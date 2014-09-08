@@ -1,0 +1,12 @@
+# Site settings
+title: K-Create | Kristoffer Hedstrom
+email: kris@k-create.com
+description: "Kristoffer Hedstrom is a Swedish interactive designer and developer living in Brooklyn, NY."
+baseurl: ""
+url: "http://k-create.com"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+sass:
+    style: :compressed
