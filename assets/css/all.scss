@@ -1,7 +1,14 @@
 ---
 ---
-
+@import 'bourbon/bourbon';
 @import 'normalize';
+
+@import 'variables';
 @import 'base';
 @import 'helpers';
+
+@import 'structure';
+@import 'simple-header';
+@import 'resume';
+
 @import 'print';
