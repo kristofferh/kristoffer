@@ -11,3 +11,11 @@
 .highlight {
     background-color: #f9f6ae;
 }
+
+.link-highlight {
+    @extend .highlight;
+    color: $dark-text;
+    font-style: italic;
+    text-decoration: none;
+    border-bottom: 1px dotted #B8860B;
+}
