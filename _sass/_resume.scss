@@ -1,3 +1,60 @@
 .resume {
     font-family: $resume-font;
+    margin: 2em auto;
+    max-width: 800px;
+}
+
+.masthead {
+    display: table;
+    width: 100%;
+}
+
+.title-wrapper {
+    display: table-cell;
+    width: 60%;
+
+    .title {
+        display: inline-block;
+        font-size: 3em;
+        font-weight: normal;
+        background-color: $dark-bg;
+        color: #fff;
+        margin: 0;
+        font-style: italic;
+        padding: 0.25em;
+    }
+
+    .sub-title {
+        font-size: 1.5em;
+        font-style: italic;
+        margin: 0.5em 0;
+    }
+}
+
+.contact-wrapper {
+    display: table-cell;
+    width: 40%;
+    text-align: right;
+    vertical-align: top;
+}
+
+.summary-wrapper {
+    font-style: italic;
+    border-top: 1px dotted #888;
+    border-bottom: 1px dotted #888;
+    padding: 1em;
+    margin: 1em 0;
+
+    .summary {
+        margin: 0;
+    }
+}
+
+.section-header {
+    float: left;
+    width: 220px;
+}
+
+.section-content {
+    float: right;
 }

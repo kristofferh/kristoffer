@@ -1,9 +1,8 @@
 .content {
     margin-left: auto;
     margin-right: auto;
-    padding: 1px 20px;
+    padding: 0 20px;
     position: relative;
-    z-index: 2;
     max-width: 960px;
     min-width: 270px;
 }
@@ -12,10 +11,28 @@
     background-color: #f9f6ae;
 }
 
-.link-highlight {
+.highlight-link {
     @extend .highlight;
     color: $dark-text;
     font-style: italic;
     text-decoration: none;
     border-bottom: 1px dotted #B8860B;
+    @include transition (background 0.1s ease);
+
+    &:hover {
+        background: transparent;
+        border-bottom-style: solid;
+    }
+}
+
+.block-link {
+    background: $dark-bg;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 0.1em;
+
+    &:hover {
+        background: transparent;
+        color: $dark-text;
+    }
 }
