@@ -4,6 +4,9 @@
 @import 'normalize';
 
 @import 'variables';
+@import 'mixins/responsive';
+@import 'mixins/common';
+
 @import 'base';
 @import 'helpers';
 

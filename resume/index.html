@@ -5,18 +5,17 @@ description: "Kristoffer Hedstrom's resume. I make things clickable and swipeabl
 resume_email: hello@k-create.com
 ---
 
-<div class="resume h-resume">
-    <section class="masthead h-card clearfix">
+<div class="resume">
+    <section class="masthead clearfix">
         <div class="title-wrapper">
-            <h1 class="title p-name" id="kristoffer-hedstrom">Kristoffer Hedstrom</h1>
-            <h2 class="sub-title">I make things clickable and swipeable</h2>
+            <h1 class="title" id="kristoffer-hedstrom">Kristoffer Hedstrom</h1>
         </div>  
-        <div class="contact-wrapper h-adr">
+        <div class="contact-wrapper">
             <div class="email">
-                Email: <a class="block-link u-email" href="mailto:{{ page.resume_email }}">{{ page.resume_email }}</a>
+                Email: <a class="block-link" href="mailto:{{ page.resume_email }}">{{ page.resume_email }}</a>
             </div>
             <div class="site">
-                Site: <a class="block-link u-url" href="http://k-create.com">k-create.com</a>
+                Site: <a class="block-link" href="http://k-create.com">k-create.com</a>
             </div>
         </div>
     </section>
@@ -200,7 +199,7 @@ resume_email: hello@k-create.com
         </div>
     </section>
     
-    <div class="education-wrapper">
+    <section class="education-wrapper">
         <div class="header">
             <h2>Education</h2>
         </div>
@@ -225,11 +224,9 @@ resume_email: hello@k-create.com
                 </li>
             </ol>
         </div>
-    </div>
-
-    <div class="clear"></div>
+    </section>
     
-    <div class="skills-wrapper">
+    <section class="skills-wrapper">
         <div class="header">
             <h2>Skills</h2>
         </div>
@@ -267,13 +264,10 @@ resume_email: hello@k-create.com
                 <li class="skill">UNIX</li>
             </ul>
         </div>
-    </div>
-    <div class="clear"></div>
-    <div class="footer">
-        <div class="content">
+    </section>
+
+    <footer class="footer">
             <p><em class="highlight">URLs and References available upon request</em> | <em class="affiliation vcard highlight"><span class="fn org">AIGA</span> Member</em></p>
             <p>Kris Hedstrom &mdash; <a class="email" href="mailto:hello@k-create.com">hello@k-create.com</a></p>
-        </div>
-    </div>
-    <div class="clear"></div>
+    </footer>
 </div>

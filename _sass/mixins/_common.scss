@@ -1,0 +1,12 @@
+@mixin title-headline {
+    font-family: $title-font;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: normal;
+    @include respond-to(small-screens) { 
+        font-size: 2.5em;
+    }
+    @include respond-to(handhelds) { 
+        font-size: 2em;
+    }
+}
