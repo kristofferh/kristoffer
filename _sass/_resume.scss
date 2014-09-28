@@ -1,18 +1,18 @@
 .resume {
     font-family: $resume-font;
-    margin: 2em auto;
+    margin: 2rem auto;
     max-width: 800px;
     padding: 1px 0 0;
 }
 
 .masthead {
-    margin: 2em 0;
+    margin: 2rem 0;
     @include respond-to(wide-screens) { 
         display: table;
         width: 100%;
     }
     @include respond-to(handhelds) { 
-        margin: 0 0 2em;
+        margin: 0 0 2rem;
     }
 }
 
@@ -30,14 +30,14 @@
     }
 
     .sub-title {
-        font-size: 1.5em;
+        font-size: 1.5rem;
         font-style: italic;
-        margin: 0.5em 0;
+        margin: 0.5rem 0;
     }
 }
 
 .contact-wrapper {
-    margin: 1em 0 0;
+    margin: 1rem 0 0;
     @include respond-to(wide-screens) { 
         display: table-cell;
         width: 40%;
@@ -50,8 +50,8 @@
     font-style: italic;
     border-top: 1px dotted #888;
     border-bottom: 1px dotted #888;
-    padding: 1em;
-    margin: 3em 0 1.5em;
+    padding: 1rem;
+    margin: 3rem 0 1.5rem;
 
     .summary {
         margin: 0;
@@ -60,9 +60,20 @@
 
 .section-header {
     float: left;
+    margin-right: 20px;
     width: 220px;
+    @include respond-to(small-screens) { 
+        float: none;
+        width: auto;
+        margin: 0;
+    }
 }
 
 .section-content {
-    float: right;
+    float: left;
+    width: calc(100% - 240px);
+    @include respond-to(small-screens) { 
+        float: none;
+        width: auto;
+    }
 }
