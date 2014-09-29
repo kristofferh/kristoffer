@@ -51,7 +51,7 @@
     border-top: 1px dotted #888;
     border-bottom: 1px dotted #888;
     padding: 1rem;
-    margin: 3rem 0 1.5rem;
+    margin: 3rem 0 2rem;
 
     .summary {
         margin: 0;
@@ -67,6 +67,11 @@
         width: auto;
         margin: 0;
     }
+
+    .section-headline {
+        font-size: rem(19px);
+        margin: 0;
+    }
 }
 
 .section-content {
@@ -75,5 +80,10 @@
     @include respond-to(small-screens) { 
         float: none;
         width: auto;
+    }
+
+    .title {
+        font-size: rem(19px);
+        margin: 0;
     }
 }
