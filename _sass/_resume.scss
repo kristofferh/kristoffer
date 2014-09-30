@@ -3,6 +3,21 @@
     margin: 2rem auto;
     max-width: 800px;
     padding: 1px 0 0;
+
+    @media print {
+        a,
+        a:visited {
+            text-decoration: none;
+        }
+
+        a[href]:after {
+            content: "";
+        }
+
+        abbr[title]:after {
+            content: "";
+        }
+    }
 }
 
 .masthead {
@@ -37,7 +52,7 @@
 }
 
 .contact-wrapper {
-    margin: 1rem 0 0;
+    margin: 2rem 0 0;
     @include respond-to(wide-screens) { 
         display: table-cell;
         width: 40%;
@@ -53,9 +68,21 @@
     padding: 1rem;
     margin: 3rem 0 2rem;
 
+    @include respond-to(handhelds) { 
+        margin-top: 1.5rem;
+        padding: 1rem 0.5rem;
+    }
+
     .summary {
         margin: 0;
     }
+}
+
+.section-wrapper {
+    margin-bottom: 2em;
+    padding-bottom: 2em;
+    border-bottom: 1px dotted #888;
+    @include clearfix;
 }
 
 .section-header {
@@ -71,6 +98,9 @@
     .section-headline {
         font-size: rem(19px);
         margin: 0;
+        @include respond-to(small-screens) { 
+            margin: 0 0 1em;
+        }
     }
 }
 
@@ -82,8 +112,47 @@
         width: auto;
     }
 
+    .experience,
+    .education {
+        position: relative;
+        margin: 0;
+    }
+
     .title {
         font-size: rem(19px);
         margin: 0;
+        @include respond-to(wide-screens) { 
+            width: calc(100% - 200px);
+        }
+    }
+
+    .dates {
+        .dt {
+            border: none;
+        }
+    }
+
+    .location {
+        @include respond-to(wide-screens) { 
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    .summary {
+        ul {
+            padding: 0 2em;
+        }
+    }
+
+    .skills {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        @include columns(3);
+        @include respond-to(handhelds) { 
+            @include columns(1);
+        }
     }
 }

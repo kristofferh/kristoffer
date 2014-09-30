@@ -14,6 +14,11 @@
     background-color: #f9f6ae;
 }
 
+.highlight-italic {
+    @extend .highlight;
+    font-style: italic;
+}
+
 .highlight-link {
     @extend .highlight;
     color: $dark-text;
