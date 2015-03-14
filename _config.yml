@@ -7,6 +7,6 @@ url: "http://k-create.com"
 
 # Build settings
 markdown: kramdown
-permalink: pretty
+permalink: /:year/:month/:day/:title/
 sass:
     style: :compressed
