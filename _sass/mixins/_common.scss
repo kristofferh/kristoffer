@@ -3,10 +3,15 @@
     text-transform: uppercase;
     font-size: 3rem;
     font-weight: normal;
-    @include respond-to(small-screens) { 
+    @include respond-to(small-screens) {
         font-size: 2.5rem;
     }
-    @include respond-to(handhelds) { 
-        font-size: 2rem;
+}
+
+@mixin backgroundcolor-animator($colors) {
+
+    @for $i from 1 through length($colors) {
+
     }
+
 }

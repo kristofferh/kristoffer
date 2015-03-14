@@ -22,17 +22,17 @@
 
 .masthead {
     margin: 2rem 0;
-    @include respond-to(wide-screens) { 
+    @include respond-to(wide-screens) {
         display: table;
         width: 100%;
     }
-    @include respond-to(handhelds) { 
+    @include respond-to(handhelds) {
         margin: 0 0 2rem;
     }
 }
 
 .title-wrapper {
-    @include respond-to(wide-screens) { 
+    @include respond-to(wide-screens) {
         display: table-cell;
         width: 60%;
     }
@@ -53,7 +53,7 @@
 
 .contact-wrapper {
     margin: 2rem 0 0;
-    @include respond-to(wide-screens) { 
+    @include respond-to(wide-screens) {
         display: table-cell;
         width: 40%;
         text-align: right;
@@ -68,7 +68,7 @@
     padding: 1rem;
     margin: 3rem 0 2rem;
 
-    @include respond-to(handhelds) { 
+    @include respond-to(handhelds) {
         margin-top: 1.5rem;
         padding: 1rem 0.5rem;
     }
@@ -89,7 +89,7 @@
     float: left;
     margin-right: 20px;
     width: 220px;
-    @include respond-to(small-screens) { 
+    @include respond-to(small-screens) {
         float: none;
         width: auto;
         margin: 0;
@@ -98,7 +98,7 @@
     .section-headline {
         font-size: rem(19px);
         margin: 0;
-        @include respond-to(small-screens) { 
+        @include respond-to(small-screens) {
             margin: 0 0 1em;
         }
     }
@@ -107,7 +107,7 @@
 .section-content {
     float: left;
     width: calc(100% - 240px);
-    @include respond-to(small-screens) { 
+    @include respond-to(small-screens) {
         float: none;
         width: auto;
     }
@@ -115,13 +115,17 @@
     .experience,
     .education {
         position: relative;
-        margin: 0;
+        margin: 0 0 2rem;
+
+        &:last-child {
+            margin-bottom: 1rem;
+        }
     }
 
     .title {
         font-size: rem(19px);
         margin: 0;
-        @include respond-to(wide-screens) { 
+        @include respond-to(wide-screens) {
             width: calc(100% - 200px);
         }
     }
@@ -133,7 +137,7 @@
     }
 
     .location {
-        @include respond-to(wide-screens) { 
+        @include respond-to(wide-screens) {
             position: absolute;
             top: 0;
             right: 0;
@@ -151,7 +155,7 @@
         margin: 0;
         padding: 0;
         @include columns(3);
-        @include respond-to(handhelds) { 
+        @include respond-to(handhelds) {
             @include columns(1);
         }
     }
