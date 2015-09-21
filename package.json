@@ -1,4 +1,18 @@
 {
+  "name": "kristofferh.github.com",
+  "version": "0.0.0",
+  "description": "Meh",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --colors",
+    "start": "webpack-dev-server --devtool eval --progress --colors"
+  },
+  "author": "Kris",
+  "license": "ISC",
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-concat": "^2.4.0",
@@ -8,7 +22,8 @@
     "gulp-watch": "^4.1.1",
     "node-bourbon": "^1.2.3",
     "require-dir": "^0.1.0",
-    "vinyl-transform": "^1.0.0"
+    "vinyl-transform": "^1.0.0",
+    "webpack": "^1.12.2"
   },
   "dependencies": {
     "browserify": "^9.0.3"
