@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "~~~ Webpack ~~~"
+NODE_ENV=production webpack --config webpack.prod.config.js -p --progress --colors
+echo "~~~ Jekyll Build ~~~"
+jekyll serve --config _config-prod.yml
+echo "~~~ Done ~~~"
+exit

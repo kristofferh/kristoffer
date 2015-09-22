@@ -1,0 +1,6 @@
+#!/bin/sh
+
+echo "~~~ dev ~~~"
+NODE_ENV=dev
+jekyll serve --watch --config _config.yml
+exit

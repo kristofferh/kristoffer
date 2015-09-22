@@ -1,1 +1,7 @@
-<script src="{{ "/assets/js/app.js" | prepend: site.baseurl }}"></script>
+{% if site.production %}
+    {% assign prepend = site.baseurl %}
+{% else %}
+    {% assign prepend = site.asseturl %}
+{% endif %}
+
+<script src="{{ "/assets/js/app.js" | prepend: prepend }}"></script>
