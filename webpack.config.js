@@ -9,6 +9,11 @@ const config = {
         path.join(__dirname, '_js/app.js')
     ],
     devtool: 'source-map',
+    devServer: {
+        historyApiFallback: {
+            index: 'index.html'
+        }
+    },
     output: {
         path: path.join(__dirname, '/assets/js'),
         filename: 'app.js',

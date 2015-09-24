@@ -1,10 +1,16 @@
-'use strict';
+import React from 'react';
+import { Router, Route, IndexRoute, Link } from 'react-router';
+import createBrowserHistory from 'history/lib/createBrowserHistory'
 
-var hey = require('./test');
+import App from './components/app';
+import About from './components/about';
 
-function hello() {
-    console.log('hi');
-    hey();
-}
+let history = createBrowserHistory();
 
-hello();
+React.render((
+  <Router history={history}>
+    <Route path='/' component={App}>
+        <Route path='about' component={About}/>
+    </Route>
+  </Router>
+), document.getElementById('page'));
