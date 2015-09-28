@@ -15,39 +15,54 @@ module Jekyll
         render_json(page,site)
       end
 
+      render_combined_json()
+
     end
 
     def render_json(post, site)
 
-      #add `json: false` to YAML to prevent JSONification
+      # add `json: false` to YAML to prevent JSONification
       if post.data.has_key? "json" and !post.data["json"]
         return
       end
 
-      path = post.destination( site.source )
+      path = post.destination( "./data" )
 
-      #only act on post/pages index in /index.html
+      # only act on post/pages index in /index.html
       return if /\/index\.html$/.match(path).nil?
 
-      #change file path
-      path['/index.html'] = '.json'
+      print(path + "\n")
+      # change file path
+      if path == "./data/index.html"
+        path.sub! 'html', 'json'
+      else
+        path['/index.html'] = '.json'
+      end
 
-      #render post using no template(s)
+      print(path + "\n")
+      # render post using no template(s)
       post.render( {}, site.site_payload)
 
-      #prepare output for JSON
+      # prepare output for JSON
       post.data["related_posts"] = related_posts(post,site)
       output = post.to_liquid
       output["next"] = output["next"].id unless output["next"].nil?
       output["previous"] = output["previous"].id unless output["previous"].nil?
 
-      #write
-      #todo, figure out how to overwrite post.destination so we can just use post.write
+      # write
+      # todo, figure out how to overwrite post.destination so we can just use post.write
       FileUtils.mkdir_p(File.dirname(path))
       File.open(path, 'w') do |f|
         f.write(output.to_json)
       end
 
+    end
+
+    def render_combined_json
+      json = Dir['./data/**/*.json'].reject {|filename| filename == './data/all.json' }.map { |f| JSON.parse File.read(f) }.flatten
+      filepath = './_includes/data/'
+      FileUtils.mkdir_p(filepath)
+      File.write(filepath + 'all.json', json.to_json)
     end
 
     def related_posts(post, site)

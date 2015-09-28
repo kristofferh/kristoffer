@@ -1,14 +1,15 @@
 import React from 'react/addons';
-import { Link } from 'react-router';
+import { History, Link } from 'react-router';
 // import ContactStore from '../stores/contacts';
 // import { Contacts } from './contacts';
 // import Loader from './loading-screen';
-// import Header from './header';
+import Navigation from './navigation';
 
 let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 let App = React.createClass({
 
+    mixins: [ History ],
     // Load initial state
     // getInitialState: function () {
     //     return {
@@ -47,12 +48,10 @@ let App = React.createClass({
     render: function () {
         return (
             <div>
-                <section className="contacts-wrapper">
-                    <Link to="/about" className="nav-item" state={{ modal: true, returnTo: this.props.location }}>+ Add New</Link>
-                    <ReactCSSTransitionGroup component="div" transitionName="modal">
-                        {this.props.children}
-                    </ReactCSSTransitionGroup>
-                </section>
+                <Navigation {...this.props} />
+                <div className="content">
+                    {this.props.children}
+                </div>
             </div>
         );
     }

@@ -1,10 +1,14 @@
 # Site settings
-title: K-Create | Kristoffer Hedstrom
+title: Kristoffer Hedstrom | k-create
 email: kris@k-create.com
 description: "Kristoffer Hedstrom is a Swedish interactive designer and developer living in Brooklyn, NY."
 baseurl: ""
 asseturl: "http://localhost:8080"
 url: "http://k-create.com"
+name: Kristoffer Hedstrom
+ogimage: ""
+fbadmin: ""
+datasource: "./data"
 
 # Build settings
 production: false
@@ -15,3 +19,4 @@ sass:
 exclude:
     - node_modules
     - tasks
+include: ["data"]

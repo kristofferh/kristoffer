@@ -1,0 +1,15 @@
+nav {
+    background-color: aquamarine;
+    height: 62px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.2s ease, height 0.2s ease 0.2s;
+    overflow: hidden;
+
+    &.home {
+        height: 100%;
+        transform: translate3d(0, 50%, 0);
+    }
+}

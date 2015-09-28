@@ -4,15 +4,12 @@
   {% include head.html %}
 
     <body>
-    {% include mark.svg %}
+
     <div id="page"></div>
 
-    <div class="page-content">
-        <div class="wrap">
-        {{ content }}
-        </div>
-    </div>
-
     {% include js.html %}
+    <script id="data" type="application/json">
+        {% include data/all.json %}
+    </script>
     </body>
 </html>

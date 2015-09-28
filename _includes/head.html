@@ -6,9 +6,19 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
 
     <meta name="description" content="{% if page.description %}{{ page.description }}{% else %} {{site.description}}{% endif %}">
+
+    <meta name="author" content="{{site.name}}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="{{site.name}}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{site.url}}">
+    <meta property="og:image" content="{{site.ogimage}}">
+    <meta property="og:site_name" content="{{site.name}}">
+    <meta property="fb:admins" content="{{site.fbadmin}}">
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %} {{site.description}}{% endif %}">
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/assets/css/all.css" | prepend: site.baseurl }}">
 
 </head>
