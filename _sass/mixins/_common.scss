@@ -1,5 +1,5 @@
 @mixin title-headline {
-    font-family: $title-font;
+    font-family: $font-family-title;
     text-transform: uppercase;
     font-size: 3rem;
     font-weight: normal;
@@ -8,10 +8,16 @@
     }
 }
 
-@mixin backgroundcolor-animator($colors) {
-
-    @for $i from 1 through length($colors) {
-
+@mixin background-color-animator($colors, $time, $repeat: infinite, $easing: ease) {
+    @include keyframes (color-animator) {
+        @for $i from 1 through length($colors) {
+            #{(($i - 1) / length($colors)) * 100}% {
+                background: #{nth($colors, $i)}
+            }
+        }
+        100% {
+            background: nth($colors, 1);
+        }
     }
-
+    @include animation (color-animator #{$time * length($colors)}s $repeat $easing);
 }

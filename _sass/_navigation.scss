@@ -1,15 +1,79 @@
-nav {
-    background-color: aquamarine;
-    height: 62px;
-    position: absolute;
+.main-nav {
+    background-color: #D9F1C1;
+    height: 60px;
+    position: fixed;
     width: 100%;
     top: 0;
     transform: translate3d(0, 0, 0);
-    transition: transform 0.2s ease, height 0.2s ease 0.2s;
+    transition: transform 0.2s ease, height 0.2s ease 0.2s, background-color 1s ease;
     overflow: hidden;
+    z-index: $z-index-max;
+    display: flex;
+    flex-flow: row wrap;
 
     &.home {
+        height: 50vh;
+        transform: translate3d(0, 100%, 0);
+
+        .nav-item {
+            height: auto;
+            font-size: 3rem;
+            position: relative;
+            visibility: visible;
+            pointer-events: all;
+
+            .text {
+                margin-top: 4px;
+            }
+        }
+    }
+
+    &.about {
+        background-color: #B5EDFF;
+    }
+
+    &.show-nav {
+        height: 100vh;
+        flex-direction: column;
+
+        .nav-item {
+            height: 60px;
+            position: relative;
+            visibility: visible;
+            pointer-events: all;
+        }
+    }
+
+    .nav-item {
+        position: absolute;
+        line-height: 1;
+        text-align: center;
+        color: #fff;
+        font-size: 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        text-transform: uppercase;
+        width: 100%;
         height: 100%;
-        transform: translate3d(0, 50%, 0);
+        font-family: $font-family-title;
+        text-decoration: none;
+        visibility: hidden;
+        pointer-events: none;
+        display: block;
+        order: 1;
+
+        &.active {
+            visibility: visible;
+            pointer-events: all;
+            order: 0;
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            line-height: 1;
+            left: 50%;
+            margin-top: 2px;
+        }
     }
 }

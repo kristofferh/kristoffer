@@ -10,9 +10,10 @@ let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 let Navigation = React.createClass({
 
     // Load initial state
-    getInitialState: function () {
+    getInitialState() {
         return {
-            path: this.setPath(this.props.location.pathname)
+            path: this.setPath(this.props.location.pathname),
+            showNav: false
         };
     },
 
@@ -30,15 +31,10 @@ let Navigation = React.createClass({
         //ContactStore.addChangeListener(this.updateContacts);
     },
 
-    // Called before a component is unmounted from the DOM.
-    componentWillUnmount() {
-        //ContactStore.removeChangeListener(this.updateContacts);
-    },
-
     componentWillReceiveProps(nextProps) {
-        console.log('changed', nextProps.location.pathname);
         this.setState({
-            path: this.setPath(nextProps.location.pathname)
+            path: this.setPath(nextProps.location.pathname),
+            showNav: !!(!this.state.showNav && nextProps.location.pathname === this.props.location.pathname)
         })
     },
 
@@ -47,11 +43,10 @@ let Navigation = React.createClass({
     },
 
     render() {
-        console.log('render');
         return (
-            <nav className={this.state.path}>
-                <Link to="/about/" activeClassName="active" className="nav-item">About</Link>
-                <Link to="/resume/" activeClassName="active" className="nav-item">Resume</Link>
+            <nav className={'main-nav ' + this.state.path + ' ' + ((this.state.showNav) ? 'show-nav' : '')}>
+                <Link to="/about/" activeClassName="active" className="nav-item"><span className="text">About</span></Link>
+                <Link to="/resume/" activeClassName="active" className="nav-item"><span className="text">Resume</span></Link>
             </nav>
         );
     }
