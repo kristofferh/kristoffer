@@ -19,16 +19,9 @@ let Navigation = React.createClass({
 
     // Called before initial rendering.
     componentWillMount() {
-        console.log('hello?', this.props.location.pathname);
         if(this.props.location.pathname === '/') {
             console.log('hey');
         }
-        //ContactStore.init();
-    },
-
-    // Called after initial rendering.
-    componentDidMount() {
-        //ContactStore.addChangeListener(this.updateContacts);
     },
 
     componentWillReceiveProps(nextProps) {

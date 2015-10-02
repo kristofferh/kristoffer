@@ -1,19 +1,19 @@
 import React from 'react/addons';
-import { History, Link } from 'react-router';
+import { Link } from 'react-router';
 // import ContactStore from '../stores/contacts';
 // import { Contacts } from './contacts';
 // import Loader from './loading-screen';
 import Navigation from './navigation';
+import Pages from './pages';
 
 let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 let App = React.createClass({
 
-    mixins: [ History ],
     // Load initial state
     // getInitialState: function () {
     //     return {
-    //         contacts: ContactStore.getContacts(),
+    //         pages: JSON.parse(document.getElementById('data').innerHTML),
     //         loading: true
     //     };
     // },
@@ -26,7 +26,11 @@ let App = React.createClass({
 
     // Called after initial rendering.
     componentDidMount: function () {
-        //ContactStore.addChangeListener(this.updateContacts);
+        // if (!this.isMounted()) {
+        //     return;
+        // }
+        // var initialProps = JSON.parse(document.getElementById('data').innerHTML);
+        // console.log(initialProps);
     },
 
     // Called before a component is unmounted from the DOM.
@@ -34,23 +38,12 @@ let App = React.createClass({
         //ContactStore.removeChangeListener(this.updateContacts);
     },
 
-    updateContacts: function () {
-        // if (!this.isMounted()) {
-        //     return;
-        // }
-
-        // this.setState({
-        //     contacts: ContactStore.getContacts(),
-        //     loading: false
-        // });
-    },
-
     render: function () {
         return (
             <div>
                 <Navigation {...this.props} />
                 <div className="content">
-                    {this.props.children}
+                    <Pages {...this.props} />
                 </div>
             </div>
         );
