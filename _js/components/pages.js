@@ -1,13 +1,16 @@
-import React, {findDOMNode} from 'react';
+import React, {findDOMNode} from 'react/addons';
 import { Link } from 'react-router';
+
+let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
 let Pages = React.createClass({
 
     render() {
+        let { pathname } = this.props.location;
         return (
-            <div>
-                {this.props.children}
-            </div>
+            <ReactCSSTransitionGroup component="div" transitionName="page">
+                 {React.cloneElement(this.props.children || <div />, { key: pathname })}
+            </ReactCSSTransitionGroup>
         );
     }
 });

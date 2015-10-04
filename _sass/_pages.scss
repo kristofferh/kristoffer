@@ -1,0 +1,34 @@
+.page-enter {
+    opacity: 0.01;
+    transform: translateY(25vh);
+    transition: all 0.35s ease-out;
+
+    &.page-enter-active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-leave {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.15s ease-in;
+
+    &.page-leave-active {
+        opacity: 0;
+        transform: translateY(5vh);
+    }
+}
+
+.content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    padding: 0 20px;
+    position: relative;
+    max-width: 960px;
+    min-width: 270px;
+    @include respond-to(handhelds) {
+        padding: 0 10px;
+    }
+}
