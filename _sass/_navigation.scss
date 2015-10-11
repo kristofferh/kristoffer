@@ -51,11 +51,17 @@
             &:not(.active) {
 
                 .text {
-                    @include animation(items-in 0.2s ease);
-
-                    //&:nth-child()
-                    // @todo include nth-child animation delay
+                    @include transform(scale(0.9) translate3d(-40%, -40%, 0));
+                    opacity: 0;
+                    @include animation(items-in 0.2s ease-out forwards);
                 }
+
+                @for $i from 1 through 10 {
+                    &:nth-child(#{$i}) .text {
+                        @include animation-delay(0.05s * $i);
+                    }
+                }
+
             }
         }
     }
@@ -92,6 +98,7 @@
             line-height: 1;
             left: 50%;
             margin-top: 2px;
+            //text-shadow: 2px 2px rgba(0, 0, 0, 0.02);
             @include transform(scale(1) translate3d(-50%, -50%, 0));
         }
     }
@@ -100,8 +107,11 @@
 @include keyframes(items-in) {
     from {
         @include transform(scale(0.9) translate3d(-40%, -40%, 0));
+        opacity: 0;
     }
+
     to {
         @include transform(scale(1) translate3d(-50%, -50%, 0));
+        opacity: 1;
     }
 }

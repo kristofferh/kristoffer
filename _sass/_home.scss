@@ -1,0 +1,26 @@
+.home-mark {
+    max-width: 100%;
+    height: 50vh;
+    margin-top: -60px;
+    @include animation(flip-it 15s ease-in-out infinite forwards);
+}
+
+.svg-mark {
+    width: 100%;
+    height: 100%;
+    fill: black;
+    stroke: black;
+    @include transform(rotate(-15deg));
+    @include animation(rocking 3s ease-in-out infinite alternate);
+}
+
+@include keyframes(rocking) {
+    from { @include transform(rotate(-15deg)); }
+    to { @include transform(rotate(30deg)); }
+}
+
+@include keyframes(flip-it) {
+    0% { @include transform(rotate(0deg)); }
+    75% { @include transform(rotate(360deg)); @include animation-timing-function(ease-out-sine) }
+    100% { @include transform(rotate(360deg)); }
+}

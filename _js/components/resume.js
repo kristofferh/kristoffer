@@ -5,8 +5,7 @@ let Resume = React.createClass({
 
     // Called before initial rendering.
     componentWillMount: function () {
-        PagesStore.init()
-        console.log('resume?', PagesStore.getPage('resume'));
+        PagesStore.init();
     },
 
     render() {

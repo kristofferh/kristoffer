@@ -1,9 +1,5 @@
 import React from 'react/addons';
 import { Lifecycle, History, Link } from 'react-router';
-// import ContactStore from '../stores/contacts';
-// import { Contacts } from './contacts';
-// import Loader from './loading-screen';
-// import Header from './header';
 
 let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 

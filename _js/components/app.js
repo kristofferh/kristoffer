@@ -1,8 +1,5 @@
 import React from 'react/addons';
 import { Link } from 'react-router';
-// import ContactStore from '../stores/contacts';
-// import { Contacts } from './contacts';
-// import Loader from './loading-screen';
 import Navigation from './navigation';
 import Pages from './pages';
 
