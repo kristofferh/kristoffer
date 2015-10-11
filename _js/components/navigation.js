@@ -1,34 +1,63 @@
 import React from 'react/addons';
 import { Lifecycle, History, Link } from 'react-router';
 
-let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
+import PagesStore from '../stores/pages';
 
 let Navigation = React.createClass({
 
     // Load initial state
     getInitialState() {
         return {
-            path: this.setPath(this.props.location.pathname),
+            path: this.getPath(this.props.location.pathname),
             showNav: false
         };
     },
 
     // Called before initial rendering.
     componentWillMount() {
-        if(this.props.location.pathname === '/') {
-            console.log('hey');
-        }
+        PagesStore.init();
     },
 
     componentWillReceiveProps(nextProps) {
         this.setState({
-            path: this.setPath(nextProps.location.pathname),
+            path: this.getPath(nextProps.location.pathname),
             showNav: !!(!this.state.showNav && nextProps.location.pathname === this.props.location.pathname)
-        })
+        });
+
+        if (nextProps.location.pathname !== this.props.location.pathname) {
+            let page = PagesStore.getPage(this.getPath(nextProps.location.pathname));
+            this.updateTitle(page.title || '');
+            this.updateDescriptions(page.description || '');
+        }
     },
 
-    setPath(path) {
-        return (path === '/') ? 'home' : path.replace(/\//g, '');
+    updateTitle(title) {
+        let baseTitle = 'Kristoffer Hedstrom | k-create';
+        if (title) {
+            title += ' - ' + baseTitle;
+        } else {
+            title = baseTitle;
+        }
+        document.title = title;
+    },
+
+    updateDescriptions(description) {
+        if (!description) {
+            return;
+        }
+
+        let metaDescriptions = [];
+        metaDescriptions.push(document.querySelector('meta[name="description"]'));
+        metaDescriptions.push(document.querySelector('meta[property="og:description"]'));
+
+        for (let meta of metaDescriptions) {
+            meta.setAttribute('content', description);
+        }
+
+    },
+
+    getPath(path) {
+        return (path === '/') ? 'index' : path.replace(/\//g, '');
     },
 
     render() {

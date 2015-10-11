@@ -3,8 +3,6 @@ import { Link } from 'react-router';
 import Navigation from './navigation';
 import Pages from './pages';
 
-let ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
-
 let App = React.createClass({
 
     // Load initial state
@@ -14,12 +12,6 @@ let App = React.createClass({
     //         loading: true
     //     };
     // },
-
-    // Called before initial rendering.
-    componentWillMount: function () {
-        console.log('hi?');
-        //ContactStore.init();
-    },
 
     // Called after initial rendering.
     componentDidMount: function () {
