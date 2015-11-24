@@ -40,12 +40,14 @@ module Jekyll
 
       print(path + "\n")
       # render post using no template(s)
-      post.render( {}, site.site_payload)
+      # post.render_liquid( {}, site.site_payload)
+      #output = post.to_liquid
 
       # prepare output for JSON
-      post.data["related_posts"] = related_posts(post,site) unless related_posts(post,site).nil?
+      #post.data["related_posts"] = related_posts(post,site) unless related_posts(post,site).nil?
       output = post.to_liquid
 
+      #output['content'] = post.transform
       output["next"] = output["next"].id unless output["next"].nil?
       output["previous"] = output["previous"].id unless output["previous"].nil?
 
