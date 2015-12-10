@@ -26,6 +26,10 @@
             .text {
                 margin-top: 4px;
             }
+
+            &.close {
+                display: none;
+            }
         }
     }
 
@@ -92,6 +96,11 @@
             border-bottom-color: transparent;
         }
 
+        &.close {
+            border-bottom: none;
+            height: 100%;
+        }
+
         .text {
             position: absolute;
             top: 50%;
@@ -103,9 +112,10 @@
         }
 
         .close-btn {
-            position: relative;
-            display: block;
-            margin: auto;
+            position: absolute;
+            left: 50%;
+            margin-left: -30px;
+            bottom: 10px;
             cursor: pointer;
             @include size(60px);
             
