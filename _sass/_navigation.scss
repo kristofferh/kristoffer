@@ -98,8 +98,41 @@
             line-height: 1;
             left: 50%;
             margin-top: 2px;
-            //text-shadow: 2px 2px rgba(0, 0, 0, 0.02);
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.02);
             @include transform(scale(1) translate3d(-50%, -50%, 0));
+        }
+
+        .close-btn {
+            position: relative;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+            @include size(60px);
+            
+            &:after,
+            &:before {
+                content: '';
+                @include position(absolute, 0 0 0 28px);
+                @include transform(rotate(45deg) translateX(0) translateY(0));
+                @include size(5px 60px);
+                background: #fff;
+                display: block;
+                @include transition(all 150ms ease-in);
+            }
+
+            &:hover:after {
+              @include transform(rotate(45deg) translateX(8px) translateY(21px));
+              @include size(5px 30px);
+              @include transition(all 150ms ease-in);
+            }
+            &:hover:before {
+              @include transform(rotate(-45deg) translateX(-8px) translateY(21px));
+              @include size(5px 30px);
+              @include transition(all 150ms ease-in);
+            }
+            &:before {
+              @include transform(rotate(-45deg) translateX(0) translateY(0));
+            }
         }
     }
 }

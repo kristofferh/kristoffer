@@ -66,6 +66,9 @@ let Navigation = React.createClass({
                 <Link to="/portfolio/" activeClassName="active" className="nav-item"><span className="text">Portfolio</span></Link>
                 <Link to="/about/" activeClassName="active" className="nav-item"><span className="text">About</span></Link>
                 <Link to="/resume/" activeClassName="active" className="nav-item"><span className="text">Resume</span></Link>
+                <span className="nav-item close">
+                    <span className="close-btn"></span>
+                </span>
             </nav>
         );
     }
