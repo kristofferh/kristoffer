@@ -112,36 +112,43 @@
         }
 
         .close-btn {
+            $closeBtnSize: 40px;
             position: absolute;
             left: 50%;
-            margin-left: -30px;
-            bottom: 10px;
+            margin-left: -22px;
+            bottom: 0;
+            padding-top: 20px;
             cursor: pointer;
-            @include size(60px);
+            @include size($closeBtnSize);
             
             &:after,
             &:before {
                 content: '';
-                @include position(absolute, 0 0 0 28px);
+                @include position(absolute, 0 0 0 $closeBtnSize / 2);
                 @include transform(rotate(45deg) translateX(0) translateY(0));
-                @include size(5px 60px);
+                @include size(5px $closeBtnSize);
                 background: #fff;
                 display: block;
                 @include transition(all 150ms ease-in);
             }
 
-            &:hover:after {
-              @include transform(rotate(45deg) translateX(8px) translateY(21px));
-              @include size(5px 30px);
-              @include transition(all 150ms ease-in);
-            }
-            &:hover:before {
-              @include transform(rotate(-45deg) translateX(-8px) translateY(21px));
-              @include size(5px 30px);
-              @include transition(all 150ms ease-in);
-            }
             &:before {
-              @include transform(rotate(-45deg) translateX(0) translateY(0));
+                @include transform(rotate(-45deg) translateX(0) translateY(0));
+            }
+
+            &:hover {
+                
+                &:after {
+                    @include transform(rotate(45deg) translateX(8px) translateY(16px));
+                    @include size(5px $closeBtnSize / 2);
+                    @include transition(all 150ms ease-in);
+                }
+
+                &:before {
+                    @include transform(rotate(-45deg) translateX(-8px) translateY(16px));
+                    @include size(5px $closeBtnSize / 2);
+                    @include transition(all 150ms ease-in);
+                }
             }
         }
     }
