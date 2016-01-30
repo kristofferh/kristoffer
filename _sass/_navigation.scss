@@ -120,7 +120,7 @@
             padding-top: 20px;
             cursor: pointer;
             @include size($closeBtnSize);
-            
+
             &:after,
             &:before {
                 content: '';
@@ -137,15 +137,15 @@
             }
 
             &:hover {
-                
+
                 &:after {
-                    @include transform(rotate(45deg) translateX(8px) translateY(16px));
+                    @include transform(rotate(45deg) translateX(3px) translateY(10px));
                     @include size(5px $closeBtnSize / 2);
                     @include transition(all 150ms ease-in);
                 }
 
                 &:before {
-                    @include transform(rotate(-45deg) translateX(-8px) translateY(16px));
+                    @include transform(rotate(-45deg) translateX(-2px) translateY(11px));
                     @include size(5px $closeBtnSize / 2);
                     @include transition(all 150ms ease-in);
                 }
