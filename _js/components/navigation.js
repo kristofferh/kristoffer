@@ -3,6 +3,8 @@ import { Lifecycle, History, Link } from 'react-router';
 
 import PagesStore from '../stores/pages';
 
+import Logo from './logo';
+
 let Navigation = React.createClass({
 
     // Load initial state
@@ -14,7 +16,6 @@ let Navigation = React.createClass({
     },
 
     handleCloseClick(event) {
-        console.log('hi');
         this.setState({showNav: false});
     },
 
@@ -68,6 +69,7 @@ let Navigation = React.createClass({
     render() {
         return (
             <nav className={'main-nav ' + this.state.path + ' ' + ((this.state.showNav) ? 'show-nav' : '')}>
+                <Logo/>
                 <Link to="/portfolio/" activeClassName="active" className="nav-item"><span className="text">Portfolio</span></Link>
                 <Link to="/about/" activeClassName="active" className="nav-item"><span className="text">About</span></Link>
                 <Link to="/resume/" activeClassName="active" className="nav-item"><span className="text">Resume</span></Link>
