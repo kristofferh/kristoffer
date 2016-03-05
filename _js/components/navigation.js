@@ -1,4 +1,4 @@
-import React from 'react/addons';
+import React from 'react';
 import { Lifecycle, History, Link } from 'react-router';
 
 import PagesStore from '../stores/pages';
