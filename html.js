@@ -18,7 +18,7 @@ module.exports = React.createClass({
 
     let cssLink;
     if (process.env.NODE_ENV === 'production') {
-      cssLink = <link rel='stylesheet' href={link('/styles.css')} />;
+      cssLink = <link rel='stylesheet' href={link('/app.css')} />;
     }
 
     return (

@@ -1,4 +1,5 @@
 var CopyWebpackPlugin = require('copy-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = function(config, env) {
   var isStatic = env === 'static';
@@ -9,13 +10,22 @@ module.exports = function(config, env) {
     postcss: [require('autoprefixer')]
   });
 
-  config.plugin('static', CopyWebpackPlugin, [[{ from: '../static'}]]);
+  if (isDev) {
+    config.removeLoader('sass');
+    config.loader('sass', {
+      test: /\.(sass|scss)/,
+      loaders: ['style', 'css', 'postcss', 'sass']
+    });
+  } else if (isProd) {
+    config.plugin('extract-css', ExtractTextPlugin, ['app.css']);
+    config.removeLoader('sass');
+    config.loader('sass', {
+      test: /\.(sass|scss)/,
+      loader: ExtractTextPlugin.extract(['css', 'postcss', 'sass'])
+    });
+  }
 
-  config.loader('fonts', function(cfg) {
-    cfg.test = /\.(((woff|woff2|eot|ttf)(\?[0-9]{8}))|(woff|woff2|eot|ttf))$/;
-    cfg.loader = 'file-loader';
-    return cfg;
-  });
+  config.plugin('static', CopyWebpackPlugin, [[{ from: '../static'}]]);
 
   return config;
 };
