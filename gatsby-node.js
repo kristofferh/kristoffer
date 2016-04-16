@@ -1,14 +1,8 @@
-var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-module.exports = function(config, env) {
-  var isStatic = env === 'static';
+exports.modifyWebpackConfig = function(config, env) {
   var isDev = env === 'develop';
   var isProd = env === 'production';
-
-  config.merge({
-    postcss: [require('autoprefixer')]
-  });
 
   if (isDev) {
     config.removeLoader('sass');
@@ -24,8 +18,6 @@ module.exports = function(config, env) {
       loader: ExtractTextPlugin.extract(['css', 'postcss', 'sass'])
     });
   }
-
-  config.plugin('static', CopyWebpackPlugin, [[{ from: '../static'}]]);
 
   return config;
 };
