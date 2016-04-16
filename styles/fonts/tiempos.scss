@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'tiempos-regular';
+    src: url('./tiempos/TiemposTextWeb-Regular.eot');
+    src: url('./tiempos/TiemposTextWeb-Regular?#iefix') format('embedded-opentype'),
+         url('./tiempos/TiemposTextWeb-Regular.woff2') format('woff2'),
+         url('./tiempos/TiemposTextWeb-Regular.woff') format('woff'),
+         url('./tiempos/TiemposTextWeb-Regular.ttf') format('truetype'),
+         url('./tiempos/TiemposTextWeb-Regular.svg#tiempos-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tiempos-regular';
+    src: url('./tiempos/TiemposTextWeb-RegularItalic.eot');
+    src: url('./tiempos/TiemposTextWeb-RegularItalic?#iefix') format('embedded-opentype'),
+         url('./tiempos/TiemposTextWeb-RegularItalic.woff2') format('woff2'),
+         url('./tiempos/TiemposTextWeb-RegularItalic.woff') format('woff'),
+         url('./tiempos/TiemposTextWeb-RegularItalic.ttf') format('truetype'),
+         url('./tiempos/TiemposTextWeb-RegularItalic.svg#tiempos-regular') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
