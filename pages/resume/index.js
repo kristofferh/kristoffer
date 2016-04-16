@@ -7,7 +7,7 @@ export default class Resume extends Component {
   render () {
     return (
       <DocumentTitle title={config.siteTitle}>
-        <div dangerouslySetInnerHTML={{ __html: require('./_static.html') }}/>
+        <div dangerouslySetInnerHTML={{ __html: require('./_static.html').body }}/>
       </DocumentTitle>
     );
   }

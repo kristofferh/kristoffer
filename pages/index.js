@@ -3,6 +3,7 @@ import DocumentTitle from 'react-document-title';
 import {config} from 'config';
 
 import 'styles/base';
+import 'styles/fonts/tanek';
 
 export default class Index extends Component {
   render() {
