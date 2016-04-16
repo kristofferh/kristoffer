@@ -2,6 +2,9 @@
 node_modules
 npm-debug.log
 coverage
+public/*
+styles/fonts/tanek
+styles/fonts/tiempos
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
