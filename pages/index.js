@@ -4,6 +4,7 @@ import {config} from 'config';
 
 import 'styles/base';
 import 'styles/fonts/tanek';
+import 'styles/fonts/tiempos';
 
 export default class Index extends Component {
   render() {
