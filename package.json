@@ -12,6 +12,7 @@
   "dependencies": {
     "babel-plugin-add-module-exports": "^0.1.2",
     "babel-preset-stage-1": "^6.5.0",
+    "classnames": "^2.2.3",
     "normalize.css": "^4.1.1",
     "react": "^15.0.1",
     "react-document-title": "^2.0.1",

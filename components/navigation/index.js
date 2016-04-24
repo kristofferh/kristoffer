@@ -1,4 +1,5 @@
 import {default as React, Component} from 'react';
+import classNames from 'classnames';
 import {Link} from 'react-router';
 
 import './styles';
@@ -11,6 +12,7 @@ export default class Navigation extends Component {
       path: this.getPath(this.props.location.pathname),
       showNav: false
     };
+    this.handleCloseClick = this.handleCloseClick.bind(this);
   }
 
   handleCloseClick() {
@@ -30,7 +32,7 @@ export default class Navigation extends Component {
 
   render() {
     return (
-      <nav className={'main-nav ' + this.state.path + ' ' + ((this.state.showNav) ? 'show-nav' : '')}>
+      <nav className={classNames('main-nav', {[`${this.state.path}`]: this.state.path}, {'show-nav': this.state.showNav} )}>
         <Link to='/portfolio/' activeClassName='active' className='nav-item'><span className='text'>{'Portfolio'}</span></Link>
         <Link to='/about/' activeClassName='active' className='nav-item'><span className='text'>{'About'}</span></Link>
         <Link to='/resume/' activeClassName='active' className='nav-item'><span className='text'>{'Resume'}</span></Link>
