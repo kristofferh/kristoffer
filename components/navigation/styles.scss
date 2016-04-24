@@ -1,198 +1,192 @@
 @import 'styles/structure/variables';
 
 .main-nav {
-    background-color: #D9F1C1;
+  background-color: #D9F1C1;
 
-    $greens: (#D9F1C1, #263B00, #4D7A00, #1E2E01, #203300);
-    $blues: (#003554, #002033, #00253B, #001D2E, #004C7A);
-    $reds: (#330016, #3B0019, #2E0014, #540024, #7A0033);
-    $grays: (#333233, #3B3A3A, #323232, #424141, #4B4C4C);
-    $color-list: join($greens, $blues);
+  $greens: (#D9F1C1, #263B00, #4D7A00, #1E2E01, #203300);
+  $blues: (#003554, #002033, #00253B, #001D2E, #004C7A);
+  $reds: (#330016, #3B0019, #2E0014, #540024, #7A0033);
+  $grays: (#333233, #3B3A3A, #323232, #424141, #4B4C4C);
+  $color-list: join($greens, $blues);
 
-    height: 60px;
-    position: fixed;
-    width: 100%;
-    top: 0;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.3s ease, height 0.3s ease, background-color 1s ease;
+  overflow: hidden;
+  z-index: $z-index-max;
+  display: flex;
+  flex-flow: column nowrap;
+
+  &.index {
+    height: 100vh;
     transform: translate3d(0, 0, 0);
-    transition: transform 0.3s ease, height 0.3s ease, background-color 1s ease;
-    overflow: hidden;
-    z-index: $z-index-max;
-    display: flex;
-    flex-flow: column nowrap;
-
-    &.index {
-        height: 50vh;
-        transform: translate3d(0, 100%, 0);
-
-        .nav-item {
-            font-size: 3rem;
-            position: relative;
-            visibility: visible;
-            pointer-events: all;
-            opacity: 1;
-            flex: 1 0 auto;
-
-            .text {
-                margin-top: 4px;
-            }
-
-            &.close {
-                display: none;
-            }
-        }
-    }
-
-    &.about {
-        background-color: #B5EDFF;
-    }
-
-    &.show-nav {
-        height: 100vh;
-
-        .nav-item {
-            height: 60px;
-            position: relative;
-            visibility: visible;
-            pointer-events: all;
-            opacity: 1;
-            transition: opacity 0.2s ease, transform 0.2s ease;
-
-            &.active {
-                border-bottom-color: rgba(255, 255, 255, 0.5);
-            }
-
-            &:not(.active) {
-
-                .text {
-                    transform: scale(0.9) translate3d(-40%, -40%, 0);
-                    opacity: 0;
-                    animation: items-in 0.2s ease-out forwards;
-                }
-
-                @for $i from 1 through 10 {
-                    &:nth-child(#{$i}) .text {
-                        animation-delay: (0.05s * $i);
-                    }
-                }
-
-            }
-        }
-    }
 
     .nav-item {
-        position: absolute;
-        line-height: 1;
-        text-align: center;
-        color: #fff;
-        font-size: 2rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        text-transform: uppercase;
-        width: 100%;
-        font-family: $font-family-title;
-        text-decoration: none;
-        visibility: hidden;
-        pointer-events: none;
-        display: block;
-        opacity: 0;
-        order: 1;
-        min-height: 60px;
-        overflow: hidden;
+      font-size: 48px;
+      font-size: 13vh; // Adjust min and max of this with media queries
+      position: relative;
+      visibility: visible;
+      pointer-events: all;
+      opacity: 1;
+      flex: 1 0 auto;
 
-        &.active {
-            visibility: visible;
-            pointer-events: all;
-            opacity: 1;
-            order: 0;
-            border-bottom-color: transparent;
+      .text {
+        margin-top: 4px;
+      }
+
+      &.close {
+        display: none;
+      }
+    }
+  }
+
+  &.about {
+    background-color: #B5EDFF;
+  }
+
+  &.show-nav {
+    height: 100vh;
+
+    .nav-item {
+      height: 60px;
+      position: relative;
+      visibility: visible;
+      pointer-events: all;
+      opacity: 1;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+
+      &.active {
+          border-bottom-color: rgba(255, 255, 255, 0.25);
+      }
+
+      &:not(.active) {
+        .text {
+          transform: scale(0.9) translate3d(-40%, -40%, 0);
+          opacity: 0;
+          animation: items-in 0.2s ease-out forwards;
         }
 
-        &:hover:before {
-            // @include background-color-animator($greens, 0.5, infinite, ease);
+        @for $i from 1 through 10 {
+          &:nth-child(#{$i}) .text {
+            animation-delay: (0.05s * $i);
+          }
+        }
+      }
+    }
+  }
+
+  .nav-item {
+    position: absolute;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+    width: 100%;
+    font-family: $font-family-title;
+    text-decoration: none;
+    visibility: hidden;
+    pointer-events: none;
+    display: block;
+    opacity: 0;
+    order: 1;
+    min-height: 60px;
+    overflow: hidden;
+
+    &.active {
+      visibility: visible;
+      pointer-events: all;
+      opacity: 1;
+      order: 0;
+      border-bottom-color: transparent;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+    }
+
+    &.close {
+      border-bottom: none;
+      height: 100%;
+    }
+
+    .text {
+      position: absolute;
+      top: 50%;
+      line-height: 1;
+      left: 50%;
+      margin-top: 2px;
+      text-shadow: 2px 2px rgba(0, 0, 0, 0.02);
+      transform: scale(1) translate3d(-50%, -50%, 0);
+    }
+
+    .close-btn {
+      $closeBtnSize: 40px;
+      position: absolute;
+      left: 50%;
+      margin-left: -22px;
+      bottom: 0;
+      padding-top: 20px;
+      cursor: pointer;
+      width: $closeBtnSize;
+      height: $closeBtnSize;
+
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: ($closeBtnSize / 2);
+        transform: rotate(45deg) translateX(0) translateY(0);
+        width: 5px;
+        height: $closeBtnSize;
+        background: #fff;
+        display: block;
+        transition: all 150ms ease-in;
+      }
+
+      &:before {
+        transform: rotate(-45deg) translateX(0) translateY(0);
+      }
+
+      &:hover {
+        &:after {
+          transform: rotate(45deg) translateX(3px) translateY(10px);
+          width: 5px;
+          height: ($closeBtnSize / 2);
+          transition: all 150ms ease-in;
         }
 
         &:before {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            content: '';
+          transform: rotate(-45deg) translateX(-2px) translateY(11px);
+          width: 5px;
+          height: ($closeBtnSize / 2);
+          transition: all 150ms ease-in;
         }
-
-        &.close {
-            border-bottom: none;
-            height: 100%;
-        }
-
-        .text {
-            position: absolute;
-            top: 50%;
-            line-height: 1;
-            left: 50%;
-            margin-top: 2px;
-            text-shadow: 2px 2px rgba(0, 0, 0, 0.02);
-            transform: scale(1) translate3d(-50%, -50%, 0);
-        }
-
-        .close-btn {
-            $closeBtnSize: 40px;
-            position: absolute;
-            left: 50%;
-            margin-left: -22px;
-            bottom: 0;
-            padding-top: 20px;
-            cursor: pointer;
-            width: $closeBtnSize;
-            height: $closeBtnSize;
-
-            &:after,
-            &:before {
-                content: '';
-                position: absolute;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: ($closeBtnSize / 2);
-                transform: rotate(45deg) translateX(0) translateY(0);
-                width: 5px;
-                height: $closeBtnSize;
-                background: #fff;
-                display: block;
-                transition: all 150ms ease-in;
-            }
-
-            &:before {
-                transform: rotate(-45deg) translateX(0) translateY(0);
-            }
-
-            &:hover {
-
-                &:after {
-                    transform: rotate(45deg) translateX(3px) translateY(10px);
-                    width: 5px;
-                    height: ($closeBtnSize / 2);
-                    transition: all 150ms ease-in;
-                }
-
-                &:before {
-                    transform: rotate(-45deg) translateX(-2px) translateY(11px);
-                    width: 5px;
-                    height: ($closeBtnSize / 2);
-                    transition: all 150ms ease-in;
-                }
-            }
-        }
+      }
     }
+  }
 }
 
 @keyframes(items-in) {
-    from {
-        transform: scale(0.9) translate3d(-40%, -40%, 0);
-        opacity: 0;
-    }
+  from {
+    transform: scale(0.9) translate3d(-40%, -40%, 0);
+    opacity: 0;
+  }
 
-    to {
-        transform: scale(1) translate3d(-50%, -50%, 0);
-        opacity: 1;
-    }
+  to {
+    transform: scale(1) translate3d(-50%, -50%, 0);
+    opacity: 1;
+  }
 }
