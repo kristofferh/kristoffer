@@ -33,6 +33,9 @@ export default class Navigation extends Component {
   render() {
     return (
       <nav className={classNames('main-nav', {[`${this.state.path}`]: this.state.path}, {'show-nav': this.state.showNav} )}>
+        <span className='nav-logo'>
+          {'Logo'}
+        </span>
         <Link to='/portfolio/' activeClassName='active' className='nav-item'><span className='text'>{'Portfolio'}</span></Link>
         <Link to='/about/' activeClassName='active' className='nav-item'><span className='text'>{'About'}</span></Link>
         <Link to='/resume/' activeClassName='active' className='nav-item'><span className='text'>{'Resume'}</span></Link>

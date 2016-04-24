@@ -24,6 +24,13 @@
     height: 100vh;
     transform: translate3d(0, 0, 0);
 
+    .nav-logo {
+      flex-grow: 1;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
     .nav-item {
       font-size: 48px;
       font-size: 13vh; // Adjust min and max of this with media queries
@@ -31,7 +38,7 @@
       visibility: visible;
       pointer-events: all;
       opacity: 1;
-      flex: 1 0 auto;
+      flex: 0.5 0 auto; // Set logo to flex-grow: 1.
 
       .text {
         margin-top: 4px;
