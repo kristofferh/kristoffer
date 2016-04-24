@@ -20,6 +20,10 @@
   display: flex;
   flex-flow: column nowrap;
 
+  .nav-logo {
+    display: none;
+  }
+
   &.index {
     height: 100vh;
     transform: translate3d(0, 0, 0);
