@@ -2,7 +2,9 @@
 node_modules
 npm-debug.log
 coverage
-public/*
+public
+.gatsby-context.js
+
 styles/fonts/tanek
 styles/fonts/tiempos
 
