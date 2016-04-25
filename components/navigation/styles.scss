@@ -13,7 +13,6 @@
   position: fixed;
   width: 100%;
   top: 0;
-  transform: translate3d(0, 0, 0);
   transition: transform 0.3s ease, height 0.3s ease, background-color 1s ease;
   overflow: hidden;
   z-index: $z-index-max;
@@ -24,9 +23,9 @@
     display: none;
   }
 
-  &.index {
+  &.index,
+  &.show-nav {
     height: 100vh;
-    transform: translate3d(0, 0, 0);
 
     .nav-logo {
       flex-grow: 1;
@@ -36,16 +35,16 @@
     }
 
     .nav-item {
-      font-size: 48px;
-      font-size: 13vh; // Adjust min and max of this with media queries
+      font-size: 48px; // Fallback.
+      font-size: 13vmin; // Adjust max of this with media queries
       position: relative;
       visibility: visible;
       pointer-events: all;
       opacity: 1;
       flex: 0.5 0 auto; // Set logo to flex-grow: 1.
 
-      .text {
-        margin-top: 4px;
+      @media (min-height: 800px) and (min-width: 800px) {
+        font-size: 104px;
       }
 
       &.close {
@@ -54,20 +53,20 @@
     }
   }
 
-  &.about {
-    background-color: #B5EDFF;
-  }
-
   &.show-nav {
-    height: 100vh;
 
     .nav-item {
-      height: 60px;
-      position: relative;
-      visibility: visible;
-      pointer-events: all;
-      opacity: 1;
-      transition: opacity 0.2s ease, transform 0.2s ease;
+      font-size: 48px; // Fallback.
+      font-size: 10vmin; // Adjust min and max of this with media queries
+      max-height: 150px;
+
+      @media (min-height: 800px) and (min-width: 800px) {
+        font-size: 80px;
+      }
+
+      @media (max-height: 400px) {
+        font-size: 32px;
+      }
 
       &.active {
           border-bottom-color: rgba(255, 255, 255, 0.25);
@@ -86,16 +85,25 @@
           }
         }
       }
+
+      &.close {
+        display: flex;
+      }
+    }
+
+    .nav-logo {
+      display: none;
     }
   }
 
+  // Collapsed state.
   .nav-item {
     position: absolute;
     line-height: 1;
     text-align: center;
-    color: #fff;
-    font-size: 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    color: $white;
+    font-size: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
     text-transform: uppercase;
     width: 100%;
     font-family: $font-family-title;
@@ -113,7 +121,7 @@
       pointer-events: all;
       opacity: 1;
       order: 0;
-      border-bottom-color: transparent;
+      border-top-color: transparent;
     }
 
     &:before {
@@ -126,8 +134,8 @@
     }
 
     &.close {
-      border-bottom: none;
-      height: 100%;
+      flex-grow: 1;
+      max-height: 100vh;
     }
 
     .text {
@@ -162,7 +170,7 @@
         transform: rotate(45deg) translateX(0) translateY(0);
         width: 5px;
         height: $closeBtnSize;
-        background: #fff;
+        background: $white;
         display: block;
         transition: all 150ms ease-in;
       }
