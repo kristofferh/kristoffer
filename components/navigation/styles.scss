@@ -63,18 +63,12 @@
       @media (min-height: 800px) and (min-width: 800px) {
         font-size: 104px;
       }
-
-      &.close {
-        display: none;
-      }
     }
   }
 
   &.show-nav {
 
     .nav-item {
-      //font-size: 48px; // Fallback.
-      //font-size: 10vmin; // Adjust min and max of this with media queries
       max-height: 150px;
 
       @media (min-height: 800px) and (min-width: 800px) {
@@ -91,6 +85,7 @@
 
       &:not(.active) {
         .text {
+          display: block;
           transform: scale(0.9) translate3d(-40%, -40%, 0);
           opacity: 0;
           animation: items-in 0.2s ease-out forwards;
@@ -102,19 +97,24 @@
           }
         }
       }
-
-      &.close {
-        display: flex;
-        @media (max-height: 400px) {
-          transform: scale(0.75);
-        }
-      }
     }
 
     .nav-logo {
       display: none;
     }
   }
+
+  &.index {
+
+    .nav-item.close {
+      flex-grow: 0;
+    }
+
+    .close-btn {
+      display: none;
+    }
+  }
+
 
   // Collapsed state.
   .nav-item {
@@ -154,8 +154,11 @@
     }
 
     &.close {
+      display: flex;
       flex-grow: 1;
       max-height: 100vh;
+      align-items: center;
+      justify-content: center;
     }
 
     .text {
@@ -169,15 +172,15 @@
     }
 
     .close-btn {
-      $closeBtnSize: 40px;
-      position: absolute;
-      left: 50%;
-      margin-left: -20px;
-      bottom: 0;
-      padding-bottom: 10px;
+      $close-btn-size: 40px;
+      transform: scale(1);
       cursor: pointer;
-      width: $closeBtnSize;
-      height: $closeBtnSize;
+      width: $close-btn-size;
+      height: $close-btn-size;
+
+      @media (max-height: 400px) {
+        transform: scale(0.75);
+      }
 
       &:after,
       &:before {
@@ -186,10 +189,10 @@
         top: 0;
         right: 0;
         bottom: 0;
-        left: 17px; //($closeBtnSize / 2);
+        left: 17px; //($close-btn-size / 2);
         transform: rotate(45deg) translateX(0) translateY(0);
         width: 5px;
-        height: $closeBtnSize;
+        height: $close-btn-size;
         background: $white;
         display: block;
         transition: all 150ms ease-in;
@@ -203,14 +206,14 @@
         &:after {
           transform: rotate(45deg) translateX(3px) translateY(10px);
           width: 5px;
-          height: ($closeBtnSize / 2);
+          height: ($close-btn-size / 2);
           transition: all 150ms ease-in;
         }
 
         &:before {
           transform: rotate(-45deg) translateX(-2px) translateY(11px);
           width: 5px;
-          height: ($closeBtnSize / 2);
+          height: ($close-btn-size / 2);
           transition: all 150ms ease-in;
         }
       }
