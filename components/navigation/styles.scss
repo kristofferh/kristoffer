@@ -10,7 +10,7 @@
   z-index: $z-index-max;
   display: flex;
   flex-flow: column nowrap;
-  overflow: auto;
+  overflow: hidden;
 
   .nav-logo {
     display: none;
@@ -45,6 +45,7 @@
   &.index,
   &.show-nav {
     height: 100vh;
+    overflow: auto;
 
     .nav-logo {
       display: flex;
