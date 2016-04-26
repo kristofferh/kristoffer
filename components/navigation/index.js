@@ -2,6 +2,7 @@ import {default as React, Component} from 'react';
 import classNames from 'classnames';
 import {Link} from 'react-router';
 
+import mark from './mark.svg';
 import './styles';
 
 export default class Navigation extends Component {
@@ -34,7 +35,7 @@ export default class Navigation extends Component {
     return (
       <nav className={classNames('main-nav', {[`${this.state.path}`]: this.state.path}, {'show-nav': this.state.showNav} )}>
         <span className='nav-logo'>
-          {'Logo'}
+          <span className='nav-logo-container' dangerouslySetInnerHTML={{__html: mark}} />
         </span>
         <Link to='/portfolio/' activeClassName='active' className='nav-item'><span className='text'>{'Portfolio'}</span></Link>
         <Link to='/about/' activeClassName='active' className='nav-item'><span className='text'>{'About'}</span></Link>
