@@ -73,8 +73,8 @@
   &.show-nav {
 
     .nav-item {
-      font-size: 48px; // Fallback.
-      font-size: 10vmin; // Adjust min and max of this with media queries
+      //font-size: 48px; // Fallback.
+      //font-size: 10vmin; // Adjust min and max of this with media queries
       max-height: 150px;
 
       @media (min-height: 800px) and (min-width: 800px) {

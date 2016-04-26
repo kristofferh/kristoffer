@@ -21,6 +21,7 @@ export default class Navigation extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log(nextProps, this.params);
     this.setState({
       path: this.getPath(nextProps.location.pathname),
       showNav: !!(!this.state.showNav && nextProps.location.pathname === this.props.location.pathname)
@@ -39,7 +40,7 @@ export default class Navigation extends Component {
         </span>
         <Link to='/portfolio/' activeClassName='active' className='nav-item'><span className='text'>{'Portfolio'}</span></Link>
         <Link to='/about/' activeClassName='active' className='nav-item'><span className='text'>{'About'}</span></Link>
-        <Link to='/resume/' activeClassName='active' className='nav-item'><span className='text'>{'Resume'}</span></Link>
+        <Link to='/resume/' activeClassName='active' className='nav-item' params={{color: 'green'}}><span className='text'>{'Resume'}</span></Link>
         <span className='nav-item close' onClick={this.handleCloseClick}>
             <span className='close-btn'></span>
         </span>

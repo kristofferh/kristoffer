@@ -1,0 +1,12 @@
+.green {
+  $background-green: #D9F1C1;
+  background: $background-green;
+
+  a {
+    color: mix($background-green, #000, 50);
+  }
+
+  .main-nav {
+    background: $background-green;
+  }
+}
