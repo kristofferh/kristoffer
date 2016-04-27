@@ -2,6 +2,14 @@
   background: $white;
   min-height: 100vh;
   display: inline-block;
+  width: 100%;
+}
+
+.content-wrapper {
+  max-width: 960px;
+  margin: 60px auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .flat-input {
