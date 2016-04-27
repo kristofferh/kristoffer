@@ -11,9 +11,12 @@ module.exports = React.createClass({
     return (
       <div>
         <Navigation {...this.props} />
-        <div className='content-wrapper'>
+        <section className='content-wrapper'>
           {this.props.children}
-        </div>
+        </section>
+        <footer>
+          {'hi'}
+        </footer>
       </div>
     );
   }
