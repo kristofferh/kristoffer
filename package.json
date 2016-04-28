@@ -20,8 +20,7 @@
     "react-dom": "^15.0.1",
     "react-responsive-grid": "^0.3.0",
     "react-router": "^2.0.0",
-    "safe-access": "^0.1.0",
-    "typography": "^0.7.0"
+    "safe-access": "^0.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.3",

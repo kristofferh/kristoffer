@@ -1,6 +1,11 @@
+@import 'variables';
+
 @mixin art-direction($color) {
+  color: mix($black-00, $color, 75);
+
+
   a {
-    color: mix($color, #000, 50);
+    color: mix($black-00, $color, 50);
   }
 
   .main-nav {
