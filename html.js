@@ -1,5 +1,6 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
+import BodyClassName from 'react-body-classname';
 
 import { prefixLink } from 'gatsby-helpers';
 
@@ -13,6 +14,13 @@ module.exports = React.createClass({
     let title = DocumentTitle.rewind();
     if (this.props.title) {
       title = this.props.title;
+    }
+
+    let color = BodyClassName.rewind();
+    if (this.props.color) {
+      color = this.props.color;
+    } else {
+      color = 'green';
     }
 
     let cssLink;
@@ -30,7 +38,7 @@ module.exports = React.createClass({
           <link rel='shortcut icon' href={this.props.favicon}/>
           {cssLink}
         </head>
-        <body>
+        <body className={color}>
           <div id='react-mount' className='page-wrapper' dangerouslySetInnerHTML={{ __html: this.props.body }} />
           <script src={prefixLink('/bundle.js')}/>
         </body>

@@ -15,6 +15,7 @@
     "classnames": "^2.2.3",
     "normalize.css": "^4.1.1",
     "react": "^15.0.1",
+    "react-body-classname": "^1.0.1",
     "react-document-title": "^2.0.1",
     "react-dom": "^15.0.1",
     "react-responsive-grid": "^0.3.0",

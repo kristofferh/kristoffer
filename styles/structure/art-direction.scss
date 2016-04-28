@@ -1,12 +1,25 @@
-.green {
-  $background-green: #D9F1C1;
-  background: $background-green;
-
+@mixin art-direction($color) {
   a {
-    color: mix($background-green, #000, 50);
+    color: mix($color, #000, 50);
   }
 
   .main-nav {
-    background: $background-green;
+    background: $color;
   }
+}
+
+.green {
+  @include art-direction(#D9F1C1);
+}
+
+.blue {
+  @include art-direction(#B5EDFF);
+}
+
+.pink{
+  @include art-direction(#EFD6F1);
+}
+
+.orange {
+  @include art-direction(#FFC6A6);
 }
