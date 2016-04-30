@@ -6,13 +6,11 @@
 }
 
 .content-wrapper {
-  margin: 60px auto 52px;
+  margin: 60px auto 20px;
   background: $white;
   display: inline-block;
   width: 100%;
   position: relative;
-  z-index: 10;
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
 .content-container {
@@ -22,6 +20,7 @@
 }
 
 .footer-wrapper {
+  display: none;
   position: fixed;
   bottom: 0;
   left: 0;
