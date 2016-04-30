@@ -37,7 +37,6 @@ export default class Navigation extends Component {
         <span className='nav-logo'>
           <span className='nav-logo-container' dangerouslySetInnerHTML={{__html: mark}} />
         </span>
-        <Link to='/portfolio/' activeClassName='active' className='nav-item'><span className='text'>{'Portfolio'}</span></Link>
         <Link to='/about/' activeClassName='active' className='nav-item'><span className='text'>{'About'}</span></Link>
         <Link to='/resume/' activeClassName='active' className='nav-item'><span className='text'>{'Resume'}</span></Link>
         <span className='nav-item close' onClick={this.handleCloseClick}>

@@ -4,8 +4,20 @@
 
   color: $dark;
 
-  a {
-    color: mix($black-00, $color, 50);
+  .content-wrapper,
+  .page-footer {
+    a {
+      color: mix($black-00, $color, 50);
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: mix($black-00, $color, 75);
+      }
+    }
+  }
+
+  .highlight {
+    background: $light;
   }
 
   .main-nav {

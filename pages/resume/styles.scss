@@ -1,4 +1,15 @@
+@import 'styles/structure/variables';
+
 .resume-wrapper {
+  margin-top: 20px;
+
+  abbr {
+    text-decoration: none;
+  }
+
+  .portfolio-link {
+    display: none;
+  }
 
   .contact-wrapper {
     @media (min-width: 64em) {
@@ -7,6 +18,49 @@
   }
 
   .section-wrapper {
+    margin-top: 3rem;
+
+    .section-headline {
+      font-family: $font-family-title;
+      font-weight: normal;
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+
+    .title {
+      font-family: $font-family-serif-headline;
+      margin: 0;
+    }
+  }
+
+  .summary-wrapper {
     margin-top: 1rem;
   }
+
+  .experience {
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .skills {
+    margin-top: 0;
+    columns: 3;
+  }
+
+  .footer {
+    margin-top: 3rem;
+  }
+
+  .location {
+    display: none;
+
+    @media (min-width: 48em) {
+      text-align: right;
+      display: block;
+    }
+  }
+
 }

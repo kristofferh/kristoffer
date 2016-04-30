@@ -11,6 +11,36 @@
   display: inline-block;
   width: 100%;
   position: relative;
+
+  .page-title {
+    font-size: 48px;
+    font-family: $font-family-title;
+    font-weight: normal;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0.75em 0 0.5em;
+    @media (max-width: 48em) {
+      font-size: 32px;
+    }
+  }
+
+  .sub-title {
+    font-size: 18px;
+    font-family: $font-family-title;
+    font-weight: normal;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .no-bullet-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .module {
+    margin: 0.5em 0;
+  }
 }
 
 .content-container {
