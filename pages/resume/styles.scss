@@ -12,7 +12,9 @@
   }
 
   .contact-wrapper {
+    margin-bottom: 1rem;
     @media (min-width: 64em) {
+      margin-top: 1rem;
       text-align: right;
     }
   }

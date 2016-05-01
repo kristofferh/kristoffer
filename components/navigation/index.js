@@ -21,10 +21,20 @@ export default class Navigation extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    let locationChanged = nextProps.location.pathname !== this.props.location.pathname;
     this.setState({
       path: this.getPath(nextProps.location.pathname),
-      showNav: !!(!this.state.showNav && nextProps.location.pathname === this.props.location.pathname)
+      showNav: !!(!this.state.showNav && !locationChanged)
     });
+
+    if (locationChanged) {
+      window.analytics.page();
+    }
+  }
+
+  componentDidMount() {
+    // Page load
+    window.analytics.page();
   }
 
   getPath(path) {
