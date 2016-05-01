@@ -1,5 +1,4 @@
 import React from 'react';
-import DocumentTitle from 'react-document-title';
 import BodyClassName from 'react-body-classname';
 import Helmet from 'react-helmet';
 
@@ -13,14 +12,10 @@ module.exports = React.createClass({
     };
   },
   render () {
-    // let title = DocumentTitle.rewind();
-    // if (this.props.title) {
-    //   title = this.props.title;
-    // }
 
     let head = Helmet.rewind();
-
     let color = BodyClassName.rewind();
+
     if (this.props.color) {
       color = this.props.color;
     } else {
