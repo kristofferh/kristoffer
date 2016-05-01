@@ -13,10 +13,12 @@ module.exports = React.createClass({
     };
   },
   render () {
-    let title = DocumentTitle.rewind();
-    if (this.props.title) {
-      title = this.props.title;
-    }
+    // let title = DocumentTitle.rewind();
+    // if (this.props.title) {
+    //   title = this.props.title;
+    // }
+
+    let head = Helmet.rewind();
 
     let color = BodyClassName.rewind();
     if (this.props.color) {
@@ -41,7 +43,8 @@ module.exports = React.createClass({
           <meta charSet='utf-8'/>
           <meta httpEquiv='X-UA-Compatible' content='IE=edge'/>
           <meta name='viewport' content='width=device-width, initial-scale=1.0 maximum-scale=1.0'/>
-          <title>{title}</title>
+          { head.meta.toComponent() }
+          { head.title.toComponent() }
           <link rel='shortcut icon' href={this.props.favicon}/>
           <script dangerouslySetInnerHTML={{ __html: analytics}} />
           {cssLink}
