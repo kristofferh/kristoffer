@@ -14,7 +14,7 @@ module.exports = React.createClass({
   render () {
     let page = this.props.children.props.route.page.data;
     let path = this.props.children.props.route.page.path;
-    console.log(path);
+
     return (
       <div>
         <Helmet

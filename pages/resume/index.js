@@ -6,13 +6,13 @@ import './styles';
 
 export default class Resume extends Component {
   render () {
-    let description = 'Kristoffer Hedstrom\'s Resume.';
+    let description = "Kristoffer Hedstrom's Resume.";
     return (
       <div>
         <Helmet
             meta={[
               { name: 'description', content: description },
-              { name: 'description', content: description },
+              { property: 'og:description', content: description },
               { name: 'twitter:title', content: description },
               { name: 'twitter:description', content: 'Cool beans.' }
             ]}
