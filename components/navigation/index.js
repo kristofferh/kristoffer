@@ -9,6 +9,7 @@ export default class Navigation extends Component {
 
   constructor(props) {
     super(props);
+    this.navItems = ['index', 'about', 'resume']; // @todo: generate links based off of these.
     this.state = {
       path: this.getPath(this.props.location.pathname),
       showNav: false
@@ -24,7 +25,7 @@ export default class Navigation extends Component {
     let locationChanged = nextProps.location.pathname !== this.props.location.pathname;
     this.setState({
       path: this.getPath(nextProps.location.pathname),
-      showNav: !!(!this.state.showNav && !locationChanged)
+      showNav: !!(!this.state.showNav && !locationChanged),
     });
 
     if (locationChanged) {
