@@ -11,7 +11,7 @@ export default class Navigation extends Component {
     super(props);
     this.navItems = ['index', 'about', 'resume']; // @todo: generate links based off of these.
     this.state = {
-      path: this.getPath(this.props.location.pathname),
+      path: this.getPath(props.location.pathname),
       showNav: false
     };
     this.handleCloseClick = this.handleCloseClick.bind(this);
