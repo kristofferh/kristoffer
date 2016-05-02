@@ -6,19 +6,12 @@
         color: #000 !important;
         box-shadow: none !important;
         text-shadow: none !important;
+        overflow: visible !important;
     }
 
     a,
     a:visited {
         text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
     }
 
     a[href^="#"]:after,
@@ -55,5 +48,52 @@
     h2,
     h3 {
         page-break-after: avoid;
+    }
+
+    @page {
+      margin: 2cm;
+    }
+
+    @page:first {
+      margin-top: 0;
+    }
+
+    .main-nav,
+    .about-photo {
+      display: none;
+    }
+
+    .main-nav.index {
+      position: relative;
+      display: block;
+
+      .nav-item {
+        display: none;
+      }
+
+      .svg-mark {
+        fill: #000;
+        stroke: #000;
+      }
+    }
+
+    .content-wrapper {
+      margin: auto;
+
+      .page-title {
+        margin-top: 0;
+      }
+    }
+
+    .resume-wrapper {
+      margin-top: 0;
+
+      .summary-wrapper {
+        margin-top: 0;
+      }
+    }
+
+    .page-footer.content-container .footer-inner {
+      text-align: center;
     }
 }
