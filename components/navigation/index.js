@@ -1,24 +1,34 @@
 import {default as React, Component} from 'react';
 import classNames from 'classnames';
 import {Link} from 'react-router';
+import { browserHistory } from 'react-router';
 
 import mark from './mark.svg';
 import './styles';
 
-export default class Navigation extends Component {
+class Navigation extends Component {
 
-  constructor(props) {
-    super(props);
+  constructor(props, context) {
+    super(props, context);
     this.navItems = ['index', 'about', 'resume', 'portfolio']; // @todo: generate links based off of these.
     this.state = {
       path: this.getPath(props.location.pathname),
       showNav: false
     };
     this.handleCloseClick = this.handleCloseClick.bind(this);
+    this.handlePortfolioClick = this.handlePortfolioClick.bind(this);
   }
 
   handleCloseClick() {
     this.setState({showNav: false});
+  }
+
+  // @todo: make this generic.
+  handlePortfolioClick(e) {
+    if (!this.state.showNav && this.state.path === 'portfolio') {
+      e.preventDefault();
+      this.setState({showNav: true});
+    }
   }
 
   componentWillReceiveProps(nextProps) {
@@ -39,7 +49,7 @@ export default class Navigation extends Component {
   }
 
   getPath(path) {
-    return (path === '/') ? 'index' : path.replace(/\//g, '');
+    return (path === '/') ? 'index' : path.split('/')[1].replace(/\//g, ' ');
   }
 
   render() {
@@ -48,7 +58,7 @@ export default class Navigation extends Component {
         <span className='nav-logo'>
           <span className='nav-logo-container' dangerouslySetInnerHTML={{__html: mark}} />
         </span>
-        <Link to='/portfolio/' activeClassName='active' className='nav-item'><span className='text'>{'Portfolio'}</span></Link>
+        <Link to='/portfolio/' onClick={this.handlePortfolioClick} activeClassName='active' className={classNames('nav-item', {'active': this.state.path === 'portfolio'})}><span className='text'>{'Portfolio'}</span></Link>
         <Link to='/about/' activeClassName='active' className='nav-item'><span className='text'>{'About'}</span></Link>
         <Link to='/resume/' activeClassName='active' className='nav-item'><span className='text'>{'Resume'}</span></Link>
         <span className='nav-item close' onClick={this.handleCloseClick}>
@@ -64,5 +74,14 @@ Navigation.defaultProps = {
 };
 
 Navigation.propTypes = {
-  location: React.PropTypes.object.isRequired
+  location: React.PropTypes.object.isRequired,
+  route: React.PropTypes.object.isRequired
 };
+
+Navigation.contextTypes = {
+  router: function () {
+    return React.PropTypes.func.isRequired;
+  }
+};
+
+export default Navigation;
