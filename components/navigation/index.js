@@ -1,7 +1,6 @@
 import {default as React, Component} from 'react';
 import classNames from 'classnames';
 import {Link} from 'react-router';
-import { browserHistory } from 'react-router';
 
 import mark from './mark.svg';
 import './styles';
@@ -13,8 +12,11 @@ class Navigation extends Component {
     this.navItems = ['index', 'about', 'resume', 'portfolio']; // @todo: generate links based off of these.
     this.state = {
       path: this.getPath(props.location.pathname),
+      pageTitle: this.getPageTitle(this.props),
       showNav: false
     };
+
+    console.log(this.state.pageTitle);
     this.handleCloseClick = this.handleCloseClick.bind(this);
     this.handlePortfolioClick = this.handlePortfolioClick.bind(this);
   }
@@ -35,9 +37,11 @@ class Navigation extends Component {
     let locationChanged = nextProps.location.pathname !== this.props.location.pathname;
     this.setState({
       path: this.getPath(nextProps.location.pathname),
+      pageTitle: this.getPageTitle(nextProps),
       showNav: !!(!this.state.showNav && !locationChanged)
     });
 
+    console.log(this.state.pageTitle);
     if (locationChanged) {
       window.analytics.page();
     }
@@ -50,6 +54,17 @@ class Navigation extends Component {
 
   getPath(path) {
     return (path === '/') ? 'index' : path.split('/')[1].replace(/\//g, ' ');
+  }
+
+  getPageTitle(props) {
+    console.log(props);
+    var test = props.route.pages
+      .filter(page => page.path === props.location.pathname);
+    console.log(test);
+    let titleArray = props.route.pages
+      .filter(page => page.path === props.location.pathname)
+      .map(stuff => stuff.data.title);
+    return titleArray[0];
   }
 
   render() {
