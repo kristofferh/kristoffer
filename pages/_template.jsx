@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Helmet from 'react-helmet';
 import {config} from 'config';
 
@@ -6,6 +7,12 @@ import Navigation from 'components/navigation';
 import Footer from 'components/footer';
 
 module.exports = React.createClass({
+  componentWillReceiveProps(newProps) {
+    // `path` is an array of tree node indexes
+    // const direction = newProps.path.length > this.props.path.length ?
+    //   'right' : 'left';
+    //this.setState({direction});
+  },
   propTypes () {
     return {
       children: React.PropTypes.any
