@@ -16,7 +16,6 @@ class Navigation extends Component {
       showNav: false
     };
 
-    console.log(this.state.pageTitle);
     this.handleCloseClick = this.handleCloseClick.bind(this);
     this.handlePortfolioClick = this.handlePortfolioClick.bind(this);
   }
@@ -41,7 +40,6 @@ class Navigation extends Component {
       showNav: !!(!this.state.showNav && !locationChanged)
     });
 
-    console.log(this.state.pageTitle);
     if (locationChanged) {
       window.analytics.page();
     }
@@ -57,10 +55,6 @@ class Navigation extends Component {
   }
 
   getPageTitle(props) {
-    console.log(props);
-    var test = props.route.pages
-      .filter(page => page.path === props.location.pathname);
-    console.log(test);
     let titleArray = props.route.pages
       .filter(page => page.path === props.location.pathname)
       .map(stuff => stuff.data.title);

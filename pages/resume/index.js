@@ -6,7 +6,7 @@ import './styles';
 
 export default class Resume extends Component {
   render () {
-    let description = "Kristoffer Hedstrom's Resume.";
+    let description = 'Kristoffer Hedstrom\'s Resume.';
     return (
       <div>
         <Helmet
