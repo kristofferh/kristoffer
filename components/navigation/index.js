@@ -88,9 +88,7 @@ Navigation.propTypes = {
 };
 
 Navigation.contextTypes = {
-  router: function () {
-    return React.PropTypes.func.isRequired;
-  }
+  router: React.PropTypes.object
 };
 
 export default Navigation;

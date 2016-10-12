@@ -14,6 +14,7 @@
     "babel-preset-stage-1": "^6.5.0",
     "classnames": "^2.2.3",
     "normalize.css": "^4.1.1",
+    "nuka-carousel": "^2.0.3",
     "react": "^15.1.0",
     "react-addons-css-transition-group": "^15.1.0",
     "react-body-classname": "^1.0.1",
