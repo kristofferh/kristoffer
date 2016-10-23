@@ -3,12 +3,17 @@ import Helmet from 'react-helmet';
 import Carousel from 'nuka-carousel';
 
 export default class Spender extends Component {
+  componentDidMount() {
+    setTimeout(() => {
+      window.dispatchEvent(new Event('resize'));
+    }, 0);
+  }
+
   render () {
     let description = 'Spender';
-    const pages = this.props.route.pages;
 
     return (
-      <div className='content-container'>
+      <div className='portfolio'>
         <Helmet
             meta={[
               { name: 'description', content: description },
@@ -18,7 +23,15 @@ export default class Spender extends Component {
             ]}
             title='Spender'
         />
-        <p>{'Spender'}</p>
+        <div className='portfolio-carousel'>
+         <Carousel decorators={[]}>
+          <img src='/images/iphone.png'/>
+          <img src='/images/iphone.png'/>
+        </Carousel>
+        </div>
+        <div className='content-container'>
+          <p>{'Spender'}</p>
+        </div>
       </div>
     );
   }
