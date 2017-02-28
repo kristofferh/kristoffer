@@ -1,7 +1,6 @@
 @import 'styles/structure/variables';
 
 .resume-wrapper {
-  margin-top: 20px;
 
   abbr {
     text-decoration: none;
@@ -12,9 +11,11 @@
   }
 
   .contact-wrapper {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+
     @media (min-width: 64em) {
-      margin-top: 1rem;
+      margin-top: 0;
       text-align: right;
     }
   }
