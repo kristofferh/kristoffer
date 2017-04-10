@@ -1,23 +1,20 @@
-import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import {config} from 'config';
 
 import Navigation from 'components/navigation';
 import Footer from 'components/footer';
 
-module.exports = React.createClass({
-  componentWillReceiveProps(newProps) {
+export default class Template extends Component {
+
+  componentWillReceiveProps() {
     // `path` is an array of tree node indexes
     // const direction = newProps.path.length > this.props.path.length ?
     //   'right' : 'left';
     //this.setState({direction});
-  },
-  propTypes () {
-    return {
-      children: React.PropTypes.any
-    };
-  },
+  }
+
   render () {
     let page = this.props.children.props.route.page.data;
     let path = this.props.children.props.route.page.path;
@@ -51,4 +48,8 @@ module.exports = React.createClass({
       </div>
     );
   }
-});
+}
+
+Template.propTypes = {
+  children: PropTypes.any
+};
