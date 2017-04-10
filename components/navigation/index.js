@@ -2,7 +2,7 @@ import {default as React, Component} from 'react';
 import classNames from 'classnames';
 import {Link} from 'react-router';
 
-import mark from './mark.svg';
+import Mark from '../mark';
 import './styles';
 
 class Navigation extends Component {
@@ -65,7 +65,9 @@ class Navigation extends Component {
     return (
       <nav className={classNames('main-nav', {[`${this.state.path}`]: this.state.path}, {'show-nav': this.state.showNav} )}>
         <span className='nav-logo'>
-          <span className='nav-logo-container' dangerouslySetInnerHTML={{__html: mark}} />
+          <span className='nav-logo-container'>
+            <Mark />
+          </span>
         </span>
         <Link to='/portfolio/' onClick={this.handlePortfolioClick} activeClassName='active' className={classNames('nav-item', {'active': this.state.path === 'portfolio'})}><span className='text'>{'Portfolio'}</span></Link>
         <Link to='/about/' activeClassName='active' className='nav-item'><span className='text'>{'About'}</span></Link>

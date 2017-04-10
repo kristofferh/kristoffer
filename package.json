@@ -13,6 +13,7 @@
     "babel-plugin-add-module-exports": "^0.1.2",
     "babel-preset-stage-1": "^6.5.0",
     "classnames": "^2.2.3",
+    "gatsby": "^0.12.39",
     "normalize.css": "^4.1.1",
     "nuka-carousel": "^2.0.3",
     "react": "^15.1.0",
@@ -22,7 +23,6 @@
     "react-dom": "^15.0.1",
     "react-helmet": "^3.1.0",
     "react-responsive-grid": "^0.3.0",
-    "react-router": "^2.0.0",
     "safe-access": "^0.1.0"
   },
   "devDependencies": {
@@ -44,7 +44,6 @@
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.0",
     "redbox-react": "^1.0.1",
-    "svg-inline-loader": "^0.4.1",
     "webpack": "^1.12.14"
   }
 }
