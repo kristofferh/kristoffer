@@ -25,7 +25,7 @@ export default class Template extends Component {
             meta={[
               { name: 'description', content: page.description || config.description },
               { property: 'og:url', content: `${config.url}${path}` },
-              { property: 'og:type', content: 'blog' },
+              { property: 'og:type', content: 'website' },
               { property: 'og:title', content: (page.title) ? `${page.title} - ${config.siteTitle}` : config.siteTitle },
               { property: 'og:site_name', content: config.siteTitle },
               { property: 'og:image', content: config.shareImage },

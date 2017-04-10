@@ -2,11 +2,20 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import Carousel from 'nuka-carousel';
 
+exports.data = {
+  title: 'Spender',
+  color: 'pink'
+};
+
 export default class Spender extends Component {
-  componentDidMount() {
-    setTimeout(() => {
-      window.dispatchEvent(new Event('resize'));
-    }, 0);
+
+  constructor() {
+    super();
+    this.handleLoadedImage = this.handleLoadedImage.bind(this);
+  }
+
+  handleLoadedImage() {
+    this.refs.carousel.setDimensions();
   }
 
   render () {
@@ -24,13 +33,14 @@ export default class Spender extends Component {
             title='Spender'
         />
         <div className='portfolio-carousel'>
-         <Carousel decorators={[]}>
-          <img src='/images/iphone.png'/>
-          <img src='/images/iphone.png'/>
-        </Carousel>
+          <Carousel decorators={[]} ref='carousel'>
+            <img src='/images/iphone.png' onLoad={this.handleLoadedImage}/>
+            <img src='/images/iphone.png'/>
+          </Carousel>
         </div>
         <div className='content-container'>
-          <p>{'Spender'}</p>
+          <p>{'Spender is personal project, where I’m keeping track of my spending through a simple iOS app.'}</p>
+          <p>{'Mint is great, but it doesn’t keep track of cash spending. And all the other different spending trackers out there, didn’t meet my specific needs, so I’m building my own version.'}</p>
         </div>
       </div>
     );

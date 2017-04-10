@@ -1,3 +1,5 @@
+@import 'variables';
+
 @mixin art-direction($color) {
   $dark: mix($black-00, $color, 75);
   $light: mix($white, $color, 50);
@@ -34,17 +36,17 @@
 }
 
 .green {
-  @include art-direction(#D9F1C1);
+  @include art-direction($green);
 }
 
 .blue {
-  @include art-direction(#B5EDFF);
+  @include art-direction($blue);
 }
 
 .pink {
-  @include art-direction(#EFD6F1);
+  @include art-direction($pink);
 }
 
 .orange {
-  @include art-direction(#FFC6A6);
+  @include art-direction($orange);
 }

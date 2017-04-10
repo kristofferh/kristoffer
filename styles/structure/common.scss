@@ -5,22 +5,25 @@
   width: 100%;
 }
 
-.page-transition-enter {
-  opacity: 0.01;
-  transition: opacity 0.1s ease-in;
-}
+.page-transition {
 
-.page-transition-enter.page-transition-enter-active {
-  opacity: 1;
-}
+  &-enter {
+    opacity: 0.01;
+    transition: opacity 0.1s ease-in;
 
-.page-transition-leave {
-  opacity: 1;
-  transition: opacity 0.1s ease-in;
-}
+    &-active {
+      opacity: 1
+    }
+  }
 
-.page-transition-leave.page-transition-leave-active {
-  opacity: 0;
+  &-leave {
+    opacity: 1;
+    transition: opacity 0.1s ease-in;
+
+    &-active {
+      opacity: 0;
+    }
+  }
 }
 
 .content-wrapper {
@@ -103,56 +106,5 @@
 }
 
 .portfolio-carousel {
-  background: radial-gradient(ellipse at center, rgba(182, 231, 221, 0.75) 0%,#040c28 100%);
-}
-
-.flat-input {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  font-family: inherit;
-  padding: 5px 5px 6px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.75);
-  color: $white;
-  font-size: 20px;
-  outline: none;
-  width: 100%;
-
-  &:active,
-  &:hover {
-      border-bottom: 2px solid rgba(255, 255, 255, 1);
-      padding-bottom: 5px;
-  }
-
-  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: rgba(255, 255, 255, 0.75);
-  }
-
-  &::-moz-placeholder { /* Firefox 19+ */
-      color: rgba(255, 255, 255, 0.8);
-  }
-
-  &:-ms-input-placeholder { /* IE 10+ */
-      color: rgba(255, 255, 255, 0.8);
-  }
-
-  &:-moz-placeholder { /* Firefox 18- */
-      color: rgba(255, 255, 255, 0.8);
-  }
-}
-
-.flat-button {
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  font-size: 20px;
-  border-radius: 2px;
-  padding: 3px 10px;
-  color: $white;
-  margin-left: 10px;
-  outline: none;
-
-  &:hover,
-  &:active {
-      background: rgba(255, 255, 255, 0.2);
-  }
+  background: radial-gradient(ellipse at center, rgba(182, 231, 221, 0.75) 0%, #040c28 100%);
 }

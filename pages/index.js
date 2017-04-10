@@ -1,4 +1,5 @@
 import {default as React, Component} from 'react';
+import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import BodyClassName from 'react-body-classname';
 
@@ -38,5 +39,5 @@ export default class Index extends Component {
 }
 
 Index.propTypes = {
-  route: React.PropTypes.object
+  route: PropTypes.object
 };

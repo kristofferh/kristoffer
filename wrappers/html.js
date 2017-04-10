@@ -1,4 +1,5 @@
 import {default as React, Component} from 'react';
+import PropTypes from 'prop-types';
 import BodyClassName from 'react-body-classname';
 
 export default class HTMLWrapper extends Component {
@@ -14,5 +15,5 @@ export default class HTMLWrapper extends Component {
 }
 
 HTMLWrapper.propTypes = {
-  route: React.PropTypes.object
+  route: PropTypes.object
 };
