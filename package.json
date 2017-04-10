@@ -39,6 +39,7 @@
     "eslint-plugin-react": "^4.1.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "flexboxgrid": "^6.3.0",
+    "postcss-cssnext": "^2.9.0",
     "postcss-loader": "^0.8.1",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.0",
