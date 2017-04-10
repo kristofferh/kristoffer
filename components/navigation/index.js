@@ -55,10 +55,7 @@ class Navigation extends Component {
   }
 
   getPageTitle(props) {
-    let titleArray = props.route.pages
-      .filter(page => page.path === props.location.pathname)
-      .map(stuff => stuff.data.title);
-    return titleArray[0];
+    return props.children.props.route.page.data.title;
   }
 
   render() {
@@ -69,9 +66,24 @@ class Navigation extends Component {
             <Mark />
           </span>
         </span>
-        <Link to='/portfolio/' onClick={this.handlePortfolioClick} activeClassName='active' className={classNames('nav-item', {'active': this.state.path === 'portfolio'})}><span className='text'>{'Portfolio'}</span></Link>
-        <Link to='/about/' activeClassName='active' className='nav-item'><span className='text'>{'About'}</span></Link>
-        <Link to='/resume/' activeClassName='active' className='nav-item'><span className='text'>{'Resume'}</span></Link>
+        <Link to='/portfolio/' onClick={this.handlePortfolioClick} activeClassName='active' className={classNames('nav-item', {'active': this.state.path === 'portfolio'})}>
+          <span className='text'>
+            <span className='subnav-wrapper'>
+              <span>
+                <span className={classNames('section-title', {'has-subnav': (this.state.path === 'portfolio' && this.state.pageTitle !== 'Portfolio')})}>{'Portfolio'}</span>
+              </span>
+              <span>
+                {(this.state.path === 'portfolio' && this.state.pageTitle !== 'Portfolio') && <span className='page-title'>{this.state.pageTitle}</span>}
+              </span>
+            </span>
+          </span>
+        </Link>
+        <Link to='/about/' activeClassName='active' className='nav-item'>
+          <span className='text'>{'About'}</span>
+        </Link>
+        <Link to='/resume/' activeClassName='active' className='nav-item'>
+          <span className='text'>{'Resume'}</span>
+        </Link>
         <span className='nav-item close' onClick={this.handleCloseClick}>
             <span className='close-btn'></span>
         </span>

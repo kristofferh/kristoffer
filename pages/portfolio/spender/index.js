@@ -4,7 +4,8 @@ import Carousel from 'nuka-carousel';
 
 exports.data = {
   title: 'Spender',
-  color: 'pink'
+  color: 'green',
+  description: 'Spender is, or will be, an iOS app for tracking spending. It is a work in progress.'
 };
 
 export default class Spender extends Component {
@@ -19,7 +20,7 @@ export default class Spender extends Component {
   }
 
   render () {
-    let description = 'Spender';
+    let {description} = exports.data;
 
     return (
       <div className='portfolio'>
@@ -39,8 +40,14 @@ export default class Spender extends Component {
           </Carousel>
         </div>
         <div className='content-container'>
-          <p>{'Spender is personal project, where I’m keeping track of my spending through a simple iOS app.'}</p>
-          <p>{'Mint is great, but it doesn’t keep track of cash spending. And all the other different spending trackers out there, didn’t meet my specific needs, so I’m building my own version.'}</p>
+          <h1 className='page-title'>{'Spender'}</h1>
+          <div className='row'>
+            <div className='col-xs-12 col-sm-8 col-sm-offset-4'>
+              <p>{'Spender is personal project, where I’m keeping track of my spending through a simple iOS app.'}</p>
+              <p>{'Mint is great, but it doesn’t keep track of cash spending. And all the other different spending trackers out there didn’t meet my specific needs.'}</p>
+              <p>{'So I’m building my own version.'}</p>
+            </div>
+          </div>
         </div>
       </div>
     );

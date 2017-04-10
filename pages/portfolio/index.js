@@ -1,12 +1,11 @@
 import React, { Component} from 'react';
 import PropTypes from 'prop-types';
-import BodyClassName from 'react-body-classname';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 import Helmet from 'react-helmet';
 import access from 'safe-access';
 
-const data = {
+exports.data = {
   title: 'Portfolio',
   color: 'orange',
   description: 'Kristoffer Hedstrom\'s Portfolio.'
@@ -14,7 +13,7 @@ const data = {
 
 export default class PortfolioIndex extends Component {
   render () {
-    let {description, title, color} = data;
+    let {description, title} = exports.data;
 
     const pages = this.props.route.pages;
 
@@ -38,21 +37,19 @@ export default class PortfolioIndex extends Component {
       });
 
     return (
-      <BodyClassName className={color}>
-        <div className='content-container'>
-          <Helmet
-              meta={[
-                { name: 'description', content: description },
-                { property: 'og:description', content: description },
-                { name: 'twitter:title', content: description },
-                { name: 'twitter:description', content: 'Cool beans.' }
-              ]}
-              title={title}
-          />
-          <p>{'Portfolio Index'}</p>
-          {pageLinks}
-        </div>
-      </BodyClassName>
+      <div className='content-container'>
+        <Helmet
+            meta={[
+              { name: 'description', content: description },
+              { property: 'og:description', content: description },
+              { name: 'twitter:title', content: description },
+              { name: 'twitter:description', content: 'Cool beans.' }
+            ]}
+            title={title}
+        />
+        <p>{'Portfolio Index'}</p>
+        {pageLinks}
+      </div>
     );
   }
 }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import BodyClassName from 'react-body-classname';
 import {config} from 'config';
 
 import Navigation from 'components/navigation';
@@ -18,9 +19,11 @@ export default class Template extends Component {
   render () {
     let page = this.props.children.props.route.page.data;
     let path = this.props.children.props.route.page.path;
+    let color = page.color || 'green';
 
     return (
       <div>
+        <BodyClassName className={color} />
         <Helmet
             meta={[
               { name: 'description', content: page.description || config.description },

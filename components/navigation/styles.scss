@@ -39,7 +39,6 @@
     fill: $white;
     stroke: $white;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.02);
-    // transform: rotate(-18deg); // Do the transform on the group instead -- pushes outside of container otherwise.
   }
 
   &.index,
@@ -80,7 +79,7 @@
       }
 
       &.active {
-          border-bottom-color: rgba(255, 255, 255, 0.25);
+        border-bottom-color: rgba(255, 255, 255, 0.25);
       }
 
       &:not(.active) {
@@ -96,6 +95,13 @@
             animation-delay: (0.05s * $i);
           }
         }
+      }
+
+      .section-title {
+        animation: page-title-in 0.2s ease forwards;
+      }
+      .page-title {
+        animation: page-title-out 0.2s ease forwards;
       }
     }
 
@@ -171,6 +177,14 @@
       transform: scale(1) translate3d(-50%, -50%, 0);
     }
 
+    .section-title {
+      display: inline-block;
+    }
+
+    .page-title {
+      display: inline-block;
+    }
+
     .close-btn {
       $close-btn-size: 40px;
       transform: scale(1);
@@ -230,5 +244,17 @@
   to {
     transform: scale(1) translate3d(-50%, -50%, 0);
     opacity: 1;
+  }
+}
+
+@keyframes page-title-out {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0);
+    opacity: 0;
   }
 }
