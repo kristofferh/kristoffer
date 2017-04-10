@@ -23,7 +23,6 @@
     "react-document-title": "^2.0.1",
     "react-dom": "^15.0.1",
     "react-helmet": "^3.1.0",
-    "react-responsive-grid": "^0.3.0",
     "safe-access": "^0.1.0"
   },
   "devDependencies": {
