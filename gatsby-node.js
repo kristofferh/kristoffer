@@ -1,4 +1,5 @@
 var extractTextWebpackPlugin = require('extract-text-webpack-plugin');
+var path = require('path');
 
 exports.modifyWebpackConfig = function(config, env) {
 
@@ -15,7 +16,12 @@ exports.modifyWebpackConfig = function(config, env) {
     config.loader('sass', {
       test: /\.(sass|scss)/,
       exclude: /\.module\.(sass|scss)$/,
-      loader: extractTextWebpackPlugin.extract(['css?minimize', 'postcss', 'sass'])
+      loader: extractTextWebpackPlugin.extract([
+        'css?minimize',
+        'postcss',
+        'sass',
+        path.resolve(__dirname, './webpack.loader.global')
+      ])
     });
   }
 
@@ -24,7 +30,13 @@ exports.modifyWebpackConfig = function(config, env) {
     config.loader('sass', {
       test: /\.(sass|scss)/,
       exclude: /\.module\.(sass|scss)$/,
-      loaders: ['style', 'css', 'postcss', 'sass']
+      loaders: [
+        'style',
+        'css',
+        'postcss',
+        'sass',
+        path.resolve(__dirname, './webpack.loader.global')
+      ]
     });
   }
 
