@@ -1,7 +1,7 @@
-@import 'styles/structure/variables';
+@import 'styles/structure/variables/index';
 
 .main-nav {
-  background-color: #D9F1C1;
+  background-color: $green;
   height: 60px;
   position: fixed;
   width: 100%;

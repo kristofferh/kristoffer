@@ -1,4 +1,4 @@
-@import 'variables';
+@import 'variables/index';
 
 @mixin art-direction($color) {
   $dark: mix($black-00, $color, 75);

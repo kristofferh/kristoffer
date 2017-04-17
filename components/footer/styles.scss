@@ -1,11 +1,11 @@
-@import 'styles/structure/variables';
+@import 'styles/structure/variables/index';
 
 .page-footer.content-container {
   margin-top: 30px;
 
   &:before {
     content: '';
-    border-top: 2px solid #eee;
+    border-top: 1px solid #eee;
     display: block;
   }
 
