@@ -11,7 +11,6 @@ const HTML = ({color, favicon, body}) => {
   let head = Helmet.rewind();
 
   if (!color) {
-    console.log(color);
     color = BodyClassName.rewind() || 'green';
   }
 
