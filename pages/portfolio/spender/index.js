@@ -17,6 +17,11 @@ export default class Spender extends Component {
 
   handleLoadedImage() {
     this.refs.carousel.setDimensions();
+    // This is terrible.
+    let slides = [].slice.call(document.querySelectorAll('.slider-slide'));
+    slides.forEach((slide) => {
+      slide.style.height = '100%';
+    });
   }
 
   render () {
@@ -37,6 +42,11 @@ export default class Spender extends Component {
           <Carousel decorators={[]} ref='carousel'>
             <img src='/images/iphone.png' onLoad={this.handleLoadedImage}/>
             <img src='/images/iphone.png'/>
+            <div className='video-container'>
+              <video autoPlay loop>
+                <source src='/videos/nomad.mp4' type='video/mp4' />
+              </video>
+            </div>
           </Carousel>
         </div>
         <div className='content-container'>
