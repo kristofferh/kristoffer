@@ -26,7 +26,7 @@ export default class PortfolioIndex extends Component {
         }
       })
       .map (page => {
-        const title = access(page, 'data.title') || page.path;
+        const title = access(page, 'data.image') || page.path;
         return (
           <div key={page.path} className='portfolio-item'>
             <Link to={prefixLink(page.path)}>
@@ -38,17 +38,17 @@ export default class PortfolioIndex extends Component {
 
     return (
       <div className='content-container'>
-        <Helmet
-            meta={[
-              { name: 'description', content: description },
-              { property: 'og:description', content: description },
-              { name: 'twitter:title', content: description },
-              { name: 'twitter:description', content: 'Cool beans.' }
-            ]}
-            title={title}
-        />
-        <p>{'Portfolio Index'}</p>
-        {pageLinks}
+        <Helmet>
+          <meta name='description' content={description} />
+          <meta property='og:description' content={description} />
+          <meta name='twitter:title' content={description} />
+          <meta name='twitter:description' content={'cool beans'} />
+          <title>{title}</title>
+        </Helmet>
+        <h1 className='page-title'>{'Selected bits'}</h1>
+        <div className='portfolio-items'>
+          {pageLinks}
+        </div>
       </div>
     );
   }

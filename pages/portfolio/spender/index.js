@@ -5,7 +5,8 @@ import Carousel from 'nuka-carousel';
 exports.data = {
   title: 'Spender',
   color: 'green',
-  description: 'Spender is, or will be, an iOS app for tracking spending. It is a work in progress.'
+  description: 'Spender is, or will be, an iOS app for tracking spending. It is a work in progress.',
+  image: '/images/iphone.png'
 };
 
 export default class Spender extends Component {
