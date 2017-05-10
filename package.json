@@ -22,7 +22,7 @@
     "react-body-classname": "^1.0.1",
     "react-document-title": "^2.0.1",
     "react-dom": "^15.0.1",
-    "react-helmet": "^3.1.0",
+    "react-helmet": "^5.0.0",
     "safe-access": "^0.1.0"
   },
   "devDependencies": {
