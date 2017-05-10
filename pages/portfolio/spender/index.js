@@ -43,7 +43,7 @@ export default class Spender extends Component {
             <img src='/images/iphone.png' onLoad={this.handleLoadedImage}/>
             <img src='/images/iphone.png'/>
             <div className='video-container'>
-              <video autoPlay loop>
+              <video className='video-player' autoPlay loop>
                 <source src='/videos/nomad.mp4' type='video/mp4' />
               </video>
             </div>
