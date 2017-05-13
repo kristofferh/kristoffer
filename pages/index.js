@@ -15,24 +15,26 @@ export default class Index extends Component {
     let color = colors[Math.floor(Math.random() * colors.length)];
     return (
       <BodyClassName className={color}>
-        <Helmet
-            meta={[
-              { name: 'description', content: config.description },
-              { property: 'og:url', content: config.url },
-              { property: 'og:type', content: 'blog' },
-              { property: 'og:title', content: config.siteTitle },
-              { property: 'og:site_name', content: config.siteTitle },
-              { property: 'og:image', content: config.shareImage },
-              { property: 'og:description', content: config.description },
-              { name: 'twitter:title', content: config.siteTitle },
-              { name: 'twitter:card', content: 'summary_large_image' },
-              { name: 'twitter:site', content: config.twitter },
-              { name: 'twitter:creator', content: config.twitter },
-              { name: 'twitter:description', content: config.description },
-              { name: 'twitter:image', content: config.shareImage }
-            ]}
-            defaultTitle={ config.siteTitle }
-        />
+        <div>
+          <Helmet defaultTitle={config.siteTitle }>
+            <meta name='description' content={config.description} />
+            <meta property='og:url' content={config.url} />
+            <meta property='og:type' content={'website'} />
+            <meta property='og:title' content={config.siteTitle} />
+            <meta property='og:site_name' content={config.siteTitle} />
+            <meta property='og:image' content={config.shareImage} />
+            <meta property='og:description' content={config.description} />
+            <meta name='twitter:title' content={config.siteTitle} />
+            <meta name='twitter:card' content={'summary_large_image'} />
+            <meta name='twitter:site' content={config.twitter} />
+            <meta name='twitter:creator' content={config.twitter} />
+            <meta name='twitter:description' content={config.description} />
+            <meta name='twitter:image' content={config.shareImage} />
+          </Helmet>
+          <div className='content-container intro'>
+            {'Kristoffer Hedstrom is an interactive designer + developer.'}
+          </div>
+        </div>
       </BodyClassName>
     );
   }
