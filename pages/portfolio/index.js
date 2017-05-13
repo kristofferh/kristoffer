@@ -1,9 +1,13 @@
-import React, { Component} from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
+import {Link} from 'react-router';
+import {prefixLink} from 'gatsby-helpers';
 import Helmet from 'react-helmet';
 import access from 'safe-access';
+
+import groupsOf from 'utils/groups-of';
+
+import './styles';
 
 exports.data = {
   title: 'Portfolio',
@@ -12,29 +16,34 @@ exports.data = {
 };
 
 export default class PortfolioIndex extends Component {
+
   render () {
     let {description, title} = exports.data;
 
     const pages = this.props.route.pages;
 
     const pageLinks = pages
-      .filter (page => {
+      .filter(page => {
         if (/^(\/portfolio\/)(.+)/.test(page.path)) {
           return true;
         } else {
           return false;
         }
       })
-      .map (page => {
+      .map(page => {
         const title = access(page, 'data.image') || page.path;
         return (
-          <div key={page.path} className='portfolio-item'>
+          <div key={page.path} className='portfolio-item col-xs-12 col-sm-4'>
             <Link to={prefixLink(page.path)}>
               {title}
             </Link>
           </div>
         );
       });
+
+    const groups = groupsOf(pageLinks, 3).map((page, i) =>
+      <div key={i} className='between-sm row'>{page}</div>
+    );
 
     return (
       <div className='content-container'>
@@ -47,7 +56,7 @@ export default class PortfolioIndex extends Component {
         </Helmet>
         <h1 className='page-title'>{'Selected bits'}</h1>
         <div className='portfolio-items'>
-          {pageLinks}
+          {groups}
         </div>
       </div>
     );
