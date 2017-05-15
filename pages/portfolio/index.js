@@ -31,10 +31,12 @@ export default class PortfolioIndex extends Component {
         }
       })
       .map(page => {
-        const title = access(page, 'data.image') || page.path;
+        const image = access(page, 'data.image');
+        const title = access(page, 'data.title') || page.path;
         return (
           <div key={page.path} className='portfolio-item col-xs-12 col-sm-4'>
             <Link to={prefixLink(page.path)}>
+              {image && <img src={image} />}
               {title}
             </Link>
           </div>

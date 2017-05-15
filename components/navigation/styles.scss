@@ -76,10 +76,6 @@
         font-size: 32px;
       }
 
-      &.active {
-        border-bottom-color: rgba($white, 0.25);
-      }
-
       &:not(.active) {
         .text {
           display: block;
@@ -153,7 +149,7 @@
     text-align: center;
     color: $white;
     font-size: 32px;
-    border-top: 1px solid rgba($white, 0.25);
+    border-top: 1px solid rgba($white, 0.15);
     text-transform: uppercase;
     width: 100%;
     font-family: $font-family-title;

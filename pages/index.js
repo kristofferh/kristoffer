@@ -31,9 +31,6 @@ export default class Index extends Component {
             <meta name='twitter:description' content={config.description} />
             <meta name='twitter:image' content={config.shareImage} />
           </Helmet>
-          <div className='content-container intro'>
-            {'Kristoffer Hedstrom is an interactive designer + developer.'}
-          </div>
         </div>
       </BodyClassName>
     );
