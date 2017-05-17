@@ -7,6 +7,8 @@ import access from 'safe-access';
 
 import groupsOf from 'utils/groups-of';
 
+import ImageLoader from 'components/image-loader';
+
 import './styles';
 
 exports.data = {
@@ -36,7 +38,7 @@ export default class PortfolioIndex extends Component {
         return (
           <div key={page.path} className='portfolio-item col-xs-12 col-sm-4'>
             <Link to={prefixLink(page.path)}>
-              {image && <img src={image} />}
+              {image && <ImageLoader placeholder={image} img={image} />}
               {title}
             </Link>
           </div>
