@@ -2,5 +2,9 @@
   margin-top: 20px;
 }
 
-.portfolio-item {
+.portfolio-item-image {
+  display: block;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  background: linear-gradient(0deg, #fafafa 0%, #fafafa 50%, #b5edff 50%);
 }

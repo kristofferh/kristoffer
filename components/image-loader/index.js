@@ -30,7 +30,7 @@ export default class ImageLoader extends Component {
     return (
       <div className={classNames('image-loader', {'image-loader--placeholder': this.props.aspectRatio})} >
         {(this.props.placeholder && !this.state.doneAnimating) && <img className={classNames('placeholder', {'fade-out': this.state.loaded})} src={this.props.placeholder} />}
-        {this.props.aspectRatio && <div style={{paddingBottom: `${this.props.aspectRatio}%`}} />}
+        {this.props.aspectRatio && <div style={{paddingBottom: `${this.props.aspectRatio * 100}%`}}></div>}
         {this.state.loaded && <img ref={(node) => this.img = node} className='img' src={this.props.img} />}
       </div>
     );

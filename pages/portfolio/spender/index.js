@@ -6,7 +6,9 @@ exports.data = {
   title: 'Spender',
   color: 'green',
   description: 'Spender is, or will be, an iOS app for tracking spending. It is a work in progress.',
-  image: '/images/iphone.png'
+  aspectRatio: 1,
+  image: '/images/spender/iphone.png',
+  thumb: '/images/spender/iphone-small.png'
 };
 
 export default class Spender extends Component {
