@@ -34,16 +34,17 @@ export default class PortfolioIndex extends Component {
       })
       .map(page => {
         const image = access(page, 'data.image');
+        const styles = access(page, 'data.styles');
         const thumb = access(page, 'data.thumb');
         const aspectRatio = access(page, 'data.aspectRatio');
         const title = access(page, 'data.title') || page.path;
         return (
-          <div key={page.path} className='portfolio-item col-xs-12 col-sm-4'>
+          <div key={page.path} className='portfolio-item col-xs-12 col-sm-4' >
             <Link to={prefixLink(page.path)}>
-              <div className='portfolio-item-image'>
+              <div className='portfolio-item-image' style={styles}>
                 {image && <ImageLoader placeholder={thumb} aspectRatio={aspectRatio} img={image} />}
               </div>
-              {title}
+              <span className='portfolio-item-text'>{title}</span>
             </Link>
           </div>
         );

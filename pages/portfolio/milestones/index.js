@@ -3,14 +3,14 @@ import Helmet from 'react-helmet';
 import Carousel from 'nuka-carousel';
 
 exports.data = {
-  title: 'Spender',
-  color: 'green',
-  description: 'Spender is, or will be, an iOS app for tracking spending. It is a work in progress.',
+  title: 'Milestones',
+  color: 'pink',
+  description: 'Set milestones to help you reach your goals.',
   aspectRatio: 1,
-  image: '/images/spender/iphone.png',
-  thumb: '/images/spender/iphone-small.png',
+  image: '/images/milestones/computer.png',
+  thumb: '/images/milestones/computer-small.png',
   styles: {
-    background: 'radial-gradient(ellipse at center, rgba(182, 231, 221, .75) 0%, #040c28 100%)'
+    background: 'linear-gradient(0deg, #fafafa 0%, #fafafa 50%, #b5edff 50%)'
   }
 };
 
@@ -40,12 +40,11 @@ export default class Spender extends Component {
           <meta property='og:description' content={description} />
           <meta name='twitter:title' content={description} />
           <meta name='twitter:description' content={description} />
-          <title>{'Spender'}</title>
+          <title>{'Milestones'}</title>
         </Helmet>
         <div className='portfolio-carousel'>
           <Carousel decorators={[]} ref='carousel'>
-            <img src='/images/iphone.png' onLoad={this.handleLoadedImage}/>
-            <img src='/images/iphone.png'/>
+            <img src='/images/milestones/computer.png' onLoad={this.handleLoadedImage}/>
             <div className='video-container'>
               <video className='video-player' autoPlay loop>
                 <source src='/videos/nomad.mp4' type='video/mp4' />
@@ -54,7 +53,7 @@ export default class Spender extends Component {
           </Carousel>
         </div>
         <div className='content-container'>
-          <h1 className='page-title'>{'Spender'}</h1>
+          <h1 className='page-title'>{'Milestones'}</h1>
           <div className='row'>
             <div className='col-xs-12 col-sm-8 col-sm-offset-4'>
               <p>{'Spender is personal project, where I’m keeping track of my spending through a simple iOS app.'}</p>
