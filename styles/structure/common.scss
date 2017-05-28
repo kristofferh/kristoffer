@@ -97,22 +97,6 @@
   }
 }
 
-.about-photo {
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-  background: transparent url('/images/shaky.gif') 50% 50% no-repeat;
-  background-size: cover;
-
-  $polygon: polygon(0 0, 0% 100%, 100% 85%, 100% 0%);
-  @supports ((clip-path: $polygon) or (-webkit-clip-path: $polygon)) {
-    @media (min-width: $min-width-sm) {
-      padding-bottom: 33%;
-      clip-path: $polygon;
-    }
-  }
-}
-
 .portfolio-carousel {
   background: radial-gradient(ellipse at center, rgba(182, 231, 221, 0.75) 0%, #040c28 100%);
 
