@@ -37,6 +37,8 @@
     fill: $white;
     stroke: $white;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.02);
+    transform: rotate(-15deg);
+    transform-origin: 50% 50%;
   }
 
   &.index,
