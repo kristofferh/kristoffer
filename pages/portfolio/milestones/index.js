@@ -10,7 +10,9 @@ exports.data = {
   image: '/images/milestones/computer.png',
   thumb: '/images/milestones/computer-small.png',
   styles: {
-    background: 'linear-gradient(0deg, #fafafa 0%, #fafafa 50%, #b5edff 50%)'
+    background: 'linear-gradient(80deg, #43D8A8, #BCBCEC)',
+    backgroundSize: '400%',
+    backgroundPosition: '100%'
   }
 };
 
@@ -31,7 +33,7 @@ export default class Spender extends Component {
   }
 
   render () {
-    const {description} = exports.data;
+    const {description, styles} = exports.data;
 
     return (
       <div className='portfolio'>
@@ -42,7 +44,7 @@ export default class Spender extends Component {
           <meta name='twitter:description' content={description} />
           <title>{'Milestones'}</title>
         </Helmet>
-        <div className='portfolio-carousel'>
+        <div className='portfolio-carousel' style={styles}>
           <Carousel decorators={[]} ref='carousel'>
             <img src='/images/milestones/computer.png' onLoad={this.handleLoadedImage}/>
             <div className='video-container'>
