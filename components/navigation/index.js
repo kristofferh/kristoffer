@@ -66,18 +66,6 @@ class Navigation extends Component {
             <Mark />
           </span>
         </span>
-        <Link to='/portfolio/' onClick={this.handlePortfolioClick} activeClassName='active' className={classNames('nav-item', {'active': this.state.path === 'portfolio'})}>
-          <span className='text'>
-            <span className={classNames('subnav-wrapper', {'has-subnav': (this.state.path === 'portfolio' && this.state.pageTitle !== 'Portfolio')})}>
-              <span className='subnav'>
-                <span className='subnav-text section-title'>{'Portfolio'}</span>
-              </span>
-              <span className='subnav'>
-                {(this.state.path === 'portfolio' && this.state.pageTitle !== 'Portfolio') && <span className='subnav-text page-title'>{this.state.pageTitle}</span>}
-              </span>
-            </span>
-          </span>
-        </Link>
         <Link to='/about/' activeClassName='active' className='nav-item'>
           <span className='text'>{'About'}</span>
         </Link>
