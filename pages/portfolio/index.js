@@ -25,14 +25,19 @@ export default class PortfolioIndex extends Component {
     const pages = this.props.route.pages;
 
     const pageLinks = pages
-      .filter(page => {
+      .filter((page) => {
         if (/^(\/portfolio\/)(.+)/.test(page.path)) {
           return true;
         } else {
           return false;
         }
       })
-      .map(page => {
+      .sort((a, b) => {
+        const orderA = access(a, 'data.order');
+        const orderB = access(b, 'data.order');
+        return orderA - orderB;
+      })
+      .map((page) => {
         const image = access(page, 'data.image');
         const styles = access(page, 'data.styles');
         const thumb = access(page, 'data.thumb');
