@@ -3,6 +3,7 @@ import Helmet from 'react-helmet';
 import Carousel from 'nuka-carousel';
 
 exports.data = {
+  order: 2,
   title: 'Spender',
   color: 'green',
   description: 'Spender is, or will be, an iOS app for tracking spending. It is a work in progress.',

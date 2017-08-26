@@ -50,3 +50,11 @@
 .orange {
   @include art-direction($orange);
 }
+
+.salmon {
+  @include art-direction($salmon);
+}
+
+.purple {
+  @include art-direction($purple)
+}

@@ -3,17 +3,15 @@ import Helmet from 'react-helmet';
 import Carousel from 'nuka-carousel';
 
 exports.data = {
-  order: 1,
-  title: 'Milestones',
-  color: 'pink',
-  description: 'Set milestones to help you reach your goals.',
+  order: 0,
+  title: 'Nomad',
+  color: 'purple',
+  description: 'Fixing one part of a broken health system.',
   aspectRatio: 1,
   image: '/images/milestones/computer.png',
   thumb: '/images/milestones/computer-small.png',
   styles: {
-    background: 'linear-gradient(80deg, #43D8A8, #BCBCEC)',
-    backgroundSize: '400%',
-    backgroundPosition: '100%'
+    background: '#fafafa'
   }
 };
 
@@ -56,13 +54,19 @@ export default class Spender extends Component {
           </Carousel>
         </div>
         <div className='content-container'>
-          <h1 className='page-title'>{'Milestones'}</h1>
+          <h1 className='page-title'>{title}</h1>
           <div className='row'>
-            <div className='col-xs-12 col-sm-8 col-sm-offset-4'>
-              <p>{'Spender is personal project, where I’m keeping track of my spending through a simple iOS app.'}</p>
-              <p>{'Mint is great, but it doesn’t keep track of cash spending. And all the other different spending trackers out there didn’t meet my specific needs.'}</p>
-              <p>{'So I’m building my own version.'}</p>
-            </div>
+            <section className='col-xs-12 col-sm-8 col-sm-offset-4'>
+              <p>{'Nomad is a healtcare marketplace for doctor and nurses, and the people that hire them.'}</p>
+              <p>{'It’s a big industry, fraught with all the issues that plague the rest of the healthcare system in the United States: slow moving bureaucracy, inefficiencies galore, technology from 1988, and everything is way more expensive than it needs to be. We’re changing all that.'}</p>
+              <p>{'We are building a healthcare marketplace that is easy to navigate, user-friendly, efficient, and most importantly:'} <span className='highlight'>{'much cheaper for everyone.'}</span></p>
+              <p>{'It’s like it’s not 1988 anymore!'}</p>
+            </section>
+            <section className='col-xs-12 col-sm-8'>
+              <h2 className='sub-title'>What Do I do there?</h2>
+              <p>{'A little bit of everything.'}</p>
+              <p>{'I have a unique hybrid role at Nomad: I’m an Art Director, at the same time as I am the Lead Product Engineer. I spent half of my time designing features, and the other half building them.'}</p>
+            </section>
           </div>
         </div>
       </div>
