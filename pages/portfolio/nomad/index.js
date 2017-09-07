@@ -2,14 +2,23 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import Carousel from 'nuka-carousel';
 
-exports.data = {
+export const data = {
   order: 0,
   title: 'Nomad',
   color: 'purple',
   description: 'Fixing one part of a broken health system.',
-  aspectRatio: 1,
-  image: '/images/milestones/computer.png',
-  thumb: '/images/milestones/computer-small.png',
+  media: [{
+    type: 'image',
+    src: '/images/nomad/computer-phone.png',
+    thumb: '/images/nomad/computer-phone-small.png',
+    aspectRatio: 1
+  }, {
+    type: 'video',
+    src: '/videos/nomad-logged-out.mp4',
+    aspectRatio: 16/9,
+    videoType: 'video/mp4',
+    attributes: {'autoPlay': true, 'loop': true}
+  }],
   styles: {
     background: '#fafafa'
   }
@@ -32,7 +41,7 @@ export default class Spender extends Component {
   }
 
   render () {
-    const {description, title, styles} = exports.data;
+    const {description, title, styles} = data;
 
     return (
       <div className='portfolio'>
@@ -45,12 +54,19 @@ export default class Spender extends Component {
         </Helmet>
         <div className='portfolio-carousel' style={styles}>
           <Carousel decorators={[]} ref='carousel'>
-            <img src='/images/milestones/computer.png' onLoad={this.handleLoadedImage}/>
-            <div className='video-container'>
-              <video className='video-player' autoPlay loop>
-                <source src='/videos/nomad.mp4' type='video/mp4' />
-              </video>
-            </div>
+            {data.media.map((item, index) => {
+              if (item.type === 'image') {
+                return <img key={index} src={item.src} onLoad={this.handleLoadedImage} />;
+              } else if (item.type === 'video') {
+                return (
+                  <div className='video-container' key={index}>
+                    <video className='video-player big-shadow' {...item.attributes}>
+                      <source src={item.src} type={item.videoType} />
+                    </video>
+                  </div>
+                );
+              }
+            })}
           </Carousel>
         </div>
         <div className='content-container'>
@@ -63,9 +79,9 @@ export default class Spender extends Component {
               <p>{'It’s like it’s not 1988 anymore!'}</p>
             </section>
             <section className='col-xs-12 col-sm-8'>
-              <h2 className='sub-title'>What Do I do there?</h2>
+              <h2 className='sub-title'>{'What Do I Do There?'}</h2>
               <p>{'A little bit of everything.'}</p>
-              <p>{'I have a unique hybrid role at Nomad: I’m an Art Director, at the same time as I am the Lead Product Engineer. I spent half of my time designing features, and the other half building them.'}</p>
+              <p>{'I have a unique hybrid role at Nomad: I’m an Art Director, and at the same time as I am the Lead Product Engineer. I spent half of my time designing features, and the other half building them.'}</p>
             </section>
           </div>
         </div>

@@ -11,7 +11,7 @@ import ImageLoader from 'components/image-loader';
 
 import './styles';
 
-exports.data = {
+export const data = {
   title: 'Portfolio',
   color: 'orange',
   description: 'Kristoffer Hedstrom\'s Portfolio.'
@@ -20,7 +20,7 @@ exports.data = {
 export default class PortfolioIndex extends Component {
 
   render () {
-    let {description, title} = exports.data;
+    let {description, title} = data;
 
     const pages = this.props.route.pages;
 

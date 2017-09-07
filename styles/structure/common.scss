@@ -98,8 +98,6 @@
 }
 
 .portfolio-carousel {
-  background: radial-gradient(ellipse at center, rgba(182, 231, 221, 0.75) 0%, #040c28 100%);
-
 
   .slider-slide > img {
     max-width: 740px;
@@ -110,14 +108,14 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    margin: 0 20px;
   }
 
   .video-player {
     margin: auto;
     display: block;
-    max-width: 540px;
+    max-width: 700px;
     height: auto;
     width: 100%;
-    box-shadow: 0 0 40px 5px;
   }
 }
