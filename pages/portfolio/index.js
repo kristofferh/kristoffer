@@ -38,16 +38,14 @@ export default class PortfolioIndex extends Component {
         return orderA - orderB;
       })
       .map((page) => {
-        const image = access(page, 'data.image');
+        const media = page.data.media && page.data.media.find((item) => item.type === 'image');
         const styles = access(page, 'data.styles');
-        const thumb = access(page, 'data.thumb');
-        const aspectRatio = access(page, 'data.aspectRatio');
         const title = access(page, 'data.title') || page.path;
         return (
           <div key={page.path} className='portfolio-item col-xs-12 col-sm-4' >
-            <Link to={prefixLink(page.path)}>
+            <Link to={prefixLink(page.path)} className='portfolio-item-link'>
               <div className='portfolio-item-image' style={styles}>
-                {image && <ImageLoader placeholder={thumb} aspectRatio={aspectRatio} img={image} />}
+                {media && <ImageLoader placeholder={media.thumb} aspectRatio={media.aspectRatio} img={media.src} />}
               </div>
               <span className='portfolio-item-text'>{title}</span>
             </Link>

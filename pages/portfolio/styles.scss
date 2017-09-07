@@ -4,6 +4,30 @@
 
 .portfolio-item {
 
+  &-link {
+    display: block;
+    position: relative;
+    padding-bottom: 30px;
+
+    .image-loader {
+      transition: all 0.1s ease;
+    }
+
+    &:hover,
+    &:focus {
+
+      .portfolio-item-text {
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+      }
+
+      .image-loader {
+        filter: blur(2px);
+        transform: scale(0.95);
+      }
+    }
+  }
+
   &-image {
     display: block;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -13,6 +37,16 @@
   &-text {
     display: block;
     color: $blackish;
-    margin-top: 10px;
+    text-align: center;
+    background: $white;
+    position: absolute;
+    font-family: $font-family-title;
+    text-transform: uppercase;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    padding: 3px 15px 0;
+    top: calc(100% - 20px);
+    transition: all 0.2s ease;
+    pointer-events: none;
   }
 }
