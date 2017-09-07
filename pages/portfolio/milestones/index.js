@@ -7,9 +7,12 @@ exports.data = {
   title: 'Milestones',
   color: 'pink',
   description: 'Set milestones to help you reach your goals.',
-  aspectRatio: 1,
-  image: '/images/milestones/computer.png',
-  thumb: '/images/milestones/computer-small.png',
+  media: [{
+    type: 'image',
+    src: '/images/milestones/computer.png',
+    thumb: '/images/milestones/computer-small.png',
+    aspectRatio: 1
+  }],
   styles: {
     background: 'linear-gradient(80deg, #43D8A8, #BCBCEC)',
     backgroundSize: '400%',

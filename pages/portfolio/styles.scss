@@ -17,7 +17,7 @@
     &:focus {
 
       .portfolio-item-text {
-        top: 50%;
+        top: calc(50% - 15px);
         transform: translate3d(-50%, -50%, 0);
       }
 

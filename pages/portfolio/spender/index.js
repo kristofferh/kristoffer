@@ -7,9 +7,12 @@ exports.data = {
   title: 'Spender',
   color: 'green',
   description: 'Spender is, or will be, an iOS app for tracking spending. It is a work in progress.',
-  aspectRatio: 1,
-  image: '/images/spender/iphone.png',
-  thumb: '/images/spender/iphone-small.png',
+  media: [{
+    type: 'image',
+    src: '/images/spender/iphone.png',
+    thumb: '/images/spender/iphone-small.png',
+    aspectRatio: 1
+  }],
   styles: {
     background: 'radial-gradient(ellipse at center, rgba(182, 231, 221, .75) 0%, #040c28 100%)'
   }
