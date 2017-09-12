@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import Carousel from 'nuka-carousel';
 
+import ImageLoader from 'components/image-loader';
+
 export const data = {
   order: 0,
   title: 'Nomad',
@@ -18,6 +20,16 @@ export const data = {
     aspectRatio: 16/9,
     videoType: 'video/mp4',
     attributes: {'autoPlay': true, 'loop': true}
+  }],
+  mediaRow: [{
+    thumb: '/images/nomad/screen-0-small.png',
+    src: '/images/nomad/screen-0.png'
+  }, {
+    thumb: '/images/nomad/screen-1-small.png',
+    src: '/images/nomad/screen-1.png'
+  }, {
+    thumb: '/images/nomad/screen-2-small.png',
+    src: '/images/nomad/screen-2.png'
   }],
   styles: {
     background: '#fafafa'
@@ -41,7 +53,13 @@ export default class Spender extends Component {
   }
 
   render () {
-    const {description, title, styles} = data;
+    const {
+      description,
+      title,
+      styles,
+      media,
+      mediaRow
+    } = data;
 
     return (
       <div className='portfolio'>
@@ -54,7 +72,7 @@ export default class Spender extends Component {
         </Helmet>
         <div className='portfolio-carousel' style={styles}>
           <Carousel decorators={[]} ref='carousel'>
-            {data.media.map((item, index) => {
+            {media.map((item, index) => {
               if (item.type === 'image') {
                 return <img key={index} src={item.src} onLoad={this.handleLoadedImage} />;
               } else if (item.type === 'video') {
@@ -72,16 +90,39 @@ export default class Spender extends Component {
         <div className='content-container'>
           <h1 className='page-title'>{title}</h1>
           <div className='row'>
-            <section className='col-xs-12 col-sm-8 col-sm-offset-4'>
+            <div className='col-xs-12 col-sm-4'>
+              <ImageLoader
+                  className='portfolio-media-item'
+                  placeholder={'/images/nomad/hello-small.png'}
+                  aspectRatio={1}
+                  img={'/images/nomad/hello.png'}
+              />
+            </div>
+            <section className='col-xs-12 col-sm-8'>
               <p>{'Nomad is a healtcare marketplace for doctor and nurses, and the people that hire them.'}</p>
               <p>{'It’s a big industry, fraught with all the issues that plague the rest of the healthcare system in the United States: slow moving bureaucracy, inefficiencies galore, technology from 1988, and everything is way more expensive than it needs to be. We’re changing all that.'}</p>
               <p>{'We are building a healthcare marketplace that is easy to navigate, user-friendly, efficient, and most importantly:'} <span className='highlight'>{'much cheaper for everyone.'}</span></p>
               <p>{'It’s like it’s not 1988 anymore!'}</p>
             </section>
-            <section className='col-xs-12 col-sm-8'>
+          </div>
+        </div>
+        <section className='portfolio-media-row'>
+          {mediaRow.map((image, i) =>
+            <ImageLoader
+                key={i}
+                className='portfolio-media-item'
+                placeholder={image.thumb}
+                aspectRatio={1}
+                img={image.src}
+            />
+          )}
+        </section>
+        <div className='content-container'>
+          <div className='row'>
+            <section className='col-xs-12 col-sm-8 portfolio-copy--second-row'>
               <h2 className='sub-title'>{'What Do I Do There?'}</h2>
               <p>{'A little bit of everything.'}</p>
-              <p>{'I have a unique hybrid role at Nomad: I’m an Art Director, and at the same time as I am the Lead Product Engineer. I spent half of my time designing features, and the other half building them.'}</p>
+              <p>{'I have a unique hybrid role at Nomad: I’m an Art Director and, at the same time, I am the Lead Product Engineer. I spent half of my time designing features, and the other half building them.'}</p>
             </section>
           </div>
         </div>

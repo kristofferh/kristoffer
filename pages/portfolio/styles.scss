@@ -30,7 +30,7 @@
 
   &-image {
     display: block;
-    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 1px 1px rgba($black, 0.05);
     border-radius: 2px;
   }
 
@@ -49,4 +49,12 @@
     transition: all 0.2s ease;
     pointer-events: none;
   }
+}
+
+.portfolio-media-row {
+  display: flex;
+}
+
+.portfolio-media-item {
+  width: 100%;
 }
