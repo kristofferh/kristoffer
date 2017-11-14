@@ -58,7 +58,7 @@ const About = () => {
             <h2 className='sub-title'>{'Bio'}</h2>
             <p>{'Hey. I’m Kris. I’m an interactive designer / developer.'}</p>
 
-            <p>{'I grew up in Umeå, in northern Sweden, but I now live in Brooklyn, NY. I am currently the Lead Product Engineer at a small startup called Nomad Health. Before that, I was a Product (Engineering) Manager at Tumblr. Before that, I worked at agencies. Before that, I was a baby.'}</p>
+            <p>{'I grew up in Umeå, in northern Sweden, but I now live in Brooklyn, NY. I am currently enjoying a hybrid Art Director + Lead Product Engineer role at a small startup called Nomad Health. Before that, I was a Product (Engineering) Manager at Tumblr. Before that, I worked at agencies. Before that, I was a baby.'}</p>
 
             <p>{'I like to design things, and then I like to build those things.'}</p>
 
@@ -76,7 +76,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default About;
