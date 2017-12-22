@@ -4,9 +4,8 @@
   "description": "K-Create.com | Kristoffer Hedstrom",
   "main": "n/a",
   "scripts": {
-    "lint":
-      "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "yarn lint"
   },
   "author": "Kristoffer Hedstrom",
   "license": "MIT",

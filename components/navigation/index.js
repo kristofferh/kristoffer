@@ -1,15 +1,14 @@
-import {default as React, Component} from 'react';
-import classNames from 'classnames';
-import {Link} from 'react-router';
+import { default as React, Component } from "react";
+import classNames from "classnames";
+import { Link } from "react-router";
 
-import Mark from '../mark';
-import './styles';
+import Mark from "../mark";
+import "./styles";
 
 class Navigation extends Component {
-
   constructor(props, context) {
     super(props, context);
-    this.navItems = ['index', 'about', 'resume', 'portfolio']; // @todo: generate links based off of these.
+    this.navItems = ["index", "about", "resume", "portfolio"]; // @todo: generate links based off of these.
     this.state = {
       path: this.getPath(props.location.pathname),
       pageTitle: this.getPageTitle(this.props),
@@ -21,19 +20,20 @@ class Navigation extends Component {
   }
 
   handleCloseClick() {
-    this.setState({showNav: false});
+    this.setState({ showNav: false });
   }
 
   // @todo: make this generic.
   handlePortfolioClick(e) {
-    if (!this.state.showNav && this.state.path === 'portfolio') {
+    if (!this.state.showNav && this.state.path === "portfolio") {
       e.preventDefault();
-      this.setState({showNav: true});
+      this.setState({ showNav: true });
     }
   }
 
   componentWillReceiveProps(nextProps) {
-    let locationChanged = nextProps.location.pathname !== this.props.location.pathname;
+    let locationChanged =
+      nextProps.location.pathname !== this.props.location.pathname;
     this.setState({
       path: this.getPath(nextProps.location.pathname),
       pageTitle: this.getPageTitle(nextProps),
@@ -51,7 +51,7 @@ class Navigation extends Component {
   }
 
   getPath(path) {
-    return (path === '/') ? 'index' : path.split('/')[1].replace(/\//g, ' ');
+    return path === "/" ? "index" : path.split("/")[1].replace(/\//g, " ");
   }
 
   getPageTitle(props) {
@@ -60,20 +60,26 @@ class Navigation extends Component {
 
   render() {
     return (
-      <nav className={classNames('main-nav', {[`${this.state.path}`]: this.state.path}, {'show-nav': this.state.showNav} )}>
-        <span className='nav-logo'>
-          <span className='nav-logo-container'>
+      <nav
+        className={classNames(
+          "main-nav",
+          { [`${this.state.path}`]: this.state.path },
+          { "show-nav": this.state.showNav }
+        )}
+      >
+        <span className="nav-logo">
+          <span className="nav-logo-container">
             <Mark />
           </span>
         </span>
-        <Link to='/about/' activeClassName='active' className='nav-item'>
-          <span className='text'>{'About'}</span>
+        <Link to="/about/" activeClassName="active" className="nav-item">
+          <span className="text">{"About"}</span>
         </Link>
-        <Link to='/resume/' activeClassName='active' className='nav-item'>
-          <span className='text'>{'Resume'}</span>
+        <Link to="/resume/" activeClassName="active" className="nav-item">
+          <span className="text">{"Resume"}</span>
         </Link>
-        <span className='nav-item close' onClick={this.handleCloseClick}>
-            <span className='close-btn'></span>
+        <span className="nav-item close" onClick={this.handleCloseClick}>
+          <span className="close-btn" />
         </span>
       </nav>
     );
