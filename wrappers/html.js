@@ -1,11 +1,11 @@
-import {default as React, Component} from 'react';
-import PropTypes from 'prop-types';
-import BodyClassName from 'react-body-classname';
+import { default as React, Component } from "react";
+import PropTypes from "prop-types";
+import BodyClassName from "react-body-classname";
 
 export default class HTMLWrapper extends Component {
-  render () {
+  render() {
     const post = this.props.route.page.data;
-    let color = post.color || 'green';
+    let color = post.color || "green";
     return (
       <BodyClassName className={color}>
         <div dangerouslySetInnerHTML={{ __html: post.body }} />
