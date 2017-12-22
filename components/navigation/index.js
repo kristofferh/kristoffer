@@ -1,4 +1,5 @@
-import { default as React, Component } from "react";
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link } from "react-router";
 
@@ -91,12 +92,12 @@ Navigation.defaultProps = {
 };
 
 Navigation.propTypes = {
-  location: React.PropTypes.object.isRequired,
-  route: React.PropTypes.object.isRequired
+  location: PropTypes.object.isRequired,
+  route: PropTypes.object.isRequired
 };
 
 Navigation.contextTypes = {
-  router: React.PropTypes.object
+  router: PropTypes.object
 };
 
 export default Navigation;

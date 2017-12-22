@@ -1,25 +1,28 @@
-import {default as React, Component} from 'react';
-import BodyClassName from 'react-body-classname';
-import Helmet from 'react-helmet';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import BodyClassName from "react-body-classname";
+import Helmet from "react-helmet";
 
-import './styles';
+import "./styles";
 
 export default class Resume extends Component {
-  render () {
-    let description = 'Kristoffer Hedstrom\'s Resume.';
+  render() {
+    let description = "Kristoffer Hedstrom's Resume.";
     return (
       <div>
         <Helmet
-            meta={[
-              { name: 'description', content: description },
-              { property: 'og:description', content: description },
-              { name: 'twitter:title', content: description },
-              { name: 'twitter:description', content: 'Cool beans.' }
-            ]}
-            title='Resume'
+          meta={[
+            { name: "description", content: description },
+            { property: "og:description", content: description },
+            { name: "twitter:title", content: description },
+            { name: "twitter:description", content: "Cool beans." }
+          ]}
+          title="Resume"
         />
-        <BodyClassName className='blue'>
-          <div dangerouslySetInnerHTML={{ __html: require('./_static.html').body }}/>
+        <BodyClassName className="blue">
+          <div
+            dangerouslySetInnerHTML={{ __html: require("./_static.html").body }}
+          />
         </BodyClassName>
       </div>
     );
@@ -27,5 +30,5 @@ export default class Resume extends Component {
 }
 
 Resume.propTypes = {
-  route: React.PropTypes.object
+  route: PropTypes.object
 };
