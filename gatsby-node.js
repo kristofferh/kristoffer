@@ -1,7 +1,7 @@
 var extractTextWebpackPlugin = require("extract-text-webpack-plugin");
 var path = require("path");
 
-exports.modifyWebpackConfig = function(config, env) {
+exports.modifyWebpackConfig = ({ config, env }) => {
   config.merge({
     postcss() {
       return [

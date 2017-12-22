@@ -5,7 +5,8 @@
   "main": "n/a",
   "scripts": {
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "yarn lint"
+    "test": "yarn lint",
+    "dev": "gatsby develop"
   },
   "author": "Kristoffer Hedstrom",
   "license": "MIT",

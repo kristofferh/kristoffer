@@ -3,10 +3,9 @@ import PropTypes from "prop-types";
 import BodyClassName from "react-body-classname";
 import Helmet from "react-helmet";
 
-import { config } from "config";
-import { prefixLink } from "gatsby-helpers";
+import { siteMetadata as config } from "../gatsby-config";
 
-const HTML = ({ color, favicon, body }) => {
+const HTML = ({ color, favicon, body, headComponents, postBodyComponents }) => {
   let head = Helmet.rewind();
 
   if (!color) {
@@ -15,7 +14,7 @@ const HTML = ({ color, favicon, body }) => {
 
   let cssLink;
   if (process.env.NODE_ENV === "production") {
-    cssLink = <link rel="stylesheet" href={prefixLink("/styles.css")} />;
+    cssLink = <link rel="stylesheet" href={"/styles.css"} />;
   }
 
   // Sorry, this is gross.
@@ -33,6 +32,7 @@ const HTML = ({ color, favicon, body }) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0 maximum-scale=1.0"
         />
+        {headComponents}
         {head.meta.toComponent()}
         {head.title.toComponent()}
         <link rel="shortcut icon" href={favicon} />
@@ -41,11 +41,11 @@ const HTML = ({ color, favicon, body }) => {
       </head>
       <body className={color}>
         <div
-          id="react-mount"
+          id="___gatsby"
           className="page-wrapper"
           dangerouslySetInnerHTML={{ __html: body }}
         />
-        <script src={prefixLink("/bundle.js")} />
+        {postBodyComponents}
       </body>
     </html>
   );
