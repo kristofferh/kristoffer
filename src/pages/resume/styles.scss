@@ -1,5 +1,6 @@
-.resume-wrapper {
+@import "../../styles/structure/variables/index";
 
+.resume-wrapper {
   abbr {
     text-decoration: none;
   }
@@ -63,5 +64,4 @@
       display: block;
     }
   }
-
 }

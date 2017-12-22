@@ -3,7 +3,7 @@ import ImageLoader from "components/image-loader";
 
 import shuffle from "utils/shuffle-array";
 
-import "./styles";
+import "./styles.scss";
 
 exports.data = {
   title: "About",

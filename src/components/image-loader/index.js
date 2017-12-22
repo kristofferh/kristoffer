@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-import "./styles";
+import "./styles.scss";
 
 export default class ImageLoader extends Component {
   constructor(props) {

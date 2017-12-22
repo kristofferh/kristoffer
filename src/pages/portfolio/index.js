@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router";
-import { prefixLink } from "gatsby-helpers";
+import { Link } from "gatsby-link";
 import Helmet from "react-helmet";
 import access from "safe-access";
 
@@ -9,7 +8,7 @@ import groupsOf from "utils/groups-of";
 
 import ImageLoader from "components/image-loader";
 
-import "./styles";
+import "./styles.scss";
 
 exports.data = {
   title: "Portfolio",
@@ -39,7 +38,7 @@ export default class PortfolioIndex extends Component {
         const title = access(page, "data.title") || page.path;
         return (
           <div key={page.path} className="portfolio-item col-xs-12 col-sm-4">
-            <Link to={prefixLink(page.path)}>
+            <Link to={page.path}>
               <div className="portfolio-item-image" style={styles}>
                 {image && (
                   <ImageLoader

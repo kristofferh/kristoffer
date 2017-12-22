@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import BodyClassName from "react-body-classname";
 import Helmet from "react-helmet";
 
-import "./styles";
+import "./styles.scss";
 
 export default class Resume extends Component {
   render() {
@@ -20,9 +20,11 @@ export default class Resume extends Component {
           title="Resume"
         />
         <BodyClassName className="blue">
+          {/*
           <div
             dangerouslySetInnerHTML={{ __html: require("./_static.html").body }}
           />
+        */}
         </BodyClassName>
       </div>
     );

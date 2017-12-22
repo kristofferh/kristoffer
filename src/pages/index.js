@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import BodyClassName from "react-body-classname";
 
-import { config } from "config";
+import { siteMetadata as config } from "../../gatsby-config";
 
-import "styles/base";
-import "styles/fonts/tanek";
-import "styles/fonts/tiempos";
+import "../styles/base.scss";
+import "../styles/fonts/tanek.scss";
+import "../styles/fonts/tiempos.scss";
 
 export default class Index extends Component {
   render() {
