@@ -4,8 +4,8 @@
   "description": "K-Create.com | Kristoffer Hedstrom",
   "main": "n/a",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "yarn lint"
   },
   "author": "Kristoffer Hedstrom",
   "license": "MIT",
@@ -35,12 +35,15 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
     "copy-webpack-plugin": "^2.0.1",
-    "eslint": "^2.3.0",
-    "eslint-plugin-react": "^4.1.0",
+    "eslint": "^4.10.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "flexboxgrid": "^6.3.0",
     "postcss-cssnext": "^2.9.0",
     "postcss-loader": "^0.8.1",
+    "prettier": "^1.9.2",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.0",
     "redbox-react": "^1.0.1",
