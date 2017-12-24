@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import "intersection-observer";
 
 import "./styles";
 
@@ -11,9 +12,11 @@ export default class ImageLoader extends Component {
       loaded: false,
       doneAnimating: false
     };
+
+    this.loadImage = this.loadImage.bind(this);
   }
 
-  componentDidMount() {
+  loadImage() {
     const image = new Image();
     image.src = this.props.img;
     image.onload = () => {
@@ -29,9 +32,23 @@ export default class ImageLoader extends Component {
     };
   }
 
+  componentDidMount() {
+    if (this.props.lazyload) {
+      this.observer = new IntersectionObserver(this.loadImage);
+      this.observer.observe(this.imageLoader);
+    } else {
+      this.loadImage();
+    }
+  }
+
+  componentWillUnmount() {
+    this.observer && this.observer.disconnect();
+  }
+
   render() {
     return (
       <div
+        ref={node => (this.imageLoader = node)}
         className={classNames("image-loader", {
           [`${this.props.className}`]: this.props.className,
           "image-loader--placeholder": this.props.aspectRatio
@@ -65,5 +82,6 @@ ImageLoader.propTypes = {
   aspectRatio: PropTypes.number,
   className: PropTypes.string,
   img: PropTypes.string.isRequired,
-  placeholder: PropTypes.string
+  placeholder: PropTypes.string,
+  lazyload: PropTypes.bool
 };

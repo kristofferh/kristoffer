@@ -3,11 +3,11 @@
 }
 
 .portfolio-item {
-
   &-link {
     display: block;
     position: relative;
     padding-bottom: 30px;
+    margin-bottom: 30px;
 
     .image-loader {
       transition: all 0.1s ease;
@@ -15,7 +15,6 @@
 
     &:hover,
     &:focus {
-
       .portfolio-item-text {
         top: calc(50% - 15px);
         transform: translate3d(-50%, -50%, 0);
