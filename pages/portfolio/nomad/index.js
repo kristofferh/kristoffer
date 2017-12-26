@@ -101,7 +101,6 @@ export default class Spender extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-4">
               <ImageLoader
-                className="portfolio-media-item"
                 placeholder={"/images/nomad/hello-small.png"}
                 aspectRatio={1}
                 img={"/images/nomad/hello.png"}
@@ -154,11 +153,17 @@ export default class Spender extends Component {
             </section>
           </div>
         </section>
-        <section className="portfolio-media-row">
-          <ImageLoader
+        <section className="portfolio-media-row portfolio-media-row--dark">
+          <div
             className="portfolio-media-item"
-            img="/images/nomad/phone.png"
-          />
+            style={{ background: "#fff0fb" }}
+          >
+            <ImageLoader
+              className="portfolio-media-item--phone load-in"
+              img="/images/nomad/phone.png"
+              aspectRatio={727 / 385}
+            />
+          </div>
         </section>
       </div>
     );

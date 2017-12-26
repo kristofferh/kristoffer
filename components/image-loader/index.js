@@ -34,7 +34,16 @@ export default class ImageLoader extends Component {
 
   componentDidMount() {
     if (this.props.lazyload) {
-      this.observer = new IntersectionObserver(this.loadImage);
+      this.observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          const { isIntersecting, intersectionRatio } = entry;
+          if (isIntersecting === true || intersectionRatio > 0) {
+            this.loadImage();
+            this.observer.disconnect();
+            this.observer = null;
+          }
+        });
+      });
       this.observer.observe(this.imageLoader);
     } else {
       this.loadImage();
@@ -77,6 +86,10 @@ export default class ImageLoader extends Component {
     );
   }
 }
+
+ImageLoader.defaultProps = {
+  lazyload: true
+};
 
 ImageLoader.propTypes = {
   aspectRatio: PropTypes.number,
