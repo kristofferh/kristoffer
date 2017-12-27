@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Helmet from "react-helmet";
-import Carousel from "nuka-carousel";
 
+import Carousel from "components/carousel";
 import ImageLoader from "components/image-loader";
 
 export const data = {
@@ -43,19 +43,9 @@ export const data = {
   }
 };
 
-export default class Spender extends Component {
+export default class Nomad extends Component {
   constructor() {
     super();
-    this.handleLoadedImage = this.handleLoadedImage.bind(this);
-  }
-
-  handleLoadedImage() {
-    this.carousel.setDimensions();
-    // This is terrible.
-    let slides = [].slice.call(document.querySelectorAll(".slider-slide"));
-    slides.forEach(slide => {
-      slide.style.height = "100%";
-    });
   }
 
   render() {
@@ -71,16 +61,10 @@ export default class Spender extends Component {
           <title>{title}</title>
         </Helmet>
         <div className="portfolio-carousel" style={styles}>
-          <Carousel decorators={[]} ref={node => (this.carousel = node)}>
+          <Carousel cellSpacing={0}>
             {media.map((item, index) => {
               if (item.type === "image") {
-                return (
-                  <ImageLoader
-                    key={index}
-                    img={item.src}
-                    loadingCallback={this.handleLoadedImage}
-                  />
-                );
+                return <ImageLoader key={index} img={item.src} />;
               } else if (item.type === "video") {
                 return (
                   <div className="video-container" key={index}>

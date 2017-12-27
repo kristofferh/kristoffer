@@ -87,7 +87,13 @@
 }
 
 .portfolio-carousel {
-  min-height: 100vh;
+  min-height: 50vh;
+
+  .slider-slide {
+    display: inline-flex !important; // overwrite
+    align-items: center;
+    justify-content: space-around;
+  }
 
   .slider-slide .image-loader {
     max-width: 740px;
