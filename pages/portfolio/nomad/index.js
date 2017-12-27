@@ -24,20 +24,6 @@ export const data = {
       attributes: { autoPlay: true, loop: true }
     }
   ],
-  mediaRow: [
-    {
-      thumb: "/images/nomad/screen-0-small.png",
-      src: "/images/nomad/screen-0.png"
-    },
-    {
-      thumb: "/images/nomad/screen-1-small.png",
-      src: "/images/nomad/screen-1.png"
-    },
-    {
-      thumb: "/images/nomad/screen-2-small.png",
-      src: "/images/nomad/screen-2.png"
-    }
-  ],
   styles: {
     background: "#fafafa"
   }
@@ -80,20 +66,13 @@ export default class Nomad extends Component {
             })}
           </Carousel>
         </div>
-        <div className="content-container">
+        <section className="content-container">
           <h1 className="page-title load-in">{title}</h1>
           <div className="row">
-            <div className="col-xs-12 col-sm-4">
-              <ImageLoader
-                placeholder={"/images/nomad/hello-small.png"}
-                aspectRatio={1}
-                img={"/images/nomad/hello.png"}
-              />
-            </div>
-            <section className="col-xs-12 col-sm-8">
+            <div className="col-xs-12 col-sm-8">
               <p className="load-in">
                 {
-                  "Nomad is a healtcare marketplace for doctor and nurses, and the people that hire them."
+                  "Nomad is a healtcare marketplace for doctors and nurses, and the people that hire them."
                 }
               </p>
               <p className="load-in">
@@ -110,23 +89,33 @@ export default class Nomad extends Component {
                 </span>
               </p>
               <p className="load-in">{"It’s like it’s not 1988 anymore!"}</p>
-            </section>
+            </div>
+            <div className="col-xs-12 col-sm-4 first-sm">
+              <ImageLoader
+                placeholder={"/images/nomad/hello-small.png"}
+                aspectRatio={1}
+                img={"/images/nomad/hello.png"}
+              />
+            </div>
           </div>
-        </div>
-        <section className="portfolio-media-row">
-          {mediaRow.map((image, i) => (
-            <ImageLoader
-              key={i}
-              className="portfolio-media-item"
-              placeholder={image.thumb}
-              aspectRatio={1}
-              img={image.src}
-            />
-          ))}
+        </section>
+        <section className="portfolio-media">
+          <div className="row">
+            <div
+              className="col-xs-12 portfolio-media-item"
+              style={{ background: "#f0f8ff" }}
+            >
+              <ImageLoader
+                className="portfolio-media-item-browser"
+                img="/images/nomad/dashboard.png"
+                aspectRatio={1024 / 1440}
+              />
+            </div>
+          </div>
         </section>
         <section className="content-container">
           <div className="row">
-            <section className="col-xs-12 col-sm-8 portfolio-copy--second-row">
+            <section className="col-xs-12 col-sm-8 col-sm-offset-2 portfolio-copy--second-row">
               <h2 className="sub-title load-in">{"What Do I Do There?"}</h2>
               <p className="load-in">{"A little bit of everything."}</p>
               <p className="load-in">
@@ -137,16 +126,94 @@ export default class Nomad extends Component {
             </section>
           </div>
         </section>
-        <section className="portfolio-media-row portfolio-media-row--dark">
-          <div
-            className="portfolio-media-item"
-            style={{ background: "#fff0fb" }}
-          >
-            <ImageLoader
-              className="portfolio-media-item--phone load-in"
-              img="/images/nomad/phone.png"
-              aspectRatio={727 / 385}
-            />
+        <section className="portfolio-media">
+          <div className="row">
+            <div
+              className="col-xs-12 col-sm-4 portfolio-media-item"
+              style={{ background: "#fff0fb" }}
+            >
+              <ImageLoader
+                className="portfolio-media-item-phone load-in"
+                img="/images/nomad/phone.png"
+                aspectRatio={727 / 385}
+              />
+            </div>
+            <div
+              className="col-xs-12 col-sm-4 portfolio-media-item"
+              style={{ background: "#f8f8ff" }}
+            >
+              <ImageLoader
+                className="portfolio-media-item-phone load-in"
+                img="/images/nomad/search-mobile@2x.png"
+                aspectRatio={727 / 385}
+              />
+            </div>
+            <div
+              className="col-xs-12 col-sm-4 portfolio-media-item"
+              style={{ background: "#fffaf0" }}
+            >
+              <ImageLoader
+                className="portfolio-media-item-phone load-in"
+                img="/images/nomad/public-facility-mobile@2x.png"
+                aspectRatio={727 / 385}
+              />
+            </div>
+          </div>
+        </section>
+        <section className="portfolio-media">
+          <div className="row">
+            <div
+              className="col-xs-12 portfolio-media-item"
+              style={{ background: "#FFF8DA" }}
+            >
+              <ImageLoader
+                className="portfolio-media-item-browser load-in"
+                img="/images/nomad/post-a-job.png"
+                aspectRatio={1024 / 1440}
+              />
+            </div>
+          </div>
+        </section>
+        <section className="content-container">
+          <div className="row around-sm">
+            <div className="col-xs-6 col-sm-4 portfolio-copy--second-row">
+              <h2 className="sub-title load-in">{"Design"}</h2>
+              <ul className="no-bullet-list">
+                <li className="load-in">UI / UX Design</li>
+                <li className="load-in">Print / Marketing Material</li>
+                <li className="load-in">Sketch</li>
+                <li className="load-in">Adobe Illustrator</li>
+                <li className="load-in">Adobe Photoshop</li>
+                <li className="load-in">Abstract</li>
+                <li className="load-in">Invision</li>
+              </ul>
+            </div>
+            <div className="col-xs-6 col-sm-4 portfolio-copy--second-row">
+              <h2 className="sub-title load-in">{"Tech"}</h2>
+              <ul className="no-bullet-list">
+                <li className="load-in">React</li>
+                <li className="load-in">Redux</li>
+                <li className="load-in">Webpack 3</li>
+                <li className="load-in">Python / Flask</li>
+                <li className="load-in">SCSS</li>
+                <li className="load-in">MongoDB</li>
+                <li className="load-in">Backbone.js</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section className="portfolio-media">
+          <div className="row">
+            <div
+              className="col-xs-12 portfolio-media-item"
+              style={{ background: "#fafafa" }}
+            >
+              <ImageLoader
+                className="portfolio-media-item-browser load-in"
+                img="/images/nomad/public-facility.png"
+                aspectRatio={1024 / 1440}
+              />
+            </div>
           </div>
         </section>
       </div>

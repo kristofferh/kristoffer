@@ -63,14 +63,25 @@
   }
 }
 
-.portfolio-media-item {
-  width: 100%;
-  padding: 50px;
+.portfolio-media {
+  .row {
+    margin: 0;
+  }
 
-  &--phone {
-    max-width: 320px;
-    filter: drop-shadow(0 2px 10px rgba($blackish, 0.1));
-    margin: auto;
+  &-item {
+    padding: 50px 20px;
+
+    &-phone {
+      max-width: 320px;
+      filter: drop-shadow(0 2px 10px rgba($blackish, 0.1));
+      margin: auto;
+    }
+
+    &-browser {
+      max-width: 800px;
+      filter: drop-shadow(0 2px 10px rgba($blackish, 0.1));
+      margin: auto;
+    }
   }
 }
 
