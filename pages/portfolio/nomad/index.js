@@ -75,10 +75,10 @@ export default class Spender extends Component {
             {media.map((item, index) => {
               if (item.type === "image") {
                 return (
-                  <img
+                  <ImageLoader
                     key={index}
-                    src={item.src}
-                    onLoad={this.handleLoadedImage}
+                    img={item.src}
+                    loadingCallback={this.handleLoadedImage}
                   />
                 );
               } else if (item.type === "video") {
@@ -97,7 +97,7 @@ export default class Spender extends Component {
           </Carousel>
         </div>
         <div className="content-container">
-          <h1 className="page-title">{title}</h1>
+          <h1 className="page-title load-in">{title}</h1>
           <div className="row">
             <div className="col-xs-12 col-sm-4">
               <ImageLoader
@@ -107,17 +107,17 @@ export default class Spender extends Component {
               />
             </div>
             <section className="col-xs-12 col-sm-8">
-              <p>
+              <p className="load-in">
                 {
                   "Nomad is a healtcare marketplace for doctor and nurses, and the people that hire them."
                 }
               </p>
-              <p>
+              <p className="load-in">
                 {
                   "It’s a big industry, fraught with all the issues that plague the rest of the healthcare system in the United States: slow moving bureaucracy, inefficiencies galore, technology from 1988, and everything is way more expensive than it needs to be. We’re changing all that."
                 }
               </p>
-              <p>
+              <p className="load-in">
                 {
                   "We are building a healthcare marketplace that is easy to navigate, user-friendly, efficient, and most importantly:"
                 }{" "}
@@ -125,7 +125,7 @@ export default class Spender extends Component {
                   {"much cheaper for everyone."}
                 </span>
               </p>
-              <p>{"It’s like it’s not 1988 anymore!"}</p>
+              <p className="load-in">{"It’s like it’s not 1988 anymore!"}</p>
             </section>
           </div>
         </div>
@@ -143,9 +143,9 @@ export default class Spender extends Component {
         <section className="content-container">
           <div className="row">
             <section className="col-xs-12 col-sm-8 portfolio-copy--second-row">
-              <h2 className="sub-title">{"What Do I Do There?"}</h2>
-              <p>{"A little bit of everything."}</p>
-              <p>
+              <h2 className="sub-title load-in">{"What Do I Do There?"}</h2>
+              <p className="load-in">{"A little bit of everything."}</p>
+              <p className="load-in">
                 {
                   "I have a unique hybrid role at Nomad: I’m an Art Director and, at the same time, I am the Lead Product Engineer. I spent half of my time designing features, and the other half building them."
                 }

@@ -25,6 +25,7 @@ export default class ImageLoader extends Component {
           "animationend",
           () => {
             this.setState({ doneAnimating: true });
+            this.props.loadingCallback();
           },
           false
         );
@@ -88,7 +89,8 @@ export default class ImageLoader extends Component {
 }
 
 ImageLoader.defaultProps = {
-  lazyload: true
+  lazyload: true,
+  loadingCallback: () => {}
 };
 
 ImageLoader.propTypes = {
@@ -96,5 +98,6 @@ ImageLoader.propTypes = {
   className: PropTypes.string,
   img: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
-  lazyload: PropTypes.bool
+  lazyload: PropTypes.bool,
+  loadingCallback: PropTypes.func
 };

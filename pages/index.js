@@ -11,8 +11,8 @@ import "styles/fonts/tiempos";
 
 export default class Index extends Component {
   render() {
-    let colors = ["green", "blue", "orange", "pink"];
-    let color = colors[Math.floor(Math.random() * colors.length)];
+    const colors = ["green", "blue", "orange", "pink"];
+    const color = colors[Math.floor(Math.random() * colors.length)];
     return (
       <BodyClassName className={color}>
         <div>

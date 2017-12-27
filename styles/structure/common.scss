@@ -6,13 +6,12 @@
 }
 
 .page-transition {
-
   &-enter {
     opacity: 0.01;
     transition: opacity 0.1s ease-in;
 
     &-active {
-      opacity: 1
+      opacity: 1;
     }
   }
 
@@ -42,7 +41,7 @@
     margin: 0 0 0.25em;
 
     &:after {
-      content: '';
+      content: "";
       width: 40px;
       border-bottom: 4px solid;
       display: block;
@@ -94,28 +93,5 @@
   .footer-inner {
     padding: 15px;
     text-align: center;
-  }
-}
-
-.portfolio-carousel {
-
-  .slider-slide > img {
-    max-width: 740px;
-    margin: auto;
-  }
-
-  .video-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin: 0 20px;
-  }
-
-  .video-player {
-    margin: auto;
-    display: block;
-    max-width: 700px;
-    height: auto;
-    width: 100%;
   }
 }

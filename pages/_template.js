@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import BodyClassName from "react-body-classname";
 import { config } from "config";
+import "intersection-observer";
 
 import Navigation from "components/navigation";
 import Footer from "components/footer";
@@ -15,10 +16,38 @@ export default class Template extends Component {
     //this.setState({direction});
   }
 
+  loadElements() {
+    const els = document.querySelectorAll(".load-in:not(.visible)");
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          const { isIntersecting, intersectionRatio } = entry;
+          if (isIntersecting === true || intersectionRatio > 0) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.5
+      }
+    );
+    els.forEach(el => {
+      observer.observe(el);
+    });
+  }
+
+  componentDidMount() {
+    this.loadElements();
+  }
+
+  componentDidUpdate() {
+    this.loadElements();
+  }
+
   render() {
-    let page = this.props.children.props.route.page.data;
-    let path = this.props.children.props.route.page.path;
-    let color = page.color || "green";
+    const page = this.props.children.props.route.page.data;
+    const path = this.props.children.props.route.page.path;
+    const color = page.color || "green";
 
     return (
       <div>
@@ -68,5 +97,6 @@ export default class Template extends Component {
 }
 
 Template.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
+  location: PropTypes.object
 };
