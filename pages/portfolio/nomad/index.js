@@ -13,15 +13,15 @@ export const data = {
     {
       type: "image",
       src: "/images/nomad/computer-phone.png",
-      thumb: "/images/nomad/computer-phone-small.png",
-      aspectRatio: 1
+      placeholder: "/images/nomad/computer-phone-small.png",
+      aspectRatio: 0.66666
     },
     {
       type: "video",
       src: "/videos/nomad-logged-out.mp4",
-      aspectRatio: 16 / 9,
+      aspectRatio: 9 / 16,
       videoType: "video/mp4",
-      attributes: { autoPlay: true, loop: true }
+      attributes: { autoPlay: true, loop: true, playsInline: true }
     }
   ],
   styles: {
@@ -35,7 +35,7 @@ export default class Nomad extends Component {
   }
 
   render() {
-    const { description, title, styles, media, mediaRow } = data;
+    const { description, title, styles, media } = data;
 
     return (
       <div className="portfolio">
@@ -50,10 +50,14 @@ export default class Nomad extends Component {
           <Carousel cellSpacing={0}>
             {media.map((item, index) => {
               if (item.type === "image") {
-                return <ImageLoader key={index} img={item.src} />;
+                return (
+                  <div className="carousel-item-wrapper" key={index}>
+                    <ImageLoader img={item.src} />
+                  </div>
+                );
               } else if (item.type === "video") {
                 return (
-                  <div className="video-container" key={index}>
+                  <div className="carousel-item-wrapper" key={index}>
                     <video
                       className="video-player big-shadow"
                       {...item.attributes}
@@ -108,6 +112,7 @@ export default class Nomad extends Component {
               <ImageLoader
                 className="portfolio-media-item-browser"
                 img="/images/nomad/dashboard.png"
+                placeholder="/images/nomad/dashboard-small.png"
                 aspectRatio={1024 / 1440}
               />
             </div>
@@ -129,32 +134,32 @@ export default class Nomad extends Component {
         <section className="portfolio-media">
           <div className="row">
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#fff0fb" }}
             >
               <ImageLoader
-                className="portfolio-media-item-phone load-in"
-                img="/images/nomad/phone.png"
+                className="portfolio-media-item-phone load-in load-in--sequence-1"
+                img="/images/nomad/dashboard-mobile.png"
                 aspectRatio={727 / 385}
               />
             </div>
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#f8f8ff" }}
             >
               <ImageLoader
-                className="portfolio-media-item-phone load-in"
-                img="/images/nomad/search-mobile@2x.png"
+                className="portfolio-media-item-phone load-in load-in--sequence-2"
+                img="/images/nomad/search-mobile.png"
                 aspectRatio={727 / 385}
               />
             </div>
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#fffaf0" }}
             >
               <ImageLoader
-                className="portfolio-media-item-phone load-in"
-                img="/images/nomad/public-facility-mobile@2x.png"
+                className="portfolio-media-item-phone load-in load-in--sequence-3"
+                img="/images/nomad/public-facility-mobile.png"
                 aspectRatio={727 / 385}
               />
             </div>

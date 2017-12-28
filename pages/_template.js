@@ -17,7 +17,7 @@ export default class Template extends Component {
   }
 
   loadElements() {
-    const els = document.querySelectorAll(".load-in:not(.visible)");
+    const els = [...document.querySelectorAll(".load-in:not(.visible)")];
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {

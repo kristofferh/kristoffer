@@ -1,4 +1,8 @@
 .resume-wrapper {
+  @supports (padding: max(0px)) {
+    padding-left: unquote("max(15px, env(safe-area-inset-left))");
+    padding-right: unquote("max(15px, env(safe-area-inset-right))");
+  }
 
   abbr {
     text-decoration: none;
@@ -63,5 +67,4 @@
       display: block;
     }
   }
-
 }

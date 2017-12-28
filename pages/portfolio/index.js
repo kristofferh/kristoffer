@@ -48,8 +48,7 @@ export default class PortfolioIndex extends Component {
               <div className="portfolio-item-image" style={styles}>
                 {media && (
                   <ImageLoader
-                    placeholder={media.thumb}
-                    aspectRatio={media.aspectRatio}
+                    className="portfolio-item-preview"
                     img={media.src}
                   />
                 )}

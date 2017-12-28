@@ -182,7 +182,7 @@ export default class Carousel extends Component {
 
   handleTouchMove(e) {
     if (this.touchObject && this.touchObject.direction !== 0) {
-      e.preventDefault();
+      //e.preventDefault();
     }
     this.updateOnDrag(e.touches[0].pageX, e.touches[0].pageY);
   }
