@@ -3,6 +3,7 @@ import Helmet from "react-helmet";
 
 import Carousel from "components/carousel";
 import ImageLoader from "components/image-loader";
+import BrowserFrame from "components/browser-frame";
 
 export const data = {
   order: 0,
@@ -109,12 +110,13 @@ export default class Nomad extends Component {
               className="col-xs-12 portfolio-media-item"
               style={{ background: "#f0f8ff" }}
             >
-              <ImageLoader
-                className="portfolio-media-item-browser"
-                img="/images/nomad/dashboard.png"
-                placeholder="/images/nomad/dashboard-small.png"
-                aspectRatio={1024 / 1440}
-              />
+              <BrowserFrame>
+                <ImageLoader
+                  img="/images/nomad/search-unlaunched@2x.png"
+                  placeholder="/images/nomad/search-unlaunched-small.png"
+                  aspectRatio={2628 / 2880}
+                />
+              </BrowserFrame>
             </div>
           </div>
         </section>
