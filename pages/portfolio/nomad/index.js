@@ -31,10 +31,6 @@ export const data = {
 };
 
 export default class Nomad extends Component {
-  constructor() {
-    super();
-  }
-
   render() {
     const { description, title, styles, media } = data;
 
