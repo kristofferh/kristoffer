@@ -52,21 +52,21 @@ $base-name: ".device-frame";
   &--phone {
     max-width: 320px;
     overflow: hidden;
-    border-radius: 34px;
+    border-radius: 3.4vw;
     background: #111;
-    padding: 5px;
+    padding: 0.5vw;
 
     #{$base-name} {
       &-header {
-        height: 40px;
-        max-height: initial;
+        max-height: 40px;
         background: inherit;
 
         &:after {
           content: "";
-          width: 40px;
-          height: 4px;
-          border-radius: 2px;
+          width: 4vw;
+          max-width: 40px;
+          height: 0.4vw;
+          border-radius: 0.2vw;
           background: #333;
           position: absolute;
           left: 50%;
@@ -79,7 +79,18 @@ $base-name: ".device-frame";
       }
 
       &-body {
-        border-radius: 5px 5px 30px 30px;
+        border-radius: 0 0 3vw 3vw;
+      }
+    }
+  }
+
+  &--phone--light {
+    @extend #{$base-name}--phone;
+    background: #efefef;
+
+    #{$base-name}-header {
+      &:after {
+        background: #ddd;
       }
     }
   }

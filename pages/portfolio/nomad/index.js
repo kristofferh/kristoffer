@@ -154,31 +154,37 @@ export default class Nomad extends Component {
               className="col-xs-4 portfolio-media-item"
               style={{ background: "#fff0fb" }}
             >
-              <ImageLoader
-                className="portfolio-media-item-phone load-in load-in--sequence-1"
-                img="/images/nomad/dashboard-mobile.png"
-                aspectRatio={727 / 385}
-              />
+              <DeviceFrame type="phone" className="load-in load-in--sequence-1">
+                <ImageLoader
+                  img="/images/nomad/dashboard-mobile.png"
+                  aspectRatio={1334 / 750}
+                />
+              </DeviceFrame>
             </div>
             <div
               className="col-xs-4 portfolio-media-item"
               style={{ background: "#f8f8ff" }}
             >
-              <ImageLoader
-                className="portfolio-media-item-phone load-in load-in--sequence-2"
-                img="/images/nomad/search-mobile.png"
-                aspectRatio={727 / 385}
-              />
+              <DeviceFrame
+                type="phone--light"
+                className="load-in load-in--sequence-2"
+              >
+                <ImageLoader
+                  img="/images/nomad/search-mobile.png"
+                  aspectRatio={1334 / 750}
+                />
+              </DeviceFrame>
             </div>
             <div
               className="col-xs-4 portfolio-media-item"
               style={{ background: "#fffaf0" }}
             >
-              <ImageLoader
-                className="portfolio-media-item-phone load-in load-in--sequence-3"
-                img="/images/nomad/public-facility-mobile.png"
-                aspectRatio={727 / 385}
-              />
+              <DeviceFrame className="load-in load-in--sequence-3" type="phone">
+                <ImageLoader
+                  img="/images/nomad/public-facility-mobile.png"
+                  aspectRatio={1334 / 750}
+                />
+              </DeviceFrame>
             </div>
           </div>
         </section>
@@ -188,11 +194,12 @@ export default class Nomad extends Component {
               className="col-xs-12 portfolio-media-item"
               style={{ background: "#FFF8DA" }}
             >
-              <ImageLoader
-                className="portfolio-media-item-browser load-in"
-                img="/images/nomad/post-a-job.png"
-                aspectRatio={1024 / 1440}
-              />
+              <DeviceFrame className="load-in">
+                <ImageLoader
+                  img="/images/nomad/post-a-job@2x.png"
+                  aspectRatio={1600 / 2880}
+                />
+              </DeviceFrame>
             </div>
           </div>
         </section>
