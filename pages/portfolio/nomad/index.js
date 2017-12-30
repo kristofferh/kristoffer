@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 
 import Carousel from "components/carousel";
 import ImageLoader from "components/image-loader";
-import BrowserFrame from "components/browser-frame";
+import DeviceFrame from "components/device-frame";
 
 export const data = {
   order: 0,
@@ -59,12 +59,11 @@ export default class Nomad extends Component {
               } else if (item.type === "video") {
                 return (
                   <div className="carousel-item-wrapper" key={index}>
-                    <video
-                      className="video-player big-shadow"
-                      {...item.attributes}
-                    >
-                      <source src={item.src} type={item.videoType} />
-                    </video>
+                    <DeviceFrame>
+                      <video className="video-player" {...item.attributes}>
+                        <source src={item.src} type={item.videoType} />
+                      </video>
+                    </DeviceFrame>
                   </div>
                 );
               }
@@ -110,13 +109,13 @@ export default class Nomad extends Component {
               className="col-xs-12 portfolio-media-item"
               style={{ background: "#f0f8ff" }}
             >
-              <BrowserFrame>
+              <DeviceFrame type="tablet">
                 <ImageLoader
                   img="/images/nomad/search-unlaunched@2x.png"
                   placeholder="/images/nomad/search-unlaunched-small.png"
                   aspectRatio={2628 / 2880}
                 />
-              </BrowserFrame>
+              </DeviceFrame>
             </div>
           </div>
         </section>
