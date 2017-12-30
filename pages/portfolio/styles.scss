@@ -93,7 +93,7 @@
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 500ms, transform 500ms;
-  //will-change: opacity, transform;
+  will-change: opacity, transform;
 
   &--sequence-1 {
     transition-delay: 0;

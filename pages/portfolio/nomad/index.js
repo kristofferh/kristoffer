@@ -109,11 +109,11 @@ export default class Nomad extends Component {
               className="col-xs-12 portfolio-media-item"
               style={{ background: "#f0f8ff" }}
             >
-              <DeviceFrame type="tablet">
+              <DeviceFrame>
                 <ImageLoader
-                  img="/images/nomad/search-unlaunched@2x.png"
-                  placeholder="/images/nomad/search-unlaunched-small.png"
-                  aspectRatio={2628 / 2880}
+                  img="/images/nomad/dashboard@2x.png"
+                  placeholder="/images/nomad/dashboard-small.png"
+                  aspectRatio={2752 / 2880}
                 />
               </DeviceFrame>
             </div>
@@ -130,6 +130,22 @@ export default class Nomad extends Component {
                 }
               </p>
             </section>
+          </div>
+        </section>
+        <section className="portfolio-media">
+          <div className="row">
+            <div
+              className="col-xs-12 portfolio-media-item"
+              style={{ background: "#f0f8ff" }}
+            >
+              <DeviceFrame>
+                <ImageLoader
+                  img="/images/nomad/search-unlaunched@2x.png"
+                  placeholder="/images/nomad/search-unlaunched-small.png"
+                  aspectRatio={2420 / 2880}
+                />
+              </DeviceFrame>
+            </div>
           </div>
         </section>
         <section className="portfolio-media">
@@ -214,11 +230,13 @@ export default class Nomad extends Component {
               className="col-xs-12 portfolio-media-item"
               style={{ background: "#fafafa" }}
             >
-              <ImageLoader
-                className="portfolio-media-item-browser load-in"
-                img="/images/nomad/public-facility.png"
-                aspectRatio={1024 / 1440}
-              />
+              <DeviceFrame bodyStyles={{ maxHeight: 800 }}>
+                <ImageLoader
+                  placeholder="/images/nomad/public-profile-small.png"
+                  img="/images/nomad/public-profile@2x.png"
+                  aspectRatio={5418 / 2880}
+                />
+              </DeviceFrame>
             </div>
           </div>
         </section>
