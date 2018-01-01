@@ -60,7 +60,7 @@ export default class PortfolioIndex extends Component {
       });
 
     const groups = groupsOf(pageLinks, 3).map((page, i) => (
-      <div key={i} className="between-sm row">
+      <div key={i} className="row">
         {page}
       </div>
     ));
