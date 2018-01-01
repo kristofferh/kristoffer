@@ -1,4 +1,4 @@
-@import 'variables/index';
+@import "variables/index";
 
 @mixin art-direction($color) {
   $dark: mix($black, $color, 75);
@@ -27,6 +27,14 @@
   }
 
   .main-nav {
+    background: $color;
+  }
+
+  .nav-logo {
+    background: mix($black, $color, 10);
+  }
+
+  &.index .nav-logo {
     background: $color;
   }
 
@@ -60,5 +68,5 @@
 }
 
 .purple {
-  @include art-direction($purple)
+  @include art-direction($purple);
 }

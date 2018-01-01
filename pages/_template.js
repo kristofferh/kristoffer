@@ -5,6 +5,7 @@ import BodyClassName from "react-body-classname";
 import { config } from "config";
 import "intersection-observer";
 
+import Logo from "components/logo";
 import Navigation from "components/navigation";
 import Footer from "components/footer";
 
@@ -45,9 +46,12 @@ export default class Template extends Component {
   }
 
   render() {
+    const colors = ["green", "blue", "orange", "pink"];
+    const defaultColor = colors[Math.floor(Math.random() * colors.length)];
+
     const page = this.props.children.props.route.page.data;
     const path = this.props.children.props.route.page.path;
-    const color = page.color || "green";
+    const color = page.color || defaultColor;
 
     return (
       <div>
@@ -88,6 +92,7 @@ export default class Template extends Component {
           titleTemplate={`%s - ${config.siteTitle}`}
           title={page.title}
         />
+        <Logo />
         <Navigation {...this.props} />
         <section className="content-wrapper">{this.props.children}</section>
         <Footer />

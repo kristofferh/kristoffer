@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router";
 import { prefixLink } from "gatsby-helpers";
-import Helmet from "react-helmet";
 import access from "safe-access";
 
 import groupsOf from "utils/groups-of";
@@ -19,8 +18,6 @@ export const data = {
 
 export default class PortfolioIndex extends Component {
   render() {
-    let { description, title } = data;
-
     const pages = this.props.route.pages;
 
     const pageLinks = pages
@@ -67,13 +64,6 @@ export default class PortfolioIndex extends Component {
 
     return (
       <div className="content-container">
-        <Helmet>
-          <meta name="description" content={description} />
-          <meta property="og:description" content={description} />
-          <meta name="twitter:title" content={description} />
-          <meta name="twitter:description" content={"cool beans"} />
-          <title>{title}</title>
-        </Helmet>
         <h1 className="page-title">{"Selected bits"}</h1>
         <div className="portfolio-items">{groups}</div>
       </div>
