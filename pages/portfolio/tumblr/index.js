@@ -33,7 +33,15 @@ export default class Tumblr extends Component {
   componentDidMount() {
     const script = document.createElement("script");
     script.setAttribute("src", "https://assets.tumblr.com/post.js");
+    script.id = "tumblr-embed";
     document.body.appendChild(script);
+  }
+
+  componentWillUnmount() {
+    const embed = document.getElementById("tumblr-embed");
+    if (embed) {
+      embed.remove();
+    }
   }
 
   render() {
