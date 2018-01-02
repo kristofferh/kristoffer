@@ -92,7 +92,7 @@ export default class Template extends Component {
           titleTemplate={`%s - ${config.siteTitle}`}
           title={page.title}
         />
-        <Logo />
+        <Logo {...this.props} />
         <Navigation {...this.props} />
         <section className="content-wrapper">{this.props.children}</section>
         <Footer />
