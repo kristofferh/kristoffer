@@ -190,30 +190,13 @@ export default class Tumblr extends Component {
         <section className="content-container">
           <div className="row">
             <section className="col-xs-12 col-sm-8 col-sm-offset-2">
-              <h2 className="sub-title load-in">{"What Do I Do There?"}</h2>
-              <p className="load-in">{"A little bit of everything."}</p>
+              <h2 className="sub-title load-in">Mobile Web</h2>
               <p className="load-in">
-                {
-                  "I have a unique hybrid role at Nomad: I’m an Art Director and, at the same time, I am the Lead Product Engineer. I spent half of my time designing features, and the other half building them."
-                }
+                The mobile web version of Tumblr was a neglected child for a
+                long time. I was put in charge of revamping it. To do that, I
+                hired a small team of engineers and got to work.
               </p>
             </section>
-          </div>
-        </section>
-        <section className="portfolio-media">
-          <div className="row">
-            <div
-              className="col-xs-12 portfolio-media-item"
-              style={{ background: "#f0f8ff" }}
-            >
-              <DeviceFrame>
-                <ImageLoader
-                  img="/images/nomad/search-unlaunched@2x.png"
-                  placeholder="/images/nomad/search-unlaunched-small.png"
-                  aspectRatio={2420 / 2880}
-                />
-              </DeviceFrame>
-            </div>
           </div>
         </section>
         <section className="portfolio-media">
@@ -222,35 +205,34 @@ export default class Tumblr extends Component {
               className="col-xs-4 portfolio-media-item"
               style={{ background: "#fff0fb" }}
             >
-              <DeviceFrame type="phone" className="load-in load-in--sequence-1">
-                <ImageLoader
-                  img="/images/nomad/dashboard-mobile.png"
-                  aspectRatio={1334 / 750}
-                />
+              <DeviceFrame type="phone">
+                <video className="video-player" autoPlay loop playsInline>
+                  <source
+                    src="/videos/tumblr/post-forms.mp4"
+                    type="video/mp4"
+                  />
+                </video>
               </DeviceFrame>
             </div>
             <div
               className="col-xs-4 portfolio-media-item"
               style={{ background: "#f8f8ff" }}
             >
-              <DeviceFrame
-                type="phone--light"
-                className="load-in load-in--sequence-2"
-              >
-                <ImageLoader
-                  img="/images/nomad/search-mobile.png"
-                  aspectRatio={1334 / 750}
-                />
+              <DeviceFrame type="phone--light">
+                <video className="video-player" autoPlay loop playsInline>
+                  <source src="/videos/tumblr/search.mp4" type="video/mp4" />
+                </video>
               </DeviceFrame>
             </div>
             <div
               className="col-xs-4 portfolio-media-item"
               style={{ background: "#fffaf0" }}
             >
-              <DeviceFrame className="load-in load-in--sequence-3" type="phone">
+              <DeviceFrame type="phone--light">
                 <ImageLoader
-                  img="/images/nomad/public-facility-mobile.png"
-                  aspectRatio={1334 / 750}
+                  img="/images/tumblr/mobile-web.jpg"
+                  placeholder="/images/tumblr/mobile-web-small.jpg"
+                  aspectRatio={1004 / 594}
                 />
               </DeviceFrame>
             </div>
