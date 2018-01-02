@@ -56,6 +56,10 @@
     }
   }
 
+  .page-title + p {
+    margin-top: 1.5em;
+  }
+
   .sub-title {
     font-size: 20px;
     font-family: $font-family-title;

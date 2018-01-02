@@ -65,35 +65,21 @@ export default class Tumblr extends Component {
           </Carousel>
         </div>
         <section className="content-container">
-          <h1 className="page-title load-in">{title}</h1>
           <div className="row">
-            <div className="col-xs-12 col-sm-8">
+            <div className="col-xs-12 col-sm-8 col-sm-offset-2">
+              <h1 className="page-title load-in">{title}</h1>
               <p className="load-in">
                 {
-                  "Nomad is a healtcare marketplace for doctors and nurses, and the people that hire them."
+                  "I spent 3 and half years at Tumblr. Starting as a Product Engineer, pre-Yahoo, then became an Engineering Manager, and finally morphing into a Product Manager role."
                 }
               </p>
               <p className="load-in">
+                {"I worked on a variety of different projects: creation tools,"}{" "}
+                <em>{"Optica"}</em>{" "}
                 {
-                  "It’s a big industry, fraught with all the issues that plague the rest of the healthcare system in the United States: slow moving bureaucracy, inefficiencies galore, technology from 1988, and everything is way more expensive than it needs to be. We’re changing all that."
+                  "(now Official) – the default theme, embeddable posts, reblog redesign, and many others."
                 }
               </p>
-              <p className="load-in">
-                {
-                  "We are building a healthcare marketplace that is easy to navigate, user-friendly, efficient, and most importantly:"
-                }{" "}
-                <span className="highlight">
-                  {"much cheaper for everyone."}
-                </span>
-              </p>
-              <p className="load-in">{"It’s like it’s not 1988 anymore!"}</p>
-            </div>
-            <div className="col-xs-12 col-sm-4 first-sm">
-              <ImageLoader
-                placeholder={"/images/nomad/hello-small.png"}
-                aspectRatio={1}
-                img={"/images/nomad/hello.png"}
-              />
             </div>
           </div>
         </section>
@@ -101,6 +87,82 @@ export default class Tumblr extends Component {
           <div className="row">
             <div
               className="col-xs-12 portfolio-media-item"
+              style={{ background: "#faf2e7" }}
+            >
+              <DeviceFrame>
+                <ImageLoader
+                  img="/images/tumblr/optica-new.jpg"
+                  placeholder="/images/tumblr/optica-new-small.jpg"
+                  aspectRatio={2000 / 2560}
+                />
+              </DeviceFrame>
+            </div>
+          </div>
+        </section>
+        <section className="content-container">
+          <div className="row">
+            <section className="col-xs-12 col-sm-8 col-sm-offset-2">
+              <h2 className="sub-title load-in">{"Optica"}</h2>
+              <p className="load-in">
+                <em>Optica</em>, now renamed <em>Official</em>, is the default
+                theme that everyone is assigned when they create a Tumblr blog.
+                It’s also the default mobile theme.
+              </p>
+              <p className="load-in">It has an obscene amount of installs.</p>
+            </section>
+          </div>
+        </section>
+        <section className="portfolio-media">
+          <div className="row">
+            <div
+              className="col-xs-6 portfolio-media-item"
+              style={{ background: "#dbe0e6" }}
+            >
+              <DeviceFrame>
+                <ImageLoader
+                  img="/images/tumblr/optica-old-desktop.jpg"
+                  placeholder="/images/tumblr/optica-old-desktop-small.jpg"
+                  aspectRatio={1283 / 1772}
+                />
+              </DeviceFrame>
+            </div>
+            <div
+              className="col-xs-6 portfolio-media-item"
+              style={{ background: "#e2e7ea" }}
+            >
+              <DeviceFrame>
+                <ImageLoader
+                  img="/images/tumblr/optica-installs.jpg"
+                  placeholder="/images/tumblr/optica-installs-small.jpg"
+                  aspectRatio={918 / 1332}
+                />
+              </DeviceFrame>
+            </div>
+          </div>
+        </section>
+        <section className="content-container">
+          <div className="row">
+            <section className="col-xs-12 col-sm-8 col-sm-offset-2">
+              <h2 className="sub-title load-in">Embeddable Posts</h2>
+              <p className="load-in">
+                Embeddable posts are Tumblr posts that can be embedded on third
+                party sites. I essentially re-created posts in a light-weight,
+                fully responsive way, with all the interactivity you’d expect -
+                like, reblog, etc.
+              </p>
+              <p className="load-in">
+                A week after they were launched, Buzzfeed posted the{" "}
+                <em>Dress</em> article, which was an embedded Tumblr posts. It’s
+                the most viewed Buzzfeed article of all time (or at least it was
+                at the time).
+              </p>
+            </section>
+          </div>
+        </section>
+        <section className="portfolio-media">
+          <div className="row">
+            <div
+              className="col-xs-12 col-sm-6 portfolio-media-item"
               style={{ background: "#f2f2f2" }}
             >
               <div className="tumblr-embed">
@@ -111,11 +173,23 @@ export default class Tumblr extends Component {
                 />
               </div>
             </div>
+            <div
+              className="col-xs-12 col-sm-6 portfolio-media-item"
+              style={{ background: "#ecafaf" }}
+            >
+              <div className="tumblr-embed">
+                <div
+                  className="tumblr-post"
+                  data-href="https://embed.tumblr.com/embed/post/75Dmwi6xWV_PQIiRtNSswQ/167271168399"
+                  data-did="da39a3ee5e6b4b0d3255bfef95601890afd80709"
+                />
+              </div>
+            </div>
           </div>
         </section>
         <section className="content-container">
           <div className="row">
-            <section className="col-xs-12 col-sm-8 col-sm-offset-2 portfolio-copy--second-row">
+            <section className="col-xs-12 col-sm-8 col-sm-offset-2">
               <h2 className="sub-title load-in">{"What Do I Do There?"}</h2>
               <p className="load-in">{"A little bit of everything."}</p>
               <p className="load-in">
