@@ -9,10 +9,17 @@ body {
   -webkit-font-smoothing: antialiased;
   color: $blackish;
   font-size: 16px;
+  position: relative;
 
   &.show-nav,
   &.index {
+    height: 100%;
     overflow: hidden;
+  }
+
+  &.index {
+    position: fixed;
+    width: 100%;
   }
 }
 

@@ -1,7 +1,5 @@
 import React, { Component } from "react";
-import Helmet from "react-helmet";
 
-import Carousel from "components/carousel";
 import ImageLoader from "components/image-loader";
 import DeviceFrame from "components/device-frame";
 
@@ -9,7 +7,7 @@ export const data = {
   order: 1,
   title: "Side Projects",
   color: "purple",
-  description: "In-progress personal projects",
+  description: "Personal projects, in various states of completion.",
   media: [
     {
       type: "image",
@@ -25,17 +23,10 @@ export const data = {
 
 export default class SideProjects extends Component {
   render() {
-    const { description, title, styles, media } = data;
+    const { title } = data;
 
     return (
       <div className="portfolio">
-        <Helmet>
-          <meta name="description" content={description} />
-          <meta property="og:description" content={description} />
-          <meta name="twitter:title" content={title} />
-          <meta name="twitter:description" content={description} />
-          <title>{title}</title>
-        </Helmet>
         <section className="portfolio-media">
           <div className="row">
             <div

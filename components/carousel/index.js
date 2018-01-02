@@ -18,13 +18,6 @@ export default class Carousel extends Component {
       wrapperWidth: "100%"
     };
 
-    const hasMatchMedia = Boolean(window.matchMedia);
-    this.mqs = this.props.breakpoints.map(breakpoint => {
-      if (hasMatchMedia && breakpoint.mq) {
-        return window.matchMedia(breakpoint.mq);
-      }
-    });
-
     this.touchObject = {};
 
     this.setDimensions = this.setDimensions.bind(this);
@@ -58,6 +51,14 @@ export default class Carousel extends Component {
 
   componentDidMount() {
     // Listen for breakpoints.
+
+    const hasMatchMedia = Boolean(window.matchMedia);
+    this.mqs = this.props.breakpoints.map(breakpoint => {
+      if (hasMatchMedia && breakpoint.mq) {
+        return window.matchMedia(breakpoint.mq);
+      }
+    });
+
     this.mqs.forEach(mq => {
       mq.addListener(this.handleMediaQuery);
     });

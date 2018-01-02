@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Helmet from "react-helmet";
 
 import Carousel from "components/carousel";
 import ImageLoader from "components/image-loader";
@@ -38,17 +37,10 @@ export default class Tumblr extends Component {
   }
 
   render() {
-    const { description, title, styles, media } = data;
+    const { title, styles, media } = data;
 
     return (
       <div className="portfolio">
-        <Helmet>
-          <meta name="description" content={description} />
-          <meta property="og:description" content={description} />
-          <meta name="twitter:title" content={title} />
-          <meta name="twitter:description" content={description} />
-          <title>{title}</title>
-        </Helmet>
         <div className="portfolio-carousel" style={styles}>
           <Carousel cellSpacing={0}>
             {media.map((item, index) => {

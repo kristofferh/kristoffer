@@ -1,6 +1,11 @@
 .page-wrapper {
   background: $white;
   min-height: 100vh;
+
+  .show-nav &,
+  .index & {
+    overflow: hidden;
+  }
 }
 
 .page-transition {

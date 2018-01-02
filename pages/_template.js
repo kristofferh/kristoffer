@@ -3,7 +3,14 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import BodyClassName from "react-body-classname";
 import { config } from "config";
-import "intersection-observer";
+
+if (typeof window !== "undefined") {
+  require("intersection-observer");
+}
+
+import "styles/base.scss";
+import "styles/fonts/tanek.scss";
+import "styles/fonts/tiempos.scss";
 
 import Logo from "components/logo";
 import Navigation from "components/navigation";
@@ -19,19 +26,14 @@ export default class Template extends Component {
 
   loadElements() {
     const els = [...document.querySelectorAll(".load-in:not(.visible)")];
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          const { isIntersecting, intersectionRatio } = entry;
-          if (isIntersecting === true || intersectionRatio > 0) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      {
-        threshold: 0.5
-      }
-    );
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const { isIntersecting, intersectionRatio } = entry;
+        if (isIntersecting === true || intersectionRatio > 0) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
     els.forEach(el => {
       observer.observe(el);
     });

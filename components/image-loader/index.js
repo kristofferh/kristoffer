@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import "intersection-observer";
+
+if (typeof window !== "undefined") {
+  require("intersection-observer");
+}
 
 import "./styles";
 

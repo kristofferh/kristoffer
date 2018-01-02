@@ -34,7 +34,7 @@ export default class Navigation extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    let locationChanged =
+    const locationChanged =
       nextProps.location.pathname !== this.props.location.pathname;
     this.setState({
       path: this.getPath(nextProps.location.pathname),
@@ -68,12 +68,18 @@ export default class Navigation extends Component {
         })}
       >
         <nav
-          className={classNames(
-            "main-nav",
-            { [`${this.state.path}`]: this.state.path },
-            { "show-nav": this.state.showNav }
-          )}
+          className={classNames("main-nav", this.state.path, {
+            "show-nav": this.state.showNav
+          })}
         >
+          <Helmet>
+            <html
+              lang="en"
+              className={classNames(this.state.path, {
+                "show-nav": this.state.showNav
+              })}
+            />
+          </Helmet>
           <Link
             to="/portfolio/"
             onClick={this.handlePortfolioClick}
