@@ -1,31 +1,23 @@
 import React, { Component } from "react";
 
-import Carousel from "components/carousel";
 import ImageLoader from "components/image-loader";
 import DeviceFrame from "components/device-frame";
 
 export const data = {
-  order: 0,
+  order: 1,
   title: "Tumblr",
   color: "purple",
   description: "Making teenagers mad, one project at a time.",
   media: [
     {
       type: "image",
-      src: "/images/nomad/computer-phone.png",
-      placeholder: "/images/nomad/computer-phone-small.png",
-      aspectRatio: 0.66666
-    },
-    {
-      type: "video",
-      src: "/videos/nomad-logged-out.mp4",
-      aspectRatio: 9 / 16,
-      videoType: "video/mp4",
-      attributes: { autoPlay: true, loop: true, playsInline: true }
+      src: "/images/tumblr/tumblr-header.jpg",
+      placeholder: "/images/tumblr/tumblr-header-small.jpg",
+      aspectRatio: 0.6979
     }
   ],
   styles: {
-    background: "#fafafa"
+    background: "#36465d"
   }
 };
 
@@ -45,33 +37,20 @@ export default class Tumblr extends Component {
   }
 
   render() {
-    const { title, styles, media } = data;
+    const { title, styles } = data;
 
     return (
       <div className="portfolio">
-        <div className="portfolio-carousel" style={styles}>
-          <Carousel cellSpacing={0}>
-            {media.map((item, index) => {
-              if (item.type === "image") {
-                return (
-                  <div className="carousel-item-wrapper" key={index}>
-                    <ImageLoader img={item.src} />
-                  </div>
-                );
-              } else if (item.type === "video") {
-                return (
-                  <div className="carousel-item-wrapper" key={index}>
-                    <DeviceFrame>
-                      <video className="video-player" {...item.attributes}>
-                        <source src={item.src} type={item.videoType} />
-                      </video>
-                    </DeviceFrame>
-                  </div>
-                );
-              }
-            })}
-          </Carousel>
-        </div>
+        <section className="portfolio-media">
+          <div className="row">
+            <div className="col-xs-12 portfolio-media-item" style={styles}>
+              <ImageLoader
+                img="/images/tumblr/tumblr-header.jpg"
+                aspectRatio={862 / 1235}
+              />
+            </div>
+          </div>
+        </section>
         <section className="content-container">
           <div className="row">
             <div className="col-xs-12 col-sm-8 col-sm-offset-2">
@@ -95,7 +74,7 @@ export default class Tumblr extends Component {
           <div className="row">
             <div
               className="col-xs-12 portfolio-media-item"
-              style={{ background: "#faf2e7" }}
+              style={{ background: "#f8f8f8" }}
             >
               <DeviceFrame>
                 <ImageLoader
