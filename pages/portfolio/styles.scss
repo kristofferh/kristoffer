@@ -133,3 +133,16 @@
   max-width: 400px;
   margin: auto;
 }
+
+.tumblr-fans {
+  margin: 0 10px 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  display: inline-block;
+  width: 200px;
+  vertical-align: top;
+}
+
+.big-shadow {
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+}

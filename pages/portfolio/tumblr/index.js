@@ -246,62 +246,68 @@ export default class Tumblr extends Component {
             </div>
           </div>
         </section>
-        <section className="portfolio-media">
-          <div className="row">
-            <div
-              className="col-xs-12 portfolio-media-item"
-              style={{ background: "#FFF8DA" }}
-            >
-              <DeviceFrame className="load-in">
-                <ImageLoader
-                  img="/images/nomad/post-a-job@2x.png"
-                  aspectRatio={1600 / 2880}
-                />
-              </DeviceFrame>
-            </div>
-          </div>
-        </section>
         <section className="content-container">
-          <div className="row around-sm">
-            <div className="col-xs-6 col-sm-4 portfolio-copy--second-row">
-              <h2 className="sub-title load-in">{"Design"}</h2>
-              <ul className="no-bullet-list">
-                <li className="load-in">UI / UX Design</li>
-                <li className="load-in">Print / Marketing Material</li>
-                <li className="load-in">Sketch</li>
-                <li className="load-in">Adobe Illustrator</li>
-                <li className="load-in">Adobe Photoshop</li>
-                <li className="load-in">Abstract</li>
-                <li className="load-in">Invision</li>
-              </ul>
+          <div className="row">
+            <div className="col-xs-12 col-sm-6">
+              <h2 className="sub-title load-in">Product Management</h2>
+              <p className="load-in">
+                I spend the last year of my time at Tumblr working as a Product
+                Manager. My team, <em>Identity</em>, was focused mainly on
+                personalizing and making Tumblr as creative as you are. We
+                worked on a few huge projects (reblog redesign was years in the
+                making), and our users loved it.
+              </p>
             </div>
-            <div className="col-xs-6 col-sm-4 portfolio-copy--second-row">
-              <h2 className="sub-title load-in">{"Tech"}</h2>
-              <ul className="no-bullet-list">
-                <li className="load-in">React</li>
-                <li className="load-in">Redux</li>
-                <li className="load-in">Webpack 3</li>
-                <li className="load-in">Python / Flask</li>
-                <li className="load-in">SCSS</li>
-                <li className="load-in">MongoDB</li>
-                <li className="load-in">Backbone.js</li>
-              </ul>
+            <div className="col-xs-12 col-sm-6">
+              <ImageLoader
+                className="tumblr-fans load-in"
+                placeholder={"/images/tumblr/fans-small.jpg"}
+                aspectRatio={650 / 300}
+                img={"/images/tumblr/fans.jpg"}
+              />
+              <ImageLoader
+                className="tumblr-fans load-in"
+                placeholder={"/images/tumblr/fans-2-small.jpg"}
+                aspectRatio={204 / 299}
+                img={"/images/tumblr/fans-2.jpg"}
+              />
             </div>
           </div>
         </section>
         <section className="portfolio-media">
           <div className="row">
             <div
-              className="col-xs-12 portfolio-media-item"
-              style={{ background: "#fafafa" }}
+              className="col-xs-12 col-sm-4 portfolio-media-item"
+              style={{ background: "#fecad1" }}
             >
-              <DeviceFrame bodyStyles={{ maxHeight: 800 }}>
-                <ImageLoader
-                  placeholder="/images/nomad/public-profile-small.png"
-                  img="/images/nomad/public-profile@2x.png"
-                  aspectRatio={5418 / 2880}
-                />
-              </DeviceFrame>
+              <ImageLoader
+                className="big-shadow"
+                placeholder={"/images/tumblr/reblog-small.jpg"}
+                aspectRatio={1}
+                img={"/images/tumblr/reblog.gif"}
+              />
+            </div>
+            <div
+              className="col-xs-12 col-sm-4 portfolio-media-item"
+              style={{ background: "#40b17d" }}
+            >
+              <ImageLoader
+                className="big-shadow"
+                placeholder={"/images/tumblr/related-posts-small.jpg"}
+                aspectRatio={405 / 540}
+                img={"/images/tumblr/related-posts.gif"}
+              />
+            </div>
+            <div
+              className="col-xs-12 col-sm-4 portfolio-media-item"
+              style={{ background: "#f5ce64" }}
+            >
+              <ImageLoader
+                className="big-shadow"
+                placeholder={"/images/tumblr/likes-small.jpg"}
+                aspectRatio={1}
+                img={"/images/tumblr/likes.gif"}
+              />
             </div>
           </div>
         </section>
