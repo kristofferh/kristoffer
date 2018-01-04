@@ -54,7 +54,9 @@ const HTML = ({ color, favicon, body, headComponents, postBodyComponents }) => {
 HTML.propTypes = {
   body: PropTypes.any,
   color: PropTypes.string,
-  favicon: PropTypes.string
+  favicon: PropTypes.string,
+  headComponents: PropTypes.any,
+  postBodyComponents: PropTypes.any
 };
 
 export default HTML;
