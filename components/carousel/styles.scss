@@ -1,0 +1,29 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  &-wrapper {
+    cursor: grab;
+    touch-action: pan-x pan-y;
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.2s ease; // @todo: measure the distance and change the timing / easing based on that.
+
+    &.dragging {
+      cursor: grabbing;
+      transition: none;
+    }
+  }
+
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+    user-select: none;
+    -webkit-user-drag: none;
+
+    img {
+      pointer-events: none;
+    }
+  }
+}

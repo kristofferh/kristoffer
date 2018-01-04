@@ -1,7 +1,7 @@
-@import 'variables/index';
+@import "variables/index";
 
 @mixin art-direction($color) {
-  $dark: mix($black-00, $color, 75);
+  $dark: mix($black, $color, 75);
   $light: mix($white, $color, 50);
 
   color: $dark;
@@ -9,11 +9,11 @@
   .content-wrapper,
   .page-footer {
     a {
-      color: mix($black-00, $color, 50);
+      color: mix($black, $color, 50);
       transition: all 0.2s ease;
 
       &:hover {
-        color: mix($black-00, $color, 75);
+        color: mix($black, $color, 75);
       }
     }
   }
@@ -23,6 +23,14 @@
   }
 
   .main-nav {
+    background: $color;
+  }
+
+  .nav-logo {
+    background: mix($black, $color, 10);
+  }
+
+  &.index .nav-logo {
     background: $color;
   }
 
@@ -49,4 +57,12 @@
 
 .orange {
   @include art-direction($orange);
+}
+
+.salmon {
+  @include art-direction($salmon);
+}
+
+.purple {
+  @include art-direction($purple);
 }

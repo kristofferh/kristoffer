@@ -6,6 +6,8 @@ coverage
 public
 .gatsby-context.js
 *.sublime-workspace
+images
+videos
 
 styles/fonts/tanek
 styles/fonts/tiempos

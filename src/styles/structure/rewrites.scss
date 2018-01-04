@@ -1,34 +1,46 @@
 html {
-    font-size: 100%;
-    line-height: 1.4;
+  font-size: 100%;
+  line-height: 1.4;
 }
 
 body {
-    font-family: $font-family-serif;
-    font-weight: 300;
-    -webkit-font-smoothing: antialiased;
-    color: $blackish;
-    font-size: 16px;
+  font-family: $font-family-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  color: $blackish;
+  font-size: 16px;
+  position: relative;
+
+  &.show-nav,
+  &.index {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &.index {
+    position: fixed;
+    width: 100%;
+  }
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background-color: #2B2B2B;
-    color: $white;
-    text-shadow: none;
+  background-color: #2b2b2b;
+  color: $white;
+  text-shadow: none;
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 audio,
@@ -36,23 +48,23 @@ canvas,
 img,
 svg,
 video {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 textarea {
-    resize: vertical;
+  resize: vertical;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 
-    &:hover {
-        text-decoration: none;
-    }
+  &:hover {
+    text-decoration: none;
+  }
 }

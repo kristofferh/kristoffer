@@ -5,6 +5,15 @@ import BodyClassName from "react-body-classname";
 
 import { siteMetadata as config } from "../../gatsby-config";
 
+if (typeof window !== "undefined") {
+  require("intersection-observer");
+}
+
+import "styles/base.scss";
+import "styles/fonts/tanek.scss";
+import "styles/fonts/tiempos.scss";
+
+import Logo from "components/logo";
 import Navigation from "components/navigation";
 import Footer from "components/footer";
 
@@ -16,10 +25,36 @@ export default class Template extends Component {
     //this.setState({direction});
   }
 
+  loadElements() {
+    const els = [...document.querySelectorAll(".load-in:not(.visible)")];
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        const { isIntersecting, intersectionRatio } = entry;
+        if (isIntersecting === true || intersectionRatio > 0) {
+          entry.target.classList.add("visible");
+        }
+      });
+    });
+    els.forEach(el => {
+      observer.observe(el);
+    });
+  }
+
+  componentDidMount() {
+    this.loadElements();
+  }
+
+  componentDidUpdate() {
+    this.loadElements();
+  }
+
   render() {
-    let page = this.props.children.props.route.page.data;
-    let path = this.props.children.props.route.page.path;
-    let color = page.color || "green";
+    const colors = ["green", "blue", "orange", "pink"];
+    const defaultColor = colors[Math.floor(Math.random() * colors.length)];
+
+    const page = this.props.children.props.route.page.data;
+    const path = this.props.children.props.route.page.path;
+    const color = page.color || defaultColor;
 
     return (
       <div>
@@ -60,6 +95,7 @@ export default class Template extends Component {
           titleTemplate={`%s - ${config.siteTitle}`}
           title={page.title}
         />
+        <Logo {...this.props} />
         <Navigation {...this.props} />
         <section className="content-wrapper">{this.props.children()}</section>
         <Footer />
@@ -69,5 +105,6 @@ export default class Template extends Component {
 }
 
 Template.propTypes = {
-  children: PropTypes.any
+  children: PropTypes.any,
+  location: PropTypes.object
 };

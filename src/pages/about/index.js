@@ -64,41 +64,45 @@ const About = () => {
           ))}
       </div>
       <div className="content-container">
-        <h1 className="page-title">{"About"}</h1>
+        <h1 className="page-title load-in">{"About"}</h1>
         <div className="row between-xs">
           <div className="module col-xs-12 col-sm-8">
-            <h2 className="sub-title">{"Bio"}</h2>
-            <p>{"Hey. I’m Kris. I’m an interactive designer / developer."}</p>
+            <h2 className="sub-title load-in">{"Bio"}</h2>
+            <div>
+              <p className="load-in">
+                {"Hey. I’m Kris. I’m an interactive designer / developer."}
+              </p>
 
-            <p>
-              {
-                "I grew up in Umeå, in northern Sweden, but I now live in Brooklyn, NY. I am currently enjoying a hybrid Art Director + Lead Product Engineer role at a small startup called Nomad Health. Before that, I was a Product (Engineering) Manager at Tumblr. Before that, I worked at agencies. Before that, I was a baby."
-              }
-            </p>
+              <p className="load-in">
+                {
+                  "I grew up in Umeå, in northern Sweden, but I now live in Brooklyn, NY. I am currently enjoying a hybrid Art Director + Lead Product Engineer role at a small startup called Nomad Health. Before that, I was a Product (Engineering) Manager at Tumblr. Before that, I worked at agencies. Before that, I was a baby."
+                }
+              </p>
 
-            <p>
-              {
-                "I like to design things, and then I like to build those things."
-              }
-            </p>
+              <p className="load-in">
+                {
+                  "I like to design things, and then I like to build those things."
+                }
+              </p>
 
-            <p>
-              {
-                "I occasionally take on freelance projects. Feel free to get in touch if you have an interesting project that you want to collaborate on. Or if you just want to say "
-              }
-              <a
-                className="highlight"
-                href="mailto:hello@k-create.com?subject=hi"
-              >
-                {"hello"}
-              </a>
-              {", that’s cool too."}
-            </p>
+              <p className="load-in">
+                {
+                  "I occasionally take on freelance projects. Feel free to get in touch if you have an interesting project that you want to collaborate on. Or if you just want to say "
+                }
+                <a
+                  className="highlight"
+                  href="mailto:hello@k-create.com?subject=hi"
+                >
+                  {"hello"}
+                </a>
+                {", that’s cool too."}
+              </p>
+            </div>
           </div>
           <div className="module col-xs-12 col-sm-3">
-            <h2 className="sub-title">{"Elsewhere"}</h2>
+            <h2 className="sub-title load-in">{"Elsewhere"}</h2>
             <ul className="no-bullet-list social-links">
-              <li>
+              <li className="load-in">
                 <a
                   href="https://github.com/kristofferh"
                   rel="noopener noreferrer"
@@ -107,7 +111,7 @@ const About = () => {
                   {"Github"}
                 </a>
               </li>
-              <li>
+              <li className="load-in">
                 <a
                   href="https://codepen.io/kristofferh/"
                   rel="noopener noreferrer"
@@ -116,7 +120,7 @@ const About = () => {
                   {"Codepen"}
                 </a>
               </li>
-              <li>
+              <li className="load-in">
                 <a
                   href="http://kris.tumblr.com/"
                   rel="noopener noreferrer"
@@ -125,7 +129,7 @@ const About = () => {
                   {"Tumblr"}
                 </a>
               </li>
-              <li>
+              <li className="load-in">
                 <a
                   href="https://twitter.com/_kris"
                   rel="noopener noreferrer"

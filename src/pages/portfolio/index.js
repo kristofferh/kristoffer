@@ -10,7 +10,7 @@ import ImageLoader from "components/image-loader";
 
 import "./styles.scss";
 
-exports.data = {
+export const data = {
   title: "Portfolio",
   color: "orange",
   description: "Kristoffer Hedstrom's Portfolio."
@@ -18,8 +18,6 @@ exports.data = {
 
 export default class PortfolioIndex extends Component {
   render() {
-    let { description, title } = exports.data;
-
     const pages = this.props.route.pages;
 
     const pageLinks = pages
@@ -30,21 +28,25 @@ export default class PortfolioIndex extends Component {
           return false;
         }
       })
+      .sort((a, b) => {
+        const orderA = access(a, "data.order");
+        const orderB = access(b, "data.order");
+        return orderA - orderB;
+      })
       .map(page => {
-        const image = access(page, "data.image");
+        const media =
+          page.data.media &&
+          page.data.media.find(item => item.type === "image");
         const styles = access(page, "data.styles");
-        const thumb = access(page, "data.thumb");
-        const aspectRatio = access(page, "data.aspectRatio");
         const title = access(page, "data.title") || page.path;
         return (
           <div key={page.path} className="portfolio-item col-xs-12 col-sm-4">
-            <Link to={page.path}>
+            <Link to={page.path} className="portfolio-item-link">
               <div className="portfolio-item-image" style={styles}>
-                {image && (
+                {media && (
                   <ImageLoader
-                    placeholder={thumb}
-                    aspectRatio={aspectRatio}
-                    img={image}
+                    className="portfolio-item-preview"
+                    img={media.src}
                   />
                 )}
               </div>
@@ -55,20 +57,13 @@ export default class PortfolioIndex extends Component {
       });
 
     const groups = groupsOf(pageLinks, 3).map((page, i) => (
-      <div key={i} className="between-sm row">
+      <div key={i} className="row">
         {page}
       </div>
     ));
 
     return (
       <div className="content-container">
-        <Helmet>
-          <meta name="description" content={description} />
-          <meta property="og:description" content={description} />
-          <meta name="twitter:title" content={description} />
-          <meta name="twitter:description" content={"cool beans"} />
-          <title>{title}</title>
-        </Helmet>
         <h1 className="page-title">{"Selected bits"}</h1>
         <div className="portfolio-items">{groups}</div>
       </div>

@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { Link } from "gatsby-link";
+import BodyClassName from "react-body-classname";
+import Helmet from "react-helmet";
 
-import Mark from "../mark";
 import "./styles.scss";
 
-class Navigation extends Component {
+export default class Navigation extends Component {
   constructor(props, context) {
     super(props, context);
     this.navItems = ["index", "about", "resume", "portfolio"]; // @todo: generate links based off of these.
@@ -33,7 +34,7 @@ class Navigation extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    let locationChanged =
+    const locationChanged =
       nextProps.location.pathname !== this.props.location.pathname;
     this.setState({
       path: this.getPath(nextProps.location.pathname),
@@ -61,28 +62,67 @@ class Navigation extends Component {
 
   render() {
     return (
-      <nav
-        className={classNames(
-          "main-nav",
-          { [`${this.state.path}`]: this.state.path },
-          { "show-nav": this.state.showNav }
-        )}
+      <BodyClassName
+        className={classNames(this.state.path, {
+          "show-nav": this.state.showNav
+        })}
       >
-        <span className="nav-logo">
-          <span className="nav-logo-container">
-            <Mark />
+        <nav
+          className={classNames("main-nav", this.state.path, {
+            "show-nav": this.state.showNav
+          })}
+        >
+          <Helmet>
+            <html
+              lang="en"
+              className={classNames(this.state.path, {
+                "show-nav": this.state.showNav
+              })}
+            />
+          </Helmet>
+          <Link
+            to="/portfolio/"
+            onClick={this.handlePortfolioClick}
+            activeClassName="active"
+            className={classNames("nav-item", {
+              active: this.state.path === "portfolio"
+            })}
+          >
+            <span className="text">
+              <span
+                className={classNames("subnav-wrapper", {
+                  "has-subnav":
+                    this.state.path === "portfolio" &&
+                    this.state.pageTitle !== "Portfolio"
+                })}
+              >
+                <span className="subnav">
+                  <span className="subnav-text section-title">
+                    {"Portfolio"}
+                  </span>
+                </span>
+                <span className="subnav">
+                  {this.state.path === "portfolio" &&
+                    this.state.pageTitle !== "Portfolio" && (
+                      <span className="subnav-text page-title">
+                        {this.state.pageTitle}
+                      </span>
+                    )}
+                </span>
+              </span>
+            </span>
+          </Link>
+          <Link to="/about/" activeClassName="active" className="nav-item">
+            <span className="text">{"About"}</span>
+          </Link>
+          <Link to="/resume/" activeClassName="active" className="nav-item">
+            <span className="text">{"Resume"}</span>
+          </Link>
+          <span className="nav-item close" onClick={this.handleCloseClick}>
+            <span className="close-btn" />
           </span>
-        </span>
-        <Link to="/about/" activeClassName="active" className="nav-item">
-          <span className="text">{"About"}</span>
-        </Link>
-        <Link to="/resume/" activeClassName="active" className="nav-item">
-          <span className="text">{"Resume"}</span>
-        </Link>
-        <span className="nav-item close" onClick={this.handleCloseClick}>
-          <span className="close-btn" />
-        </span>
-      </nav>
+        </nav>
+      </BodyClassName>
     );
   }
 }
@@ -99,5 +139,3 @@ Navigation.propTypes = {
 Navigation.contextTypes = {
   router: PropTypes.object
 };
-
-export default Navigation;

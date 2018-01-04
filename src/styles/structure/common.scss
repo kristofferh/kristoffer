@@ -1,18 +1,20 @@
 .page-wrapper {
   background: $white;
   min-height: 100vh;
-  display: inline-block;
-  width: 100%;
+
+  .show-nav &,
+  .index & {
+    overflow: hidden;
+  }
 }
 
 .page-transition {
-
   &-enter {
     opacity: 0.01;
     transition: opacity 0.1s ease-in;
 
     &-active {
-      opacity: 1
+      opacity: 1;
     }
   }
 
@@ -27,7 +29,7 @@
 }
 
 .content-wrapper {
-  margin: 60px auto 20px;
+  margin: 0 auto 20px;
   background: $white;
   display: inline-block;
   width: 100%;
@@ -42,7 +44,7 @@
     margin: 0 0 0.25em;
 
     &:after {
-      content: '';
+      content: "";
       width: 40px;
       border-bottom: 4px solid;
       display: block;
@@ -52,6 +54,10 @@
     @media (min-width: $min-width-sm) {
       font-size: 48px;
     }
+  }
+
+  .page-title + p {
+    margin-top: 1.5em;
   }
 
   .sub-title {
@@ -94,30 +100,5 @@
   .footer-inner {
     padding: 15px;
     text-align: center;
-  }
-}
-
-.portfolio-carousel {
-  background: radial-gradient(ellipse at center, rgba(182, 231, 221, 0.75) 0%, #040c28 100%);
-
-
-  .slider-slide > img {
-    max-width: 740px;
-    margin: auto;
-  }
-
-  .video-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .video-player {
-    margin: auto;
-    display: block;
-    max-width: 540px;
-    height: auto;
-    width: 100%;
-    box-shadow: 0 0 40px 5px;
   }
 }
