@@ -21,7 +21,7 @@ export const data = {
   }
 };
 
-export default class SideProjects extends Component {
+export default class Archive extends Component {
   render() {
     const { title, styles } = data;
 
@@ -45,7 +45,9 @@ export default class SideProjects extends Component {
           <div className="row center">
             <div className="col-xs-8">
               <p className="load-in">
-                {"Older projects. From the olden times."}
+                {
+                  "Older projects. Freelance and agency work. From the olden times."
+                }
               </p>
             </div>
           </div>
@@ -53,26 +55,86 @@ export default class SideProjects extends Component {
         <section className="portfolio-media">
           <div className="row">
             <div
-              className="col-xs-4 portfolio-media-item"
-              style={{ background: "#a0c2de" }}
+              className="col-xs-12 portfolio-media-item"
+              style={{ background: "#0a0501" }}
             >
-              <DeviceFrame type="phone--light">
+              <DeviceFrame bodyStyles={{ maxHeight: 800 }}>
                 <ImageLoader
-                  img="/images/side-projects/milestones-mobile.png"
-                  placeholder="/images/side-projects/milestones-mobile-small.png"
-                  aspectRatio={1334 / 750}
+                  placeholder="/images/archive/project-rebrief-small.jpg"
+                  img="/images/archive/project-rebrief.jpg"
+                  aspectRatio={4980 / 980}
+                />
+              </DeviceFrame>
+            </div>
+          </div>
+        </section>
+        <section className="portfolio-media">
+          <div className="row">
+            <div
+              className="col-xs-6 portfolio-media-item"
+              style={{ background: "#f2706f" }}
+            >
+              <DeviceFrame>
+                <ImageLoader
+                  img="/images/archive/raleigh-1.jpg"
+                  placeholder="/images/archive/raleigh-1-small.jpg"
+                  aspectRatio={500 / 700}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-8 portfolio-media-item"
-              style={{ background: "#b4bde9" }}
+              className="col-xs-6 portfolio-media-item"
+              style={{ background: "#90a0d1" }}
             >
               <DeviceFrame>
                 <ImageLoader
-                  img="/images/side-projects/milestones@2x.png"
-                  placeholder="/images/side-projects/milestones-small.png"
-                  aspectRatio={1342 / 2560}
+                  img="/images/archive/zeitgeist-1.jpg"
+                  placeholder="/images/archive/zeitgeist-1-small.jpg"
+                  aspectRatio={500 / 700}
+                />
+              </DeviceFrame>
+            </div>
+          </div>
+        </section>
+        <section className="portfolio-media">
+          <div className="row">
+            <div
+              className="col-xs-6 portfolio-media-item"
+              style={{ background: "#fbfafa" }}
+            >
+              <DeviceFrame>
+                <ImageLoader
+                  img="/images/archive/gw2.jpg"
+                  placeholder="/images/archive/gw2-small.jpg"
+                  aspectRatio={1000 / 1400}
+                />
+              </DeviceFrame>
+            </div>
+            <div
+              className="col-xs-6 portfolio-media-item"
+              style={{ background: "#fbfafa" }}
+            >
+              <DeviceFrame>
+                <ImageLoader
+                  img="/images/archive/gw2-races.jpg"
+                  placeholder="/images/archive/gw2-races-small.jpg"
+                  aspectRatio={1000 / 1400}
+                />
+              </DeviceFrame>
+            </div>
+          </div>
+        </section>
+        <section className="portfolio-media">
+          <div className="row">
+            <div
+              className="col-xs-12 portfolio-media-item"
+              style={{ background: "#fcc013" }}
+            >
+              <DeviceFrame bodyStyles={{ maxHeight: 800 }}>
+                <ImageLoader
+                  img="/images/archive/tictail.jpg"
+                  placeholder="/images/archive/tictail-small.jpg"
+                  aspectRatio={7596 / 2560}
                 />
               </DeviceFrame>
             </div>
@@ -84,10 +146,11 @@ export default class SideProjects extends Component {
               className="col-xs-6 portfolio-media-item"
               style={{ background: "#f9f9f9" }}
             >
-              <DeviceFrame type="phone--light">
+              <DeviceFrame>
                 <ImageLoader
-                  img="/images/side-projects/spender-splash.png"
-                  aspectRatio={1334 / 750}
+                  img="/images/archive/vw-canada-1.jpg"
+                  placeholder="/images/archive/vw-canada-1-small.jpg"
+                  aspectRatio={500 / 700}
                 />
               </DeviceFrame>
             </div>
@@ -95,10 +158,11 @@ export default class SideProjects extends Component {
               className="col-xs-6 portfolio-media-item"
               style={{ background: "#f1f1f4" }}
             >
-              <DeviceFrame type="phone">
+              <DeviceFrame>
                 <ImageLoader
-                  img="/images/side-projects/spender-overview.png"
-                  aspectRatio={1334 / 750}
+                  img="/images/archive/al-jazeera-1.jpg"
+                  placeholder="/images/archive/zeitgeist-1-small.jpg"
+                  aspectRatio={500 / 700}
                 />
               </DeviceFrame>
             </div>
@@ -108,12 +172,14 @@ export default class SideProjects extends Component {
           <div className="row">
             <div
               className="col-xs-12 portfolio-media-item"
-              style={{ background: "#222" }}
+              style={{ background: "#363636" }}
             >
-              <DeviceFrame className="load-in" styles={{ maxWidth: 720 }}>
-                <video className="video-player" autoPlay loop playsInline>
-                  <source src="/videos/krisandrazi.mp4" type="video/mp4" />
-                </video>
+              <DeviceFrame bodyStyles={{ maxHeight: 800 }}>
+                <ImageLoader
+                  img="/images/archive/gw-products-individual.jpg"
+                  placeholder="/images/archive/gw-products-individual-small.jpg"
+                  aspectRatio={1800 / 1400}
+                />
               </DeviceFrame>
             </div>
           </div>
