@@ -7,7 +7,7 @@ import DeviceFrame from "components/device-frame";
 export const data = {
   order: 0,
   title: "Nomad",
-  color: "purple",
+  color: "blue",
   description: "Fixing one part of a broken health system.",
   media: [
     {
