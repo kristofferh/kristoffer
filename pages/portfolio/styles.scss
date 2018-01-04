@@ -75,6 +75,10 @@
   &-item {
     padding: 50px 20px;
 
+    &--flush-bottom {
+      padding-bottom: 0;
+    }
+
     &-phone {
       max-width: 320px;
       margin: auto;
@@ -145,4 +149,7 @@
 
 .big-shadow {
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+}
+
+.side-project {
 }

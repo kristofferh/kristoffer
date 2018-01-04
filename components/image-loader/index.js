@@ -66,6 +66,7 @@ export default class ImageLoader extends Component {
           [`${this.props.className}`]: this.props.className,
           "image-loader--placeholder": this.props.aspectRatio
         })}
+        style={this.props.styles}
       >
         {this.props.placeholder &&
           !this.state.doneAnimating && (
@@ -102,5 +103,6 @@ ImageLoader.propTypes = {
   img: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   lazyload: PropTypes.bool,
-  loadingCallback: PropTypes.func
+  loadingCallback: PropTypes.func,
+  styles: PropTypes.object
 };

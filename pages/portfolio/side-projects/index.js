@@ -4,29 +4,57 @@ import ImageLoader from "components/image-loader";
 import DeviceFrame from "components/device-frame";
 
 export const data = {
-  order: 1,
+  order: 2,
   title: "Side Projects",
   color: "purple",
   description: "Personal projects, in various states of completion.",
   media: [
     {
       type: "image",
-      src: "/images/nomad/computer-phone.png",
-      placeholder: "/images/nomad/computer-phone-small.png",
-      aspectRatio: 0.66666
+      src: "/images/side-projects/side-projects-header.png",
+      placeholder: "/images/side-projects/side-projects-header-alt.png",
+      aspectRatio: 0.344
     }
   ],
   styles: {
-    background: "#fafafa"
+    background: "linear-gradient(80deg, #43D8A8, #BCBCEC)",
+    backgroundSize: "201%",
+    backgroundPosition: "100%"
   }
 };
 
 export default class SideProjects extends Component {
   render() {
-    const { title } = data;
+    const { title, styles } = data;
 
     return (
       <div className="portfolio">
+        <section className="portfolio-media">
+          <div className="row">
+            <div
+              className="col-xs-12 portfolio-media-item portfolio-media-item--flush-bottom"
+              style={styles}
+            >
+              <ImageLoader
+                styles={{ maxWidth: 500, margin: "0 auto -1px" }}
+                img="/images/side-projects/side-projects-header-alt.png"
+                aspectRatio={394 / 768}
+              />
+            </div>
+          </div>
+        </section>
+        <section className="content-container">
+          <h1 className="page-title load-in">{title}</h1>
+          <div className="row center">
+            <div className="col-xs-8">
+              <p className="load-in">
+                {
+                  "I start a lot of side projects. Some make it further than others. This is a sampling."
+                }
+              </p>
+            </div>
+          </div>
+        </section>
         <section className="portfolio-media">
           <div className="row">
             <div
@@ -52,18 +80,6 @@ export default class SideProjects extends Component {
                   aspectRatio={1342 / 2560}
                 />
               </DeviceFrame>
-            </div>
-          </div>
-        </section>
-        <section className="content-container">
-          <h1 className="page-title load-in">{title}</h1>
-          <div className="row center">
-            <div className="col-xs-8">
-              <p className="load-in">
-                {
-                  "I start a lot of side projects. Some make it further than others. This is a sampling."
-                }
-              </p>
             </div>
           </div>
         </section>
