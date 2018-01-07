@@ -4,10 +4,12 @@ import ImageLoader from "components/image-loader";
 import DeviceFrame from "components/device-frame";
 
 export const data = {
+  portfolio: true,
   order: 3,
   title: "Archive",
   color: "pink",
   description: "Older projects.",
+  path: "/portfolio/archive",
   media: [
     {
       type: "image",

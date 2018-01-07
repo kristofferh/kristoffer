@@ -4,10 +4,12 @@ import ImageLoader from "components/image-loader";
 import DeviceFrame from "components/device-frame";
 
 export const data = {
+  portfolio: true,
   order: 1,
   title: "Tumblr",
   color: "purple",
   description: "Making teenagers mad, one project at a time.",
+  path: "/portfolio/tumblr",
   media: [
     {
       type: "image",

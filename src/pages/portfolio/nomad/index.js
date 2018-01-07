@@ -5,10 +5,12 @@ import ImageLoader from "components/image-loader";
 import DeviceFrame from "components/device-frame";
 
 export const data = {
+  portfolio: true,
   order: 0,
   title: "Nomad",
   color: "blue",
   description: "Fixing one part of a broken health system.",
+  path: "/portfolio/nomad",
   media: [
     {
       type: "image",

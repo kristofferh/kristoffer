@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { Link } from "gatsby-link";
-import access from "safe-access";
+import Link from "gatsby-link";
+import graphql from "graphql";
 
 import groupsOf from "utils/groups-of";
 
@@ -15,61 +15,73 @@ export const data = {
   description: "Kristoffer Hedstrom's Portfolio."
 };
 
-export default class PortfolioIndex extends Component {
-  render() {
-    const pages = this.props.route.pages;
-
-    const pageLinks = pages
-      .filter(page => {
-        if (/^(\/portfolio\/)(.+)/.test(page.path)) {
-          return true;
-        } else {
-          return false;
-        }
-      })
-      .sort((a, b) => {
-        const orderA = access(a, "data.order");
-        const orderB = access(b, "data.order");
-        return orderA - orderB;
-      })
-      .map(page => {
-        const media =
-          page.data.media &&
-          page.data.media.find(item => item.type === "image");
-        const styles = access(page, "data.styles");
-        const title = access(page, "data.title") || page.path;
-        return (
-          <div key={page.path} className="portfolio-item col-xs-12 col-sm-4">
-            <Link to={page.path} className="portfolio-item-link">
-              <div className="portfolio-item-image" style={styles}>
-                {media && (
-                  <ImageLoader
-                    className="portfolio-item-preview"
-                    img={media.src}
-                  />
-                )}
-              </div>
-              <span className="portfolio-item-text">{title}</span>
-            </Link>
-          </div>
-        );
-      });
-
-    const groups = groupsOf(pageLinks, 3).map((page, i) => (
-      <div key={i} className="row">
-        {page}
-      </div>
-    ));
-
+const PortfolioIndex = ({ data }) => {
+  const pageLinks = data.portfolio.edges.map(({ node: page }) => {
+    const { styles, title, path } = page.data;
+    const media =
+      page.data.media && page.data.media.find(item => item.type === "image");
     return (
-      <div className="content-container">
-        <h1 className="page-title">{"Selected bits"}</h1>
-        <div className="portfolio-items">{groups}</div>
+      <div key={path} className="portfolio-item col-xs-12 col-sm-4">
+        <Link to={path} className="portfolio-item-link">
+          <div className="portfolio-item-image" style={styles}>
+            {media && (
+              <ImageLoader className="portfolio-item-preview" img={media.src} />
+            )}
+          </div>
+          <span className="portfolio-item-text">{title}</span>
+        </Link>
       </div>
     );
-  }
-}
+  });
+
+  const groups = groupsOf(pageLinks, 3).map((page, i) => (
+    <div key={i} className="row">
+      {page}
+    </div>
+  ));
+
+  return (
+    <div className="content-container">
+      <h1 className="page-title">{"Selected bits"}</h1>
+      <div className="portfolio-items">{groups}</div>
+    </div>
+  );
+};
 
 PortfolioIndex.propTypes = {
-  route: PropTypes.object
+  data: PropTypes.object
 };
+
+export const pageQuery = graphql`
+  query portfolioQuery {
+    portfolio: allJsFrontmatter(
+      filter: { data: { portfolio: { eq: true } } }
+      sort: { fields: [data___order], order: ASC }
+    ) {
+      edges {
+        node {
+          data {
+            title
+            path
+            styles {
+              background
+              backgroundPosition
+              backgroundSize
+            }
+            order
+            description
+            media {
+              type
+              src
+              aspectRatio
+              placeholder
+              videoType
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default PortfolioIndex;
