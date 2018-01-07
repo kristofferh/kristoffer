@@ -48,7 +48,7 @@ export default class SideProjects extends Component {
         <section className="content-container">
           <h1 className="page-title load-in">{title}</h1>
           <div className="row center">
-            <div className="col-xs-8">
+            <div className="col-xs-12 col-sm-8">
               <p className="load-in">
                 {
                   "I start a lot of side projects. Some make it further than others. This is a sampling."

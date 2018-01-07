@@ -6,40 +6,35 @@
   "scripts": {
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "yarn lint",
-    "dev": "gatsby develop"
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve"
   },
   "author": "Kristoffer Hedstrom",
   "license": "MIT",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.3",
     "gatsby": "^1.9.0",
     "gatsby-link": "^1.6.0",
+    "gatsby-plugin-postcss-sass": "^1.0.15",
     "gatsby-plugin-resolve-src": "^1.0.0",
-    "gatsby-plugin-sass": "^1.0.15",
     "gatsby-source-filesystem": "^1.5.11",
     "gatsby-transformer-javascript-static-exports": "^1.3.8",
     "intersection-observer": "^0.5.0",
-    "normalize.css": "^4.1.1",
-    "prop-types": "^15.5.6",
-    "react": "^15.1.0",
-    "react-addons-css-transition-group": "^15.1.0",
+    "normalize.css": "^7.0.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
     "react-body-classname": "^1.0.1",
-    "react-document-title": "^2.0.1",
-    "react-dom": "^15.0.1",
-    "react-helmet": "^5.0.0",
-    "safe-access": "^0.1.0"
+    "react-dom": "^16.2.0",
+    "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^6.3.3",
-    "copy-webpack-plugin": "^2.0.1",
-    "eslint": "^4.10.0",
+    "eslint": "^4.15.0",
     "eslint-config-prettier": "^2.6.0",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",
-    "extract-text-webpack-plugin": "^1.0.1",
     "flexboxgrid": "^6.3.0",
-    "postcss-cssnext": "^2.9.0",
-    "postcss-loader": "^0.8.1",
     "prettier": "^1.9.2"
   }
 }

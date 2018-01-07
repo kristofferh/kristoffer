@@ -8,11 +8,11 @@ module.exports = {
     description:
       "Website for Kristoffer Hedstrom: Interactive designer and developer from Brooklyn, NY",
     twitter: "@_kris",
-    shareImage: "https://k-create.com/images/shaky.gif"
+    shareImage: "https://k-create.com/images/about/shakey-0.gif"
   },
   plugins: [
     "gatsby-plugin-resolve-src",
-    "gatsby-plugin-sass",
+    "gatsby-plugin-postcss-sass",
     "gatsby-transformer-javascript-static-exports",
     {
       resolve: "gatsby-source-filesystem",

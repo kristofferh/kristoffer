@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import BodyClassName from "react-body-classname";
 import graphql from "graphql";
+import "babel-polyfill";
 
 if (typeof window !== "undefined") {
   require("intersection-observer");
@@ -128,6 +129,7 @@ export const pageQuery = graphql`
         description
         twitter
         shareImage
+        url
       }
     }
     allFile {
