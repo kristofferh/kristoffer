@@ -10,5 +10,16 @@ module.exports = {
     twitter: "@_kris",
     shareImage: "https://k-create.com/images/shaky.gif"
   },
-  plugins: ["gatsby-plugin-resolve-src", "gatsby-plugin-sass"]
+  plugins: [
+    "gatsby-plugin-resolve-src",
+    "gatsby-plugin-sass",
+    "gatsby-transformer-javascript-static-exports",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "pages",
+        path: `${__dirname}/src/pages/`
+      }
+    }
+  ]
 };

@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import BodyClassName from "react-body-classname";
-
-import { siteMetadata as config } from "../../gatsby-config";
+import graphql from "graphql";
 
 if (typeof window !== "undefined") {
   require("intersection-observer");
@@ -18,13 +17,6 @@ import Navigation from "components/navigation";
 import Footer from "components/footer";
 
 export default class Template extends Component {
-  componentWillReceiveProps() {
-    // `path` is an array of tree node indexes
-    // const direction = newProps.path.length > this.props.path.length ?
-    //   'right' : 'left';
-    //this.setState({direction});
-  }
-
   loadElements() {
     const els = [...document.querySelectorAll(".load-in:not(.visible)")];
     const observer = new IntersectionObserver(entries => {
@@ -41,19 +33,32 @@ export default class Template extends Component {
   }
 
   componentDidMount() {
-    this.loadElements();
+    //this.loadElements();
   }
 
   componentDidUpdate() {
-    this.loadElements();
+    //this.loadElements();
   }
 
   render() {
+    const { data, location } = this.props;
+    let page = {};
     const colors = ["green", "blue", "orange", "pink"];
     const defaultColor = colors[Math.floor(Math.random() * colors.length)];
-
-    const page = this.props.children.props.route.page.data;
-    const path = this.props.children.props.route.page.path;
+    const config = data.site.siteMetadata;
+    const currentPage = data.allFile.edges.find(({ node }) => {
+      return (
+        node.relativeDirectory === location.pathname.replace(/^\/|\/$/g, "") &&
+        node.childJsFrontmatter
+      );
+    });
+    if (currentPage) {
+      // Assign the nested object page coming from GraphQL to a new name
+      const {
+        node: { childJsFrontmatter: { data: currentPageData = {} } }
+      } = currentPage;
+      page = { ...currentPageData };
+    }
     const color = page.color || defaultColor;
 
     return (
@@ -65,7 +70,10 @@ export default class Template extends Component {
               name: "description",
               content: page.description || config.description
             },
-            { property: "og:url", content: `${config.url}${path}` },
+            {
+              property: "og:url",
+              content: `${config.url}${location.pathname}`
+            },
             { property: "og:type", content: "website" },
             {
               property: "og:title",
@@ -95,8 +103,9 @@ export default class Template extends Component {
           titleTemplate={`%s - ${config.siteTitle}`}
           title={page.title}
         />
-        <Logo {...this.props} />
-        <Navigation {...this.props} />
+
+        <Logo {...page} {...this.props} />
+        <Navigation {...page} {...this.props} />
         <section className="content-wrapper">{this.props.children()}</section>
         <Footer />
       </div>
@@ -106,5 +115,36 @@ export default class Template extends Component {
 
 Template.propTypes = {
   children: PropTypes.any,
-  location: PropTypes.object
+  location: PropTypes.object,
+  data: PropTypes.object
 };
+
+// eslint-disable-next-line no-undef
+export const pageQuery = graphql`
+  query IndexQuery {
+    site {
+      siteMetadata {
+        siteTitle
+        description
+        twitter
+        shareImage
+      }
+    }
+    allFile {
+      edges {
+        node {
+          relativeDirectory
+          childJsFrontmatter {
+            data {
+              title
+              color
+              description
+              nav
+              order
+            }
+          }
+        }
+      }
+    }
+  }
+`;

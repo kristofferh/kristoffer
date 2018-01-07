@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { Link } from "gatsby-link";
+import Link from "gatsby-link";
 import BodyClassName from "react-body-classname";
 import Helmet from "react-helmet";
 
 import "./styles.scss";
 
 export default class Navigation extends Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor(props) {
+    super(props);
     this.navItems = ["index", "about", "resume", "portfolio"]; // @todo: generate links based off of these.
     this.state = {
       path: this.getPath(props.location.pathname),
@@ -57,7 +57,7 @@ export default class Navigation extends Component {
   }
 
   getPageTitle(props) {
-    return props.children.props.route.page.data.title;
+    return props.title;
   }
 
   render() {
@@ -133,9 +133,5 @@ Navigation.defaultProps = {
 
 Navigation.propTypes = {
   location: PropTypes.object.isRequired,
-  route: PropTypes.object.isRequired
-};
-
-Navigation.contextTypes = {
-  router: PropTypes.object
+  title: PropTypes.string
 };
