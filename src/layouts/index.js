@@ -18,7 +18,7 @@ import Footer from "components/footer";
 
 export default class Template extends Component {
   loadElements() {
-    const els = [...document.querySelectorAll(".load-in:not(.visible)")];
+    const els = document.querySelectorAll(".load-in:not(.visible)");
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         const { isIntersecting, intersectionRatio } = entry;
@@ -27,17 +27,17 @@ export default class Template extends Component {
         }
       });
     });
-    els.forEach(el => {
+    Array.from(els).forEach(el => {
       observer.observe(el);
     });
   }
 
   componentDidMount() {
-    //this.loadElements();
+    this.loadElements();
   }
 
   componentDidUpdate() {
-    //this.loadElements();
+    this.loadElements();
   }
 
   render() {

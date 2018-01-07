@@ -17,12 +17,19 @@ export default class Navigation extends Component {
       showNav: false
     };
 
+    this.handleNavClick = this.handleNavClick.bind(this);
     this.handleCloseClick = this.handleCloseClick.bind(this);
     this.handlePortfolioClick = this.handlePortfolioClick.bind(this);
   }
 
-  handleCloseClick() {
+  handleCloseClick(e) {
+    e.preventDefault();
+    e.stopPropagation();
     this.setState({ showNav: false });
+  }
+
+  handleNavClick() {
+    this.setState({ showNav: !this.state.showNav });
   }
 
   // @todo: make this generic.
@@ -68,6 +75,7 @@ export default class Navigation extends Component {
         })}
       >
         <nav
+          onClick={this.handleNavClick}
           className={classNames("main-nav", this.state.path, {
             "show-nav": this.state.showNav
           })}
