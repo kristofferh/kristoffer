@@ -1,0 +1,19 @@
+@import "../../styles/structure/variables/index";
+
+.about-photos {
+  display: flex;
+}
+
+.about-photo {
+  width: 100%;
+
+  &:last-child {
+    display: none;
+  }
+
+  @media (min-width: $min-width-sm) {
+    &:last-child {
+      display: block;
+    }
+  }
+}

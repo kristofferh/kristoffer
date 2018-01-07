@@ -1,0 +1,36 @@
+@import "../../styles/structure/variables/index";
+
+.nav-logo {
+  display: block;
+  width: 100%;
+  height: 55px;
+  position: relative;
+  transition: transform 0.3s ease, height 0.3s ease, background-color 0.5s ease;
+
+  .index & {
+    height: 30vh;
+  }
+}
+
+.nav-logo-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+.svg-mark {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  fill: $white;
+  stroke: $white;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.02);
+  transform: rotate(-15deg);
+  transform-origin: 50% 50%;
+}

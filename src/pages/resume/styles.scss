@@ -1,0 +1,72 @@
+@import "../../styles/structure/variables/index";
+
+.resume-wrapper {
+  @supports (padding: max(0px)) {
+    padding-left: unquote("max(15px, env(safe-area-inset-left))");
+    padding-right: unquote("max(15px, env(safe-area-inset-right))");
+  }
+
+  abbr {
+    text-decoration: none;
+  }
+
+  .portfolio-link {
+    display: none;
+  }
+
+  .contact-wrapper {
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+
+    @media (min-width: 64em) {
+      margin-top: 0;
+      text-align: right;
+    }
+  }
+
+  .section-wrapper {
+    margin-top: 3rem;
+
+    .section-headline {
+      font-family: $font-family-title;
+      font-weight: normal;
+      text-transform: uppercase;
+      margin-top: 0;
+    }
+
+    .title {
+      font-family: $font-family-serif-headline;
+      margin: 0;
+    }
+  }
+
+  .summary-wrapper {
+    margin-top: 1rem;
+  }
+
+  .experience {
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .skills {
+    margin-top: 0;
+    columns: 3;
+  }
+
+  .footer {
+    margin-top: 3rem;
+  }
+
+  .location {
+    display: none;
+
+    @media (min-width: 48em) {
+      text-align: right;
+      display: block;
+    }
+  }
+}

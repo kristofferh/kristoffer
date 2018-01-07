@@ -1,0 +1,155 @@
+@import "../../styles/structure/variables/index";
+
+@mixin staggered_transitions($nth: 1, $items: 2, $initial: 0, $step: 0.1) {
+  @for $i from $nth through $items {
+    &:nth-of-type(#{$i}) {
+      transition-delay: #{$initial}s;
+    }
+    $initial: $initial + $step;
+  }
+}
+
+.portfolio-items {
+  margin-top: 20px;
+}
+
+.portfolio-item {
+  &-link {
+    display: block;
+    position: relative;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+
+    &:hover,
+    &:focus {
+      .portfolio-item-text {
+        top: calc(50% - 15px);
+        transform: translate3d(-50%, -50%, 0);
+      }
+
+      .portfolio-item-preview {
+        filter: blur(2px);
+        transform: scale(0.95);
+      }
+    }
+  }
+
+  &-image {
+    display: flex;
+    box-shadow: 0 0 1px 1px rgba($black, 0.05);
+    border-radius: 2px;
+    align-items: center;
+    padding: 20px;
+
+    &:after {
+      content: "";
+      padding-bottom: 100%;
+      display: table;
+    }
+  }
+
+  &-preview {
+    transition: all 0.1s ease;
+  }
+
+  &-text {
+    display: block;
+    color: $blackish;
+    text-align: center;
+    background: $white;
+    position: absolute;
+    font-family: $font-family-title;
+    text-transform: uppercase;
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+    padding: 3px 15px 0;
+    top: calc(100% - 20px);
+    transition: all 0.2s ease;
+    pointer-events: none;
+  }
+}
+
+.portfolio-media {
+  .row {
+    margin: 0;
+  }
+
+  &-item {
+    padding: 50px 20px;
+
+    &--flush-bottom {
+      padding-bottom: 0;
+    }
+
+    &-phone {
+      max-width: 320px;
+      margin: auto;
+    }
+
+    &-browser {
+      max-width: 800px;
+      box-shadow: 0 3px 50px 10px rgba($blackish, 0.1);
+      border-radius: 5px 5px 0 0;
+      margin: auto;
+    }
+  }
+}
+
+.load-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 500ms, transform 500ms;
+  will-change: opacity, transform;
+
+  &--sequence-1 {
+    transition-delay: 0;
+  }
+
+  &--sequence-2 {
+    transition-delay: 0.1s;
+  }
+
+  &--sequence-3 {
+    transition-delay: 0.2s;
+  }
+
+  &.visible {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.portfolio-carousel {
+  .carousel-item-wrapper {
+    max-width: 720px;
+    padding: 20px;
+    margin: auto;
+  }
+}
+
+.video-player {
+  margin: auto;
+  display: block;
+  max-width: 720px;
+  height: auto;
+  width: 100%;
+}
+
+.tumblr-embed {
+  max-width: 400px;
+  margin: auto;
+}
+
+.tumblr-fans {
+  margin: 0 10px 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid #eee;
+  display: inline-block;
+  width: 200px;
+  vertical-align: top;
+}
+
+.big-shadow {
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
+}
+
