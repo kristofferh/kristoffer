@@ -38,6 +38,16 @@ module.exports = {
             src: "/favicon-192x192.png",
             sizes: "192x192",
             type: "image/png"
+          },
+          {
+            src: "/favicon-512x512.png",
+            sizes: "512x512",
+            type: "image/png"
+          },
+          {
+            src: "/favicon-1024x1024.png",
+            sizes: "1024x1024",
+            type: "image/png"
           }
         ],
         start_url: "/",
