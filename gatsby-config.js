@@ -8,7 +8,8 @@ module.exports = {
     description:
       "Website for Kristoffer Hedstrom: Interactive designer and developer from Brooklyn, NY",
     twitter: "@_kris",
-    shareImage: "https://k-create.com/images/about/shakey-0.gif"
+    shareImage: "https://k-create.com/images/about/shakey-0.gif",
+    siteName: "k-create.com"
   },
   plugins: [
     "gatsby-plugin-resolve-src",
