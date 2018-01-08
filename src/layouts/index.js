@@ -102,7 +102,7 @@ export default class Template extends Component {
             { name: "twitter:image", content: config.shareImage }
           ]}
           titleTemplate={`%s - ${config.siteTitle}`}
-          title={page.title}
+          title={page.title || config.siteName}
         />
 
         <Logo {...page} {...this.props} />
@@ -130,6 +130,7 @@ export const pageQuery = graphql`
         twitter
         shareImage
         url
+        siteName
       }
     }
     allFile {
