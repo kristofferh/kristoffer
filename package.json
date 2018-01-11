@@ -8,7 +8,9 @@
     "test": "yarn lint",
     "dev": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "ci:before": "greenkeeper-lockfile-update",
+    "ci:after": "greenkeeper-lockfile-upload"
   },
   "author": "Kristoffer Hedstrom",
   "license": "MIT",
