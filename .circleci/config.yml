@@ -19,6 +19,8 @@ jobs:
     steps:
       - checkout
 
+      - run: yarn global add greenkeeper-lockfile@1
+
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -26,23 +28,18 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn global add greenkeeper-lockfile@1
       - run: yarn install
 
       - save_cache:
           paths:
             - node_modules
-            - "~/src/node_modules"
-          key: kristoffer-{{ .Branch }}
+          key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run:
-          name: Update yarn lockfile
-          command: ./node_modules/.bin/greenkeeper-lockfile-update
+
+      - run: yarn ci:before
 
       # run tests!
       - run: yarn test
 
-      - run:
-          name: Upload yarn lockfile
-          command: ./node_modules/.bin/greenkeeper-lockfile-upload
+      - run: yarn ci:after
 
