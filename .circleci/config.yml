@@ -27,6 +27,8 @@ jobs:
           - v1-dependencies-
 
       - run: yarn install
+      - run: yarn global add greenkeeper-lockfile@1
+      - run: greenkeeper-lockfile-update
 
       - save_cache:
           paths:
@@ -35,3 +37,5 @@ jobs:
 
       # run tests!
       - run: yarn test
+
+      - run: greenkeeper-lockfile-upload
