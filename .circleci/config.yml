@@ -19,6 +19,8 @@ jobs:
     steps:
       - checkout
 
+      - run: yarn global add greenkeeper-lockfile@1
+
       # Download and cache dependencies
       - restore_cache:
           keys:
@@ -33,5 +35,11 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+
+      - run: yarn ci:before
+
       # run tests!
       - run: yarn test
+
+      - run: yarn ci:after
+
