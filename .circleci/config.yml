@@ -31,7 +31,7 @@ jobs:
 
       - run:
           name: Update yarn lockfile
-          command: ./node_modules/.bin/greenkeeper-lockfile-update
+          command: node_modules/.bin/greenkeeper-lockfile-update
 
       - save_cache:
           paths:
@@ -43,5 +43,5 @@ jobs:
 
       - run:
           name: Upload yarn lockfile
-          command: ./node_modules/.bin/greenkeeper-lockfile-upload
+          command: node_modules/.bin/greenkeeper-lockfile-upload
 
