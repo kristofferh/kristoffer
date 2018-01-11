@@ -1,5 +1,7 @@
 # Kristoffer
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kristofferh/kristoffer.svg)](https://greenkeeper.io/)
+
 It's a website.
 
 ## Dev
