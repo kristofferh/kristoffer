@@ -29,14 +29,14 @@ jobs:
       - run: yarn install
       - run: yarn global add greenkeeper-lockfile@1
 
-      - run:
-          name: Update yarn lockfile
-          command: node_modules/.bin/greenkeeper-lockfile-update
-
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
+
+      - run:
+          name: Update yarn lockfile
+          command: node_modules/.bin/greenkeeper-lockfile-update
 
       # run tests!
       - run: yarn test
