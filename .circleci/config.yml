@@ -28,7 +28,10 @@ jobs:
 
       - run: yarn install
       - run: yarn global add greenkeeper-lockfile@1
-      - run: greenkeeper-lockfile-update
+
+      - run:
+          name: Update yarn lockfile
+          command: ./node_modules/.bin/greenkeeper-lockfile-update
 
       - save_cache:
           paths:
@@ -38,4 +41,7 @@ jobs:
       # run tests!
       - run: yarn test
 
-      - run: greenkeeper-lockfile-upload
+      - run:
+          name: Upload yarn lockfile
+          command: ./node_modules/.bin/greenkeeper-lockfile-upload
+
