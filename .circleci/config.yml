@@ -32,16 +32,17 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+            - "~/src/node_modules"
+          key: kristoffer-{{ .Branch }}
 
       - run:
           name: Update yarn lockfile
-          command: node_modules/.bin/greenkeeper-lockfile-update
+          command: ./node_modules/.bin/greenkeeper-lockfile-update
 
       # run tests!
       - run: yarn test
 
       - run:
           name: Upload yarn lockfile
-          command: node_modules/.bin/greenkeeper-lockfile-upload
+          command: ./node_modules/.bin/greenkeeper-lockfile-upload
 
