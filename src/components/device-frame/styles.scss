@@ -56,6 +56,11 @@ $base-name: ".device-frame";
     background: #111;
     padding: 0.5vw;
 
+    @media (min-width: 1200px) {
+      padding: 4px;
+      border-radius: 34px;
+    }
+
     #{$base-name} {
       &-header {
         max-height: 40px;
@@ -80,6 +85,10 @@ $base-name: ".device-frame";
 
       &-body {
         border-radius: 0 0 3vw 3vw;
+
+        @media (min-width: 1200px) {
+          border-radius: 0 0 30px 30px;
+        }
       }
     }
   }

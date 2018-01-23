@@ -66,7 +66,7 @@ export default class Nomad extends Component {
             <div className="col-xs-12 col-sm-8">
               <p className="load-in">
                 {
-                  "Nomad is a healtcare marketplace for doctors and nurses, and the people that hire them."
+                  "Nomad is a healthcare marketplace for doctors and nurses, and the people that hire them."
                 }
               </p>
               <p className="load-in">
