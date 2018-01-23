@@ -17,45 +17,6 @@ module.exports = {
     "gatsby-plugin-resolve-src",
     "gatsby-plugin-postcss-sass",
     "gatsby-transformer-javascript-static-exports",
-    "gatsby-plugin-offline",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        name: "Kristoffer Hedstrom",
-        short_name: "Kristoffer Hedstrom",
-        icons: [
-          {
-            src: "/favicon-16x16.png",
-            sizes: "16x16",
-            type: "image/png"
-          },
-          {
-            src: "/favicon-144x144.png",
-            sizes: "144x144",
-            type: "image/png"
-          },
-          {
-            src: "/favicon-192x192.png",
-            sizes: "192x192",
-            type: "image/png"
-          },
-          {
-            src: "/favicon-512x512.png",
-            sizes: "512x512",
-            type: "image/png"
-          },
-          {
-            src: "/favicon-1024x1024.png",
-            sizes: "1024x1024",
-            type: "image/png"
-          }
-        ],
-        start_url: "/",
-        background_color: "white",
-        theme_color: "white",
-        display: "minimal-ui"
-      }
-    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
