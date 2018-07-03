@@ -36,7 +36,8 @@ export default class Carousel extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
+  // TODO: UPDATE THIS.
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (this.props.index !== nextProps.index) {
       this.setState(
         {
@@ -278,7 +279,7 @@ export default class Carousel extends Component {
     const yDelta = y1 - y2;
     const rad = Math.atan2(yDelta, xDelta);
 
-    let swipeAngle = Math.round(rad * 180 / Math.PI);
+    let swipeAngle = Math.round((rad * 180) / Math.PI);
 
     if (swipeAngle < 0) {
       swipeAngle = 360 - Math.abs(swipeAngle);

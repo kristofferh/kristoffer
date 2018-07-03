@@ -40,7 +40,7 @@ export default class Navigation extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const locationChanged =
       nextProps.location.pathname !== this.props.location.pathname;
     this.setState({
@@ -68,6 +68,8 @@ export default class Navigation extends Component {
   }
 
   render() {
+    const showSubNav =
+      this.state.path === "portfolio" && this.state.pageTitle !== "Portfolio";
     return (
       <BodyClassName
         className={classNames(this.state.path, {
@@ -110,12 +112,11 @@ export default class Navigation extends Component {
                   </span>
                 </span>
                 <span className="subnav">
-                  {this.state.path === "portfolio" &&
-                    this.state.pageTitle !== "Portfolio" && (
-                      <span className="subnav-text page-title">
-                        {this.state.pageTitle}
-                      </span>
-                    )}
+                  {showSubNav && (
+                    <span className="subnav-text page-title">
+                      {this.state.pageTitle}
+                    </span>
+                  )}
                 </span>
               </span>
             </span>
