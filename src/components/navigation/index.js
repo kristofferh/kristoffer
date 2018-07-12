@@ -7,6 +7,7 @@ import Helmet from "react-helmet";
 
 import "./styles.scss";
 
+/* eslint-disable */
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
@@ -40,6 +41,7 @@ export default class Navigation extends Component {
     }
   }
 
+  // @todo: fix this.
   componentWillReceiveProps(nextProps) {
     const locationChanged =
       nextProps.location.pathname !== this.props.location.pathname;
@@ -68,6 +70,8 @@ export default class Navigation extends Component {
   }
 
   render() {
+    const showSubNav =
+      this.state.path === "portfolio" && this.state.pageTitle !== "Portfolio";
     return (
       <BodyClassName
         className={classNames(this.state.path, {
@@ -110,12 +114,11 @@ export default class Navigation extends Component {
                   </span>
                 </span>
                 <span className="subnav">
-                  {this.state.path === "portfolio" &&
-                    this.state.pageTitle !== "Portfolio" && (
-                      <span className="subnav-text page-title">
-                        {this.state.pageTitle}
-                      </span>
-                    )}
+                  {showSubNav && (
+                    <span className="subnav-text page-title">
+                      {this.state.pageTitle}
+                    </span>
+                  )}
                 </span>
               </span>
             </span>

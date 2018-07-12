@@ -56,7 +56,9 @@ export default class Template extends Component {
     if (currentPage) {
       // Assign the nested object page coming from GraphQL to a new name
       const {
-        node: { childJsFrontmatter: { data: currentPageData = {} } }
+        node: {
+          childJsFrontmatter: { data: currentPageData = {} }
+        }
       } = currentPage;
       page = { ...currentPageData };
     }

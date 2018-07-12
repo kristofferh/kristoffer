@@ -59,6 +59,7 @@ export default class ImageLoader extends Component {
   }
 
   render() {
+    const showPlaceholder = this.props.placeholder && !this.state.doneAnimating;
     return (
       <div
         ref={node => (this.imageLoader = node)}
@@ -68,15 +69,14 @@ export default class ImageLoader extends Component {
         })}
         style={this.props.styles}
       >
-        {this.props.placeholder &&
-          !this.state.doneAnimating && (
-            <img
-              className={classNames("placeholder", {
-                "fade-out": this.state.loaded
-              })}
-              src={this.props.placeholder}
-            />
-          )}
+        {showPlaceholder && (
+          <img
+            className={classNames("placeholder", {
+              "fade-out": this.state.loaded
+            })}
+            src={this.props.placeholder}
+          />
+        )}
         {this.props.aspectRatio && (
           <div style={{ paddingBottom: `${this.props.aspectRatio * 100}%` }} />
         )}
