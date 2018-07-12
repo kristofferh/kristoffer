@@ -7,6 +7,7 @@ import Helmet from "react-helmet";
 
 import "./styles.scss";
 
+/* eslint-disable */
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
@@ -40,7 +41,8 @@ export default class Navigation extends Component {
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  // @todo: fix this.
+  componentWillReceiveProps(nextProps) {
     const locationChanged =
       nextProps.location.pathname !== this.props.location.pathname;
     this.setState({
