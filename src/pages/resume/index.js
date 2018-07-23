@@ -35,7 +35,7 @@ const Resume = () => (
     <section className="section-wrapper summary-wrapper row">
       <div className="summary col-xs-12">
         I’m an Interactive Designer and Developer with{" "}
-        <span className="highlight">16 years of experience</span>. I have both
+        <span className="highlight">17 years of experience</span>. I have both
         programming and graphic design skills, which makes me a bit of a strange
         monster. In addition, I have Product Management and User Experience
         design expertise.{" "}
@@ -579,6 +579,7 @@ const Resume = () => (
           <li className="skill">CSS3</li>
           <li className="skill">JavaScript</li>
           <li className="skill">React / React-Native</li>
+          <li className="skill">GraphQL</li>
           <li className="skill">PHP</li>
           <li className="skill">Python</li>
           <li className="skill">Swift</li>
