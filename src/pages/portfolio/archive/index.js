@@ -8,7 +8,7 @@ export const data = {
   order: 3,
   title: "Archive",
   color: "pink",
-  description: "Older projects.",
+  description: "Miscellaneous projects.",
   path: "/portfolio/archive",
   media: [
     {
@@ -47,9 +47,7 @@ export default class Archive extends Component {
           <div className="row center">
             <div className="col-xs-12 col-sm-8">
               <p className="load-in">
-                {
-                  "Older projects. Freelance and agency work. From the olden times."
-                }
+                Miscellaneous projects. Freelance and agency work, mainly.
               </p>
             </div>
           </div>
@@ -94,6 +92,20 @@ export default class Archive extends Component {
                   placeholder="/images/archive/zeitgeist-1-small.jpg"
                   aspectRatio={500 / 700}
                 />
+              </DeviceFrame>
+            </div>
+          </div>
+        </section>
+        <section className="portfolio-media">
+          <div className="row">
+            <div
+              className="col-xs-12 portfolio-media-item"
+              style={{ background: "#222" }}
+            >
+              <DeviceFrame className="load-in" styles={{ maxWidth: 720 }}>
+                <video className="video-player" autoPlay loop playsInline>
+                  <source src="/videos/krisandrazi.mp4" type="video/mp4" />
+                </video>
               </DeviceFrame>
             </div>
           </div>
