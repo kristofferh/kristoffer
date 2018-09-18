@@ -2,6 +2,12 @@
 # yarn lockfile v1
 
 
+"@babel/runtime@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.0.0.tgz#adeb78fedfc855aa05bc041640f3f6f98e85424c"
+  dependencies:
+    regenerator-runtime "^0.12.0"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -3465,11 +3471,11 @@ gatsby-plugin-resolve-src@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-resolve-src/-/gatsby-plugin-resolve-src-1.0.0.tgz#5606de11cb3e0983461e26ebdc3daba59e7099be"
 
-gatsby-plugin-sitemap@^1.2.9:
-  version "1.2.9"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-1.2.9.tgz#e612e0f7df9edb4c94d931049d454610343bcdbb"
+gatsby-plugin-sitemap@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-sitemap/-/gatsby-plugin-sitemap-2.0.1.tgz#d9d2cecfd9474b842923cdb5b0bca505911c7830"
   dependencies:
-    babel-runtime "^6.26.0"
+    "@babel/runtime" "^7.0.0"
     sitemap "^1.12.0"
 
 gatsby-react-router-scroll@^1.0.7:
@@ -7231,6 +7237,10 @@ regenerator-runtime@^0.10.5:
 regenerator-runtime@^0.11.0:
   version "0.11.1"
   resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.11.1.tgz#be05ad7f9bf7d22e056f9726cee5017fbf19e2e9"
+
+regenerator-runtime@^0.12.0:
+  version "0.12.1"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.12.1.tgz#fa1a71544764c036f8c49b13a08b2594c9f8a0de"
 
 regenerator-transform@^0.10.0:
   version "0.10.1"
