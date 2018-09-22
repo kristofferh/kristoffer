@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 
-import Carousel from "components/carousel";
 import ImageLoader from "components/image-loader";
 import DeviceFrame from "components/device-frame";
 
