@@ -49,6 +49,10 @@ export default class Tumblr extends Component {
               <ImageLoader
                 img="/images/tumblr/tumblr-header.jpg"
                 aspectRatio={862 / 1235}
+                styles={{
+                  maxWidth: 800,
+                  margin: "auto"
+                }}
               />
             </div>
           </div>

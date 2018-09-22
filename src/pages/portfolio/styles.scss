@@ -119,6 +119,54 @@
   }
 }
 
+.portfolio-process-container {
+  background: #fafafa;
+  padding: 0 15px;
+}
+
+.portfolio-process {
+  list-style: none;
+  counter-reset: item;
+  padding: 30px 0;
+  margin: 0 auto;
+
+  @media (min-width: $min-width-sm) {
+    column-count: 2;
+    column-gap: 50px;
+    padding: 50px 0;
+  }
+
+  &-item {
+    counter-increment: item;
+    margin-left: 20px;
+    position: relative;
+    margin-bottom: 20px;
+
+    @media (min-width: $min-width-sm) {
+      margin-left: 30px;
+    }
+
+    &:before {
+      content: counter(item) ".";
+      position: absolute;
+      left: -20px;
+      top: 0;
+      font-family: $font-family-title;
+      font-size: 20px;
+      line-height: 1.2;
+
+      @media (min-width: $min-width-sm) {
+        font-size: 24px;
+        left: -30px;
+      }
+    }
+
+    p {
+      margin-top: 0.5em;
+    }
+  }
+}
+
 .portfolio-carousel {
   .carousel-item-wrapper {
     max-width: 720px;
@@ -152,4 +200,3 @@
 .big-shadow {
   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.1);
 }
-

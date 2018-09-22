@@ -32,17 +32,15 @@ export default class Apps extends Component {
     return (
       <div className="portfolio">
         <section className="portfolio-media">
-          <div className="row">
-            <div
-              className="col-xs-12 portfolio-media-item portfolio-media-item--flush-bottom"
-              style={styles}
-            >
-              <ImageLoader
-                styles={{ maxWidth: 500, margin: "0 auto -1px" }}
-                img="/images/apps/side-projects-header-alt.png"
-                aspectRatio={394 / 768}
-              />
-            </div>
+          <div
+            className="portfolio-media-item portfolio-media-item--flush-bottom"
+            style={styles}
+          >
+            <ImageLoader
+              styles={{ maxWidth: 500, margin: "0 auto -1px" }}
+              img="/images/apps/side-projects-header-alt.png"
+              aspectRatio={394 / 768}
+            />
           </div>
         </section>
         <section className="content-container">
