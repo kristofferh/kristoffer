@@ -252,7 +252,7 @@ export default class Nomad extends Component {
           <div className="portfolio-media-item" style={{ background: "#fff" }}>
             <DeviceFrame
               styles={{
-                maxWidth: 800,
+                maxWidth: 720,
                 margin: "auto"
               }}
             >
