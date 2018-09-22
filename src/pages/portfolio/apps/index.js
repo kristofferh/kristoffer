@@ -19,9 +19,8 @@ export const data = {
     }
   ],
   styles: {
-    background: "linear-gradient(80deg, #43D8A8, #BCBCEC)",
-    backgroundSize: "201%",
-    backgroundPosition: "100%"
+    background:
+      "#A1A4BA radial-gradient(50% 102%, rgb(225, 202, 211, 0.25) 4%, #A1A4BA 100%)"
   }
 };
 
@@ -32,17 +31,15 @@ export default class Apps extends Component {
     return (
       <div className="portfolio">
         <section className="portfolio-media">
-          <div className="row">
-            <div
-              className="col-xs-12 portfolio-media-item portfolio-media-item--flush-bottom"
-              style={styles}
-            >
-              <ImageLoader
-                styles={{ maxWidth: 500, margin: "0 auto -1px" }}
-                img="/images/apps/side-projects-header-alt.png"
-                aspectRatio={394 / 768}
-              />
-            </div>
+          <div
+            className="portfolio-media-item portfolio-media-item--flush-bottom"
+            style={styles}
+          >
+            <ImageLoader
+              styles={{ maxWidth: 500, margin: "0 auto -1px" }}
+              img="/images/apps/side-projects-header-alt.png"
+              aspectRatio={394 / 768}
+            />
           </div>
         </section>
         <section className="content-container">
@@ -80,6 +77,21 @@ export default class Apps extends Component {
               </DeviceFrame>
             </div>
           </div>
+        </section>
+        <section className="content-container">
+          <div className="row">
+            <section className="col-xs-12 col-sm-8 col-sm-offset-2">
+              <h2 className="sub-title load-in">Spender</h2>
+              <p className="load-in">
+                <em>Spender</em> is a spending tracker. It connects to your bank
+                accounts and lets you manually track cash transactions. I
+                founded the project and am taking it from concept, to design, to
+                development.
+              </p>
+            </section>
+          </div>
+        </section>
+        <section className="portfolio-media">
           <div className="row">
             <div
               className="col-xs-4 portfolio-media-item"
@@ -117,6 +129,29 @@ export default class Apps extends Component {
           </div>
         </section>
 
+        <section className="content-container">
+          <div className="row">
+            <section className="col-xs-12 col-sm-8 col-sm-offset-2">
+              <h2 className="sub-title load-in">Control Room</h2>
+              <p className="load-in">
+                <em>Control Room</em> is simple-to-use smart-home app, which
+                lets users get a quick idea of what’s happening at their home or
+                office.
+              </p>
+              <p>
+                The focus is automation and quick access - not trying to
+                replicate every single feature of a given device. The UI is
+                purposely minimalist, with swipe actions to navigate between
+                screens.
+              </p>
+              <p>
+                The goal is to include the most frequent use cases, and give the
+                user an option to open the companion app for a device for more
+                detailed views.
+              </p>
+            </section>
+          </div>
+        </section>
         <section className="portfolio-media">
           <div className="row">
             <div
@@ -153,6 +188,8 @@ export default class Apps extends Component {
               </DeviceFrame>
             </div>
           </div>
+        </section>
+        <section className="portfolio-media">
           <div className="row">
             <div
               className="col-xs-4 portfolio-media-item"
@@ -225,7 +262,17 @@ export default class Apps extends Component {
             </div>
           </div>
         </section>
-
+        <section className="content-container">
+          <div className="row">
+            <section className="col-xs-12 col-sm-8 col-sm-offset-2">
+              <h2 className="sub-title load-in">Milestones</h2>
+              <p className="load-in">
+                A combination of a todo-list and a calendar. A side-project that
+                I work on whenever I have time (never).
+              </p>
+            </section>
+          </div>
+        </section>
         <section className="portfolio-media">
           <div className="row">
             <div

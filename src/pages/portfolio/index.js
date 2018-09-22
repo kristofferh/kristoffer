@@ -66,7 +66,6 @@ export const pageQuery = graphql`
             styles {
               background
               backgroundPosition
-              backgroundSize
             }
             order
             description
@@ -75,7 +74,6 @@ export const pageQuery = graphql`
               src
               aspectRatio
               placeholder
-              videoType
             }
           }
         }

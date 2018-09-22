@@ -80,12 +80,17 @@ const Resume = () => (
               </li>
               <li>Prototyping with Invision and Framer</li>
               <li>
-                Implementing with React, Redux, Redux-Form, Webpack and SASS
-                frontend
+                Implementing with React, Redux, Redux-Form, Webpack, CSS-in-JS,
+                and SASS frontend
               </li>
               <li>Introducing React-Native into workflow</li>
               <li>Changing healthcare for the better</li>
             </ul>
+            <p>
+              Technologies: <em>Sketch</em>, <em>Photoshop</em>,{" "}
+              <em>InVision</em>, <em>Framer</em>, <em>Illustrator</em>,{" "}
+              <em>React</em>, <em>JavaScript</em>, <em>CSS</em>, <em>HTML</em>
+            </p>
           </div>
         </div>
         <div className="experience">
@@ -112,14 +117,16 @@ const Resume = () => (
           </div>
           <div className="summary">
             <ul>
+              <li>Led a marketing team for Swedish based e-commerce company</li>
               <li>
-                Lead a marketing team for Swedish based e-commerce company
-              </li>
-              <li>
-                Implementing responsive landing pages with Node, React, and
+                Implemented responsive landing pages with Node, React, and
                 Coffeescript
               </li>
             </ul>
+            <p>
+              Technologies: <em>Coffeescript</em>, <em>React</em>,{" "}
+              <em>JavaScript</em>, <em>CSS</em>, <em>HTML</em>
+            </p>
           </div>
         </div>
         <div className="experience">
@@ -149,23 +156,19 @@ const Resume = () => (
           <div className="summary">
             <ul>
               <li>
-                Lead a team of Product Engineers, Designers, and Mobile
-                Engineers
+                Led a team of Product Engineers, Designers, and Mobile Engineers
               </li>
-              <li>Data-driven product management</li>
+              <li>Spearheaded data-driven product management</li>
               <li>
-                Plan and manage projects for the Identity team (personalization,
-                themes, customization, etc)
+                Planned and managed projects for the <em>Identity</em> team
+                (personalization, themes, customization, etc)
               </li>
-              <li>
-                Evaluate and analayze results of projects and tests, plan for
-                next iteration
-              </li>
-              <li>
-                You know that scene from <em>Minority Report</em> with the
-                virtual reality gloves? It was almost exactly nothing like that.
-              </li>
+              <li>Evaluated and analyzed results of projects and tests</li>
+              <li>Made teenagers super angry</li>
             </ul>
+            <p>
+              Technologies: <em>SQL</em>, <em>PHP</em>, <em>Hadoop</em>
+            </p>
           </div>
         </div>
         <div className="experience">
@@ -193,12 +196,18 @@ const Resume = () => (
           <div className="summary">
             <ul>
               <li>
-                Create new features on Tumblr.com using Javascript, PHP, CSS and
-                HTML5
+                Created new features on Tumblr.com using Javascript, PHP, CSS,
+                and HTML5
               </li>
-              <li>Design and develop new default themes</li>
-              <li>Focus on post creation tools</li>
+              <li>Created themes used by millions of people</li>
+              <li>Focused on post creation tools</li>
+              <li>Made the mobile web version 86% less terrible</li>
+              <li>Created embeddable posts for use on third party sites</li>
             </ul>
+            <p>
+              Technologies: <em>Backbone</em>, <em>JavaScript</em>,{" "}
+              <em>Photoshop</em>, <em>PHP</em>, <em>CSS</em>
+            </p>
           </div>
         </div>
         <div className="experience">
@@ -226,16 +235,19 @@ const Resume = () => (
           <div className="summary">
             <ul>
               <li>
-                Focus on implementing complex UI designs using Javascript
+                Focused on implementing complex UI designs using Javascript
                 (including Ajax, SVG, WebGL and Canvas APIs), CSS and HTML5
               </li>
-              <li>Mentor junior developers</li>
+              <li>Mentored junior developers</li>
               <li>
-                Clients include <em>Google</em>, <em>EA</em>, <em>HTC</em>, and{" "}
-                <em>USA Today</em>
+                Contributed to <em>USA Today</em>’s major redesign
               </li>
-              <li>Stayed out late one night</li>
+              <li>Worked on several award winning sites for Google</li>
+              <li>Created a Chrome app for Al-Jazeera English</li>
             </ul>
+            <p>
+              Technologies: <em>Canvas</em>, <em>WebGL</em>, <em>JavaScript</em>
+            </p>
           </div>
         </div>
         <div className="experience">
@@ -265,24 +277,29 @@ const Resume = () => (
           <div className="summary">
             <ul>
               <li>
-                Develop award-winning, standards-based, high-profile sites for
+                Developed award-winning, standards-based, high-profile sites for
                 interactive agency
               </li>
               <li>
-                Implementing JavaScript solutions using design patterns such as
-                the Factory, Module and Pub-Sub
+                Implemented JavaScript solutions using design patterns such as
+                the Factory, Module, and Pub-Sub
               </li>
               <li>
-                Create solutions using jQuery and Prototype libraries, as well
+                Created solutions using jQuery and Prototype libraries, as well
                 as native JavaScript
               </li>
-              <li>Lead team of junior developers</li>
+              <li>Led team of junior developers</li>
               <li>
-                Clients include <em>Microsoft</em>, <em>Pokémon</em>,{" "}
-                <em>Target</em>, <em>Nintendo</em>, and{" "}
-                <em>San Francisco Opera</em>
+                Collaborated with clients including <em>Microsoft</em>,{" "}
+                <em>Pokémon</em>, <em>Target</em>, <em>Nintendo</em>,{" "}
+                <em>Sydney Opera House</em>, and <em>San Francisco Opera</em>
               </li>
+              <li>Worked on in-house products using C# and JavaScript</li>
             </ul>
+            <p>
+              Technologies: <em>JavaScript</em>, <em>jQuery</em>, <em>C#</em>,{" "}
+              <em>Photoshop</em>, <em>Illustrator</em>, <em>SVG</em>
+            </p>
           </div>
         </div>
         <div className="experience">
@@ -312,22 +329,27 @@ const Resume = () => (
           <div className="summary">
             <ul>
               <li>
-                Create mockups for NCsoft’s Western game franchise web sites
+                Created mockups for NCsoft’s Western game franchise web sites
               </li>
               <li>
-                Design user interface solutions for game installers and
+                Designed user interface solutions for game installers and
                 launchers
               </li>
               <li>
-                Develop and maintain game sites using Movable Type and
+                Developed and maintained game sites using Movable Type and
                 Expression Engine
               </li>
-              <li>Project Management</li>
+              <li>Provided Project Management and Design QA</li>
               <li>
-                Games include <em>Guild Wars</em>, <em>Guild Wars 2</em>,{" "}
-                <em>Aion</em>, <em>Lineage II</em>, <em>City of Heroes</em>
+                Shipped games included <em>Guild Wars</em>,{" "}
+                <em>Guild Wars 2</em>, <em>Aion</em>, <em>Lineage II</em>,{" "}
+                <em>City of Heroes</em>
               </li>
             </ul>
+            <p>
+              Technologies: <em>Photoshop</em>, <em>Adobe Flash</em>,{" "}
+              <em>Illustrator</em>, <em>OmniGraffle</em>, <em>InDesign</em>
+            </p>
           </div>
         </div>
         <div className="experience">
@@ -354,25 +376,29 @@ const Resume = () => (
           </div>
           <div className="summary">
             <ul>
-              <li>Design mockups for automotive industry web sites</li>
+              <li>Designed sites and apps for automotive industry</li>
               <li>
-                Design and implement click-through simulators and prototypes for
-                use with usability testing and client pitches
+                Designed and implemented click-through simulators and prototypes
+                for use with usability testing and client pitches
               </li>
               <li>
-                Create Information Architecture deliverables (wireframes,
+                Created Information Architecture deliverables (wireframes,
                 sitemaps, personas, etc)
               </li>
               <li>
-                Act as mentor and technical consultant for junior members of the
-                team
+                Acted as mentor and technical consultant for junior members of
+                the team
               </li>
               <li>
-                Clients include <em>GM</em>, <em>Lexus</em>, <em>BMW</em>,{" "}
-                <em>Volkswagen</em>, <em>Hyundai</em>, <em>Subaru</em>, and{" "}
-                <em>Audi</em>
+                Contributed to client work including <em>GM</em>, <em>Lexus</em>,{" "}
+                <em>BMW</em>, <em>Volkswagen</em>, <em>Hyundai</em>,{" "}
+                <em>Subaru</em>, and <em>Audi</em>
               </li>
             </ul>
+            <p>
+              Technologies: <em>Photoshop</em>, <em>Illustrator</em>,{" "}
+              <em>InDesign</em>, <em>Visio</em>
+            </p>
           </div>
         </div>
         <div className="experience">
@@ -400,21 +426,27 @@ const Resume = () => (
           <div className="summary">
             <ul>
               <li>
-                Develop award-winning, standards-based, high-profile sites for
-                interactive agency
+                Developed award-winning, standards-based, high-profile sites for
+                interactive agency.
               </li>
               <li>
-                Responsible for implementing complex UI designs using
-                Javascript, CSS, HMTL, and Actionscript/Flash
+                Implemented complex UI designs using JavaScript, CSS, HMTL, and
+                Actionscript/Flash
               </li>
-              <li>Web application development</li>
-              <li>Lead team of junior developers</li>
               <li>
-                Clients include <em>Nintendo</em>, <em>Raleigh Bicycles</em>,{" "}
-                <em>Microsoft</em>,<em>Ubisoft</em>,{" "}
+                Created Wordpress plugins and sites for a variety of clients
+              </li>
+              <li>Developed web applications</li>
+              <li>
+                Worked on client projects including <em>Nintendo</em>,{" "}
+                <em>Raleigh Bicycles</em>, <em>Microsoft</em>,<em>Ubisoft</em>,{" "}
                 <em>New York Metropolitan Opera</em>
               </li>
             </ul>
+            <p>
+              Technologies: <em>HTML</em>, <em>JavaScript</em>,{" "}
+              <em>Actionscript</em>, <em>Flash</em>, <em>Wordpress</em>
+            </p>
           </div>
         </div>
         <div className="experience">
@@ -442,15 +474,25 @@ const Resume = () => (
           <div className="summary">
             <ul>
               <li>
-                Design, develop, and maintain KCTS.org and related websites
+                Designed, developed, and maintained KCTS.org and related
+                websites
               </li>
-              <li>Design and implement PBS and PBS Kids related sites</li>
+              <li>Designed and implemented PBS and PBS Kids related sites</li>
               <li>
-                Create interactive features using Flash / Actionscript, ASP, SQL
-                and XML
+                Created interactive features using Flash / Actionscript, ASP,
+                SQL and XML
               </li>
-              <li>Application development</li>
+              <li>Developed applications</li>
+              <li>
+                Created an online payment system for pledge drives, which
+                brought in over $200,000 USD the first year
+              </li>
             </ul>
+            <p>
+              Technologies: <em>Photoshop</em>, <em>Flash/Actionscript</em>,{" "}
+              <em>ASP</em>, <em>SQL</em>, <em>Adobe Premiere</em>,{" "}
+              <em>FinalCut</em>
+            </p>
           </div>
         </div>
         <div className="experience">
@@ -474,30 +516,29 @@ const Resume = () => (
           </div>
           <div className="summary">
             <ul>
-              <li>Freelance designer / developer for various web sites</li>
-              <li>Creative development using Web Standards</li>
               <li>
-                User Experience Design, Information Architecture, and usability
-                testing
+                Acted as freelance designer / developer for various web sites
               </li>
               <li>
-                Dynamic content, including content management systems, using
-                languages such as PHP, JavaScript (Node.js), and Ruby (on Rails)
+                Contributed User Experience Design, Information Architecture
               </li>
-              <li>Database architecture</li>
+              <li>Conducted usability testing</li>
               <li>
-                JavaScript development using jQuery, Prototype / Scriptaculous,
-                Mootools, YUI, and native JavaScript
+                Implemented custom content management systems, using PHP,
+                JavaScript (Node.js), and Ruby (on Rails)
               </li>
               <li>
-                Flash design and{" "}
-                <abbr className="help" title="Object Oriented Programing">
-                  OOP
-                </abbr>{" "}
-                Actionscript development
+                Developed frontend systems using jQuery, Prototype /
+                Scriptaculous, Mootools, YUI, native JavaScript, Flash and
+                Actionscript
               </li>
               <li>Graphic, logo and print design</li>
             </ul>
+            <p>
+              Technologies: <em>Photoshop</em>, <em>Wordpress</em>,{" "}
+              <em>Flash/Actionscript</em>, <em>PHP</em>, <em>Ruby on Rails</em>,{" "}
+              <em>Node.js</em>
+            </p>
           </div>
         </div>
         <div className="experience">
@@ -519,11 +560,20 @@ const Resume = () => (
           </div>
           <div className="summary">
             <ul>
-              <li>Programmer for non-profit educational organization</li>
-              <li>HTML, PHP and MySQL development</li>
-              <li>Initial functionality tests and analysis on beta versions</li>
-              <li>User-interface and graphic design</li>
+              <li>
+                Developed open library application in HTML, PHP and MySQL for
+                non-profit educational organization
+              </li>
+              <li>
+                Performed initial functionality tests and analysis on beta
+                versions
+              </li>
+              <li>Contributed user-interface and graphic design</li>
             </ul>
+            <p>
+              Technologies: <em>Photoshop</em>, <em>PHP</em>, <em>MySql</em>,{" "}
+              <em>HTML</em>
+            </p>
           </div>
         </div>
       </div>
