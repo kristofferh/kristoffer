@@ -19,9 +19,8 @@ export const data = {
     }
   ],
   styles: {
-    background: "linear-gradient(80deg, #43D8A8, #BCBCEC)",
-    backgroundSize: "201%",
-    backgroundPosition: "100%"
+    background:
+      "#A1A4BA radial-gradient(50% 102%, rgb(225, 202, 211, 0.25) 4%, #A1A4BA 100%)"
   }
 };
 
