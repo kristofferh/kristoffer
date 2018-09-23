@@ -71,7 +71,7 @@ export const pageQuery = graphql`
             description
             media {
               type
-              src
+              img
               aspectRatio
               placeholder
             }

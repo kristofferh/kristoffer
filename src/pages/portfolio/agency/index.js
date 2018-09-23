@@ -22,7 +22,7 @@ export const data = {
   }
 };
 
-export default class agency extends Component {
+export default class Agency extends Component {
   render() {
     const { title, styles, media } = data;
 
