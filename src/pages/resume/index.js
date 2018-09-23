@@ -240,7 +240,8 @@ const Resume = () => (
               </li>
               <li>Mentored junior developers</li>
               <li>
-                Contributed to <em>USA Today</em>’s major redesign
+                Contributed to <em>USA Today</em>
+                ’s major redesign
               </li>
               <li>Worked on several award winning sites for Google</li>
               <li>Created a Chrome app for Al-Jazeera English</li>
@@ -390,8 +391,8 @@ const Resume = () => (
                 the team
               </li>
               <li>
-                Contributed to client work including <em>GM</em>, <em>Lexus</em>,{" "}
-                <em>BMW</em>, <em>Volkswagen</em>, <em>Hyundai</em>,{" "}
+                Contributed to client work including <em>GM</em>, <em>Lexus</em>
+                , <em>BMW</em>, <em>Volkswagen</em>, <em>Hyundai</em>,{" "}
                 <em>Subaru</em>, and <em>Audi</em>
               </li>
             </ul>
@@ -589,7 +590,8 @@ const Resume = () => (
             <h3 className="title col-xs-12 col-sm-8">
               <abbr className="help" title="Bachelor of Science">
                 B.S.
-              </abbr>, Computer Science
+              </abbr>
+              , Computer Science
             </h3>
             <div className="location col-xs-12 col-sm-4">Tacoma, WA</div>
           </div>
