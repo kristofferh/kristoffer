@@ -13,13 +13,13 @@ export const data = {
   media: [
     {
       type: "image",
-      src: "/images/tumblr/tumblr-header.jpg",
-      placeholder: "/images/tumblr/tumblr-header-small.jpg",
-      aspectRatio: 0.6979
+      img: "/images/tumblr/tumblr-poster.png",
+      placeholder: "/images/tumblr/tumblr-poster-small.png",
+      aspectRatio: 0.75
     }
   ],
   styles: {
-    background: "#36465d"
+    background: "#f5f6f7"
   }
 };
 
@@ -39,7 +39,7 @@ export default class Tumblr extends Component {
   }
 
   render() {
-    const { title, styles } = data;
+    const { title, styles, media } = data;
 
     return (
       <div className="portfolio">
@@ -47,8 +47,7 @@ export default class Tumblr extends Component {
           <div className="row">
             <div className="col-xs-12 portfolio-media-item" style={styles}>
               <ImageLoader
-                img="/images/tumblr/tumblr-header.jpg"
-                aspectRatio={862 / 1235}
+                {...media[0]}
                 styles={{
                   maxWidth: 800,
                   margin: "auto"

@@ -25,7 +25,7 @@ const PortfolioIndex = ({ data }) => {
         <Link to={path} className="portfolio-item-link">
           <div className="portfolio-item-image" style={styles}>
             {media && (
-              <ImageLoader className="portfolio-item-preview" img={media.src} />
+              <ImageLoader className="portfolio-item-preview" img={media.img} />
             )}
           </div>
           <span className="portfolio-item-text">{title}</span>
@@ -65,13 +65,12 @@ export const pageQuery = graphql`
             path
             styles {
               background
-              backgroundPosition
             }
             order
             description
             media {
               type
-              src
+              img
               aspectRatio
               placeholder
             }

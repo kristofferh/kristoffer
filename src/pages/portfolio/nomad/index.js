@@ -13,26 +13,25 @@ export const data = {
   media: [
     {
       type: "image",
-      src: "/images/nomad/computer-phone.png",
-      placeholder: "/images/nomad/computer-phone-small.png",
-      aspectRatio: 0.66666
+      img: "/images/nomad/nomad-poster.png",
+      placeholder: "/images/nomad/nomad-poster-small.png",
+      aspectRatio: 0.75
     }
   ],
   styles: {
-    background: "#fafafa"
+    background: "#f5f6f7"
   }
 };
 
 export default class Nomad extends Component {
   render() {
-    const { title, styles } = data;
+    const { title, styles, media } = data;
 
     return (
       <div className="portfolio">
         <section className="portfolio-media" style={styles}>
           <ImageLoader
-            img="/images/nomad/computer-phone.png"
-            aspectRatio={0.66666}
+            {...media[0]}
             styles={{
               maxWidth: 800,
               margin: "auto"
