@@ -12,13 +12,14 @@ export const data = {
   path: "/portfolio/agency",
   media: [
     {
+      type: "image",
       img: "/images/agency/agency-poster.png",
       placeholder: "/images/agency/agency-poster-small.png",
       aspectRatio: 0.75
     }
   ],
   styles: {
-    background: "#383838"
+    background: "#f5f6f7"
   }
 };
 

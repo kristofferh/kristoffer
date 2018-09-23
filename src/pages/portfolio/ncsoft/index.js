@@ -12,6 +12,7 @@ export const data = {
   path: "/portfolio/ncsoft",
   media: [
     {
+      type: "image",
       img: "/images/ncsoft/ncsoft-poster.png",
       placeholder: "/images/ncsoft/ncsoft-poster-small.png",
       aspectRatio: 0.75
