@@ -60,6 +60,9 @@ const About = () => {
               placeholder={image.small}
               aspectRatio={1}
               img={image.big}
+              imageProps={{
+                alt: "GIF of Kris"
+              }}
             />
           ))}
       </div>
