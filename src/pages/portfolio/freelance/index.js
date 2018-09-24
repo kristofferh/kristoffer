@@ -40,6 +40,9 @@ export default class Freelance extends Component {
                 maxWidth: 800,
                 margin: "auto"
               }}
+              imageProps={{
+                alt: title
+              }}
             />
           </div>
         </section>
@@ -48,10 +51,7 @@ export default class Freelance extends Component {
           <div className="row center">
             <div className="col-xs-12 col-sm-8">
               <p className="load-in">
-                I’ve been doing freelance, on-and-off, my entire career. I
-                started doing it because I happened to graduate college right
-                around the time the first IT bubble burst and it was difficult
-                for me to find jobs, but I stuck with it because it’s fun.
+                I’ve been doing freelance, on-and-off, my entire career.
                 Nowadays I seldom take on new projects, but I occasionally get
                 inspired. This section also includes side-projects and contract
                 work.
@@ -62,24 +62,30 @@ export default class Freelance extends Component {
         <section className="portfolio-media">
           <div className="row">
             <div
-              className="col-xs-12 col-sm-6 portfolio-media-item"
+              className="col-xs-6 portfolio-media-item"
               style={{ background: "#f9f9f9" }}
             >
               <DeviceFrame type="phone--light">
                 <ImageLoader
                   img="/images/freelance/spender-splash.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Spender app splash screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-12 col-sm-6 portfolio-media-item"
+              className="col-xs-6 portfolio-media-item"
               style={{ background: "#f9f9f9" }}
             >
               <DeviceFrame type="phone--light">
                 <ImageLoader
                   img="/images/freelance/spender-signin.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Spender app signin screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -101,35 +107,44 @@ export default class Freelance extends Component {
         <section className="portfolio-media">
           <div className="row">
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#f9f9f9" }}
             >
               <DeviceFrame type="phone--light">
                 <ImageLoader
                   img="/images/freelance/spender-signin-verify.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Spender app verify screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#f9f9f9" }}
             >
               <DeviceFrame type="phone--light">
                 <ImageLoader
                   img="/images/freelance/spender-overview.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Spender app overview screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#f9f9f9" }}
             >
               <DeviceFrame type="phone--light">
                 <ImageLoader
                   img="/images/freelance/spender-overlay.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Spender app overlayscreen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -162,6 +177,9 @@ export default class Freelance extends Component {
                   img="/images/freelance/dubsmash-quotes-tablet.jpg"
                   placeholder="/images/freelance/dubsmash-quotes-tablet-small.jpg"
                   aspectRatio={2048 / 1536}
+                  imageProps={{
+                    alt: "Dubsmash tablet screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -174,6 +192,9 @@ export default class Freelance extends Component {
                   img="/images/freelance/dubsmash-quotes-tablet-embed.jpg"
                   placeholder="/images/freelance/dubsmash-quotes-tablet-embed-small.jpg"
                   aspectRatio={2048 / 1536}
+                  imageProps={{
+                    alt: "Dubsmash embed screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -183,7 +204,7 @@ export default class Freelance extends Component {
         <section className="portfolio-media">
           <div className="row">
             <div
-              className="col-xs-12 col-sm-6 portfolio-media-item"
+              className="col-xs-6 portfolio-media-item"
               style={{ background: "#111" }}
             >
               <DeviceFrame type="phone--light">
@@ -191,11 +212,14 @@ export default class Freelance extends Component {
                   img="/images/freelance/dubsmash-quotes-mobile-web.jpg"
                   placeholder="/images/freelance/dubsmash-quotes-mobile-web-small.jpg"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Dubsmash mobile web screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-12 col-sm-6 portfolio-media-item"
+              className="col-xs-6 portfolio-media-item"
               style={{ background: "#111" }}
             >
               <DeviceFrame type="phone--light">
@@ -203,6 +227,9 @@ export default class Freelance extends Component {
                   img="/images/freelance/dubsmash-quotes-mobile-web-search.jpg"
                   placeholder="/images/freelance/dubsmash-quotes-mobile-web-search.jpg"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Dubsmash mobile web search screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -216,6 +243,9 @@ export default class Freelance extends Component {
                 img="/images/freelance/dubsmash-quotes-full.jpg"
                 placeholder="/images/freelance/dubsmash-quotes-full.jpg"
                 aspectRatio={1024 / 1440}
+                imageProps={{
+                  alt: "Dubsmash desktop screen."
+                }}
               />
             </DeviceFrame>
           </div>
@@ -232,6 +262,9 @@ export default class Freelance extends Component {
                   img="/images/freelance/dubsmash-quote-wireframe-new.jpg"
                   placeholder="/images/freelance/dubsmash-quote-wireframe-new-small.jpg"
                   aspectRatio={1771 / 1440}
+                  imageProps={{
+                    alt: "Dubsmash admin panel wireframe."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -244,6 +277,9 @@ export default class Freelance extends Component {
                   img="/images/freelance/dubsmash-quote-wireframe-edit.jpg"
                   placeholder="/images/freelance/dubsmash-quote-wireframe-edit-small.jpg"
                   aspectRatio={1453 / 1440}
+                  imageProps={{
+                    alt: "Dubsmash admin panel wireframe."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -276,35 +312,44 @@ export default class Freelance extends Component {
         <section className="portfolio-media">
           <div className="row">
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#F1F2F3" }}
             >
               <DeviceFrame type="phone">
                 <ImageLoader
                   img="/images/freelance/control-room-home.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Control room app home screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#F1F2F3" }}
             >
               <DeviceFrame type="phone">
                 <ImageLoader
                   img="/images/freelance/control-room-room.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Control room app room screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#F1F2F3" }}
             >
               <DeviceFrame type="phone">
                 <ImageLoader
                   img="/images/freelance/control-room-living-room.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Control room app living room screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -313,35 +358,44 @@ export default class Freelance extends Component {
         <section className="portfolio-media">
           <div className="row">
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#F1F2F3" }}
             >
               <DeviceFrame type="phone">
                 <ImageLoader
                   img="/images/freelance/control-room-webcam.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Control room app webcam screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#F1F2F3" }}
             >
               <DeviceFrame type="phone">
                 <ImageLoader
                   img="/images/freelance/control-room-thermostat.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Control room app thermostat screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#F1F2F3" }}
             >
               <DeviceFrame type="phone">
                 <ImageLoader
                   img="/images/freelance/control-room-speaker.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Control room app speaker screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -349,35 +403,44 @@ export default class Freelance extends Component {
 
           <div className="row">
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#F1F2F3" }}
             >
               <DeviceFrame type="phone">
                 <ImageLoader
                   img="/images/freelance/control-room-multiple-1.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Control room multiple users screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#F1F2F3" }}
             >
               <DeviceFrame type="phone">
                 <ImageLoader
                   img="/images/freelance/control-room-multiple-2.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Control room multiple users screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#F1F2F3" }}
             >
               <DeviceFrame type="phone">
                 <ImageLoader
                   img="/images/freelance/control-room-settings.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Control room settings screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -406,6 +469,9 @@ export default class Freelance extends Component {
                 img="/images/archive/tictail.jpg"
                 placeholder="/images/archive/tictail-small.jpg"
                 aspectRatio={7596 / 2560}
+                imageProps={{
+                  alt: "Tictail screen."
+                }}
               />
             </DeviceFrame>
           </div>
@@ -425,7 +491,7 @@ export default class Freelance extends Component {
         <section className="portfolio-media">
           <div className="row">
             <div
-              className="col-xs-12 col-sm-4 portfolio-media-item"
+              className="col-xs-4 portfolio-media-item"
               style={{ background: "#a0c2de" }}
             >
               <DeviceFrame type="phone--light">
@@ -433,11 +499,14 @@ export default class Freelance extends Component {
                   img="/images/side-projects/milestones-mobile.png"
                   placeholder="/images/freelance/milestones-mobile-small.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Milestones app mobile."
+                  }}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-12 col-sm-8 portfolio-media-item"
+              className="col-xs-8 portfolio-media-item"
               style={{ background: "#a0c2de" }}
             >
               <DeviceFrame>
@@ -445,35 +514,11 @@ export default class Freelance extends Component {
                   img="/images/side-projects/milestones@2x.png"
                   placeholder="/images/freelance/milestones-small.png"
                   aspectRatio={1342 / 2560}
+                  imageProps={{
+                    alt: "Milestones app desktop."
+                  }}
                 />
               </DeviceFrame>
-            </div>
-          </div>
-        </section>
-        <section className="content-container">
-          <div className="row around-sm">
-            <div className="col-xs-6 col-sm-4 portfolio-copy--second-row">
-              <h2 className="sub-title load-in">{"Design"}</h2>
-              <ul className="no-bullet-list">
-                <li className="load-in">Sketch</li>
-                <li className="load-in">Adobe Illustrator</li>
-                <li className="load-in">Adobe Photoshop</li>
-                <li className="load-in">Framer</li>
-              </ul>
-            </div>
-            <div className="col-xs-6 col-sm-4 portfolio-copy--second-row">
-              <h2 className="sub-title load-in">{"Tech"}</h2>
-              <ul className="no-bullet-list">
-                <li className="load-in">React</li>
-                <li className="load-in">React Native</li>
-                <li className="load-in">Redux</li>
-                <li className="load-in">Webpack</li>
-                <li className="load-in">Node.js</li>
-                <li className="load-in">SCSS</li>
-                <li className="load-in">PostgreSQL</li>
-                <li className="load-in">GraphQL</li>
-                <li className="load-in">AWS</li>
-              </ul>
             </div>
           </div>
         </section>
