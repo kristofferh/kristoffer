@@ -52,49 +52,54 @@ export default class Tumblr extends Component {
                   maxWidth: 800,
                   margin: "auto"
                 }}
+                imageProps={{
+                  alt: title
+                }}
               />
             </div>
           </div>
         </section>
+
         <section className="content-container">
           <div className="row">
             <div className="col-xs-12 col-sm-8 col-sm-offset-2">
               <h1 className="page-title load-in">{title}</h1>
               <p className="load-in">
-                {
-                  "I spent 3 and half years at Tumblr. Starting as a Product Engineer, pre-Yahoo, then became an Engineering Manager, and finally morphing into a Product Manager role."
-                }
+                I spent 3 and half years at Tumblr. Starting as a Product
+                Engineer, pre-Yahoo, then became an Engineering Manager, and
+                finally morphing into a Product Manager role.
               </p>
               <p className="load-in">
-                {"I worked on a variety of different projects: creation tools,"}{" "}
-                <em>{"Optica"}</em>{" "}
-                {
-                  "(now Official) – the default theme, embeddable posts, reblog redesign, and many others."
-                }
+                I worked on a variety of different projects: creation tools{" "}
+                <em>{"Optica"}</em> (now Official) – the default theme,
+                embeddable posts, reblog redesign, and many others.
               </p>
             </div>
           </div>
         </section>
+
         <section className="portfolio-media">
-          <div className="row">
-            <div
-              className="col-xs-12 portfolio-media-item"
-              style={{ background: "#f8f8f8" }}
-            >
-              <DeviceFrame>
-                <ImageLoader
-                  img="/images/tumblr/optica-new.jpg"
-                  placeholder="/images/tumblr/optica-new-small.jpg"
-                  aspectRatio={2000 / 2560}
-                />
-              </DeviceFrame>
-            </div>
+          <div
+            className="portfolio-media-item"
+            style={{ background: "#f8f8f8" }}
+          >
+            <DeviceFrame>
+              <ImageLoader
+                img="/images/tumblr/optica-new.jpg"
+                placeholder="/images/tumblr/optica-new-small.jpg"
+                aspectRatio={2000 / 2560}
+                imageProps={{
+                  alt: "Optica screenshot."
+                }}
+              />
+            </DeviceFrame>
           </div>
         </section>
+
         <section className="content-container">
           <div className="row">
             <section className="col-xs-12 col-sm-8 col-sm-offset-2">
-              <h2 className="sub-title load-in">{"Optica"}</h2>
+              <h2 className="sub-title load-in">Optica</h2>
               <p className="load-in">
                 <em>Optica</em>, now renamed <em>Official</em>, is the default
                 theme that everyone is assigned when they create a Tumblr blog.
@@ -104,6 +109,7 @@ export default class Tumblr extends Component {
             </section>
           </div>
         </section>
+
         <section className="portfolio-media">
           <div className="row">
             <div
@@ -115,6 +121,9 @@ export default class Tumblr extends Component {
                   img="/images/tumblr/optica-old-desktop.jpg"
                   placeholder="/images/tumblr/optica-old-desktop-small.jpg"
                   aspectRatio={1283 / 1772}
+                  imageProps={{
+                    alt: "Old version of Optica screenshot."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -127,11 +136,15 @@ export default class Tumblr extends Component {
                   img="/images/tumblr/optica-installs.jpg"
                   placeholder="/images/tumblr/optica-installs-small.jpg"
                   aspectRatio={918 / 1332}
+                  imageProps={{
+                    alt: "Number of installs."
+                  }}
                 />
               </DeviceFrame>
             </div>
           </div>
         </section>
+
         <section className="content-container">
           <div className="row">
             <section className="col-xs-12 col-sm-8 col-sm-offset-2">
@@ -151,6 +164,7 @@ export default class Tumblr extends Component {
             </section>
           </div>
         </section>
+
         <section className="portfolio-media">
           <div className="row">
             <div
@@ -179,6 +193,7 @@ export default class Tumblr extends Component {
             </div>
           </div>
         </section>
+
         <section className="content-container">
           <div className="row">
             <section className="col-xs-12 col-sm-8 col-sm-offset-2">
@@ -191,6 +206,7 @@ export default class Tumblr extends Component {
             </section>
           </div>
         </section>
+
         <section className="portfolio-media">
           <div className="row">
             <div
@@ -230,6 +246,7 @@ export default class Tumblr extends Component {
             </div>
           </div>
         </section>
+
         <section className="content-container">
           <div className="row">
             <div className="col-xs-12 col-sm-6">
@@ -248,16 +265,23 @@ export default class Tumblr extends Component {
                 placeholder={"/images/tumblr/fans-small.jpg"}
                 aspectRatio={650 / 300}
                 img={"/images/tumblr/fans.jpg"}
+                imageProps={{
+                  alt: "Screenshot of happy users."
+                }}
               />
               <ImageLoader
                 className="tumblr-fans load-in"
                 placeholder={"/images/tumblr/fans-2-small.jpg"}
                 aspectRatio={204 / 299}
                 img={"/images/tumblr/fans-2.jpg"}
+                imageProps={{
+                  alt: "Another screenshot of happy users."
+                }}
               />
             </div>
           </div>
         </section>
+
         <section className="portfolio-media">
           <div className="row">
             <div
@@ -269,6 +293,9 @@ export default class Tumblr extends Component {
                 placeholder={"/images/tumblr/reblog-small.jpg"}
                 aspectRatio={1}
                 img={"/images/tumblr/reblog.gif"}
+                imageProps={{
+                  alt: "GIF of reblog announcement."
+                }}
               />
             </div>
             <div
@@ -280,6 +307,9 @@ export default class Tumblr extends Component {
                 placeholder={"/images/tumblr/related-posts-small.jpg"}
                 aspectRatio={405 / 540}
                 img={"/images/tumblr/related-posts.gif"}
+                imageProps={{
+                  alt: "GIF of related posts announcement."
+                }}
               />
             </div>
             <div
@@ -291,6 +321,9 @@ export default class Tumblr extends Component {
                 placeholder={"/images/tumblr/likes-small.jpg"}
                 aspectRatio={1}
                 img={"/images/tumblr/likes.gif"}
+                imageProps={{
+                  alt: "GIF of likes announcement."
+                }}
               />
             </div>
           </div>

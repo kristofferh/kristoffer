@@ -318,69 +318,37 @@ export default class Nomad extends Component {
           </div>
         </section>
         <section className="portfolio-media">
-          <div className="row">
-            <div
-              className="col-xs-12 portfolio-media-item"
-              style={{ background: "#FFF8DA" }}
-            >
-              <DeviceFrame className="load-in">
-                <ImageLoader
-                  img="/images/nomad/post-a-job@2x.png"
-                  aspectRatio={1600 / 2880}
-                  imageProps={{
-                    alt: "Posting a job screen."
-                  }}
-                />
-              </DeviceFrame>
-            </div>
+          <div
+            className="portfolio-media-item"
+            style={{ background: "#FFF8DA" }}
+          >
+            <DeviceFrame className="load-in">
+              <ImageLoader
+                img="/images/nomad/post-a-job@2x.png"
+                aspectRatio={1600 / 2880}
+                imageProps={{
+                  alt: "Posting a job screen."
+                }}
+              />
+            </DeviceFrame>
           </div>
         </section>
-        <section className="content-container">
-          <div className="row around-sm">
-            <div className="col-xs-6 col-sm-4 portfolio-copy--second-row">
-              <h2 className="sub-title load-in">{"Design"}</h2>
-              <ul className="no-bullet-list">
-                <li className="load-in">UI / UX Design</li>
-                <li className="load-in">Print / Marketing Material</li>
-                <li className="load-in">Sketch</li>
-                <li className="load-in">Adobe Illustrator</li>
-                <li className="load-in">Adobe Photoshop</li>
-                <li className="load-in">Abstract</li>
-                <li className="load-in">Invision</li>
-                <li className="load-in">Framer</li>
-              </ul>
-            </div>
-            <div className="col-xs-6 col-sm-4 portfolio-copy--second-row">
-              <h2 className="sub-title load-in">{"Tech"}</h2>
-              <ul className="no-bullet-list">
-                <li className="load-in">React</li>
-                <li className="load-in">Redux</li>
-                <li className="load-in">Webpack 3</li>
-                <li className="load-in">Python / Flask</li>
-                <li className="load-in">SCSS</li>
-                <li className="load-in">MongoDB</li>
-                <li className="load-in">Backbone.js</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+
         <section className="portfolio-media">
-          <div className="row">
-            <div
-              className="col-xs-12 portfolio-media-item"
-              style={{ background: "#fafafa" }}
-            >
-              <DeviceFrame bodyStyles={{ maxHeight: 800 }}>
-                <ImageLoader
-                  placeholder="/images/nomad/public-profile-small.png"
-                  img="/images/nomad/public-profile@2x.png"
-                  aspectRatio={5418 / 2880}
-                  imageProps={{
-                    alt: "Public profile screen."
-                  }}
-                />
-              </DeviceFrame>
-            </div>
+          <div
+            className="portfolio-media-item"
+            style={{ background: "#fafafa" }}
+          >
+            <DeviceFrame bodyStyles={{ maxHeight: 800 }}>
+              <ImageLoader
+                placeholder="/images/nomad/public-profile-small.png"
+                img="/images/nomad/public-profile@2x.png"
+                aspectRatio={5418 / 2880}
+                imageProps={{
+                  alt: "Public profile screen."
+                }}
+              />
+            </DeviceFrame>
           </div>
         </section>
       </div>
