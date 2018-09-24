@@ -60,6 +60,9 @@ const About = () => {
               placeholder={image.small}
               aspectRatio={1}
               img={image.big}
+              imageProps={{
+                alt: "GIF of Kris"
+              }}
             />
           ))}
       </div>
@@ -70,32 +73,32 @@ const About = () => {
             <h2 className="sub-title load-in">{"Bio"}</h2>
             <div>
               <p className="load-in">
-                {"Hey. I’m Kris. I’m an interactive designer / developer."}
+                Hey. I’m Kris. I’m an interactive designer / developer.
               </p>
 
               <p className="load-in">
-                {
-                  "I grew up in Umeå, in northern Sweden, but I now live in Brooklyn, NY. I am currently enjoying a hybrid Art Director + Lead Product Engineer role at a startup called Nomad Health. Before that, I was a Product (Engineering) Manager at Tumblr. Before that, I worked at agencies. Before that, I was a baby."
-                }
+                I grew up in Umeå, in northern Sweden, but I now live in
+                Brooklyn, NY. I am currently enjoying a hybrid Art Director +
+                Lead Product Engineer role at a startup called Nomad Health.
+                Before that, I was a Product (Engineering) Manager at Tumblr.
+                Before that, I worked at agencies. Before that, I was a baby.
               </p>
 
               <p className="load-in">
-                {
-                  "I like to design things, and then I like to build those things."
-                }
+                I like to design things, and then I like to build those things.
               </p>
 
               <p className="load-in">
-                {
-                  "I occasionally take on freelance projects. Feel free to get in touch if you have an interesting project that you want to collaborate on. Or if you just want to say "
-                }
+                I occasionally take on freelance projects. Feel free to get in
+                touch if you have an interesting project that you want to
+                collaborate on. Or if you just want to say{" "}
                 <a
                   className="highlight"
                   href="mailto:hello@k-create.com?subject=hi"
                 >
-                  {"hello"}
-                </a>
-                {", that’s cool too."}
+                  hello
+                </a>{" "}
+                , that’s cool too.
               </p>
             </div>
           </div>
@@ -108,7 +111,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  {"Github"}
+                  Github
                 </a>
               </li>
               <li className="load-in">
@@ -117,7 +120,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  {"Codepen"}
+                  Codepen
                 </a>
               </li>
               <li className="load-in">
@@ -126,7 +129,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  {"Tumblr"}
+                  Tumblr
                 </a>
               </li>
               <li className="load-in">
@@ -135,7 +138,7 @@ const About = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  {"Twitter"}
+                  Twitter
                 </a>
               </li>
             </ul>

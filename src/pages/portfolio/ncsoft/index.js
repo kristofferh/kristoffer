@@ -40,6 +40,9 @@ export default class NCsoft extends Component {
                 maxWidth: 800,
                 margin: "auto"
               }}
+              imageProps={{
+                alt: title
+              }}
             />
           </div>
         </section>
@@ -58,19 +61,20 @@ export default class NCsoft extends Component {
         </section>
 
         <section className="portfolio-media">
-          <div className="row">
-            <div
-              className="col-xs-12 portfolio-media-item"
-              style={{ background: "#f5f6f7" }}
-            >
-              <DeviceFrame bodyStyles={{ maxHeight: 800 }}>
-                <ImageLoader
-                  img="/images/ncsoft/gw2-home-2.0.jpg"
-                  placeholder="/images/ncsoft/gw2-home-2.0-small.jpg"
-                  aspectRatio={1700 / 1400}
-                />
-              </DeviceFrame>
-            </div>
+          <div
+            className="portfolio-media-item"
+            style={{ background: "#f5f6f7" }}
+          >
+            <DeviceFrame bodyStyles={{ maxHeight: 800 }}>
+              <ImageLoader
+                img="/images/ncsoft/gw2-home-2.0.jpg"
+                placeholder="/images/ncsoft/gw2-home-2.0-small.jpg"
+                aspectRatio={1700 / 1400}
+                imageProps={{
+                  alt: "Guild Wars 2 screen."
+                }}
+              />
+            </DeviceFrame>
           </div>
         </section>
 
@@ -101,6 +105,9 @@ export default class NCsoft extends Component {
                   img="/images/ncsoft/gw2.jpg"
                   placeholder="/images/ncsoft/gw2-small.jpg"
                   aspectRatio={1000 / 1400}
+                  imageProps={{
+                    alt: "Guild Wars 2 screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -113,6 +120,9 @@ export default class NCsoft extends Component {
                   img="/images/ncsoft/gw2-races.jpg"
                   placeholder="/images/ncsoft/gw2-races-small.jpg"
                   aspectRatio={1000 / 1400}
+                  imageProps={{
+                    alt: "Guild Wars 2 screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -134,6 +144,9 @@ export default class NCsoft extends Component {
                 img="/images/ncsoft/gw2-characters-grid.jpg"
                 placeholder="/images/ncsoft/gw2-characters-grid-small.jpg"
                 aspectRatio={1000 / 1400}
+                imageProps={{
+                  alt: "Guild Wars 2 screen."
+                }}
               />
             </DeviceFrame>
           </div>
@@ -166,6 +179,9 @@ export default class NCsoft extends Component {
                   img="/images/ncsoft/gw-home-1.0.jpg"
                   placeholder="/images/ncsoft/gw-home-1.0-small.jpg"
                   aspectRatio={1000 / 1400}
+                  imageProps={{
+                    alt: "Guild Wars screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -178,6 +194,9 @@ export default class NCsoft extends Component {
                   img="/images/ncsoft/gw-internal-page.jpg"
                   placeholder="/images/ncsoft/gw-internal-page-small.jpg"
                   aspectRatio={1000 / 1400}
+                  imageProps={{
+                    alt: "Guild Wars screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -195,6 +214,9 @@ export default class NCsoft extends Component {
                   img="/images/archive/gw-products-individual.jpg"
                   placeholder="/images/archive/gw-products-individual-small.jpg"
                   aspectRatio={1800 / 1400}
+                  imageProps={{
+                    alt: "Guild Wars screen."
+                  }}
                 />
               </DeviceFrame>
             </div>

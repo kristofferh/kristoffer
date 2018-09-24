@@ -36,6 +36,9 @@ export default class Nomad extends Component {
               maxWidth: 800,
               margin: "auto"
             }}
+            imageProps={{
+              alt: title
+            }}
           />
         </section>
         <section className="content-container">
@@ -43,30 +46,31 @@ export default class Nomad extends Component {
           <div className="row">
             <div className="col-xs-12 col-sm-8">
               <p className="load-in">
-                {
-                  "Nomad is a healthcare marketplace for doctors and nurses, and the people that hire them."
-                }
+                Nomad is a healthcare marketplace for doctors and nurses, and
+                the people that hire them.
               </p>
               <p className="load-in">
-                {
-                  "It’s a big industry, fraught with all the issues that plague the rest of the healthcare system in the United States: slow moving bureaucracy, inefficiencies galore, technology from 1988, and everything is way more expensive than it needs to be. We’re changing all that."
-                }
+                It’s a big industry, fraught with all the issues that plague the
+                rest of the healthcare system in the United States: slow moving
+                bureaucracy, inefficiencies galore, technology from 1988, and
+                everything is way more expensive than it needs to be. We’re
+                changing all that.
               </p>
               <p className="load-in">
-                {
-                  "We are building a healthcare marketplace that is easy to navigate, user-friendly, efficient, and most importantly:"
-                }{" "}
-                <span className="highlight">
-                  {"much cheaper for everyone."}
-                </span>
+                We are building a healthcare marketplace that is easy to
+                navigate, user-friendly, efficient, and most importantly:{" "}
+                <span className="highlight">much cheaper for everyone.</span>
               </p>
-              <p className="load-in">{"It’s like it’s not 1988 anymore!"}</p>
+              <p className="load-in">It’s like it’s not 1988 anymore!</p>
             </div>
             <div className="col-xs-12 col-sm-4 first-sm">
               <ImageLoader
                 placeholder={"/images/nomad/hello-small.png"}
                 aspectRatio={1}
                 img={"/images/nomad/hello.png"}
+                imageProps={{
+                  alt: "Hello"
+                }}
               />
             </div>
           </div>
@@ -82,6 +86,9 @@ export default class Nomad extends Component {
                   img="/images/nomad/dashboard@2x.png"
                   placeholder="/images/nomad/dashboard-small.png"
                   aspectRatio={2752 / 2880}
+                  imageProps={{
+                    alt: "Nomad Dashboard"
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -90,12 +97,12 @@ export default class Nomad extends Component {
         <section className="content-container">
           <div className="row">
             <section className="col-xs-12 col-sm-8 col-sm-offset-2 portfolio-copy--second-row">
-              <h2 className="sub-title load-in">{"What Do I Do There?"}</h2>
-              <p className="load-in">{"A little bit of everything."}</p>
+              <h2 className="sub-title load-in">What Do I Do There?</h2>
+              <p className="load-in">A little bit of everything.</p>
               <p className="load-in">
-                {
-                  "I have a unique hybrid role at Nomad: I’m an Art Director and, at the same time, I am the Lead Product Engineer. I spent half of my time designing features, and the other half building them."
-                }
+                I have a unique hybrid role at Nomad: I’m an Art Director and,
+                at the same time, I am the Lead Product Engineer. I spent half
+                of my time designing features, and the other half building them.
               </p>
             </section>
           </div>
@@ -110,6 +117,9 @@ export default class Nomad extends Component {
                 img="/images/nomad/find-a-job-few-results.png"
                 placeholder="/images/nomad/find-a-job-few-results-small.png"
                 aspectRatio={3066 / 2880}
+                imageProps={{
+                  alt: "Search page, few results."
+                }}
               />
             </DeviceFrame>
           </div>
@@ -140,10 +150,10 @@ export default class Nomad extends Component {
             <li className="portfolio-process-item">
               <h3 className="sub-title">Explore</h3>
               <p>
-                Evaluate the simplest ways to communicate to solve the problem.
-                Distill the goals and outcomes. Sketches, occasionally
-                wireframes, and initial mockups of the overall flow and
-                strategy.
+                Evaluate the most efficient ways to communicate to solve the
+                problem, formulate a hypothesis. Distill the goals and outcomes.
+                Sketches, occasionally wireframes, and initial mockups of the
+                overall flow and strategy.
               </p>
             </li>
             <li className="portfolio-process-item">
@@ -156,8 +166,8 @@ export default class Nomad extends Component {
             <li className="portfolio-process-item">
               <h3 className="sub-title">Refine</h3>
               <p>
-                Incorporate feedback from stakeholders and users. Polish and
-                animation explorations.
+                Incorporate feedback from stakeholders and users. Add polish and
+                explore animations.
               </p>
             </li>
             <li className="portfolio-process-item">
@@ -180,19 +190,25 @@ export default class Nomad extends Component {
 
         <section className="portfolio-media" style={{ background: "#f0f8ff" }}>
           <div className="row">
-            <div className="col-xs-6 portfolio-media-item">
+            <div className="col-xs-12 col-sm-6 portfolio-media-item">
               <DeviceFrame className="load-in load-in--sequence-1">
                 <ImageLoader
                   img="/images/nomad/find-a-job-wireframe-free-text.png"
                   aspectRatio={3066 / 2880}
+                  imageProps={{
+                    alt: "Search wireframe, free text."
+                  }}
                 />
               </DeviceFrame>
             </div>
-            <div className="col-xs-6 portfolio-media-item">
+            <div className="col-xs-12 col-sm-6 portfolio-media-item">
               <DeviceFrame className="load-in load-in--sequence-2">
                 <ImageLoader
                   img="/images/nomad/find-a-job-filters.png"
                   aspectRatio={3066 / 2880}
+                  imageProps={{
+                    alt: "Higher-fidelity search mockup."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -201,19 +217,25 @@ export default class Nomad extends Component {
 
         <section className="portfolio-media" style={{ background: "#f0f8ff" }}>
           <div className="row">
-            <div className="col-xs-6 portfolio-media-item">
+            <div className="col-xs-12 col-sm-6 portfolio-media-item">
               <DeviceFrame className="load-in load-in--sequence-1">
                 <ImageLoader
                   img="/images/nomad/find-a-job-wireframe-quick-view.png"
                   aspectRatio={2092 / 2880}
+                  imageProps={{
+                    alt: "Wireframe of quick-view for search."
+                  }}
                 />
               </DeviceFrame>
             </div>
-            <div className="col-xs-6 portfolio-media-item">
+            <div className="col-xs-12 col-sm-6 portfolio-media-item">
               <DeviceFrame className="load-in load-in--sequence-2">
                 <ImageLoader
                   img="/images/nomad/find-a-job-quick-view.png"
                   aspectRatio={2092 / 2880}
+                  imageProps={{
+                    alt: "Higher fidelity comp of quick view for search."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -230,6 +252,9 @@ export default class Nomad extends Component {
                 <ImageLoader
                   img="/images/nomad/find-a-job-wireframe-mobile-free-text.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Wireframe of search for mobile."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -241,6 +266,9 @@ export default class Nomad extends Component {
                 <ImageLoader
                   img="/images/nomad/find-a-job-mobile-filters-applied.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Search for mobile mockup."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -267,6 +295,9 @@ export default class Nomad extends Component {
                 <ImageLoader
                   img="/images/nomad/dashboard-mobile.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Nomad dashboard mobile."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -278,69 +309,46 @@ export default class Nomad extends Component {
                 <ImageLoader
                   img="/images/nomad/public-facility-mobile.png"
                   aspectRatio={1334 / 750}
+                  imageProps={{
+                    alt: "Public facility screen for mobile."
+                  }}
                 />
               </DeviceFrame>
             </div>
           </div>
         </section>
         <section className="portfolio-media">
-          <div className="row">
-            <div
-              className="col-xs-12 portfolio-media-item"
-              style={{ background: "#FFF8DA" }}
-            >
-              <DeviceFrame className="load-in">
-                <ImageLoader
-                  img="/images/nomad/post-a-job@2x.png"
-                  aspectRatio={1600 / 2880}
-                />
-              </DeviceFrame>
-            </div>
+          <div
+            className="portfolio-media-item"
+            style={{ background: "#FFF8DA" }}
+          >
+            <DeviceFrame className="load-in">
+              <ImageLoader
+                img="/images/nomad/post-a-job@2x.png"
+                aspectRatio={1600 / 2880}
+                imageProps={{
+                  alt: "Posting a job screen."
+                }}
+              />
+            </DeviceFrame>
           </div>
         </section>
-        <section className="content-container">
-          <div className="row around-sm">
-            <div className="col-xs-6 col-sm-4 portfolio-copy--second-row">
-              <h2 className="sub-title load-in">{"Design"}</h2>
-              <ul className="no-bullet-list">
-                <li className="load-in">UI / UX Design</li>
-                <li className="load-in">Print / Marketing Material</li>
-                <li className="load-in">Sketch</li>
-                <li className="load-in">Adobe Illustrator</li>
-                <li className="load-in">Adobe Photoshop</li>
-                <li className="load-in">Abstract</li>
-                <li className="load-in">Invision</li>
-                <li className="load-in">Framer</li>
-              </ul>
-            </div>
-            <div className="col-xs-6 col-sm-4 portfolio-copy--second-row">
-              <h2 className="sub-title load-in">{"Tech"}</h2>
-              <ul className="no-bullet-list">
-                <li className="load-in">React</li>
-                <li className="load-in">Redux</li>
-                <li className="load-in">Webpack 3</li>
-                <li className="load-in">Python / Flask</li>
-                <li className="load-in">SCSS</li>
-                <li className="load-in">MongoDB</li>
-                <li className="load-in">Backbone.js</li>
-              </ul>
-            </div>
-          </div>
-        </section>
+
         <section className="portfolio-media">
-          <div className="row">
-            <div
-              className="col-xs-12 portfolio-media-item"
-              style={{ background: "#fafafa" }}
-            >
-              <DeviceFrame bodyStyles={{ maxHeight: 800 }}>
-                <ImageLoader
-                  placeholder="/images/nomad/public-profile-small.png"
-                  img="/images/nomad/public-profile@2x.png"
-                  aspectRatio={5418 / 2880}
-                />
-              </DeviceFrame>
-            </div>
+          <div
+            className="portfolio-media-item"
+            style={{ background: "#fafafa" }}
+          >
+            <DeviceFrame bodyStyles={{ maxHeight: 800 }}>
+              <ImageLoader
+                placeholder="/images/nomad/public-profile-small.png"
+                img="/images/nomad/public-profile@2x.png"
+                aspectRatio={5418 / 2880}
+                imageProps={{
+                  alt: "Public profile screen."
+                }}
+              />
+            </DeviceFrame>
           </div>
         </section>
       </div>

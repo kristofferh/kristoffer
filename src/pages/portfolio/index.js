@@ -25,7 +25,11 @@ const PortfolioIndex = ({ data }) => {
         <Link to={path} className="portfolio-item-link">
           <div className="portfolio-item-image" style={styles}>
             {media && (
-              <ImageLoader className="portfolio-item-preview" img={media.img} />
+              <ImageLoader
+                imageProps={{ alt: title }}
+                className="portfolio-item-preview"
+                img={media.img}
+              />
             )}
           </div>
           <span className="portfolio-item-text">{title}</span>

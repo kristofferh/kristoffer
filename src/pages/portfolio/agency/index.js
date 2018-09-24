@@ -40,6 +40,9 @@ export default class Agency extends Component {
                 maxWidth: 800,
                 margin: "auto"
               }}
+              imageProps={{
+                alt: title
+              }}
             />
           </div>
         </section>
@@ -67,6 +70,9 @@ export default class Agency extends Component {
                 placeholder="/images/agency/project-rebrief-full-small.jpg"
                 img="/images/agency/project-rebrief-full.jpg"
                 aspectRatio={4980 / 980}
+                imageProps={{
+                  alt: "Project Re:Brief screen."
+                }}
               />
             </DeviceFrame>
           </div>
@@ -103,6 +109,9 @@ export default class Agency extends Component {
                   img="/images/agency/project-rebrief-1.jpg"
                   placeholder="/images/agency/project-rebrief-1-small.jpg"
                   aspectRatio={500 / 700}
+                  imageProps={{
+                    alt: "Project Re:Brief screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -115,6 +124,9 @@ export default class Agency extends Component {
                   img="/images/agency/project-rebrief-2.jpg"
                   placeholder="/images/agency/project-rebrief-2-small.jpg"
                   aspectRatio={500 / 700}
+                  imageProps={{
+                    alt: "Project Re:Brief screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -132,6 +144,9 @@ export default class Agency extends Component {
                   img="/images/agency/usa-today-1.jpg"
                   placeholder="/images/agency/usa-today-1-small.jpg"
                   aspectRatio={560 / 877}
+                  imageProps={{
+                    alt: "USA Today screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -144,6 +159,9 @@ export default class Agency extends Component {
                   img="/images/agency/usa-today-2.jpg"
                   placeholder="/images/agency/usa-today-2-small.jpg"
                   aspectRatio={560 / 877}
+                  imageProps={{
+                    alt: "USA Today screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -158,6 +176,9 @@ export default class Agency extends Component {
                   img="/images/agency/think-with-google-1.jpg"
                   placeholder="/images/agency/think-with-google-1-small.jpg"
                   aspectRatio={1765 / 1280}
+                  imageProps={{
+                    alt: "Think with Google screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -167,6 +188,9 @@ export default class Agency extends Component {
                   img="/images/agency/think-with-google-2.jpg"
                   placeholder="/images/agency/think-with-google-2-small.jpg"
                   aspectRatio={1087 / 1280}
+                  imageProps={{
+                    alt: "Think with Google screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -184,6 +208,9 @@ export default class Agency extends Component {
                   img="/images/agency/zeitgeist-1.jpg"
                   placeholder="/images/agency/zeitgeist-1-small.jpg"
                   aspectRatio={500 / 700}
+                  imageProps={{
+                    alt: "Google Zeitgeist screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -196,6 +223,9 @@ export default class Agency extends Component {
                   img="/images/agency/al-jazeera-1.jpg"
                   placeholder="/images/agency/zeitgeist-1-small.jpg"
                   aspectRatio={500 / 700}
+                  imageProps={{
+                    alt: "Google Zeitgeist screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -229,6 +259,9 @@ export default class Agency extends Component {
                   img="/images/agency/pokemon-black-white-1.jpg"
                   placeholder="/images/agency/pokemon-black-white-1-small.jpg"
                   aspectRatio={1000 / 1415}
+                  imageProps={{
+                    alt: "Pokemon Black and White screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -241,6 +274,9 @@ export default class Agency extends Component {
                   img="/images/agency/pokemon-black-white-2.jpg"
                   placeholder="/images/agency/pokemon-black-white-2-small.jpg"
                   aspectRatio={1000 / 1709}
+                  imageProps={{
+                    alt: "Pokemon Black and White screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -250,7 +286,7 @@ export default class Agency extends Component {
         <section className="portfolio-media">
           <div className="row">
             <div
-              className="col-xs-6 portfolio-media-item"
+              className="col-xs-12 col-sm-6 portfolio-media-item"
               style={{ background: "#f2706f" }}
             >
               <DeviceFrame>
@@ -258,11 +294,14 @@ export default class Agency extends Component {
                   img="/images/agency/raleigh-1.jpg"
                   placeholder="/images/agency/raleigh-1-small.jpg"
                   aspectRatio={500 / 700}
+                  imageProps={{
+                    alt: "Raleigh screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-6 portfolio-media-item"
+              className="col-xs-12 col-sm-6 portfolio-media-item"
               style={{ background: "#ade1e5" }}
             >
               <DeviceFrame>
@@ -270,6 +309,9 @@ export default class Agency extends Component {
                   img="/images/agency/nintendo-ds-1.jpg"
                   placeholder="/images/agency/nintendo-ds-1-small.jpg"
                   aspectRatio={1000 / 1400}
+                  imageProps={{
+                    alt: "Nintendo DS Lite screen."
+                  }}
                 />
               </DeviceFrame>
             </div>
@@ -289,6 +331,9 @@ export default class Agency extends Component {
                 img="/images/agency/royal-opera-house-1.jpg"
                 placeholder="/images/agency/royal-opera-house-1-small.jpg"
                 aspectRatio={994 / 768}
+                imageProps={{
+                  alt: "Royal Opera House screen."
+                }}
               />
             </DeviceFrame>
           </div>

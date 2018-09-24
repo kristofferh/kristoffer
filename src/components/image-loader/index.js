@@ -75,6 +75,7 @@ export default class ImageLoader extends Component {
               "fade-out": this.state.loaded
             })}
             src={this.props.placeholder}
+            alt=""
           />
         )}
         {this.props.aspectRatio && (
@@ -85,6 +86,7 @@ export default class ImageLoader extends Component {
             ref={node => (this.img = node)}
             className="img"
             src={this.props.img}
+            {...this.props.imageProps}
           />
         )}
       </div>
@@ -104,5 +106,6 @@ ImageLoader.propTypes = {
   placeholder: PropTypes.string,
   lazyload: PropTypes.bool,
   loadingCallback: PropTypes.func,
-  styles: PropTypes.object
+  styles: PropTypes.object,
+  imageProps: PropTypes.object
 };
