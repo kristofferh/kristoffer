@@ -190,7 +190,7 @@ export default class Nomad extends Component {
 
         <section className="portfolio-media" style={{ background: "#f0f8ff" }}>
           <div className="row">
-            <div className="col-xs-6 portfolio-media-item">
+            <div className="col-xs-12 col-sm-6 portfolio-media-item">
               <DeviceFrame className="load-in load-in--sequence-1">
                 <ImageLoader
                   img="/images/nomad/find-a-job-wireframe-free-text.png"
@@ -201,7 +201,7 @@ export default class Nomad extends Component {
                 />
               </DeviceFrame>
             </div>
-            <div className="col-xs-6 portfolio-media-item">
+            <div className="col-xs-12 col-sm-6 portfolio-media-item">
               <DeviceFrame className="load-in load-in--sequence-2">
                 <ImageLoader
                   img="/images/nomad/find-a-job-filters.png"
@@ -217,7 +217,7 @@ export default class Nomad extends Component {
 
         <section className="portfolio-media" style={{ background: "#f0f8ff" }}>
           <div className="row">
-            <div className="col-xs-6 portfolio-media-item">
+            <div className="col-xs-12 col-sm-6 portfolio-media-item">
               <DeviceFrame className="load-in load-in--sequence-1">
                 <ImageLoader
                   img="/images/nomad/find-a-job-wireframe-quick-view.png"
@@ -228,7 +228,7 @@ export default class Nomad extends Component {
                 />
               </DeviceFrame>
             </div>
-            <div className="col-xs-6 portfolio-media-item">
+            <div className="col-xs-12 col-sm-6 portfolio-media-item">
               <DeviceFrame className="load-in load-in--sequence-2">
                 <ImageLoader
                   img="/images/nomad/find-a-job-quick-view.png"

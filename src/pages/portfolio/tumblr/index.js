@@ -44,19 +44,17 @@ export default class Tumblr extends Component {
     return (
       <div className="portfolio">
         <section className="portfolio-media">
-          <div className="row">
-            <div className="col-xs-12 portfolio-media-item" style={styles}>
-              <ImageLoader
-                {...media[0]}
-                styles={{
-                  maxWidth: 800,
-                  margin: "auto"
-                }}
-                imageProps={{
-                  alt: title
-                }}
-              />
-            </div>
+          <div className="portfolio-media-item" style={styles}>
+            <ImageLoader
+              {...media[0]}
+              styles={{
+                maxWidth: 800,
+                margin: "auto"
+              }}
+              imageProps={{
+                alt: title
+              }}
+            />
           </div>
         </section>
 
@@ -65,7 +63,7 @@ export default class Tumblr extends Component {
             <div className="col-xs-12 col-sm-8 col-sm-offset-2">
               <h1 className="page-title load-in">{title}</h1>
               <p className="load-in">
-                I spent 3 and half years at Tumblr. Starting as a Product
+                I spent three and half years at Tumblr. Starting as a Product
                 Engineer, pre-Yahoo, then became an Engineering Manager, and
                 finally morphing into a Product Manager role.
               </p>
@@ -113,7 +111,7 @@ export default class Tumblr extends Component {
         <section className="portfolio-media">
           <div className="row">
             <div
-              className="col-xs-6 portfolio-media-item"
+              className="col-xs-12 col-sm-6portfolio-media-item"
               style={{ background: "#dbe0e6" }}
             >
               <DeviceFrame>
@@ -128,7 +126,7 @@ export default class Tumblr extends Component {
               </DeviceFrame>
             </div>
             <div
-              className="col-xs-6 portfolio-media-item"
+              className="col-xs-12 col-sm-6 portfolio-media-item"
               style={{ background: "#e2e7ea" }}
             >
               <DeviceFrame>
