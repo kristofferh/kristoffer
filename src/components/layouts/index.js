@@ -109,7 +109,7 @@ export default class Template extends Component {
 
         <Logo {...page} {...this.props} />
         <Navigation {...page} {...this.props} />
-        <section className="content-wrapper">{this.props.children()}</section>
+        <section className="content-wrapper">{this.props.children}</section>
         <Footer />
       </div>
     );
