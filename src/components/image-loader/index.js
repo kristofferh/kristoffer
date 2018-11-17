@@ -6,7 +6,7 @@ if (typeof window !== "undefined") {
   require("intersection-observer");
 }
 
-import "./styles.scss";
+//import "./styles.scss";
 
 export default class ImageLoader extends Component {
   constructor(props) {

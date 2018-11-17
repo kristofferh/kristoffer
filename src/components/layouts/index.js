@@ -9,13 +9,13 @@ if (typeof window !== "undefined") {
   require("intersection-observer");
 }
 
-import "styles/base.scss";
-import "styles/fonts/tanek.scss";
-import "styles/fonts/tiempos.scss";
+// import "../../styles/base.scss";
+// import "../../styles/fonts/tanek.scss";
+// import "../../styles/fonts/tiempos.scss";
 
-import Logo from "components/logo";
-import Navigation from "components/navigation";
-import Footer from "components/footer";
+import Logo from "../../components/logo";
+import Navigation from "../../components/navigation";
+import Footer from "../../components/footer";
 
 export default class Template extends Component {
   loadElements() {
