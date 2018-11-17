@@ -1,9 +1,11 @@
 import React from "react";
-import ImageLoader from "components/image-loader";
 
-import shuffle from "utils/shuffle-array";
+import ImageLoader from "../../components/image-loader";
+import Layout from "../../components/layouts";
 
-import "./styles.scss";
+import shuffle from "../../utils/shuffle-array";
+
+//import "./styles.scss";
 
 exports.data = {
   title: "About",
@@ -49,7 +51,7 @@ exports.data = {
 const About = () => {
   const { images } = exports.data;
   return (
-    <div>
+    <Layout>
       <div className="about-photos">
         {shuffle(images)
           .slice(0, 3)
@@ -145,7 +147,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

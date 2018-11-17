@@ -3,11 +3,12 @@ import PropTypes from "prop-types";
 import Link from "gatsby-link";
 import graphql from "graphql";
 
-import groupsOf from "utils/groups-of";
+import groupsOf from "../../utils/groups-of";
 
-import ImageLoader from "components/image-loader";
+import Layout from "../../components/layouts";
+import ImageLoader from "../../components/image-loader";
 
-import "./styles.scss";
+//import "./styles.scss";
 
 export const data = {
   title: "Portfolio",
@@ -45,10 +46,12 @@ const PortfolioIndex = ({ data }) => {
   ));
 
   return (
-    <div className="content-container">
-      <h1 className="page-title">{"Selected bits"}</h1>
-      <div className="portfolio-items">{groups}</div>
-    </div>
+    <Layout>
+      <div className="content-container">
+        <h1 className="page-title">{"Selected bits"}</h1>
+        <div className="portfolio-items">{groups}</div>
+      </div>
+    </Layout>
   );
 };
 
