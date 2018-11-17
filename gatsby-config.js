@@ -14,8 +14,8 @@ module.exports = {
     siteName: "k-create.com"
   },
   plugins: [
-    "gatsby-plugin-resolve-src",
-    "gatsby-plugin-postcss-sass",
+    // "gatsby-plugin-resolve-src",
+    // "gatsby-plugin-postcss-sass",
     "gatsby-transformer-javascript-static-exports",
     {
       resolve: "gatsby-source-filesystem",
