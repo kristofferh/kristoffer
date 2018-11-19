@@ -20,7 +20,7 @@
     "gatsby": "^1.9.0",
     "gatsby-link": "^2.0.6",
     "gatsby-plugin-manifest": "^2.0.9",
-    "gatsby-plugin-offline": "^1.0.12",
+    "gatsby-plugin-offline": "^2.0.15",
     "gatsby-plugin-postcss-sass": "^1.0.15",
     "gatsby-plugin-resolve-src": "^1.0.0",
     "gatsby-plugin-sitemap": "^1.2.9",
