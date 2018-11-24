@@ -5,7 +5,7 @@ import Link from "gatsby-link";
 import BodyClassName from "react-body-classname";
 import Helmet from "react-helmet";
 
-//import "./styles.scss";
+import "./styles.scss";
 
 /* eslint-disable */
 export default class Navigation extends Component {

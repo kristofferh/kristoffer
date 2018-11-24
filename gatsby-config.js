@@ -16,6 +16,7 @@ module.exports = {
   plugins: [
     // "gatsby-plugin-resolve-src",
     // "gatsby-plugin-postcss-sass",
+    "gatsby-plugin-sass",
     "gatsby-transformer-javascript-frontmatter",
     {
       resolve: "gatsby-source-filesystem",

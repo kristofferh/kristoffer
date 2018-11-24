@@ -9,9 +9,9 @@ import "babel-polyfill";
 //   require("intersection-observer");
 // }
 
-// import "../../styles/base.scss";
-// import "../../styles/fonts/tanek.scss";
-// import "../../styles/fonts/tiempos.scss";
+import "../../styles/base.scss";
+import "../../styles/fonts/tanek.scss";
+import "../../styles/fonts/tiempos.scss";
 
 import Logo from "../../components/logo";
 import Navigation from "../../components/navigation";

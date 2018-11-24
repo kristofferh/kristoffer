@@ -23,6 +23,7 @@
     "gatsby-plugin-offline": "^2.0.15",
     "gatsby-plugin-postcss-sass": "^1.0.15",
     "gatsby-plugin-resolve-src": "^1.0.0",
+    "gatsby-plugin-sass": "^2.0.4",
     "gatsby-plugin-sitemap": "^2.0.2",
     "gatsby-source-filesystem": "^2.0.8",
     "gatsby-transformer-javascript-frontmatter": "^2.0.4",
@@ -41,6 +42,7 @@
     "eslint-plugin-prettier": "^2.6.2",
     "eslint-plugin-react": "^7.10.0",
     "flexboxgrid": "^6.3.0",
+    "node-sass": "^4.10.0",
     "prettier": "^1.14.3"
   }
 }

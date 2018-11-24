@@ -4,7 +4,7 @@ import Link from "gatsby-link";
 
 import Mark from "../mark";
 
-//import "./styles.scss";
+import "./styles.scss";
 
 const Logo = ({ location }) => {
   const Holder = location.pathname !== "/" ? Link : "span";
