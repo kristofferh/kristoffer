@@ -7,7 +7,7 @@ import shuffle from "../../utils/shuffle-array";
 
 //import "./styles.scss";
 
-exports.data = {
+export const frontmatter = {
   title: "About",
   color: "pink",
   description:

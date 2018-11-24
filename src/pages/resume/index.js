@@ -3,7 +3,7 @@ import React from "react";
 import Layout from "../../components/layouts";
 //import "./styles.scss";
 
-exports.data = {
+export const frontmatter = {
   title: "Resume",
   color: "blue",
   description: "Kristoffer Hedstrom's Resume."

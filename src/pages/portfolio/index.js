@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
-import graphql from "graphql";
+import { graphql } from "gatsby";
 
 import groupsOf from "../../utils/groups-of";
 
@@ -10,7 +10,7 @@ import ImageLoader from "../../components/image-loader";
 
 //import "./styles.scss";
 
-export const data = {
+export const frontmatter = {
   title: "Portfolio",
   color: "orange",
   description: "Kristoffer Hedstrom's Portfolio."
@@ -61,13 +61,13 @@ PortfolioIndex.propTypes = {
 
 export const pageQuery = graphql`
   query portfolioQuery {
-    portfolio: allJsFrontmatter(
-      filter: { data: { portfolio: { eq: true } } }
-      sort: { fields: [data___order], order: ASC }
+    portfolio: allJavascriptFrontmatter(
+      filter: { frontmatter: { portfolio: { eq: true } } }
+      sort: { fields: [frontmatter___order], order: ASC }
     ) {
       edges {
         node {
-          data {
+          frontmatter {
             title
             path
             styles {

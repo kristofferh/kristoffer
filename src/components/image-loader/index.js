@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 
-if (typeof window !== "undefined") {
-  require("intersection-observer");
-}
+// if (typeof window !== "undefined") {
+//   require("intersection-observer");
+// }
 
 //import "./styles.scss";
 

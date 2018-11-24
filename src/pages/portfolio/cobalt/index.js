@@ -4,7 +4,7 @@ import Layout from "../../../components/layouts";
 import ImageLoader from "../../../components/image-loader";
 import DeviceFrame from "../../../components/device-frame";
 
-export const data = {
+export const frontmatter = {
   portfolio: true,
   order: 3,
   title: "Cobalt",
