@@ -30,7 +30,9 @@ export default class Navigation extends Component {
   }
 
   handleNavClick() {
-    this.setState({ showNav: !this.state.showNav });
+    // e.preventDefault();
+    // console.log("hi?");
+    //this.setState({ showNav: !this.state.showNav });
   }
 
   // @todo: make this generic.

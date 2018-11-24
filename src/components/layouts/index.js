@@ -54,43 +54,44 @@ export default class Template extends Component {
                 shareImage
                 url
                 siteName
+                name
+                email
               }
             }
           }
         `}
         render={data => {
-          const { location } = this.props;
-          let page = {};
+          const { location, children, frontmatter } = this.props;
           const colors = ["green", "blue", "orange", "pink"];
           const defaultColor =
             colors[Math.floor(Math.random() * colors.length)];
-          // const config = data.site.siteMetadata;
-          // const currentPage = data.allFile.edges.find(({ node }) => {
+          const config = data.site.siteMetadata;
+          const { name, email } = config;
+          // const currentfrontmatter = data.allFile.edges.find(({ node }) => {
           //   return (
           //     node.relativeDirectory ===
           //       location.pathname.replace(/^\/|\/$/g, "") &&
           //     node.childJsFrontmatter
           //   );
           // });
-          // if (currentPage) {
-          //   // Assign the nested object page coming from GraphQL to a new name
+          // if (currentfrontmatter) {
+          //   // Assign the nested object frontmatter coming from GraphQL to a new name
           //   const {
           //     node: {
-          //       childJsFrontmatter: { data: currentPageData = {} }
+          //       childJsFrontmatter: { data: currentfrontmatterData = {} }
           //     }
-          //   } = currentPage;
-          //   page = { ...currentPageData };
+          //   } = currentfrontmatter;
+          //   frontmatter = { ...currentfrontmatterData };
           // }
-          const color = page.color || defaultColor;
+          const color = frontmatter.color || defaultColor;
           return (
             <>
               <BodyClassName className={color} />
-              {/*
               <Helmet
                 meta={[
                   {
                     name: "description",
-                    content: page.description || config.description
+                    content: frontmatter.description || config.description
                   },
                   {
                     property: "og:url",
@@ -99,39 +100,38 @@ export default class Template extends Component {
                   { property: "og:type", content: "website" },
                   {
                     property: "og:title",
-                    content: page.title
-                      ? `${page.title} - ${config.siteTitle}`
+                    content: frontmatter.title
+                      ? `${frontmatter.title} - ${config.siteTitle}`
                       : config.siteTitle
                   },
                   { property: "og:site_name", content: config.siteTitle },
                   { property: "og:image", content: config.shareImage },
                   {
                     property: "og:description",
-                    content: page.description || config.description
+                    content: frontmatter.description || config.description
                   },
                   {
                     name: "twitter:title",
-                    content: page.title ? page.title : config.siteTitle
+                    content: frontmatter.title
+                      ? frontmatter.title
+                      : config.siteTitle
                   },
                   { name: "twitter:card", content: "summary_large_image" },
                   { name: "twitter:site", content: config.twitter },
                   { name: "twitter:creator", content: config.twitter },
                   {
                     name: "twitter:description",
-                    content: page.description || config.description
+                    content: frontmatter.description || config.description
                   },
                   { name: "twitter:image", content: config.shareImage }
                 ]}
                 titleTemplate={`%s - ${config.siteTitle}`}
-                title={page.title || config.siteName}
+                title={frontmatter.title || config.siteName}
               />
-                */}
-              <Logo {...page} {...this.props} />
-              <Navigation {...page} {...this.props} />
-              <section className="content-wrapper">
-                {this.props.children}
-              </section>
-              <Footer />
+              <Logo location={location} />
+              <Navigation {...frontmatter} {...this.props} />
+              <section className="content-wrapper">{children}</section>
+              <Footer name={name} email={email} />
             </>
           );
         }}
@@ -140,14 +140,18 @@ export default class Template extends Component {
   }
 }
 
+Template.defaultProps = {
+  frontmatter: {}
+};
+
 Template.propTypes = {
   children: PropTypes.any,
   location: PropTypes.object,
-  data: PropTypes.object
+  frontmatter: PropTypes.object
 };
 
 // eslint-disable-next-line no-undef
-// export const pageQuery = graphql`
+// export const frontmatterQuery = graphql`
 //   query IndexQuery {
 //     site {
 //       siteMetadata {

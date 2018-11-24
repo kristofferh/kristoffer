@@ -1,20 +1,22 @@
 import React from "react";
-
-import { siteMetadata as config } from "../../../gatsby-config";
+import PropTypes from "prop-types";
 
 import "./styles.scss";
 
-const Footer = () => {
+const Footer = ({ name, email }) => {
   return (
     <footer className="page-footer content-container">
-      <div className="footer-inner row">
-        <div className="col-xs-12">
-          {`${config.name}`}
-          {" — "} <a href={`mailto:${config.email}`}>{config.email}</a>
-        </div>
+      <div className="footer-inner">
+        {name}
+        {" — "} <a href={`mailto:${email}`}>{email}</a>
       </div>
     </footer>
   );
+};
+
+Footer.propTypes = {
+  name: PropTypes.node,
+  email: PropTypes.node
 };
 
 export default Footer;

@@ -26,7 +26,7 @@ export const frontmatter = {
 
 export default class Freelance extends Component {
   render() {
-    const { title, styles, media } = data;
+    const { title, styles, media } = frontmatter;
 
     return (
       <Layout>
