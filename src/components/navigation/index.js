@@ -52,13 +52,13 @@ export default class Navigation extends Component {
     });
 
     if (locationChanged) {
-      window.analytics.page();
+      //window.analytics.page();
     }
   }
 
   componentDidMount() {
     // Page load
-    window.analytics.page();
+    //window.analytics.page();
   }
 
   getPath(path) {
