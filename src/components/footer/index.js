@@ -2,7 +2,7 @@ import React from "react";
 
 import { siteMetadata as config } from "../../../gatsby-config";
 
-//import "./styles.scss";
+import "./styles.scss";
 
 const Footer = () => {
   return (

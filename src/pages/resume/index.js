@@ -1,7 +1,8 @@
 import React from "react";
 
 import Layout from "../../components/layouts";
-//import "./styles.scss";
+
+import "./styles.scss";
 
 export const frontmatter = {
   title: "Resume",
@@ -9,8 +10,8 @@ export const frontmatter = {
   description: "Kristoffer Hedstrom's Resume."
 };
 
-const Resume = () => (
-  <Layout>
+const Resume = props => (
+  <Layout {...props}>
     <div className="resume-wrapper content-container">
       <section className="summary-wrapper masthead row middle-xs top-sm">
         <div className="title-wrapper col-xs-12 col-md-6">

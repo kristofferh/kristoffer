@@ -5,7 +5,7 @@ import Layout from "../../components/layouts";
 
 import shuffle from "../../utils/shuffle-array";
 
-//import "./styles.scss";
+import "./styles.scss";
 
 export const frontmatter = {
   title: "About",
@@ -48,10 +48,10 @@ export const frontmatter = {
   ]
 };
 
-const About = () => {
-  const { images } = exports.data;
+const About = props => {
+  const { images } = frontmatter;
   return (
-    <Layout>
+    <Layout {...props}>
       <div className="about-photos">
         {shuffle(images)
           .slice(0, 3)
@@ -69,10 +69,10 @@ const About = () => {
           ))}
       </div>
       <div className="content-container">
-        <h1 className="page-title load-in">{"About"}</h1>
+        <h1 className="page-title load-in">About</h1>
         <div className="row between-xs">
           <div className="module col-xs-12 col-sm-8">
-            <h2 className="sub-title load-in">{"Bio"}</h2>
+            <h2 className="sub-title load-in">Bio</h2>
             <div>
               <p className="load-in">
                 Hey. I’m Kris. I’m an interactive designer / developer.
