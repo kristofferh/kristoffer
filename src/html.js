@@ -36,7 +36,9 @@ const HTML = ({ color, favicon, body, headComponents, postBodyComponents }) => {
         {head.meta.toComponent()}
         {head.title.toComponent()}
         <link rel="shortcut icon" href={favicon} />
+        {/*
         <script dangerouslySetInnerHTML={{ __html: analytics }} />
+        */}
         {cssLink}
       </head>
       <body className={color}>
