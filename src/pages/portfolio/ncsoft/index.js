@@ -6,9 +6,9 @@ import DeviceFrame from "../../../components/device-frame";
 
 export const frontmatter = {
   portfolio: true,
-  order: 3,
+  order: 4,
   title: "NCsoft",
-  color: "pink",
+  color: "green",
   description: "Game-studio design work.",
   path: "/portfolio/ncsoft",
   media: [
@@ -28,7 +28,7 @@ const NCsoft = props => {
   const { title, styles, media } = frontmatter;
 
   return (
-    <Layout {...props}>
+    <Layout {...props} frontmatter={frontmatter}>
       <div className="portfolio">
         <section className="portfolio-media">
           <div

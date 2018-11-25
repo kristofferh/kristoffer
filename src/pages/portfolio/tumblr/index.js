@@ -43,7 +43,7 @@ export default class Tumblr extends Component {
     const { title, styles, media } = frontmatter;
 
     return (
-      <Layout>
+      <Layout {...this.props} frontmatter={frontmatter}>
         <div className="portfolio">
           <section className="portfolio-media">
             <div className="portfolio-media-item" style={styles}>
