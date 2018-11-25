@@ -8,7 +8,7 @@ import groupsOf from "../../utils/groups-of";
 import Layout from "../../components/layouts";
 import ImageLoader from "../../components/image-loader";
 
-//import "./styles.scss";
+import "./styles.scss";
 
 export const frontmatter = {
   title: "Portfolio",
@@ -16,11 +16,12 @@ export const frontmatter = {
   description: "Kristoffer Hedstrom's Portfolio."
 };
 
-const PortfolioIndex = ({ data }) => {
+const PortfolioIndex = ({ data, ...rest }) => {
   const pageLinks = data.portfolio.edges.map(({ node: page }) => {
-    const { styles, title, path } = page.data;
+    const { styles, title, path } = page.frontmatter;
     const media =
-      page.data.media && page.data.media.find(item => item.type === "image");
+      page.frontmatter.media &&
+      page.frontmatter.media.find(item => item.type === "image");
     return (
       <div key={path} className="portfolio-item col-xs-12 col-sm-4">
         <Link to={path} className="portfolio-item-link">
@@ -46,7 +47,7 @@ const PortfolioIndex = ({ data }) => {
   ));
 
   return (
-    <Layout>
+    <Layout {...rest}>
       <div className="content-container">
         <h1 className="page-title">{"Selected bits"}</h1>
         <div className="portfolio-items">{groups}</div>
