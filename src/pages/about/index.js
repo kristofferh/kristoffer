@@ -51,7 +51,7 @@ export const frontmatter = {
 const About = props => {
   const { images } = frontmatter;
   return (
-    <Layout {...props}>
+    <Layout {...props} frontmatter={frontmatter}>
       <div className="about-photos">
         {shuffle(images)
           .slice(0, 3)

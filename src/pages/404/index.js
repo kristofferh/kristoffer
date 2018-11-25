@@ -9,7 +9,7 @@ export const frontmatter = {
 };
 
 const FourOhFour = props => (
-  <Layout {...props}>
+  <Layout {...props} frontmatter={frontmatter}>
     <div className="content-container">
       <h1 className="page-title">{"Not Found"}</h1>
       <p>{"Oops, can’t find that page."}</p>

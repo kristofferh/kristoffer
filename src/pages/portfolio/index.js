@@ -47,7 +47,7 @@ const PortfolioIndex = ({ data, ...rest }) => {
   ));
 
   return (
-    <Layout {...rest}>
+    <Layout {...rest} frontmatter={frontmatter}>
       <div className="content-container">
         <h1 className="page-title">{"Selected bits"}</h1>
         <div className="portfolio-items">{groups}</div>

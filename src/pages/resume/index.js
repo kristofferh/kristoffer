@@ -11,7 +11,7 @@ export const frontmatter = {
 };
 
 const Resume = props => (
-  <Layout {...props}>
+  <Layout {...props} frontmatter={frontmatter}>
     <div className="resume-wrapper content-container">
       <section className="summary-wrapper masthead row middle-xs top-sm">
         <div className="title-wrapper col-xs-12 col-md-6">
