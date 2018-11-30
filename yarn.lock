@@ -3716,9 +3716,10 @@ escape-string-regexp@1.0.5, escape-string-regexp@^1.0.2, escape-string-regexp@^1
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-prettier@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-3.1.0.tgz#2c26d2cdcfa3a05f0642cd7e6e4ef3316cdabfa2"
+eslint-config-prettier@^3.2.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-3.3.0.tgz#41afc8d3b852e757f06274ed6c44ca16f939a57d"
+  integrity sha512-Bc3bh5bAcKNvs3HOpSi6EfGA2IIp7EzWcg2tS4vP7stnXu/J1opihHDM7jI9JCIckyIDTgZLSWn7J3HY0j2JfA==
   dependencies:
     get-stdin "^6.0.0"
 
@@ -5610,9 +5611,10 @@ internal-ip@^3.0.1:
     default-gateway "^2.6.0"
     ipaddr.js "^1.5.2"
 
-intersection-observer@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.5.0.tgz#9fe8bee3953c755b1485c38efd9633d535775ea6"
+intersection-observer@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.5.1.tgz#e340fc56ce74290fe2b2394d1ce88c4353ac6dfa"
+  integrity sha512-Zd7Plneq82kiXFixs7bX62YnuZ0BMRci9br7io88LwDyF3V43cQMI+G5IiTlTNTt+LsDUppl19J/M2Fp9UkH6g==
 
 invariant@^2.2.0, invariant@^2.2.2:
   version "2.2.2"
@@ -7067,9 +7069,10 @@ normalize-url@^3.0.0:
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-3.3.0.tgz#b2e1c4dc4f7c6d57743df733a4f5978d18650559"
   integrity sha512-U+JJi7duF1o+u2pynbp2zXDW2/PADgC30f0GsHZtRh+HOcXHnw137TrNlyxxRvWW5fjKd3bcLHPxofWuCjaeZg==
 
-normalize.css@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.0.tgz#14ac5e461612538a4ce9be90a7da23f86e718493"
+normalize.css@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+  integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
 
 npm-bundled@^1.0.1:
   version "1.0.5"
@@ -8018,9 +8021,10 @@ prettier-linter-helpers@^1.0.0:
   dependencies:
     fast-diff "^1.1.2"
 
-prettier@^1.14.3:
-  version "1.14.3"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.14.3.tgz#90238dd4c0684b7edce5f83b0fb7328e48bd0895"
+prettier@^1.15.3:
+  version "1.15.3"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.15.3.tgz#1feaac5bdd181237b54dbe65d874e02a1472786a"
+  integrity sha512-gAU9AGAPMaKb3NNSUUuhhFAS7SCO4ALTN4nRIn6PJ075Qd28Yn2Ig2ahEJWdJwJmlEBTUfC7mMUSFy8MwsOCfg==
 
 pretty-bytes@^4.0.2:
   version "4.0.2"
