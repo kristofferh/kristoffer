@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
-import ImageLoader from "components/image-loader";
-import DeviceFrame from "components/device-frame";
+import Layout from "../../../components/layouts";
+import ImageLoader from "../../../components/image-loader";
+import DeviceFrame from "../../../components/device-frame";
 
-export const data = {
+export const frontmatter = {
   portfolio: true,
   order: 0,
   title: "Nomad",
@@ -23,11 +24,11 @@ export const data = {
   }
 };
 
-export default class Nomad extends Component {
-  render() {
-    const { title, styles, media } = data;
+const Nomad = props => {
+  const { title, styles, media } = frontmatter;
 
-    return (
+  return (
+    <Layout {...props} frontmatter={frontmatter}>
       <div className="portfolio">
         <section className="portfolio-media" style={styles}>
           <ImageLoader
@@ -352,6 +353,8 @@ export default class Nomad extends Component {
           </div>
         </section>
       </div>
-    );
-  }
-}
+    </Layout>
+  );
+};
+
+export default Nomad;

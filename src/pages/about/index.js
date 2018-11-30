@@ -1,11 +1,13 @@
 import React from "react";
-import ImageLoader from "components/image-loader";
 
-import shuffle from "utils/shuffle-array";
+import ImageLoader from "../../components/image-loader";
+import Layout from "../../components/layouts";
+
+import shuffle from "../../utils/shuffle-array";
 
 import "./styles.scss";
 
-exports.data = {
+export const frontmatter = {
   title: "About",
   color: "pink",
   description:
@@ -46,10 +48,10 @@ exports.data = {
   ]
 };
 
-const About = () => {
-  const { images } = exports.data;
+const About = props => {
+  const { images } = frontmatter;
   return (
-    <div>
+    <Layout {...props} frontmatter={frontmatter}>
       <div className="about-photos">
         {shuffle(images)
           .slice(0, 3)
@@ -67,10 +69,10 @@ const About = () => {
           ))}
       </div>
       <div className="content-container">
-        <h1 className="page-title load-in">{"About"}</h1>
+        <h1 className="page-title load-in">About</h1>
         <div className="row between-xs">
           <div className="module col-xs-12 col-sm-8">
-            <h2 className="sub-title load-in">{"Bio"}</h2>
+            <h2 className="sub-title load-in">Bio</h2>
             <div>
               <p className="load-in">
                 Hey. I’m Kris. I’m an interactive designer / developer.
@@ -145,7 +147,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

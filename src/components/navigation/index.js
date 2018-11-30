@@ -7,7 +7,6 @@ import Helmet from "react-helmet";
 
 import "./styles.scss";
 
-/* eslint-disable */
 export default class Navigation extends Component {
   constructor(props) {
     super(props);
@@ -17,48 +16,43 @@ export default class Navigation extends Component {
       pageTitle: this.getPageTitle(this.props),
       showNav: false
     };
-
-    this.handleNavClick = this.handleNavClick.bind(this);
-    this.handleCloseClick = this.handleCloseClick.bind(this);
-    this.handlePortfolioClick = this.handlePortfolioClick.bind(this);
   }
 
-  handleCloseClick(e) {
+  handleCloseClick = e => {
     e.preventDefault();
     e.stopPropagation();
     this.setState({ showNav: false });
-  }
-
-  handleNavClick() {
-    this.setState({ showNav: !this.state.showNav });
-  }
+  };
 
   // @todo: make this generic.
-  handlePortfolioClick(e) {
+  handlePortfolioClick = e => {
     if (!this.state.showNav && this.state.path === "portfolio") {
       e.preventDefault();
       this.setState({ showNav: true });
     }
-  }
+  };
 
-  // @todo: fix this.
-  componentWillReceiveProps(nextProps) {
+  componentDidUpdate(prevProps, prevState) {
     const locationChanged =
-      nextProps.location.pathname !== this.props.location.pathname;
-    this.setState({
-      path: this.getPath(nextProps.location.pathname),
-      pageTitle: this.getPageTitle(nextProps),
-      showNav: !!(!this.state.showNav && !locationChanged)
-    });
+      prevProps.location.pathname !== this.props.location.pathname;
+    if (this.state.showNav === prevState.showNav) {
+      this.setState({
+        path: this.getPath(this.props.location.pathname),
+        pageTitle: this.getPageTitle(this.props),
+        showNav: !!(!this.state.showNav && !locationChanged)
+      });
+    }
 
-    if (locationChanged) {
+    if (locationChanged && window.analytics) {
       window.analytics.page();
     }
   }
 
   componentDidMount() {
     // Page load
-    window.analytics.page();
+    if (window.analytics) {
+      window.analytics.page();
+    }
   }
 
   getPath(path) {
@@ -79,7 +73,6 @@ export default class Navigation extends Component {
         })}
       >
         <nav
-          onClick={this.handleNavClick}
           className={classNames("main-nav", this.state.path, {
             "show-nav": this.state.showNav
           })}

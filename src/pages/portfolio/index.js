@@ -1,25 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "gatsby-link";
-import graphql from "graphql";
+import { graphql } from "gatsby";
 
-import groupsOf from "utils/groups-of";
+import groupsOf from "../../utils/groups-of";
 
-import ImageLoader from "components/image-loader";
+import Layout from "../../components/layouts";
+import ImageLoader from "../../components/image-loader";
 
 import "./styles.scss";
 
-export const data = {
+export const frontmatter = {
   title: "Portfolio",
   color: "orange",
   description: "Kristoffer Hedstrom's Portfolio."
 };
 
-const PortfolioIndex = ({ data }) => {
+const PortfolioIndex = ({ data, ...rest }) => {
   const pageLinks = data.portfolio.edges.map(({ node: page }) => {
-    const { styles, title, path } = page.data;
+    const { styles, title, path } = page.frontmatter;
     const media =
-      page.data.media && page.data.media.find(item => item.type === "image");
+      page.frontmatter.media &&
+      page.frontmatter.media.find(item => item.type === "image");
     return (
       <div key={path} className="portfolio-item col-xs-12 col-sm-4">
         <Link to={path} className="portfolio-item-link">
@@ -45,10 +47,12 @@ const PortfolioIndex = ({ data }) => {
   ));
 
   return (
-    <div className="content-container">
-      <h1 className="page-title">{"Selected bits"}</h1>
-      <div className="portfolio-items">{groups}</div>
-    </div>
+    <Layout {...rest} frontmatter={frontmatter}>
+      <div className="content-container">
+        <h1 className="page-title">{"Selected bits"}</h1>
+        <div className="portfolio-items">{groups}</div>
+      </div>
+    </Layout>
   );
 };
 
@@ -58,13 +62,13 @@ PortfolioIndex.propTypes = {
 
 export const pageQuery = graphql`
   query portfolioQuery {
-    portfolio: allJsFrontmatter(
-      filter: { data: { portfolio: { eq: true } } }
-      sort: { fields: [data___order], order: ASC }
+    portfolio: allJavascriptFrontmatter(
+      filter: { frontmatter: { portfolio: { eq: true } } }
+      sort: { fields: [frontmatter___order], order: ASC }
     ) {
       edges {
         node {
-          data {
+          frontmatter {
             title
             path
             styles {

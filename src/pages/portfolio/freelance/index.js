@@ -1,9 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 
-import ImageLoader from "components/image-loader";
-import DeviceFrame from "components/device-frame";
+import Layout from "../../../components/layouts";
+import ImageLoader from "../../../components/image-loader";
+import DeviceFrame from "../../../components/device-frame";
 
-export const data = {
+export const frontmatter = {
   portfolio: true,
   order: 2,
   title: "Freelance",
@@ -23,11 +24,11 @@ export const data = {
   }
 };
 
-export default class Freelance extends Component {
-  render() {
-    const { title, styles, media } = data;
+const Freelance = props => {
+  const { title, styles, media } = frontmatter;
 
-    return (
+  return (
+    <Layout {...props} frontmatter={frontmatter}>
       <div className="portfolio">
         <section className="portfolio-media">
           <div
@@ -523,6 +524,8 @@ export default class Freelance extends Component {
           </div>
         </section>
       </div>
-    );
-  }
-}
+    </Layout>
+  );
+};
+
+export default Freelance;
