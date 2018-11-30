@@ -12,10 +12,6 @@ const HTML = ({ color, favicon, body, headComponents, postBodyComponents }) => {
     color = BodyClassName.rewind() || "green";
   }
 
-  let cssLink;
-  if (process.env.NODE_ENV === "production") {
-    cssLink = <link rel="stylesheet" href={"/styles.css"} />;
-  }
   // Sorry, this is gross.
   let analytics;
   if (process.env.NODE_ENV === "production") {
@@ -40,7 +36,6 @@ const HTML = ({ color, favicon, body, headComponents, postBodyComponents }) => {
         {head.title.toComponent()}
         <link rel="shortcut icon" href={favicon} />
         <script dangerouslySetInnerHTML={{ __html: analytics }} />
-        {cssLink}
       </head>
       <body className={color}>
         <div
