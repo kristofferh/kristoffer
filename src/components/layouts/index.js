@@ -5,9 +5,9 @@ import BodyClassName from "react-body-classname";
 import { StaticQuery, graphql } from "gatsby";
 import "babel-polyfill";
 
-// if (typeof window !== "undefined") {
-//   require("intersection-observer");
-// }
+if (typeof window !== "undefined") {
+  require("intersection-observer");
+}
 
 import "../../styles/base.scss";
 import "../../styles/fonts/tanek.scss";
