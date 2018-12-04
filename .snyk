@@ -1,0 +1,22 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.13.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:hoek:20180212':
+    - gatsby-source-filesystem > chokidar > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2018-12-04T22:04:36.136Z'
+    - gatsby > gatsby-plugin-page-creator > chokidar > fsevents > node-pre-gyp > hawk > hoek:
+        patched: '2018-12-04T22:04:36.136Z'
+    - gatsby-source-filesystem > chokidar > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2018-12-04T22:04:36.136Z'
+    - gatsby-source-filesystem > chokidar > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2018-12-04T22:04:36.136Z'
+    - gatsby-source-filesystem > chokidar > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-04T22:04:36.136Z'
+    - gatsby > gatsby-plugin-page-creator > chokidar > fsevents > node-pre-gyp > hawk > sntp > hoek:
+        patched: '2018-12-04T22:04:36.136Z'
+    - gatsby > gatsby-plugin-page-creator > chokidar > fsevents > node-pre-gyp > hawk > boom > hoek:
+        patched: '2018-12-04T22:04:36.136Z'
+    - gatsby > gatsby-plugin-page-creator > chokidar > fsevents > node-pre-gyp > hawk > cryptiles > boom > hoek:
+        patched: '2018-12-04T22:04:36.136Z'

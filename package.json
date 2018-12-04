@@ -10,7 +10,9 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "ci:before": "greenkeeper-lockfile-update",
-    "ci:after": "greenkeeper-lockfile-upload"
+    "ci:after": "greenkeeper-lockfile-upload",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Kristoffer Hedstrom",
   "license": "MIT",
@@ -30,9 +32,10 @@
     "normalize.css": "^8.0.1",
     "prop-types": "^15.6.0",
     "react": "^16.6.3",
-    "react-body-classname": "^1.0.1",
+    "react-body-classname": "^1.2.0",
     "react-dom": "^16.6.3",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "snyk": "^1.114.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -43,5 +46,6 @@
     "flexboxgrid": "^6.3.0",
     "node-sass": "^4.10.0",
     "prettier": "^1.15.3"
-  }
+  },
+  "snyk": true
 }
