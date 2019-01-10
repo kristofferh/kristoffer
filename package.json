@@ -24,7 +24,7 @@
     "gatsby-plugin-sass": "^2.0.7",
     "gatsby-plugin-sitemap": "^2.0.4",
     "gatsby-source-filesystem": "^2.0.13",
-    "gatsby-transformer-javascript-frontmatter": "^2.0.4",
+    "gatsby-transformer-javascript-frontmatter": "^2.0.5",
     "gatsby-transformer-javascript-static-exports": "^2.1.3",
     "intersection-observer": "^0.5.1",
     "normalize.css": "^8.0.1",
