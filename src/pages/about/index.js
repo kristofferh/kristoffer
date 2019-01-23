@@ -99,7 +99,7 @@ const About = props => {
                   href="mailto:hello@k-create.com?subject=hi"
                 >
                   hello
-                </a>{" "}
+                </a>
                 , that’s cool too.
               </p>
             </div>
