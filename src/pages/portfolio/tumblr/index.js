@@ -113,8 +113,8 @@ export default class Tumblr extends Component {
           <section className="portfolio-media">
             <div className="row">
               <div
-                className="col-xs-12 col-sm-6portfolio-media-item"
-                style={{ background: "#dbe0e6" }}
+                className="col-xs-12 col-sm-6 portfolio-media-item"
+                style={{ background: "#dbe0ea" }}
               >
                 <DeviceFrame>
                   <ImageLoader
@@ -129,7 +129,7 @@ export default class Tumblr extends Component {
               </div>
               <div
                 className="col-xs-12 col-sm-6 portfolio-media-item"
-                style={{ background: "#e2e7ea" }}
+                style={{ background: "#dbe0ea" }}
               >
                 <DeviceFrame>
                   <ImageLoader
