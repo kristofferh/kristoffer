@@ -18,6 +18,16 @@ import Navigation from "../../components/navigation";
 import Footer from "../../components/footer";
 
 export default class Template extends Component {
+  static defaultProps = {
+    frontmatter: {}
+  };
+
+  static propTypes = {
+    children: PropTypes.any,
+    location: PropTypes.object,
+    frontmatter: PropTypes.object
+  };
+
   loadElements() {
     const els = document.querySelectorAll(".load-in:not(.visible)");
     const observer = new IntersectionObserver(entries => {
@@ -67,22 +77,6 @@ export default class Template extends Component {
             colors[Math.floor(Math.random() * colors.length)];
           const config = data.site.siteMetadata;
           const { name, email } = config;
-          // const currentfrontmatter = data.allFile.edges.find(({ node }) => {
-          //   return (
-          //     node.relativeDirectory ===
-          //       location.pathname.replace(/^\/|\/$/g, "") &&
-          //     node.childJsFrontmatter
-          //   );
-          // });
-          // if (currentfrontmatter) {
-          //   // Assign the nested object frontmatter coming from GraphQL to a new name
-          //   const {
-          //     node: {
-          //       childJsFrontmatter: { data: currentfrontmatterData = {} }
-          //     }
-          //   } = currentfrontmatter;
-          //   frontmatter = { ...currentfrontmatterData };
-          // }
           const color = frontmatter.color || defaultColor;
           return (
             <>
@@ -139,45 +133,3 @@ export default class Template extends Component {
     );
   }
 }
-
-Template.defaultProps = {
-  frontmatter: {}
-};
-
-Template.propTypes = {
-  children: PropTypes.any,
-  location: PropTypes.object,
-  frontmatter: PropTypes.object
-};
-
-// eslint-disable-next-line no-undef
-// export const frontmatterQuery = graphql`
-//   query IndexQuery {
-//     site {
-//       siteMetadata {
-//         siteTitle
-//         description
-//         twitter
-//         shareImage
-//         url
-//         siteName
-//       }
-//     }
-//     allFile {
-//       edges {
-//         node {
-//           relativeDirectory
-//           childJsFrontmatter {
-//             data {
-//               title
-//               color
-//               description
-//               nav
-//               order
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;

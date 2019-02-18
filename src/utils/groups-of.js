@@ -1,4 +1,4 @@
-module.exports = (arr = [], n) => {
+export default (arr = [], n) => {
   const ret = [];
   let group = [];
 
