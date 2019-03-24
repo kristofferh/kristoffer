@@ -8,7 +8,7 @@ module.exports = {
     email: "hello@k-create.com",
     segment: "KrpuBOMB62nTKrcoFBpMoZQEKKIJllxU",
     description:
-      "Website for Kristoffer Hedstrom: Interactive designer and developer from Brooklyn, NY",
+      "Website for Kristoffer Hedstrom: Swedish Interactive designer and developer currently in Switzerland.",
     twitter: "@_kris",
     shareImage: "https://k-create.com/images/about/shakey-0.gif",
     siteName: "k-create.com"

@@ -38,7 +38,7 @@ const Resume = props => (
       <section className="section-wrapper summary-wrapper row">
         <div className="summary col-xs-12">
           I’m an Interactive Designer and Developer with{" "}
-          <span className="highlight">17 years of experience</span>. I have both
+          <span className="highlight">18 years of experience</span>. I have both
           programming and graphic design skills, which makes me a bit of a
           strange monster. In addition, I have Product Management and User
           Experience design expertise.{" "}
@@ -53,6 +53,38 @@ const Resume = props => (
           <h2 className="section-headline">Experience</h2>
         </header>
         <div className="section-content col-xs-12 col-sm-9">
+          <div className="experience">
+            <div className="title-location row space-between-xs">
+              <h3 className="title col-xs-12 col-sm-8">Senior UX Engineer</h3>
+              <div className="location col-xs-12 col-sm-4">
+                Zürich, Switzerland
+              </div>
+            </div>
+            <a
+              target="_blank"
+              href="https://google.com"
+              className="org highlight-link"
+              rel="noopener noreferrer"
+            >
+              Google
+            </a>
+            <div className="dates">
+              <abbr className="dt dt-start" title="2019-03-04">
+                March 2019
+              </abbr>{" "}
+              -{" "}
+              <abbr className="dt dt-end" title="now">
+                Present
+              </abbr>
+            </div>
+            <div className="summary">
+              <ul>
+                <li>Creation tools for Google Calendar</li>
+                <li>Prototyping</li>
+                <li>Attempting to learn Swiss German</li>
+              </ul>
+            </div>
+          </div>
           <div className="experience">
             <div className="title-location row space-between-xs">
               <h3 className="title col-xs-12 col-sm-8">
@@ -73,8 +105,8 @@ const Resume = props => (
                 March 2016
               </abbr>{" "}
               -{" "}
-              <abbr className="dt dt-end" title="now">
-                Present
+              <abbr className="dt dt-end" title="2019-02-15">
+                February 2019
               </abbr>
             </div>
             <div className="summary">
