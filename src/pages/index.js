@@ -8,7 +8,7 @@ const Index = props => (
       <h1 className="page-title">Kristoffer Hedstrom</h1>
       <div className="portfolio-items">
         {
-          "Kris Hedstrom is an interactive designer and developer. Currently in Brooklyn."
+          "Kris Hedstrom is an interactive designer and developer. Currently in Switzerland."
         }
       </div>
     </div>

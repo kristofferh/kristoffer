@@ -11,7 +11,7 @@ export const frontmatter = {
   title: "About",
   color: "pink",
   description:
-    "My name is Kristoffer Hedstrom. I'm originally from Umeå, Sweden, but now live in Brooklyn. I make interactive things on the internet.",
+    "My name is Kristoffer Hedstrom. I'm originally from Umeå, Sweden, but now live in Switzerland. I make interactive things on the internet.",
   images: [
     {
       small: "/images/about/shakey-0-small.jpg",
@@ -75,15 +75,18 @@ const About = props => {
             <h2 className="sub-title load-in">Bio</h2>
             <div>
               <p className="load-in">
-                Hey. I’m Kris. I’m an interactive designer / developer.
+                Hey. I’m Kris. I’m an interactive designer / developer. Like my
+                ancestors, I make interactive things on the internet.
               </p>
 
               <p className="load-in">
-                I grew up in Umeå, in northern Sweden, but I now live in
-                Brooklyn, NY. I am currently enjoying a hybrid Art Director +
-                Lead Product Engineer role at a startup called Nomad Health.
-                Before that, I was a Product (Engineering) Manager at Tumblr.
-                Before that, I worked at agencies. Before that, I was a baby.
+                I grew up in Umeå, in northern Sweden, but I now live in Zürich,
+                Switzerland. I spent more than twenty years in the United
+                States, the first 14 in Seattle, and then Brooklyn, NY. I am
+                currently employed by Google. Before Google, I worked at a
+                small-ish startup. Before that, I was a Product (Engineering)
+                Manager at Tumblr. Before that, I worked at agencies. Before
+                that, I was a baby.
               </p>
 
               <p className="load-in">
