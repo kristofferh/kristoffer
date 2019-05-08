@@ -26,7 +26,7 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-javascript-frontmatter": "^2.0.9",
     "gatsby-transformer-javascript-static-exports": "^2.1.6",
-    "intersection-observer": "^0.5.1",
+    "intersection-observer": "^0.6.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
