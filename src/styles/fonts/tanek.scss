@@ -1,10 +1,11 @@
 @font-face {
-    font-family: 'tanek';
-    src: url('./tanek/tanek-kris-webfont.eot');
-    src: url('./tanek/tanek-kris-webfont.eot?#iefix') format('embedded-opentype'),
-         url('./tanek/tanek-kris-webfont.woff2') format('woff2'),
-         url('./tanek/tanek-kris-webfont.woff') format('woff'),
-         url('./tanek/tanek-kris-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: "tanek";
+  src: url("./tanek/tanek-kris-webfont.eot");
+  src: url("./tanek/tanek-kris-webfont.eot?#iefix") format("embedded-opentype"),
+    url("./tanek/tanek-kris-webfont.woff2") format("woff2"),
+    url("./tanek/tanek-kris-webfont.woff") format("woff"),
+    url("./tanek/tanek-kris-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }

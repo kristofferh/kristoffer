@@ -675,6 +675,7 @@ const Resume = props => (
             <li className="skill">HTML5</li>
             <li className="skill">CSS3</li>
             <li className="skill">JavaScript</li>
+            <li className="skill">TypeScript</li>
             <li className="skill">React / React-Native</li>
             <li className="skill">GraphQL</li>
             <li className="skill">PHP</li>
