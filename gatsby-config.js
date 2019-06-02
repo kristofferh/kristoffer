@@ -3,6 +3,7 @@ const regexExclude404 = /^(?!\/(dev-404-page|404)).*$/;
 module.exports = {
   siteMetadata: {
     siteTitle: "Kristoffer Hedstrom",
+    siteUrl: "https://k-create.com",
     url: "https://k-create.com",
     name: "Kristoffer Hedstrom",
     email: "hello@k-create.com",
@@ -30,7 +31,7 @@ module.exports = {
         {
           site {
             siteMetadata {
-              url
+              siteUrl
             }
           }
 
@@ -51,7 +52,7 @@ module.exports = {
         serialize: ({ site, allSitePage }) =>
           allSitePage.edges.map(edge => {
             return {
-              url: site.siteMetadata.url + edge.node.path,
+              url: site.siteMetadata.siteUrl + edge.node.path,
               changefreq: "daily",
               priority: 0.7
             };
