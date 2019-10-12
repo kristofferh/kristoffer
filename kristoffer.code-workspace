@@ -8,6 +8,9 @@
     "files.exclude": {
       "node_modules": true
     },
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
   }
 }

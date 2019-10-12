@@ -1,99 +1,112 @@
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-        overflow: visible !important;
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    overflow: visible !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  @page {
+    margin: 2cm;
+  }
+
+  @page:first {
+    margin-top: 0;
+  }
+
+  .main-nav,
+  .about-photo {
+    display: none !important;
+  }
+
+  .index {
+    .nav-logo-container {
+      position: relative;
+      width: auto;
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 0 15px;
     }
 
-    a,
-    a:visited {
-        text-decoration: underline;
+    .svg-mark {
+      fill: #000;
+      stroke: #000;
+      max-width: 300px;
     }
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-
-    @page {
-      margin: 2cm;
-    }
-
-    @page:first {
-      margin-top: 0;
-    }
-
-    .main-nav,
-    .about-photo {
+    .page-footer {
       display: none;
     }
+  }
 
-    .main-nav.index {
-      position: relative;
-      display: block;
+  .content-wrapper,
+  .content-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: auto !important;
 
-      .nav-item {
-        display: none;
-      }
-
-      .svg-mark {
-        fill: #000;
-        stroke: #000;
-      }
-    }
-
-    .content-wrapper {
-      margin: auto;
-
-      .page-title {
-        margin-top: 0;
-      }
-    }
-
-    .resume-wrapper {
+    .page-title {
       margin-top: 0;
+    }
+  }
 
-      .summary-wrapper {
-        margin-top: 0;
-      }
+  .resume-wrapper {
+    margin-top: 0;
+
+    .location {
+      text-align: left !important;
     }
 
-    .page-footer.content-container .footer-inner {
-      text-align: center;
+    .summary-wrapper {
+      margin-top: 0;
     }
+  }
+
+  .page-footer.content-container .footer-inner {
+    text-align: center;
+  }
 }
