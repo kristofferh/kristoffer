@@ -87,6 +87,11 @@
   max-width: 960px;
   margin: 30px auto;
   padding: 0 15px;
+
+  @supports (padding: unquote("max(0px)")) {
+    padding-left: unquote("max(15px, env(safe-area-inset-left))");
+    padding-right: unquote("max(15px, env(safe-area-inset-right))");
+  }
 }
 
 .footer-wrapper {

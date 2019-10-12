@@ -80,7 +80,10 @@ const Resume = props => (
             <div className="summary">
               <ul>
                 <li>Creation tools for Google Calendar</li>
-                <li>Prototyping</li>
+                <li>
+                  Design and build prototypes for new features in Google
+                  Calendar and Tasks
+                </li>
                 <li>Attempting to learn Swiss German</li>
               </ul>
             </div>
