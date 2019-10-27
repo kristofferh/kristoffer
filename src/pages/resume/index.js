@@ -1,7 +1,5 @@
 import React from "react";
-
 import Layout from "../../components/layouts";
-
 import "./styles.scss";
 
 export const frontmatter = {
@@ -79,13 +77,20 @@ const Resume = props => (
             </div>
             <div className="summary">
               <ul>
-                <li>Creation tools for Google Calendar</li>
                 <li>
-                  Design and build prototypes for new features in Google
-                  Calendar and Tasks
+                  Creation tools for <em>Google Calendar</em>
+                </li>
+                <li>
+                  Design and build prototypes for new features in{" "}
+                  <em>Google Calendar</em> and <em>Google Tasks</em>
                 </li>
                 <li>Attempting to learn Swiss German</li>
               </ul>
+              <p>
+                Technologies: <em>Sketch</em>, <em>Figma</em>, <em>React</em>,{" "}
+                <em>JavaScript</em>, <em>CSS</em>, <em>HTML</em>,{" "}
+                <em>Flutter</em>
+              </p>
             </div>
           </div>
           <div className="experience">
@@ -239,8 +244,8 @@ const Resume = props => (
             <div className="summary">
               <ul>
                 <li>
-                  Created new features on Tumblr.com using Javascript, PHP, CSS,
-                  and HTML5
+                  Created new features on <em>Tumblr</em> using Javascript, PHP,
+                  CSS, and HTML5
                 </li>
                 <li>Created themes used by millions of people</li>
                 <li>Focused on post creation tools</li>
@@ -286,8 +291,12 @@ const Resume = props => (
                   Contributed to <em>USA Today</em>
                   ’s major redesign
                 </li>
-                <li>Worked on several award winning sites for Google</li>
-                <li>Created a Chrome app for Al-Jazeera English</li>
+                <li>
+                  Worked on several award winning sites for <em>Google</em>
+                </li>
+                <li>
+                  Created a Chrome app for <em>Al-Jazeera English</em>
+                </li>
               </ul>
               <p>
                 Technologies: <em>Canvas</em>, <em>WebGL</em>,{" "}
@@ -384,7 +393,6 @@ const Resume = props => (
                   Developed and maintained game sites using Movable Type and
                   Expression Engine
                 </li>
-                <li>Provided Project Management and Design QA</li>
                 <li>
                   Shipped games included <em>Guild Wars</em>,{" "}
                   <em>Guild Wars 2</em>, <em>Aion</em>, <em>Lineage II</em>,{" "}
@@ -521,10 +529,13 @@ const Resume = props => (
             <div className="summary">
               <ul>
                 <li>
-                  Designed, developed, and maintained KCTS.org and related
-                  websites
+                  Designed, developed, and maintained <em>KCTS.org</em> and
+                  related websites
                 </li>
-                <li>Designed and implemented PBS and PBS Kids related sites</li>
+                <li>
+                  Designed and implemented <em>PBS</em> and <em>PBS Kids</em>{" "}
+                  related sites
+                </li>
                 <li>
                   Created interactive features using Flash / Actionscript, ASP,
                   SQL and XML

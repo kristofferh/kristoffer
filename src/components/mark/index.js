@@ -160,7 +160,7 @@ const Mark = () => {
             />
           </g>
         </g>
-        <g className="kristoffer-mark-chevrons">
+        {/* <g className="kristoffer-mark-chevrons">
           <g>
             <path
               d="M140.139,245.988c2.29,7.632,4.579,15.265,6.869,22.897c0.312,1.04,1.717,1.234,2.285,0.299
@@ -209,7 +209,7 @@ const Mark = () => {
                         L404.622,271.141z"
             />
           </g>
-        </g>
+        </g> */}
         <g className="kristoffer-mark-bottom-text">
           <text transform="matrix(0.2434 0.9699 -0.9699 0.2434 122.9092 267.1235)">
             <tspan x="0" y="0" fontFamily="tanek" fontSize="40.7028">

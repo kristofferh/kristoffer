@@ -1,99 +1,164 @@
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-        overflow: visible !important;
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    overflow: visible !important;
+    position: static !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  @page {
+    margin: 3cm;
+  }
+
+  .row {
+    display: block !important;
+    flex: none;
+    margin: 0 !important;
+  }
+
+  .col-xs,
+  .col-xs-1,
+  .col-xs-2,
+  .col-xs-3,
+  .col-xs-4,
+  .col-xs-5,
+  .col-xs-6,
+  .col-xs-7,
+  .col-xs-8,
+  .col-xs-9,
+  .col-xs-10,
+  .col-xs-11,
+  .col-xs-12,
+  .col-xs-offset-0,
+  .col-xs-offset-1,
+  .col-xs-offset-2,
+  .col-xs-offset-3,
+  .col-xs-offset-4,
+  .col-xs-offset-5,
+  .col-xs-offset-6,
+  .col-xs-offset-7,
+  .col-xs-offset-8,
+  .col-xs-offset-9,
+  .col-xs-offset-10,
+  .col-xs-offset-11,
+  .col-xs-offset-12 {
+    display: block !important;
+    padding: 0 !important;
+  }
+
+  .main-nav,
+  .about-photo {
+    display: none !important;
+  }
+
+  .nav-logo {
+    display: none !important;
+  }
+
+  .index {
+    .nav-logo {
+      display: block !important;
     }
 
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-
-    @page {
-      margin: 2cm;
-    }
-
-    @page:first {
-      margin-top: 0;
-    }
-
-    .main-nav,
-    .about-photo {
-      display: none;
-    }
-
-    .main-nav.index {
+    .nav-logo-container {
       position: relative;
-      display: block;
-
-      .nav-item {
-        display: none;
-      }
-
-      .svg-mark {
-        fill: #000;
-        stroke: #000;
-      }
+      width: auto;
+      max-width: 960px;
+      margin: 30px auto;
+      padding: 0 15px;
     }
 
-    .content-wrapper {
-      margin: auto;
-
-      .page-title {
-        margin-top: 0;
-      }
+    .svg-mark {
+      fill: #000;
+      stroke: #000;
+      max-width: 300px;
     }
 
-    .resume-wrapper {
+    .page-footer {
+      display: none !important;
+    }
+  }
+
+  .content-wrapper,
+  .content-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: auto !important;
+    display: block !important;
+
+    .page-title {
       margin-top: 0;
+    }
+  }
 
-      .summary-wrapper {
-        margin-top: 0;
-      }
+  .resume-wrapper {
+    margin-top: 0;
+
+    .location {
+      text-align: left !important;
     }
 
-    .page-footer.content-container .footer-inner {
-      text-align: center;
+    .summary-wrapper {
+      margin-top: 0;
     }
+
+    .section-wrapper {
+      margin: 1cm 0 !important;
+      display: block !important;
+      padding: 0;
+    }
+
+    .footer {
+      display: none !important;
+    }
+  }
+
+  .page-footer.content-container .footer-inner {
+    text-align: center;
+  }
 }
