@@ -88,7 +88,7 @@ const Resume = props => (
               </ul>
               <p>
                 Technologies: <em>Sketch</em>, <em>Figma</em>, <em>React</em>,{" "}
-                <em>JavaScript</em>, <em>CSS</em>, <em>HTML</em>,{" "}
+                <em>TypeScript</em>, <em>CSS</em>, <em>HTML</em>,{" "}
                 <em>Flutter</em>
               </p>
             </div>
