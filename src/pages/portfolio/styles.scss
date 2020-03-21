@@ -25,11 +25,21 @@
       .portfolio-item-text {
         top: calc(50% - 15px);
         transform: translate3d(-50%, -50%, 0);
+        background: $white;
+        color: $blackish;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
       }
 
       .portfolio-item-preview {
         filter: blur(2px);
         transform: scale(0.95);
+      }
+    }
+
+    &:active {
+      .portfolio-item-preview {
+        filter: blur(2px);
+        transform: scale(0.9);
       }
     }
   }
@@ -56,7 +66,7 @@
     display: block;
     color: $blackish;
     text-align: center;
-    background: $white;
+    background: transparent;
     position: absolute;
     font-family: $font-family-title;
     text-transform: uppercase;
@@ -66,6 +76,11 @@
     top: calc(100% - 20px);
     transition: all 0.2s ease;
     pointer-events: none;
+    border-radius: 2px;
+
+    .dark-mode & {
+      color: $white;
+    }
   }
 }
 
@@ -122,6 +137,10 @@
 .portfolio-process-container {
   background: #fafafa;
   padding: 0 15px;
+
+  .dark-mode & {
+    background: #1c1c1d;
+  }
 }
 
 .portfolio-process {

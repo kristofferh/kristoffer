@@ -43,26 +43,104 @@
   }
 }
 
+@mixin art-direction-dark($color) {
+  $body: mix($black, $color, 85);
+  $dark: mix($black, $color, 90);
+  $light: mix($white, $color, 50);
+
+  color: $light;
+  background: $palenight;
+
+  .dark-mode,
+  .page-wrapper {
+    background: $palenight;
+    color: $white;
+  }
+
+  .content-wrapper,
+  .page-footer {
+    background: $palenight;
+    color: $white;
+
+    a {
+      color: mix($black, $color, 25);
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: mix($white, $color, 50);
+      }
+    }
+  }
+
+  .highlight {
+    background: mix($black, $color, 70);
+  }
+
+  a.highlight {
+    background: mix($black, $color, 80);
+  }
+
+  .main-nav {
+    background: $dark;
+
+    .nav-item {
+      border-top-color: rgba($white, 0.03);
+    }
+  }
+
+  .nav-logo {
+    background: mix($black, $color, 95);
+  }
+
+  &.index .nav-logo {
+    background: $dark;
+  }
+}
+
 .green {
   @include art-direction($green);
+
+  &.dark-mode {
+    @include art-direction-dark($green);
+  }
 }
 
 .blue {
   @include art-direction($blue);
+
+  &.dark-mode {
+    @include art-direction-dark($blue);
+  }
 }
 
 .pink {
   @include art-direction($pink);
+
+  &.dark-mode {
+    @include art-direction-dark($pink);
+  }
 }
 
 .orange {
   @include art-direction($orange);
+
+  &.dark-mode {
+    @include art-direction-dark($orange);
+  }
 }
 
 .salmon {
   @include art-direction($salmon);
+
+  &.dark-mode {
+    @include art-direction-dark($salmon);
+  }
 }
 
 .purple {
   @include art-direction($purple);
+
+  &.dark-mode {
+    @include art-direction-dark($purple);
+  }
 }

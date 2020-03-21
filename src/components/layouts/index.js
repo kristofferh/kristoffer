@@ -1,26 +1,28 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import Helmet from "react-helmet";
-import BodyClassName from "react-body-classname";
-import { StaticQuery, graphql } from "gatsby";
 import "babel-polyfill";
+import classNames from "classnames";
+import { graphql, StaticQuery } from "gatsby";
+import PropTypes from "prop-types";
+import React, { Component } from "react";
+import BodyClassName from "react-body-classname";
+import Helmet from "react-helmet";
+import Footer from "../../components/footer";
+import Logo from "../../components/logo";
+import Navigation from "../../components/navigation";
+import { ThemeContext } from "../../context/theme";
+import "../../styles/base.scss";
+import "../../styles/fonts/tanek.scss";
+import "../../styles/fonts/tiempos.scss";
 
 if (typeof window !== "undefined") {
   require("intersection-observer");
 }
 
-import "../../styles/base.scss";
-import "../../styles/fonts/tanek.scss";
-import "../../styles/fonts/tiempos.scss";
-
-import Logo from "../../components/logo";
-import Navigation from "../../components/navigation";
-import Footer from "../../components/footer";
-
 export default class Template extends Component {
   static defaultProps = {
     frontmatter: {}
   };
+
+  static contextType = ThemeContext;
 
   static propTypes = {
     children: PropTypes.any,
@@ -78,9 +80,12 @@ export default class Template extends Component {
           const config = data.site.siteMetadata;
           const { name, email } = config;
           const color = frontmatter.color || defaultColor;
+          const { theme } = this.context;
           return (
             <>
-              <BodyClassName className={color} />
+              <BodyClassName
+                className={classNames(color, { "dark-mode": theme === "dark" })}
+              />
               <Helmet
                 meta={[
                   {

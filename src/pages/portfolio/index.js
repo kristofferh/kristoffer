@@ -1,13 +1,11 @@
-import React from "react";
-import PropTypes from "prop-types";
-import Link from "gatsby-link";
 import { graphql } from "gatsby";
-
-import groupsOf from "../../utils/groups-of";
-
-import Layout from "../../components/layouts";
+import Link from "gatsby-link";
+import PropTypes from "prop-types";
+import React, { useContext } from "react";
 import ImageLoader from "../../components/image-loader";
-
+import Layout from "../../components/layouts";
+import { ThemeContext } from "../../context/theme";
+import groupsOf from "../../utils/groups-of";
 import "./styles.scss";
 
 export const frontmatter = {
@@ -17,15 +15,19 @@ export const frontmatter = {
 };
 
 const PortfolioIndex = ({ data, ...rest }) => {
+  const { theme } = useContext(ThemeContext);
   const pageLinks = data.portfolio.edges.map(({ node: page }) => {
-    const { styles, title, path } = page.frontmatter;
+    const { styles, title, path, darkStyles } = page.frontmatter;
     const media =
       page.frontmatter.media &&
       page.frontmatter.media.find(item => item.type === "image");
     return (
       <div key={path} className="portfolio-item col-xs-12 col-sm-4">
         <Link to={path} className="portfolio-item-link">
-          <div className="portfolio-item-image" style={styles}>
+          <div
+            className="portfolio-item-image"
+            style={theme === "dark" && darkStyles ? darkStyles : styles}
+          >
             {media && (
               <ImageLoader
                 imageProps={{ alt: title }}
@@ -72,6 +74,9 @@ export const pageQuery = graphql`
             title
             path
             styles {
+              background
+            }
+            darkStyles {
               background
             }
             order

@@ -1,8 +1,7 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 import BodyClassName from "react-body-classname";
 import Helmet from "react-helmet";
-
 import { siteMetadata as config } from "../gatsby-config";
 
 const HTML = ({ color, favicon, body, headComponents, postBodyComponents }) => {

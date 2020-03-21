@@ -10,6 +10,7 @@ body {
   color: $blackish;
   font-size: 16px;
   position: relative;
+  transition: background 0.15s ease, color 0.25 ease-in;
 
   &.show-nav,
   &.index {

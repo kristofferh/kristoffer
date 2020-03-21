@@ -1,8 +1,8 @@
-import React from "react";
-
-import Layout from "../../../components/layouts";
-import ImageLoader from "../../../components/image-loader";
+import React, { useContext } from "react";
 import DeviceFrame from "../../../components/device-frame";
+import ImageLoader from "../../../components/image-loader";
+import Layout from "../../../components/layouts";
+import { ThemeContext } from "../../../context/theme";
 
 export const frontmatter = {
   portfolio: true,
@@ -14,26 +14,29 @@ export const frontmatter = {
   media: [
     {
       type: "image",
-      img: "/images/ncsoft/ncsoft-poster.png",
-      placeholder: "/images/ncsoft/ncsoft-poster-small.png",
+      img: "/images/ncsoft/ncsoft-poster-2.png",
+      placeholder: "/images/ncsoft/ncsoft-poster-2-small.png",
       aspectRatio: 0.75
     }
   ],
   styles: {
     background: "#f5f6f7"
+  },
+  darkStyles: {
+    background: "#47525d"
   }
 };
 
 const NCsoft = props => {
-  const { title, styles, media } = frontmatter;
-
+  const { title, styles, darkStyles, media } = frontmatter;
+  const { theme } = useContext(ThemeContext);
   return (
     <Layout {...props} frontmatter={frontmatter}>
       <div className="portfolio">
         <section className="portfolio-media">
           <div
             className="portfolio-media-item portfolio-media-item"
-            style={styles}
+            style={theme === "dark" ? darkStyles : styles}
           >
             <ImageLoader
               {...media[0]}

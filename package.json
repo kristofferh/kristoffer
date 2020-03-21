@@ -10,7 +10,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "ci:before": "greenkeeper-lockfile-update",
-    "ci:after": "greenkeeper-lockfile-upload"
+    "ci:after": "greenkeeper-lockfile-upload",
+    "clean": "gatsby clean"
   },
   "author": "Kristoffer Hedstrom",
   "license": "MIT",
@@ -19,8 +20,6 @@
     "classnames": "^2.2.3",
     "gatsby": "^2.18.10",
     "gatsby-link": "^2.2.20",
-    "gatsby-plugin-manifest": "^2.2.21",
-    "gatsby-plugin-offline": "^3.0.4",
     "gatsby-plugin-sass": "^2.1.18",
     "gatsby-plugin-sitemap": "^2.2.17",
     "gatsby-source-filesystem": "^2.1.31",
