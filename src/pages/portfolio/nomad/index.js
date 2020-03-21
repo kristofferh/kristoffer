@@ -1,8 +1,8 @@
-import React from "react";
-
-import Layout from "../../../components/layouts";
-import ImageLoader from "../../../components/image-loader";
+import React, { useContext } from "react";
 import DeviceFrame from "../../../components/device-frame";
+import ImageLoader from "../../../components/image-loader";
+import Layout from "../../../components/layouts";
+import { ThemeContext } from "../../../context/theme";
 
 export const frontmatter = {
   portfolio: true,
@@ -21,16 +21,23 @@ export const frontmatter = {
   ],
   styles: {
     background: "#f5f6f7"
+  },
+  darkStyles: {
+    background: "#47525d"
   }
 };
 
 const Nomad = props => {
-  const { title, styles, media } = frontmatter;
-
+  const { title, styles, darkStyles, media } = frontmatter;
+  const { theme } = useContext(ThemeContext);
+  console.log(theme);
   return (
     <Layout {...props} frontmatter={frontmatter}>
       <div className="portfolio">
-        <section className="portfolio-media" style={styles}>
+        <section
+          className="portfolio-media"
+          style={theme === "dark" ? darkStyles : styles}
+        >
           <ImageLoader
             {...media[0]}
             styles={{

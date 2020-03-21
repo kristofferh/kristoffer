@@ -5,8 +5,12 @@
 
   &:before {
     content: "";
-    border-top: 1px solid $light-gray;
+    border-top: 1px solid rgba($black, 0.1);
     display: block;
+
+    .dark-mode & {
+      border-top: 1px solid rgba($white, 0.1);
+    }
   }
 
   .footer-inner {
