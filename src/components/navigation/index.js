@@ -1,10 +1,9 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
 import classNames from "classnames";
 import Link from "gatsby-link";
+import PropTypes from "prop-types";
+import React, { Component } from "react";
 import BodyClassName from "react-body-classname";
 import Helmet from "react-helmet";
-
 import "./styles.scss";
 
 export default class Navigation extends Component {
@@ -32,16 +31,13 @@ export default class Navigation extends Component {
     }
   };
 
-  componentDidUpdate(prevProps, prevState) {
+  handleNavClick = e => {
+    this.setState({ showNav: !this.state.showNav });
+  };
+
+  componentDidUpdate(prevProps) {
     const locationChanged =
       prevProps.location.pathname !== this.props.location.pathname;
-    if (this.state.showNav === prevState.showNav) {
-      this.setState({
-        path: this.getPath(this.props.location.pathname),
-        pageTitle: this.getPageTitle(this.props),
-        showNav: !!(!this.state.showNav && !locationChanged)
-      });
-    }
 
     if (locationChanged && window.analytics) {
       window.analytics.page();
@@ -76,6 +72,7 @@ export default class Navigation extends Component {
           className={classNames("main-nav", this.state.path, {
             "show-nav": this.state.showNav
           })}
+          onClick={this.handleNavClick}
         >
           <Helmet>
             <html

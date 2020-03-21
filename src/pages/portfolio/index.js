@@ -18,7 +18,6 @@ const PortfolioIndex = ({ data, ...rest }) => {
   const { theme } = useContext(ThemeContext);
   const pageLinks = data.portfolio.edges.map(({ node: page }) => {
     const { styles, title, path, darkStyles } = page.frontmatter;
-    console.log(theme);
     const media =
       page.frontmatter.media &&
       page.frontmatter.media.find(item => item.type === "image");

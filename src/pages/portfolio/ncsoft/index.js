@@ -14,8 +14,8 @@ export const frontmatter = {
   media: [
     {
       type: "image",
-      img: "/images/ncsoft/ncsoft-poster.png",
-      placeholder: "/images/ncsoft/ncsoft-poster-small.png",
+      img: "/images/ncsoft/ncsoft-poster-2.png",
+      placeholder: "/images/ncsoft/ncsoft-poster-2-small.png",
       aspectRatio: 0.75
     }
   ],

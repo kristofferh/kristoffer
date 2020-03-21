@@ -14,6 +14,12 @@
   }
 
   .footer-inner {
+    display: flex;
     padding: 40px 0;
+  }
+
+  .theme-toggle {
+    cursor: pointer;
+    margin-left: auto;
   }
 }
