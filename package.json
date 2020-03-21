@@ -10,8 +10,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "ci:before": "greenkeeper-lockfile-update",
-    "ci:after": "greenkeeper-lockfile-upload",
-    "clean": "gatsby clean"
+    "ci:after": "greenkeeper-lockfile-upload"
   },
   "author": "Kristoffer Hedstrom",
   "license": "MIT",
@@ -20,6 +19,8 @@
     "classnames": "^2.2.3",
     "gatsby": "^2.18.10",
     "gatsby-link": "^2.2.20",
+    "gatsby-plugin-manifest": "^2.2.21",
+    "gatsby-plugin-offline": "^3.0.4",
     "gatsby-plugin-sass": "^2.1.18",
     "gatsby-plugin-sitemap": "^2.2.17",
     "gatsby-source-filesystem": "^2.1.31",
@@ -41,6 +42,6 @@
     "eslint-plugin-react": "^7.16.0",
     "flexboxgrid": "^6.3.0",
     "node-sass": "^4.12.0",
-    "prettier": "^1.18.2"
+    "prettier": "^2.0.0"
   }
 }
