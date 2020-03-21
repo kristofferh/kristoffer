@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-
-import Layout from "../../../components/layouts";
-import ImageLoader from "../../../components/image-loader";
 import DeviceFrame from "../../../components/device-frame";
+import ImageLoader from "../../../components/image-loader";
+import Layout from "../../../components/layouts";
+import { ThemeContext } from "../../../context/theme";
 
 export const frontmatter = {
   portfolio: true,
@@ -21,10 +21,15 @@ export const frontmatter = {
   ],
   styles: {
     background: "#f5f6f7"
+  },
+  darkStyles: {
+    background: "#47525d"
   }
 };
 
 export default class Tumblr extends Component {
+  static contextType = ThemeContext;
+
   componentDidMount() {
     const script = document.createElement("script");
     script.setAttribute("src", "https://assets.tumblr.com/post.js");
@@ -40,13 +45,16 @@ export default class Tumblr extends Component {
   }
 
   render() {
-    const { title, styles, media } = frontmatter;
-
+    const { title, styles, darkStyles, media } = frontmatter;
+    const { theme } = this.context;
     return (
       <Layout {...this.props} frontmatter={frontmatter}>
         <div className="portfolio">
           <section className="portfolio-media">
-            <div className="portfolio-media-item" style={styles}>
+            <div
+              className="portfolio-media-item"
+              style={theme === "dark" ? darkStyles : styles}
+            >
               <ImageLoader
                 {...media[0]}
                 styles={{

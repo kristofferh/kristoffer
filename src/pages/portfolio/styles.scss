@@ -137,6 +137,10 @@
 .portfolio-process-container {
   background: #fafafa;
   padding: 0 15px;
+
+  .dark-mode & {
+    background: #1c1c1d;
+  }
 }
 
 .portfolio-process {

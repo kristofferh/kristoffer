@@ -30,7 +30,6 @@ export const frontmatter = {
 const Nomad = props => {
   const { title, styles, darkStyles, media } = frontmatter;
   const { theme } = useContext(ThemeContext);
-  console.log(theme);
   return (
     <Layout {...props} frontmatter={frontmatter}>
       <div className="portfolio">
