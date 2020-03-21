@@ -31,7 +31,7 @@ export default class Navigation extends Component {
     }
   };
 
-  handleNavClick = e => {
+  handleNavClick = () => {
     this.setState({ showNav: !this.state.showNav });
   };
 

@@ -4,7 +4,7 @@ import { ThemeContext } from "../../context/theme";
 import "./styles.scss";
 
 const Footer = ({ name, email }) => {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const { toggleTheme } = useContext(ThemeContext);
   const handleToggle = () => {
     toggleTheme();
   };
