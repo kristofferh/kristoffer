@@ -99,48 +99,28 @@
 
 .green {
   @include art-direction($green);
-
-  &.dark-mode {
-    @include art-direction-dark($green);
-  }
 }
 
 .blue {
   @include art-direction($blue);
-
-  &.dark-mode {
-    @include art-direction-dark($blue);
-  }
 }
 
 .pink {
   @include art-direction($pink);
-
-  &.dark-mode {
-    @include art-direction-dark($pink);
-  }
 }
 
 .orange {
   @include art-direction($orange);
-
-  &.dark-mode {
-    @include art-direction-dark($orange);
-  }
 }
 
 .salmon {
   @include art-direction($salmon);
-
-  &.dark-mode {
-    @include art-direction-dark($salmon);
-  }
 }
 
 .purple {
   @include art-direction($purple);
+}
 
-  &.dark-mode {
-    @include art-direction-dark($purple);
-  }
+.dark-mode {
+  @include art-direction-dark($pink);
 }
