@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import React, { useContext } from "react";
 import { ThemeContext } from "../../context/theme";
+import Toggle from "../toggle";
 import "./styles.scss";
 
 const Footer = ({ name, email }) => {
-  const { toggleTheme } = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
   const handleToggle = () => {
     toggleTheme();
   };
@@ -13,9 +14,29 @@ const Footer = ({ name, email }) => {
       <div className="footer-inner">
         {name}
         {" — "} <a href={`mailto:${email}`}>{email}</a>
-        <a className="theme-toggle" onClick={handleToggle}>
-          Toggle theme
-        </a>
+        <Toggle
+          className="theme-toggle"
+          binary
+          options={[
+            {
+              value: "light",
+              label: (
+                <span role="img" aria-label="sun" title="Toggle light">
+                  🌞
+                </span>
+              )
+            },
+            {
+              value: "dark",
+              label: (
+                <span role="img" aria-label="moon" title="Toggle dark">
+                  🌒
+                </span>
+              )
+            }
+          ]}
+          input={{ name: "toggle", onChange: handleToggle, value: theme }}
+        />
       </div>
     </footer>
   );

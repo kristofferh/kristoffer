@@ -41,6 +41,13 @@
       color: $light;
     }
   }
+
+  .radio-toggles--binary
+    .radio-toggle:nth-child(1)
+    input:checked
+    ~ .radio-toggle-text:before {
+    background: $color;
+  }
 }
 
 @mixin art-direction-dark($color) {
@@ -94,6 +101,17 @@
 
   &.index .nav-logo {
     background: $dark;
+  }
+
+  .radio-toggles--binary {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .radio-toggles--binary
+    .radio-toggle:nth-child(2)
+    input:checked
+    ~ .radio-toggle-text:before {
+    background: $color;
   }
 }
 
