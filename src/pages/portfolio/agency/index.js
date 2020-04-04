@@ -16,18 +16,18 @@ export const frontmatter = {
       type: "image",
       img: "/images/agency/agency-poster.png",
       placeholder: "/images/agency/agency-poster-small.png",
-      aspectRatio: 0.75
-    }
+      aspectRatio: 0.75,
+    },
   ],
   styles: {
-    background: "#f5f6f7"
+    background: "#f5f6f7",
   },
   darkStyles: {
-    background: "#47525d"
-  }
+    background: "#47525d",
+  },
 };
 
-const Agency = props => {
+const Agency = (props) => {
   const { title, styles, darkStyles, media } = frontmatter;
   const { theme } = useContext(ThemeContext);
   return (
@@ -42,10 +42,10 @@ const Agency = props => {
               {...media[0]}
               styles={{
                 maxWidth: 800,
-                margin: "auto"
+                margin: "auto",
               }}
               imageProps={{
-                alt: title
+                alt: title,
               }}
             />
           </div>
@@ -75,7 +75,7 @@ const Agency = props => {
                 img="/images/agency/project-rebrief-full.jpg"
                 aspectRatio={4980 / 980}
                 imageProps={{
-                  alt: "Project Re:Brief screen."
+                  alt: "Project Re:Brief screen.",
                 }}
               />
             </DeviceFrame>
@@ -114,7 +114,7 @@ const Agency = props => {
                   placeholder="/images/agency/project-rebrief-1-small.jpg"
                   aspectRatio={500 / 700}
                   imageProps={{
-                    alt: "Project Re:Brief screen."
+                    alt: "Project Re:Brief screen.",
                   }}
                 />
               </DeviceFrame>
@@ -129,7 +129,7 @@ const Agency = props => {
                   placeholder="/images/agency/project-rebrief-2-small.jpg"
                   aspectRatio={500 / 700}
                   imageProps={{
-                    alt: "Project Re:Brief screen."
+                    alt: "Project Re:Brief screen.",
                   }}
                 />
               </DeviceFrame>
@@ -149,7 +149,7 @@ const Agency = props => {
                   placeholder="/images/agency/usa-today-1-small.jpg"
                   aspectRatio={560 / 877}
                   imageProps={{
-                    alt: "USA Today screen."
+                    alt: "USA Today screen.",
                   }}
                 />
               </DeviceFrame>
@@ -164,7 +164,7 @@ const Agency = props => {
                   placeholder="/images/agency/usa-today-2-small.jpg"
                   aspectRatio={560 / 877}
                   imageProps={{
-                    alt: "USA Today screen."
+                    alt: "USA Today screen.",
                   }}
                 />
               </DeviceFrame>
@@ -181,7 +181,7 @@ const Agency = props => {
                   placeholder="/images/agency/think-with-google-1-small.jpg"
                   aspectRatio={1765 / 1280}
                   imageProps={{
-                    alt: "Think with Google screen."
+                    alt: "Think with Google screen.",
                   }}
                 />
               </DeviceFrame>
@@ -193,7 +193,7 @@ const Agency = props => {
                   placeholder="/images/agency/think-with-google-2-small.jpg"
                   aspectRatio={1087 / 1280}
                   imageProps={{
-                    alt: "Think with Google screen."
+                    alt: "Think with Google screen.",
                   }}
                 />
               </DeviceFrame>
@@ -213,7 +213,7 @@ const Agency = props => {
                   placeholder="/images/agency/zeitgeist-1-small.jpg"
                   aspectRatio={500 / 700}
                   imageProps={{
-                    alt: "Google Zeitgeist screen."
+                    alt: "Google Zeitgeist screen.",
                   }}
                 />
               </DeviceFrame>
@@ -228,7 +228,7 @@ const Agency = props => {
                   placeholder="/images/agency/zeitgeist-1-small.jpg"
                   aspectRatio={500 / 700}
                   imageProps={{
-                    alt: "Google Zeitgeist screen."
+                    alt: "Google Zeitgeist screen.",
                   }}
                 />
               </DeviceFrame>
@@ -264,7 +264,7 @@ const Agency = props => {
                   placeholder="/images/agency/pokemon-black-white-1-small.jpg"
                   aspectRatio={1000 / 1415}
                   imageProps={{
-                    alt: "Pokemon Black and White screen."
+                    alt: "Pokemon Black and White screen.",
                   }}
                 />
               </DeviceFrame>
@@ -279,7 +279,7 @@ const Agency = props => {
                   placeholder="/images/agency/pokemon-black-white-2-small.jpg"
                   aspectRatio={1000 / 1709}
                   imageProps={{
-                    alt: "Pokemon Black and White screen."
+                    alt: "Pokemon Black and White screen.",
                   }}
                 />
               </DeviceFrame>
@@ -299,7 +299,7 @@ const Agency = props => {
                   placeholder="/images/agency/raleigh-1-small.jpg"
                   aspectRatio={500 / 700}
                   imageProps={{
-                    alt: "Raleigh screen."
+                    alt: "Raleigh screen.",
                   }}
                 />
               </DeviceFrame>
@@ -314,7 +314,7 @@ const Agency = props => {
                   placeholder="/images/agency/nintendo-ds-1-small.jpg"
                   aspectRatio={1000 / 1400}
                   imageProps={{
-                    alt: "Nintendo DS Lite screen."
+                    alt: "Nintendo DS Lite screen.",
                   }}
                 />
               </DeviceFrame>
@@ -336,7 +336,7 @@ const Agency = props => {
                 placeholder="/images/agency/royal-opera-house-1-small.jpg"
                 aspectRatio={994 / 768}
                 imageProps={{
-                  alt: "Royal Opera House screen."
+                  alt: "Royal Opera House screen.",
                 }}
               />
             </DeviceFrame>

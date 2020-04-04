@@ -19,7 +19,7 @@ if (typeof window !== "undefined") {
 
 export default class Template extends Component {
   static defaultProps = {
-    frontmatter: {}
+    frontmatter: {},
   };
 
   static contextType = ThemeContext;
@@ -27,20 +27,20 @@ export default class Template extends Component {
   static propTypes = {
     children: PropTypes.any,
     location: PropTypes.object,
-    frontmatter: PropTypes.object
+    frontmatter: PropTypes.object,
   };
 
   loadElements() {
     const els = document.querySelectorAll(".load-in:not(.visible)");
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
         const { isIntersecting, intersectionRatio } = entry;
         if (isIntersecting === true || intersectionRatio > 0) {
           entry.target.classList.add("visible");
         }
       });
     });
-    Array.from(els).forEach(el => {
+    Array.from(els).forEach((el) => {
       observer.observe(el);
     });
   }
@@ -72,7 +72,7 @@ export default class Template extends Component {
             }
           }
         `}
-        render={data => {
+        render={(data) => {
           const { location, children, frontmatter } = this.props;
           const colors = ["green", "blue", "orange", "pink"];
           const defaultColor =
@@ -90,39 +90,39 @@ export default class Template extends Component {
                 meta={[
                   {
                     name: "description",
-                    content: frontmatter.description || config.description
+                    content: frontmatter.description || config.description,
                   },
                   {
                     property: "og:url",
-                    content: `${config.url}${location.pathname}`
+                    content: `${config.url}${location.pathname}`,
                   },
                   { property: "og:type", content: "website" },
                   {
                     property: "og:title",
                     content: frontmatter.title
                       ? `${frontmatter.title} - ${config.siteTitle}`
-                      : config.siteTitle
+                      : config.siteTitle,
                   },
                   { property: "og:site_name", content: config.siteTitle },
                   { property: "og:image", content: config.shareImage },
                   {
                     property: "og:description",
-                    content: frontmatter.description || config.description
+                    content: frontmatter.description || config.description,
                   },
                   {
                     name: "twitter:title",
                     content: frontmatter.title
                       ? frontmatter.title
-                      : config.siteTitle
+                      : config.siteTitle,
                   },
                   { name: "twitter:card", content: "summary_large_image" },
                   { name: "twitter:site", content: config.twitter },
                   { name: "twitter:creator", content: config.twitter },
                   {
                     name: "twitter:description",
-                    content: frontmatter.description || config.description
+                    content: frontmatter.description || config.description,
                   },
-                  { name: "twitter:image", content: config.shareImage }
+                  { name: "twitter:image", content: config.shareImage },
                 ]}
                 titleTemplate={`%s - ${config.siteTitle}`}
                 title={frontmatter.title || config.siteName}

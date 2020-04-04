@@ -23,7 +23,7 @@ const Footer = ({ name, email }) => {
 
 Footer.propTypes = {
   name: PropTypes.node,
-  email: PropTypes.node
+  email: PropTypes.node,
 };
 
 export default Footer;

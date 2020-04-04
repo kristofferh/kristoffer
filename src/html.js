@@ -53,7 +53,7 @@ HTML.propTypes = {
   color: PropTypes.string,
   favicon: PropTypes.string,
   headComponents: PropTypes.any,
-  postBodyComponents: PropTypes.any
+  postBodyComponents: PropTypes.any,
 };
 
 export default HTML;

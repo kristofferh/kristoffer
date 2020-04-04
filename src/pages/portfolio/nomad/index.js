@@ -16,18 +16,18 @@ export const frontmatter = {
       type: "image",
       img: "/images/nomad/nomad-poster.png",
       placeholder: "/images/nomad/nomad-poster-small.png",
-      aspectRatio: 0.75
-    }
+      aspectRatio: 0.75,
+    },
   ],
   styles: {
-    background: "#f5f6f7"
+    background: "#f5f6f7",
   },
   darkStyles: {
-    background: "#47525d"
-  }
+    background: "#47525d",
+  },
 };
 
-const Nomad = props => {
+const Nomad = (props) => {
   const { title, styles, darkStyles, media } = frontmatter;
   const { theme } = useContext(ThemeContext);
   return (
@@ -41,10 +41,10 @@ const Nomad = props => {
             {...media[0]}
             styles={{
               maxWidth: 800,
-              margin: "auto"
+              margin: "auto",
             }}
             imageProps={{
-              alt: title
+              alt: title,
             }}
           />
         </section>
@@ -76,7 +76,7 @@ const Nomad = props => {
                 aspectRatio={1}
                 img={"/images/nomad/hello.png"}
                 imageProps={{
-                  alt: "Hello"
+                  alt: "Hello",
                 }}
               />
             </div>
@@ -94,7 +94,7 @@ const Nomad = props => {
                   placeholder="/images/nomad/dashboard-small.png"
                   aspectRatio={2752 / 2880}
                   imageProps={{
-                    alt: "Nomad Dashboard"
+                    alt: "Nomad Dashboard",
                   }}
                 />
               </DeviceFrame>
@@ -125,7 +125,7 @@ const Nomad = props => {
                 placeholder="/images/nomad/find-a-job-few-results-small.png"
                 aspectRatio={3066 / 2880}
                 imageProps={{
-                  alt: "Search page, few results."
+                  alt: "Search page, few results.",
                 }}
               />
             </DeviceFrame>
@@ -203,7 +203,7 @@ const Nomad = props => {
                   img="/images/nomad/find-a-job-wireframe-free-text.png"
                   aspectRatio={3066 / 2880}
                   imageProps={{
-                    alt: "Search wireframe, free text."
+                    alt: "Search wireframe, free text.",
                   }}
                 />
               </DeviceFrame>
@@ -214,7 +214,7 @@ const Nomad = props => {
                   img="/images/nomad/find-a-job-filters.png"
                   aspectRatio={3066 / 2880}
                   imageProps={{
-                    alt: "Higher-fidelity search mockup."
+                    alt: "Higher-fidelity search mockup.",
                   }}
                 />
               </DeviceFrame>
@@ -230,7 +230,7 @@ const Nomad = props => {
                   img="/images/nomad/find-a-job-wireframe-quick-view.png"
                   aspectRatio={2092 / 2880}
                   imageProps={{
-                    alt: "Wireframe of quick-view for search."
+                    alt: "Wireframe of quick-view for search.",
                   }}
                 />
               </DeviceFrame>
@@ -241,7 +241,7 @@ const Nomad = props => {
                   img="/images/nomad/find-a-job-quick-view.png"
                   aspectRatio={2092 / 2880}
                   imageProps={{
-                    alt: "Higher fidelity comp of quick view for search."
+                    alt: "Higher fidelity comp of quick view for search.",
                   }}
                 />
               </DeviceFrame>
@@ -260,7 +260,7 @@ const Nomad = props => {
                   img="/images/nomad/find-a-job-wireframe-mobile-free-text.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Wireframe of search for mobile."
+                    alt: "Wireframe of search for mobile.",
                   }}
                 />
               </DeviceFrame>
@@ -274,7 +274,7 @@ const Nomad = props => {
                   img="/images/nomad/find-a-job-mobile-filters-applied.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Search for mobile mockup."
+                    alt: "Search for mobile mockup.",
                   }}
                 />
               </DeviceFrame>
@@ -286,7 +286,7 @@ const Nomad = props => {
             <DeviceFrame
               styles={{
                 maxWidth: 720,
-                margin: "auto"
+                margin: "auto",
               }}
             >
               <video className="video-player" autoPlay loop playsInline>
@@ -303,7 +303,7 @@ const Nomad = props => {
                   img="/images/nomad/dashboard-mobile.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Nomad dashboard mobile."
+                    alt: "Nomad dashboard mobile.",
                   }}
                 />
               </DeviceFrame>
@@ -317,7 +317,7 @@ const Nomad = props => {
                   img="/images/nomad/public-facility-mobile.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Public facility screen for mobile."
+                    alt: "Public facility screen for mobile.",
                   }}
                 />
               </DeviceFrame>
@@ -334,7 +334,7 @@ const Nomad = props => {
                 img="/images/nomad/post-a-job@2x.png"
                 aspectRatio={1600 / 2880}
                 imageProps={{
-                  alt: "Posting a job screen."
+                  alt: "Posting a job screen.",
                 }}
               />
             </DeviceFrame>
@@ -352,7 +352,7 @@ const Nomad = props => {
                 img="/images/nomad/public-profile@2x.png"
                 aspectRatio={5418 / 2880}
                 imageProps={{
-                  alt: "Public profile screen."
+                  alt: "Public profile screen.",
                 }}
               />
             </DeviceFrame>

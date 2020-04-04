@@ -11,7 +11,7 @@ import "./styles.scss";
 export const frontmatter = {
   title: "Portfolio",
   color: "orange",
-  description: "Kristoffer Hedstrom's Portfolio."
+  description: "Kristoffer Hedstrom's Portfolio.",
 };
 
 const PortfolioIndex = ({ data, ...rest }) => {
@@ -20,7 +20,7 @@ const PortfolioIndex = ({ data, ...rest }) => {
     const { styles, title, path, darkStyles } = page.frontmatter;
     const media =
       page.frontmatter.media &&
-      page.frontmatter.media.find(item => item.type === "image");
+      page.frontmatter.media.find((item) => item.type === "image");
     return (
       <div key={path} className="portfolio-item col-xs-12 col-sm-4">
         <Link to={path} className="portfolio-item-link">
@@ -59,7 +59,7 @@ const PortfolioIndex = ({ data, ...rest }) => {
 };
 
 PortfolioIndex.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
 };
 
 export const pageQuery = graphql`

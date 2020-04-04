@@ -7,7 +7,7 @@ import "./styles.scss";
 const DeviceFrame = ({ children, className, styles, bodyStyles, type }) => (
   <figure
     className={classNames("device-frame", className, {
-      [`device-frame--${type}`]: type
+      [`device-frame--${type}`]: type,
     })}
     style={styles}
   >
@@ -32,7 +32,7 @@ DeviceFrame.propTypes = {
   children: PropTypes.any,
   styles: PropTypes.object,
   bodyStyles: PropTypes.object,
-  type: PropTypes.string
+  type: PropTypes.string,
 };
 
 export default DeviceFrame;
