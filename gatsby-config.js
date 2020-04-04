@@ -12,7 +12,7 @@ module.exports = {
       "Website for Kristoffer Hedstrom: Swedish Interactive designer and developer currently in Switzerland.",
     twitter: "@_kris",
     shareImage: "https://k-create.com/images/about/shakey-0.gif",
-    siteName: "k-create.com"
+    siteName: "k-create.com",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -21,8 +21,8 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "pages",
-        path: `${__dirname}/src/pages/`
-      }
+        path: `${__dirname}/src/pages/`,
+      },
     },
     {
       resolve: "gatsby-plugin-sitemap",
@@ -50,14 +50,14 @@ module.exports = {
           }
         }`,
         serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map(edge => {
+          allSitePage.edges.map((edge) => {
             return {
               url: site.siteMetadata.siteUrl + edge.node.path,
               changefreq: "daily",
-              priority: 0.7
+              priority: 0.7,
             };
-          })
-      }
-    }
-  ]
+          }),
+      },
+    },
+  ],
 };

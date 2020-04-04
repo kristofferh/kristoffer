@@ -24,7 +24,7 @@ const Footer = ({ name, email }) => {
                 <span role="img" aria-label="sun" title="Toggle light">
                   🌞
                 </span>
-              )
+              ),
             },
             {
               value: "dark",
@@ -32,8 +32,8 @@ const Footer = ({ name, email }) => {
                 <span role="img" aria-label="moon" title="Toggle dark">
                   🌒
                 </span>
-              )
-            }
+              ),
+            },
           ]}
           input={{ name: "toggle", onChange: handleToggle, value: theme }}
         />

@@ -7,10 +7,10 @@ const Toggle = ({ options, input, binary, className }) => {
   return (
     <nav
       className={classNames("radio-toggles", className, {
-        "radio-toggles--binary": binary
+        "radio-toggles--binary": binary,
       })}
     >
-      {options.map(option => (
+      {options.map((option) => (
         <label className="radio-toggle" key={option.value}>
           <input
             type="radio"
@@ -32,7 +32,7 @@ Toggle.propTypes = {
   className: PropTypes.string,
   options: PropTypes.array.isRequired,
   input: PropTypes.object.isRequired,
-  binary: PropTypes.bool
+  binary: PropTypes.bool,
 };
 
 export default Toggle;
