@@ -16,15 +16,15 @@ export const frontmatter = {
       type: "image",
       img: "/images/tumblr/tumblr-poster.png",
       placeholder: "/images/tumblr/tumblr-poster-small.png",
-      aspectRatio: 0.75
-    }
+      aspectRatio: 0.75,
+    },
   ],
   styles: {
-    background: "#f5f6f7"
+    background: "#f5f6f7",
   },
   darkStyles: {
-    background: "#47525d"
-  }
+    background: "#47525d",
+  },
 };
 
 export default class Tumblr extends Component {
@@ -59,10 +59,10 @@ export default class Tumblr extends Component {
                 {...media[0]}
                 styles={{
                   maxWidth: 800,
-                  margin: "auto"
+                  margin: "auto",
                 }}
                 imageProps={{
-                  alt: title
+                  alt: title,
                 }}
               />
             </div>
@@ -97,7 +97,7 @@ export default class Tumblr extends Component {
                   placeholder="/images/tumblr/optica-new-small.jpg"
                   aspectRatio={2000 / 2560}
                   imageProps={{
-                    alt: "Optica screenshot."
+                    alt: "Optica screenshot.",
                   }}
                 />
               </DeviceFrame>
@@ -130,7 +130,7 @@ export default class Tumblr extends Component {
                     placeholder="/images/tumblr/optica-old-desktop-small.jpg"
                     aspectRatio={1283 / 1772}
                     imageProps={{
-                      alt: "Old version of Optica screenshot."
+                      alt: "Old version of Optica screenshot.",
                     }}
                   />
                 </DeviceFrame>
@@ -145,7 +145,7 @@ export default class Tumblr extends Component {
                     placeholder="/images/tumblr/optica-installs-small.jpg"
                     aspectRatio={918 / 1332}
                     imageProps={{
-                      alt: "Number of installs."
+                      alt: "Number of installs.",
                     }}
                   />
                 </DeviceFrame>
@@ -274,7 +274,7 @@ export default class Tumblr extends Component {
                   aspectRatio={650 / 300}
                   img={"/images/tumblr/fans.jpg"}
                   imageProps={{
-                    alt: "Screenshot of happy users."
+                    alt: "Screenshot of happy users.",
                   }}
                 />
                 <ImageLoader
@@ -283,7 +283,7 @@ export default class Tumblr extends Component {
                   aspectRatio={204 / 299}
                   img={"/images/tumblr/fans-2.jpg"}
                   imageProps={{
-                    alt: "Another screenshot of happy users."
+                    alt: "Another screenshot of happy users.",
                   }}
                 />
               </div>
@@ -302,7 +302,7 @@ export default class Tumblr extends Component {
                   aspectRatio={1}
                   img={"/images/tumblr/reblog.gif"}
                   imageProps={{
-                    alt: "GIF of reblog announcement."
+                    alt: "GIF of reblog announcement.",
                   }}
                 />
               </div>
@@ -316,7 +316,7 @@ export default class Tumblr extends Component {
                   aspectRatio={405 / 540}
                   img={"/images/tumblr/related-posts.gif"}
                   imageProps={{
-                    alt: "GIF of related posts announcement."
+                    alt: "GIF of related posts announcement.",
                   }}
                 />
               </div>
@@ -330,7 +330,7 @@ export default class Tumblr extends Component {
                   aspectRatio={1}
                   img={"/images/tumblr/likes.gif"}
                   imageProps={{
-                    alt: "GIF of likes announcement."
+                    alt: "GIF of likes announcement.",
                   }}
                 />
               </div>

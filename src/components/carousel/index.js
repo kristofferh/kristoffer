@@ -15,7 +15,7 @@ export default class Carousel extends Component {
       items: this.props.showItems,
       itemWidth: "100%",
       itemOuterWidth: 0,
-      wrapperWidth: "100%"
+      wrapperWidth: "100%",
     };
 
     this.touchObject = {};
@@ -41,7 +41,7 @@ export default class Carousel extends Component {
     if (this.props.index !== nextProps.index) {
       this.setState(
         {
-          index: nextProps.index
+          index: nextProps.index,
         },
         () => {
           this.animateTo();
@@ -54,13 +54,13 @@ export default class Carousel extends Component {
     // Listen for breakpoints.
 
     const hasMatchMedia = Boolean(window.matchMedia);
-    this.mqs = this.props.breakpoints.map(breakpoint => {
+    this.mqs = this.props.breakpoints.map((breakpoint) => {
       if (hasMatchMedia && breakpoint.mq) {
         return window.matchMedia(breakpoint.mq);
       }
     });
 
-    this.mqs.forEach(mq => {
+    this.mqs.forEach((mq) => {
       mq.addListener(this.handleMediaQuery);
     });
     this.handleMediaQuery();
@@ -74,7 +74,7 @@ export default class Carousel extends Component {
 
   componentWillUnmount() {
     window.removeEventListener("resize", this.setDimensions);
-    this.mqs.forEach(mq => {
+    this.mqs.forEach((mq) => {
       mq.removeListener(this.handleMediaQuery);
     });
   }
@@ -86,7 +86,7 @@ export default class Carousel extends Component {
 
     this.setState(
       {
-        index: Math.max(0, this.state.index - this.state.items)
+        index: Math.max(0, this.state.index - this.state.items),
       },
       () => {
         this.animateTo();
@@ -103,7 +103,7 @@ export default class Carousel extends Component {
 
     this.setState(
       {
-        index: this.state.index + this.state.items
+        index: this.state.index + this.state.items,
       },
       () => {
         this.animateTo();
@@ -113,10 +113,10 @@ export default class Carousel extends Component {
 
   handleMediaQuery() {
     // This all feels a little brittle, can it be simplified?
-    const match = this.mqs.reverse().find(query => query.matches);
+    const match = this.mqs.reverse().find((query) => query.matches);
 
     if (match) {
-      const item = this.props.breakpoints.find(breakpoint => {
+      const item = this.props.breakpoints.find((breakpoint) => {
         // IE10-11 returns match.media as 'all and (max-width:860px)'
         // -- adds `all and` and removes the space between property and value. Why?
         // Good question, no one knows, but we have to adapt and use a
@@ -128,7 +128,7 @@ export default class Carousel extends Component {
         this.setState(
           {
             items: item.showItems,
-            cellSpacing: item.cellSpacing
+            cellSpacing: item.cellSpacing,
           },
           () => {
             this.setDimensions();
@@ -138,7 +138,7 @@ export default class Carousel extends Component {
     } else {
       this.setState({
         items: this.props.showItems,
-        cellSpacing: this.props.cellSpacing
+        cellSpacing: this.props.cellSpacing,
       });
     }
   }
@@ -146,11 +146,11 @@ export default class Carousel extends Component {
   handleMouseDown(e) {
     this.touchObject = {
       startX: e.clientX,
-      startY: e.clientY
+      startY: e.clientY,
     };
 
     this.setState({
-      dragging: true
+      dragging: true,
     });
   }
 
@@ -178,7 +178,7 @@ export default class Carousel extends Component {
   handleTouchStart(e) {
     this.touchObject = {
       startX: e.touches[0].pageX,
-      startY: e.touches[0].pageY
+      startY: e.touches[0].pageY,
     };
   }
 
@@ -220,11 +220,11 @@ export default class Carousel extends Component {
     this.touchObject = {
       ...this.touchObject,
       length: length,
-      direction: direction
+      direction: direction,
     };
 
     this.setState({
-      x: this.getLeftOffset(length * direction)
+      x: this.getLeftOffset(length * direction),
     });
   }
 
@@ -246,7 +246,7 @@ export default class Carousel extends Component {
       dragging: false,
       clickGuard:
         this.touchObject.length &&
-        this.touchObject.length > this.props.clickGuardDistance
+        this.touchObject.length > this.props.clickGuardDistance,
     });
     this.touchObject = {};
   }
@@ -254,7 +254,7 @@ export default class Carousel extends Component {
   animateTo() {
     this.setState(
       {
-        x: this.state.index * this.state.itemOuterWidth * -1
+        x: this.state.index * this.state.itemOuterWidth * -1,
       },
       () => {
         if (this.props.dataCallback) {
@@ -263,7 +263,7 @@ export default class Carousel extends Component {
             hasNext:
               this.state.index <
               React.Children.count(this.props.children) - this.state.items,
-            hasPrevious: this.state.index > 0
+            hasPrevious: this.state.index > 0,
           });
         }
       }
@@ -310,7 +310,7 @@ export default class Carousel extends Component {
       {
         itemOuterWidth: itemOuterWidth,
         itemWidth: itemOuterWidth - 2 * this.state.cellSpacing,
-        wrapperWidth: wrapperWidth
+        wrapperWidth: wrapperWidth,
       },
       () => {
         this.animateTo();
@@ -324,9 +324,9 @@ export default class Carousel extends Component {
     return (
       <div
         className={classNames(baseClassName, {
-          [`${this.props.className}`]: this.props.className
+          [`${this.props.className}`]: this.props.className,
         })}
-        ref={node => (this.frame = node)}
+        ref={(node) => (this.frame = node)}
       >
         <div
           onTouchStart={this.handleTouchStart}
@@ -342,19 +342,19 @@ export default class Carousel extends Component {
             msTransform: transform,
             WebkitTransform: transform,
             transform: transform,
-            width: this.state.wrapperWidth
+            width: this.state.wrapperWidth,
           }}
           className={classNames(`${baseClassName}-wrapper`, {
-            dragging: this.state.dragging
+            dragging: this.state.dragging,
           })}
-          ref={node => (this.wrapper = node)}
+          ref={(node) => (this.wrapper = node)}
         >
           {React.Children.map(this.props.children, (child, i) => (
             <div
               style={{
                 width: this.state.itemWidth,
                 marginRight: this.state.cellSpacing,
-                marginLeft: this.state.cellSpacing
+                marginLeft: this.state.cellSpacing,
               }}
               className={`${baseClassName}-item`}
               key={i}
@@ -375,7 +375,7 @@ Carousel.defaultProps = {
   showItems: 1,
   breakpoints: [],
   minDragLength: 100,
-  clickGuardDistance: 40
+  clickGuardDistance: 40,
 };
 
 Carousel.propTypes = {
@@ -388,5 +388,5 @@ Carousel.propTypes = {
   dataCallback: PropTypes.func,
   minDragLength: PropTypes.number,
   index: PropTypes.number, // Update index from outside carousel.
-  showItems: PropTypes.number
+  showItems: PropTypes.number,
 };

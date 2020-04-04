@@ -16,18 +16,18 @@ export const frontmatter = {
       type: "image",
       img: "/images/freelance/freelance-poster.png",
       placeholder: "/images/freelance/freelance-poster-small.png",
-      aspectRatio: 0.75
-    }
+      aspectRatio: 0.75,
+    },
   ],
   styles: {
-    background: "#f5f6f7"
+    background: "#f5f6f7",
   },
   darkStyles: {
-    background: "#47525d"
-  }
+    background: "#47525d",
+  },
 };
 
-const Freelance = props => {
+const Freelance = (props) => {
   const { title, styles, darkStyles, media } = frontmatter;
   const { theme } = useContext(ThemeContext);
   return (
@@ -42,10 +42,10 @@ const Freelance = props => {
               {...media[0]}
               styles={{
                 maxWidth: 800,
-                margin: "auto"
+                margin: "auto",
               }}
               imageProps={{
-                alt: title
+                alt: title,
               }}
             />
           </div>
@@ -74,7 +74,7 @@ const Freelance = props => {
                   img="/images/freelance/spender-splash.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Spender app splash screen."
+                    alt: "Spender app splash screen.",
                   }}
                 />
               </DeviceFrame>
@@ -88,7 +88,7 @@ const Freelance = props => {
                   img="/images/freelance/spender-signin.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Spender app signin screen."
+                    alt: "Spender app signin screen.",
                   }}
                 />
               </DeviceFrame>
@@ -119,7 +119,7 @@ const Freelance = props => {
                   img="/images/freelance/spender-signin-verify.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Spender app verify screen."
+                    alt: "Spender app verify screen.",
                   }}
                 />
               </DeviceFrame>
@@ -133,7 +133,7 @@ const Freelance = props => {
                   img="/images/freelance/spender-overview.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Spender app overview screen."
+                    alt: "Spender app overview screen.",
                   }}
                 />
               </DeviceFrame>
@@ -147,7 +147,7 @@ const Freelance = props => {
                   img="/images/freelance/spender-overlay.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Spender app overlayscreen."
+                    alt: "Spender app overlayscreen.",
                   }}
                 />
               </DeviceFrame>
@@ -182,7 +182,7 @@ const Freelance = props => {
                   placeholder="/images/freelance/dubsmash-quotes-tablet-small.jpg"
                   aspectRatio={2048 / 1536}
                   imageProps={{
-                    alt: "Dubsmash tablet screen."
+                    alt: "Dubsmash tablet screen.",
                   }}
                 />
               </DeviceFrame>
@@ -197,7 +197,7 @@ const Freelance = props => {
                   placeholder="/images/freelance/dubsmash-quotes-tablet-embed-small.jpg"
                   aspectRatio={2048 / 1536}
                   imageProps={{
-                    alt: "Dubsmash embed screen."
+                    alt: "Dubsmash embed screen.",
                   }}
                 />
               </DeviceFrame>
@@ -217,7 +217,7 @@ const Freelance = props => {
                   placeholder="/images/freelance/dubsmash-quotes-mobile-web-small.jpg"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Dubsmash mobile web screen."
+                    alt: "Dubsmash mobile web screen.",
                   }}
                 />
               </DeviceFrame>
@@ -232,7 +232,7 @@ const Freelance = props => {
                   placeholder="/images/freelance/dubsmash-quotes-mobile-web-search.jpg"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Dubsmash mobile web search screen."
+                    alt: "Dubsmash mobile web search screen.",
                   }}
                 />
               </DeviceFrame>
@@ -248,7 +248,7 @@ const Freelance = props => {
                 placeholder="/images/freelance/dubsmash-quotes-full.jpg"
                 aspectRatio={1024 / 1440}
                 imageProps={{
-                  alt: "Dubsmash desktop screen."
+                  alt: "Dubsmash desktop screen.",
                 }}
               />
             </DeviceFrame>
@@ -267,7 +267,7 @@ const Freelance = props => {
                   placeholder="/images/freelance/dubsmash-quote-wireframe-new-small.jpg"
                   aspectRatio={1771 / 1440}
                   imageProps={{
-                    alt: "Dubsmash admin panel wireframe."
+                    alt: "Dubsmash admin panel wireframe.",
                   }}
                 />
               </DeviceFrame>
@@ -282,7 +282,7 @@ const Freelance = props => {
                   placeholder="/images/freelance/dubsmash-quote-wireframe-edit-small.jpg"
                   aspectRatio={1453 / 1440}
                   imageProps={{
-                    alt: "Dubsmash admin panel wireframe."
+                    alt: "Dubsmash admin panel wireframe.",
                   }}
                 />
               </DeviceFrame>
@@ -324,7 +324,7 @@ const Freelance = props => {
                   img="/images/freelance/control-room-home.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Control room app home screen."
+                    alt: "Control room app home screen.",
                   }}
                 />
               </DeviceFrame>
@@ -338,7 +338,7 @@ const Freelance = props => {
                   img="/images/freelance/control-room-room.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Control room app room screen."
+                    alt: "Control room app room screen.",
                   }}
                 />
               </DeviceFrame>
@@ -352,7 +352,7 @@ const Freelance = props => {
                   img="/images/freelance/control-room-living-room.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Control room app living room screen."
+                    alt: "Control room app living room screen.",
                   }}
                 />
               </DeviceFrame>
@@ -370,7 +370,7 @@ const Freelance = props => {
                   img="/images/freelance/control-room-webcam.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Control room app webcam screen."
+                    alt: "Control room app webcam screen.",
                   }}
                 />
               </DeviceFrame>
@@ -384,7 +384,7 @@ const Freelance = props => {
                   img="/images/freelance/control-room-thermostat.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Control room app thermostat screen."
+                    alt: "Control room app thermostat screen.",
                   }}
                 />
               </DeviceFrame>
@@ -398,7 +398,7 @@ const Freelance = props => {
                   img="/images/freelance/control-room-speaker.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Control room app speaker screen."
+                    alt: "Control room app speaker screen.",
                   }}
                 />
               </DeviceFrame>
@@ -415,7 +415,7 @@ const Freelance = props => {
                   img="/images/freelance/control-room-multiple-1.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Control room multiple users screen."
+                    alt: "Control room multiple users screen.",
                   }}
                 />
               </DeviceFrame>
@@ -429,7 +429,7 @@ const Freelance = props => {
                   img="/images/freelance/control-room-multiple-2.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Control room multiple users screen."
+                    alt: "Control room multiple users screen.",
                   }}
                 />
               </DeviceFrame>
@@ -443,7 +443,7 @@ const Freelance = props => {
                   img="/images/freelance/control-room-settings.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Control room settings screen."
+                    alt: "Control room settings screen.",
                   }}
                 />
               </DeviceFrame>
@@ -474,7 +474,7 @@ const Freelance = props => {
                 placeholder="/images/archive/tictail-small.jpg"
                 aspectRatio={7596 / 2560}
                 imageProps={{
-                  alt: "Tictail screen."
+                  alt: "Tictail screen.",
                 }}
               />
             </DeviceFrame>
@@ -504,7 +504,7 @@ const Freelance = props => {
                   placeholder="/images/freelance/milestones-mobile-small.png"
                   aspectRatio={1334 / 750}
                   imageProps={{
-                    alt: "Milestones app mobile."
+                    alt: "Milestones app mobile.",
                   }}
                 />
               </DeviceFrame>
@@ -519,7 +519,7 @@ const Freelance = props => {
                   placeholder="/images/freelance/milestones-small.png"
                   aspectRatio={1342 / 2560}
                   imageProps={{
-                    alt: "Milestones app desktop."
+                    alt: "Milestones app desktop.",
                   }}
                 />
               </DeviceFrame>

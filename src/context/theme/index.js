@@ -3,7 +3,7 @@ import React from "react";
 
 const defaultState = {
   theme: "light",
-  toggleTheme: () => {}
+  toggleTheme: () => {},
 };
 
 export const ThemeContext = React.createContext(defaultState);
@@ -12,7 +12,7 @@ export class ThemeProvider extends React.Component {
   state = defaultState;
 
   static propTypes = {
-    children: PropTypes.any
+    children: PropTypes.any,
   };
 
   darkMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -64,7 +64,7 @@ export class ThemeProvider extends React.Component {
 
   setDefaultTheme = () => {
     this.setState({
-      theme: this.supportsDarkMode() ? "dark" : "light"
+      theme: this.supportsDarkMode() ? "dark" : "light",
     });
   };
 
@@ -76,7 +76,7 @@ export class ThemeProvider extends React.Component {
       this.setState({ theme: savedTheme });
     } else {
       this.setState({
-        theme: this.supportsDarkMode() ? "dark" : "light"
+        theme: this.supportsDarkMode() ? "dark" : "light",
       });
       this.listenForChanges();
     }
@@ -89,7 +89,7 @@ export class ThemeProvider extends React.Component {
       <ThemeContext.Provider
         value={{
           theme,
-          toggleTheme: this.handleToggleTheme
+          toggleTheme: this.handleToggleTheme,
         }}
       >
         {children}

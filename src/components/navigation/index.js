@@ -13,18 +13,18 @@ export default class Navigation extends Component {
     this.state = {
       path: this.getPath(props.location.pathname),
       pageTitle: this.getPageTitle(this.props),
-      showNav: false
+      showNav: false,
     };
   }
 
-  handleCloseClick = e => {
+  handleCloseClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
     this.setState({ showNav: false });
   };
 
   // @todo: make this generic.
-  handlePortfolioClick = e => {
+  handlePortfolioClick = (e) => {
     if (!this.state.showNav && this.state.path === "portfolio") {
       e.preventDefault();
       this.setState({ showNav: true });
@@ -65,12 +65,12 @@ export default class Navigation extends Component {
     return (
       <BodyClassName
         className={classNames(this.state.path, {
-          "show-nav": this.state.showNav
+          "show-nav": this.state.showNav,
         })}
       >
         <nav
           className={classNames("main-nav", this.state.path, {
-            "show-nav": this.state.showNav
+            "show-nav": this.state.showNav,
           })}
           onClick={this.handleNavClick}
         >
@@ -78,7 +78,7 @@ export default class Navigation extends Component {
             <html
               lang="en"
               className={classNames(this.state.path, {
-                "show-nav": this.state.showNav
+                "show-nav": this.state.showNav,
               })}
             />
           </Helmet>
@@ -87,7 +87,7 @@ export default class Navigation extends Component {
             onClick={this.handlePortfolioClick}
             activeClassName="active"
             className={classNames("nav-item", {
-              active: this.state.path === "portfolio"
+              active: this.state.path === "portfolio",
             })}
           >
             <span className="text">
@@ -95,7 +95,7 @@ export default class Navigation extends Component {
                 className={classNames("subnav-wrapper", {
                   "has-subnav":
                     this.state.path === "portfolio" &&
-                    this.state.pageTitle !== "Portfolio"
+                    this.state.pageTitle !== "Portfolio",
                 })}
               >
                 <span className="subnav">
@@ -129,10 +129,10 @@ export default class Navigation extends Component {
 }
 
 Navigation.defaultProps = {
-  location: {}
+  location: {},
 };
 
 Navigation.propTypes = {
   location: PropTypes.object.isRequired,
-  title: PropTypes.string
+  title: PropTypes.string,
 };

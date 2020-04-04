@@ -5,10 +5,10 @@ import "./styles.scss";
 export const frontmatter = {
   title: "Resume",
   color: "blue",
-  description: "Kristoffer Hedstrom's Resume."
+  description: "Kristoffer Hedstrom's Resume.",
 };
 
-const Resume = props => (
+const Resume = (props) => (
   <Layout {...props} frontmatter={frontmatter}>
     <div className="resume-wrapper content-container">
       <section className="summary-wrapper masthead row middle-xs top-sm">

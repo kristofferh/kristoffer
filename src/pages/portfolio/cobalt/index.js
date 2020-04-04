@@ -16,18 +16,18 @@ export const frontmatter = {
       type: "image",
       img: "/images/cobalt/cobalt-poster.png",
       placeholder: "/images/cobalt/cobalt-poster-small.png",
-      aspectRatio: 0.75
-    }
+      aspectRatio: 0.75,
+    },
   ],
   styles: {
-    background: "#f5f6f7"
+    background: "#f5f6f7",
   },
   darkStyles: {
-    background: "#47525d"
-  }
+    background: "#47525d",
+  },
 };
 
-const Cobalt = props => {
+const Cobalt = (props) => {
   const { title, styles, darkStyles, media } = frontmatter;
   const { theme } = useContext(ThemeContext);
   return (
@@ -42,10 +42,10 @@ const Cobalt = props => {
               {...media[0]}
               styles={{
                 maxWidth: 800,
-                margin: "auto"
+                margin: "auto",
               }}
               imageProps={{
-                alt: title
+                alt: title,
               }}
             />
           </div>
@@ -85,7 +85,7 @@ const Cobalt = props => {
                   placeholder="/images/cobalt/bmw-1-small.jpg"
                   aspectRatio={431 / 800}
                   imageProps={{
-                    alt: "BMW screen."
+                    alt: "BMW screen.",
                   }}
                 />
               </DeviceFrame>
@@ -100,7 +100,7 @@ const Cobalt = props => {
                   placeholder="/images/cobalt/bmw-2-small.jpg"
                   aspectRatio={517 / 800}
                   imageProps={{
-                    alt: "BMW screen."
+                    alt: "BMW screen.",
                   }}
                 />
               </DeviceFrame>
@@ -117,7 +117,7 @@ const Cobalt = props => {
               img="/images/cobalt/bmw-wireframes.jpg"
               aspectRatio={1200 / 1600}
               imageProps={{
-                alt: "BMW wireframes."
+                alt: "BMW wireframes.",
               }}
             />
           </div>
@@ -135,7 +135,7 @@ const Cobalt = props => {
                   placeholder="/images/cobalt/vw-canada-1-small.jpg"
                   aspectRatio={500 / 700}
                   imageProps={{
-                    alt: "VW Canada screen."
+                    alt: "VW Canada screen.",
                   }}
                 />
               </DeviceFrame>
@@ -150,7 +150,7 @@ const Cobalt = props => {
                   placeholder="/images/cobalt/vw-canada-2-small.jpg"
                   aspectRatio={500 / 700}
                   imageProps={{
-                    alt: "VW Canada screen."
+                    alt: "VW Canada screen.",
                   }}
                 />
               </DeviceFrame>
@@ -170,7 +170,7 @@ const Cobalt = props => {
                   placeholder="/images/cobalt/vw-canada-3-small.jpg"
                   aspectRatio={500 / 700}
                   imageProps={{
-                    alt: "VW Canada screen."
+                    alt: "VW Canada screen.",
                   }}
                 />
               </DeviceFrame>
@@ -185,7 +185,7 @@ const Cobalt = props => {
                   placeholder="/images/cobalt/vw-canada-4-small.jpg"
                   aspectRatio={500 / 700}
                   imageProps={{
-                    alt: "VW Canada screen."
+                    alt: "VW Canada screen.",
                   }}
                 />
               </DeviceFrame>

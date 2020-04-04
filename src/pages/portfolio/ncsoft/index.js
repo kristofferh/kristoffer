@@ -16,18 +16,18 @@ export const frontmatter = {
       type: "image",
       img: "/images/ncsoft/ncsoft-poster-2.png",
       placeholder: "/images/ncsoft/ncsoft-poster-2-small.png",
-      aspectRatio: 0.75
-    }
+      aspectRatio: 0.75,
+    },
   ],
   styles: {
-    background: "#f5f6f7"
+    background: "#f5f6f7",
   },
   darkStyles: {
-    background: "#47525d"
-  }
+    background: "#47525d",
+  },
 };
 
-const NCsoft = props => {
+const NCsoft = (props) => {
   const { title, styles, darkStyles, media } = frontmatter;
   const { theme } = useContext(ThemeContext);
   return (
@@ -42,10 +42,10 @@ const NCsoft = props => {
               {...media[0]}
               styles={{
                 maxWidth: 800,
-                margin: "auto"
+                margin: "auto",
               }}
               imageProps={{
-                alt: title
+                alt: title,
               }}
             />
           </div>
@@ -75,7 +75,7 @@ const NCsoft = props => {
                 placeholder="/images/ncsoft/gw2-home-2.0-small.jpg"
                 aspectRatio={1700 / 1400}
                 imageProps={{
-                  alt: "Guild Wars 2 screen."
+                  alt: "Guild Wars 2 screen.",
                 }}
               />
             </DeviceFrame>
@@ -110,7 +110,7 @@ const NCsoft = props => {
                   placeholder="/images/ncsoft/gw2-small.jpg"
                   aspectRatio={1000 / 1400}
                   imageProps={{
-                    alt: "Guild Wars 2 screen."
+                    alt: "Guild Wars 2 screen.",
                   }}
                 />
               </DeviceFrame>
@@ -125,7 +125,7 @@ const NCsoft = props => {
                   placeholder="/images/ncsoft/gw2-races-small.jpg"
                   aspectRatio={1000 / 1400}
                   imageProps={{
-                    alt: "Guild Wars 2 screen."
+                    alt: "Guild Wars 2 screen.",
                   }}
                 />
               </DeviceFrame>
@@ -141,7 +141,7 @@ const NCsoft = props => {
             <DeviceFrame
               styles={{
                 maxWidth: 800,
-                margin: "auto"
+                margin: "auto",
               }}
             >
               <ImageLoader
@@ -149,7 +149,7 @@ const NCsoft = props => {
                 placeholder="/images/ncsoft/gw2-characters-grid-small.jpg"
                 aspectRatio={1000 / 1400}
                 imageProps={{
-                  alt: "Guild Wars 2 screen."
+                  alt: "Guild Wars 2 screen.",
                 }}
               />
             </DeviceFrame>
@@ -184,7 +184,7 @@ const NCsoft = props => {
                   placeholder="/images/ncsoft/gw-home-1.0-small.jpg"
                   aspectRatio={1000 / 1400}
                   imageProps={{
-                    alt: "Guild Wars screen."
+                    alt: "Guild Wars screen.",
                   }}
                 />
               </DeviceFrame>
@@ -199,7 +199,7 @@ const NCsoft = props => {
                   placeholder="/images/ncsoft/gw-internal-page-small.jpg"
                   aspectRatio={1000 / 1400}
                   imageProps={{
-                    alt: "Guild Wars screen."
+                    alt: "Guild Wars screen.",
                   }}
                 />
               </DeviceFrame>
@@ -219,7 +219,7 @@ const NCsoft = props => {
                   placeholder="/images/archive/gw-products-individual-small.jpg"
                   aspectRatio={1800 / 1400}
                   imageProps={{
-                    alt: "Guild Wars screen."
+                    alt: "Guild Wars screen.",
                   }}
                 />
               </DeviceFrame>

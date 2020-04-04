@@ -15,40 +15,40 @@ export const frontmatter = {
   images: [
     {
       small: "/images/about/shakey-0-small.jpg",
-      big: "/images/about/shakey-0.gif"
+      big: "/images/about/shakey-0.gif",
     },
     {
       small: "/images/about/shakey-1-small.jpg",
-      big: "/images/about/shakey-1.gif"
+      big: "/images/about/shakey-1.gif",
     },
     {
       small: "/images/about/shakey-2-small.jpg",
-      big: "/images/about/shakey-2.gif"
+      big: "/images/about/shakey-2.gif",
     },
     {
       small: "/images/about/shakey-3-small.jpg",
-      big: "/images/about/shakey-3.gif"
+      big: "/images/about/shakey-3.gif",
     },
     {
       small: "/images/about/shakey-4-small.jpg",
-      big: "/images/about/shakey-4.gif"
+      big: "/images/about/shakey-4.gif",
     },
     {
       small: "/images/about/shakey-5-small.jpg",
-      big: "/images/about/shakey-5.gif"
+      big: "/images/about/shakey-5.gif",
     },
     {
       small: "/images/about/shakey-6-small.jpg",
-      big: "/images/about/shakey-6.gif"
+      big: "/images/about/shakey-6.gif",
     },
     {
       small: "/images/about/shakey-7-small.jpg",
-      big: "/images/about/shakey-7.gif"
-    }
-  ]
+      big: "/images/about/shakey-7.gif",
+    },
+  ],
 };
 
-const About = props => {
+const About = (props) => {
   const { images } = frontmatter;
   return (
     <Layout {...props} frontmatter={frontmatter}>
@@ -63,7 +63,7 @@ const About = props => {
               aspectRatio={1}
               img={image.big}
               imageProps={{
-                alt: "GIF of Kris"
+                alt: "GIF of Kris",
               }}
             />
           ))}

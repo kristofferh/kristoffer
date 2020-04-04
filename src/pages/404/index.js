@@ -5,10 +5,10 @@ import Layout from "../../components/layouts";
 export const frontmatter = {
   title: "Oops. Not Found.",
   color: "orange",
-  nav: "none"
+  nav: "none",
 };
 
-const FourOhFour = props => (
+const FourOhFour = (props) => (
   <Layout {...props} frontmatter={frontmatter}>
     <div className="content-container">
       <h1 className="page-title">{"Not Found"}</h1>

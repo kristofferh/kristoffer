@@ -7,5 +7,5 @@ export const wrapRootElement = ({ element }) => (
 );
 
 wrapRootElement.propTypes = {
-  element: PropTypes.any
+  element: PropTypes.any,
 };
