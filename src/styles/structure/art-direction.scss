@@ -41,6 +41,13 @@
       color: $light;
     }
   }
+
+  .radio-toggles--binary
+    .radio-toggle:nth-child(1)
+    input:checked
+    ~ .radio-toggle-text:before {
+    background: $color;
+  }
 }
 
 @mixin art-direction-dark($color) {
@@ -95,52 +102,43 @@
   &.index .nav-logo {
     background: $dark;
   }
+
+  .radio-toggles--binary {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .radio-toggles--binary
+    .radio-toggle:nth-child(2)
+    input:checked
+    ~ .radio-toggle-text:before {
+    background: $color;
+  }
 }
 
 .green {
   @include art-direction($green);
-
-  &.dark-mode {
-    @include art-direction-dark($green);
-  }
 }
 
 .blue {
   @include art-direction($blue);
-
-  &.dark-mode {
-    @include art-direction-dark($blue);
-  }
 }
 
 .pink {
   @include art-direction($pink);
-
-  &.dark-mode {
-    @include art-direction-dark($pink);
-  }
 }
 
 .orange {
   @include art-direction($orange);
-
-  &.dark-mode {
-    @include art-direction-dark($orange);
-  }
 }
 
 .salmon {
   @include art-direction($salmon);
-
-  &.dark-mode {
-    @include art-direction-dark($salmon);
-  }
 }
 
 .purple {
   @include art-direction($purple);
+}
 
-  &.dark-mode {
-    @include art-direction-dark($purple);
-  }
+.dark-mode {
+  @include art-direction-dark($pink);
 }

@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const defaultState = {
-  theme: "dark",
+  theme: "light",
   toggleTheme: () => {},
 };
 
