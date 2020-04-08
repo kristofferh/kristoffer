@@ -1,9 +1,22 @@
 import classNames from "classnames";
-import PropTypes from "prop-types";
 import React from "react";
 import "./styles.scss";
 
-const Toggle = ({ options, input, binary, className }) => {
+type Props = {
+  className?: string;
+  options: {
+    value: string;
+    label: string;
+  }[];
+  input: {
+    name: string;
+    value: string;
+    onChange?: () => void;
+  };
+  binary?: boolean;
+};
+
+const Toggle: React.FC<Props> = ({ options, input, binary, className }) => {
   return (
     <nav
       className={classNames("radio-toggles", className, {
@@ -18,7 +31,9 @@ const Toggle = ({ options, input, binary, className }) => {
             value={option.value}
             checked={input.value === option.value}
             onChange={() => {
-              input.onChange();
+              if (input.onChange) {
+                input.onChange();
+              }
             }}
           />
           <span className="radio-toggle-text">{option.label}</span>
@@ -26,13 +41,6 @@ const Toggle = ({ options, input, binary, className }) => {
       ))}
     </nav>
   );
-};
-
-Toggle.propTypes = {
-  className: PropTypes.string,
-  options: PropTypes.array.isRequired,
-  input: PropTypes.object.isRequired,
-  binary: PropTypes.bool,
 };
 
 export default Toggle;

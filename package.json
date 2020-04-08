@@ -4,8 +4,10 @@
   "description": "K-Create.com | Kristoffer Hedstrom",
   "main": "n/a",
   "scripts": {
+    "types": "tsc",
+    "types:watch": "yarn types -- --watch",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "yarn lint",
+    "test": "yarn lint && yarn types",
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -23,6 +25,7 @@
     "gatsby-plugin-offline": "^3.1.2",
     "gatsby-plugin-sass": "^2.2.1",
     "gatsby-plugin-sitemap": "^2.3.1",
+    "gatsby-plugin-typescript": "^2.3.1",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-javascript-frontmatter": "^2.2.1",
     "gatsby-transformer-javascript-static-exports": "^2.3.2",
@@ -35,6 +38,10 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@types/classnames": "^2.2.10",
+    "@types/node": "^13.11.0",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.4.0",
@@ -42,6 +49,7 @@
     "eslint-plugin-react": "^7.16.0",
     "flexboxgrid": "^6.3.0",
     "node-sass": "^4.12.0",
-    "prettier": "^2.0.0"
+    "prettier": "^2.0.0",
+    "typescript": "^3.8.3"
   }
 }
