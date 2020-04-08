@@ -15,6 +15,7 @@ module.exports = {
     siteName: "k-create.com",
   },
   plugins: [
+    "gatsby-plugin-typescript",
     "gatsby-plugin-sass",
     "gatsby-transformer-javascript-frontmatter",
     {
