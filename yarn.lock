@@ -5270,10 +5270,10 @@ gatsby-transformer-javascript-static-exports@^2.3.2:
     "@babel/traverse" "^7.8.6"
     bluebird "^3.7.2"
 
-gatsby@^2.20.12:
-  version "2.20.12"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.20.12.tgz#0312f99aaa51d7a18c51abb2bee2d32b5f3fd918"
-  integrity sha512-HoyjJA432ZUKOgkzsOSEdSbo3Vhi3lhr5uw8JnebO4S9Cqc6J2kw9HNASwtYFGzZVClGrsYwXVaLcOnSKtZmxA==
+gatsby@^2.20.13:
+  version "2.20.15"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.20.15.tgz#7f91baac059ad9eb1b0b384b2a38e2a7459742cd"
+  integrity sha512-sEAFCOC1MBPuBRMTtvMTrJmvbaUlAq5OMCxjpXbY+1wleObuHA9k3VGHT5F4G38Egj7EPc8fvyLACfDfWnDWOA==
   dependencies:
     "@babel/code-frame" "^7.8.3"
     "@babel/core" "^7.8.7"
