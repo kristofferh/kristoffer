@@ -92,19 +92,13 @@
   }
 
   .main-nav,
-  .about-photo {
-    display: none !important;
-  }
-
+  .about-photo,
+  .theme-toggle,
   .nav-logo {
     display: none !important;
   }
 
   .index {
-    .nav-logo {
-      display: block !important;
-    }
-
     .nav-logo-container {
       position: relative;
       width: auto;
