@@ -24,7 +24,7 @@
     "gatsby-plugin-manifest": "^2.3.3",
     "gatsby-plugin-offline": "^3.1.2",
     "gatsby-plugin-sass": "^2.2.1",
-    "gatsby-plugin-sitemap": "^2.3.1",
+    "gatsby-plugin-sitemap": "^2.3.2",
     "gatsby-plugin-typescript": "^2.3.1",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-javascript-frontmatter": "^2.2.1",
