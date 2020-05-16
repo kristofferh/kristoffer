@@ -34,15 +34,14 @@ const Resume = (props) => (
       </section>
 
       <section className="section-wrapper summary-wrapper row">
-        <div className="summary col-xs-12">
+        <div className="summary col-xs-12 col-sm-9">
           I’m an Interactive Designer and Developer with{" "}
-          <span className="highlight">18 years of experience</span>. I have both
-          programming and graphic design skills, which makes me a bit of a
-          strange monster. In addition, I have Product Management and User
-          Experience design expertise.{" "}
-          <span className="highlight">
+          <mark className="highlight">18 years of experience</mark>. I have both
+          programming and design skills, which makes me a bit of a strange
+          monster.{" "}
+          <mark className="highlight">
             I still want to learn and get better.
-          </span>
+          </mark>
         </div>
       </section>
 
@@ -84,11 +83,12 @@ const Resume = (props) => (
                   Design and build prototypes for new features in{" "}
                   <em>Google Calendar</em> and <em>Google Tasks</em>
                 </li>
+                <li>Augmenting existing products with Chrome Extensions</li>
                 <li>Attempting to learn Swiss German</li>
               </ul>
               <p>
                 Technologies: <em>Sketch</em>, <em>Figma</em>, <em>React</em>,{" "}
-                <em>TypeScript</em>, <em>CSS</em>, <em>HTML</em>,{" "}
+                <em>TypeScript</em>, <em>RxJS</em>, <em>CSS</em>, <em>HTML</em>,{" "}
                 <em>Flutter</em>
               </p>
             </div>
