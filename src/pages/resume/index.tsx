@@ -122,9 +122,9 @@ const Resume = (props: any) => (
                 <li>Attempted to learn Swiss German</li>
               </ul>
               <p>
-                Technologies / Tools: <em>Sketch</em>, <em>Figma</em>,{" "}
-                <em>React</em>, <em>TypeScript</em>, <em>RxJS</em>, <em>CSS</em>
-                , <em>HTML</em>, <em>Flutter</em>
+                Technologies: <em>Sketch</em>, <em>Figma</em>, <em>React</em>,{" "}
+                <em>TypeScript</em>, <em>RxJS</em>, <em>CSS</em>, <em>HTML</em>,{" "}
+                <em>Flutter</em>
               </p>
             </div>
           </div>
