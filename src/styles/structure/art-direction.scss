@@ -19,6 +19,7 @@
   }
 
   .highlight {
+    color: inherit;
     background: $light;
   }
 
@@ -80,6 +81,7 @@
   }
 
   .highlight {
+    color: inherit;
     background: mix($black, $color, 70);
   }
 
