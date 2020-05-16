@@ -3,7 +3,7 @@ import { Canvas, useFrame } from "react-three-fiber";
 
 export const Box = () => {
   // This reference will give us direct access to the mesh
-  const mesh = useRef<mesh>();
+  const mesh = useRef<any>();
 
   // Set up state for the hovered and active state
   const [hovered, setHover] = useState(false);
