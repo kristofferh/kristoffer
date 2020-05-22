@@ -18,7 +18,7 @@
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.3",
     "gatsby": "^2.21.37",
-    "gatsby-link": "^2.4.2",
+    "gatsby-link": "^2.4.3",
     "gatsby-plugin-manifest": "^2.4.3",
     "gatsby-plugin-offline": "^3.2.2",
     "gatsby-plugin-sass": "^2.3.2",
