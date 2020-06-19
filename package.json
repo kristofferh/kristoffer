@@ -10,7 +10,9 @@
     "test": "yarn lint && yarn types",
     "dev": "gatsby develop",
     "build": "gatsby build",
-    "serve": "gatsby serve"
+    "serve": "gatsby serve",
+    "transfer": "rsync --filter='- /images' --filter='- /videos' -arv public/ $npm_config_deploy_path",
+    "deploy": "yarn build && yarn transfer"
   },
   "author": "Kristoffer Hedstrom",
   "license": "MIT",

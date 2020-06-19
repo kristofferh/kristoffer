@@ -6,10 +6,9 @@ const Index = (props) => (
   <Layout {...props}>
     <div className="content-container">
       <h1 className="page-title">Kristoffer Hedstrom</h1>
-      <div className="portfolio-items">
-        {
-          "Kris Hedstrom is an interactive designer and developer. Currently in Switzerland."
-        }
+      <div className="page-intro">
+        Kris Hedstrom is an interactive designer and developer. Currently in
+        Zürich, Switzerland.
       </div>
     </div>
   </Layout>
