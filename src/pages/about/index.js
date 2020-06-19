@@ -78,21 +78,30 @@ const About = (props) => {
                 Hey. I’m Kris. I’m an interactive designer / developer. Like my
                 ancestors, I make interactive things on the internet.
               </p>
-
               <p className="load-in">
-                I grew up in Umeå, in northern Sweden, but I now live in Zürich,
-                Switzerland. I spent more than twenty years in the United
-                States, the first 14 in Seattle, and then Brooklyn, NY. I am
-                currently employed by Google. Before Google, I worked at a
+                I grew up in Umeå, in northern Sweden, but now live in Zürich,
+                Switzerland with my wife{" "}
+                <a
+                  href="https://sarfrazi.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="highlight"
+                >
+                  Razi
+                </a>{" "}
+                and our dog Frankie. I spent more than twenty years in the
+                United States, the first fourteen in Seattle, and then Brooklyn,
+                NY for eight.
+              </p>
+              <p className="load-in">
+                I am currently employed by Google. Before Google, I worked at a
                 small-ish startup. Before that, I was a Product (Engineering)
                 Manager at Tumblr. Before that, I worked at agencies. Before
                 that, I was a baby.
               </p>
-
               <p className="load-in">
                 I like to design things, and then I like to build those things.
               </p>
-
               <p className="load-in">
                 I occasionally take on freelance projects. Feel free to get in
                 touch if you have an interesting project that you want to
@@ -144,6 +153,15 @@ const About = (props) => {
                   target="_blank"
                 >
                   Twitter
+                </a>
+              </li>
+              <li className="load-in">
+                <a
+                  href="https://www.toptal.com/designers/resume/kristoffer-hedstrom"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  Toptal
                 </a>
               </li>
             </ul>

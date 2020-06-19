@@ -87,9 +87,9 @@ const Resume = (props) => (
                 <li>Attempting to learn Swiss German</li>
               </ul>
               <p>
-                Technologies: <em>Sketch</em>, <em>Figma</em>, <em>React</em>,{" "}
-                <em>TypeScript</em>, <em>RxJS</em>, <em>CSS</em>, <em>HTML</em>,{" "}
-                <em>Flutter</em>
+                Technologies / Tools: <em>Sketch</em>, <em>Figma</em>,{" "}
+                <em>React</em>, <em>TypeScript</em>, <em>RxJS</em>, <em>CSS</em>
+                , <em>HTML</em>, <em>Flutter</em>
               </p>
             </div>
           </div>
@@ -119,20 +119,20 @@ const Resume = (props) => (
             </div>
             <div className="summary">
               <ul>
-                <li>Creating a modern healthcare staffing platform</li>
+                <li>Created a modern healthcare staffing platform</li>
                 <li>
-                  Designing new features in Sketch, Illustrator, and Photoshop
+                  Designed new features in Sketch, Illustrator, and Photoshop
                 </li>
-                <li>Prototyping with Invision and Framer</li>
+                <li>Prototyped with Invision and Framer</li>
                 <li>
-                  Implementing with React, Redux, Redux-Form, Webpack,
+                  Implemented features with React, Redux, Redux-Form, Webpack,
                   CSS-in-JS, and SASS frontend
                 </li>
-                <li>Introducing React-Native into workflow</li>
-                <li>Changing healthcare for the better</li>
+                <li>Introduced React-Native into workflow</li>
+                <li>Changed healthcare for the better - at least a little</li>
               </ul>
               <p>
-                Technologies: <em>Sketch</em>, <em>Photoshop</em>,{" "}
+                Technologies / Tools: <em>Sketch</em>, <em>Photoshop</em>,{" "}
                 <em>InVision</em>, <em>Framer</em>, <em>Illustrator</em>,{" "}
                 <em>React</em>, <em>JavaScript</em>, <em>CSS</em>, <em>HTML</em>
               </p>
@@ -171,7 +171,7 @@ const Resume = (props) => (
                 </li>
               </ul>
               <p>
-                Technologies: <em>Coffeescript</em>, <em>React</em>,{" "}
+                Technologies / Tools: <em>Coffeescript</em>, <em>React</em>,{" "}
                 <em>JavaScript</em>, <em>CSS</em>, <em>HTML</em>
               </p>
             </div>
@@ -215,7 +215,8 @@ const Resume = (props) => (
                 <li>Made teenagers super angry</li>
               </ul>
               <p>
-                Technologies: <em>SQL</em>, <em>PHP</em>, <em>Hadoop</em>
+                Technologies / Tools: <em>SQL</em>, <em>PHP</em>,{" "}
+                <em>Hadoop</em>
               </p>
             </div>
           </div>
@@ -253,7 +254,7 @@ const Resume = (props) => (
                 <li>Created embeddable posts for use on third party sites</li>
               </ul>
               <p>
-                Technologies: <em>Backbone</em>, <em>JavaScript</em>,{" "}
+                Technologies / Tools: <em>Backbone</em>, <em>JavaScript</em>,{" "}
                 <em>Photoshop</em>, <em>PHP</em>, <em>CSS</em>
               </p>
             </div>
@@ -299,7 +300,7 @@ const Resume = (props) => (
                 </li>
               </ul>
               <p>
-                Technologies: <em>Canvas</em>, <em>WebGL</em>,{" "}
+                Technologies / Tools: <em>Canvas</em>, <em>WebGL</em>,{" "}
                 <em>JavaScript</em>
               </p>
             </div>
@@ -351,8 +352,9 @@ const Resume = (props) => (
                 <li>Worked on in-house products using C# and JavaScript</li>
               </ul>
               <p>
-                Technologies: <em>JavaScript</em>, <em>jQuery</em>, <em>C#</em>,{" "}
-                <em>Photoshop</em>, <em>Illustrator</em>, <em>SVG</em>
+                Technologies / Tools: <em>JavaScript</em>, <em>jQuery</em>,{" "}
+                <em>C#</em>, <em>Photoshop</em>, <em>Illustrator</em>,{" "}
+                <em>SVG</em>
               </p>
             </div>
           </div>
@@ -400,7 +402,7 @@ const Resume = (props) => (
                 </li>
               </ul>
               <p>
-                Technologies: <em>Photoshop</em>, <em>Adobe Flash</em>,{" "}
+                Technologies / Tools: <em>Photoshop</em>, <em>Adobe Flash</em>,{" "}
                 <em>Illustrator</em>, <em>OmniGraffle</em>, <em>InDesign</em>
               </p>
             </div>
@@ -449,7 +451,7 @@ const Resume = (props) => (
                 </li>
               </ul>
               <p>
-                Technologies: <em>Photoshop</em>, <em>Illustrator</em>,{" "}
+                Technologies / Tools: <em>Photoshop</em>, <em>Illustrator</em>,{" "}
                 <em>InDesign</em>, <em>Visio</em>
               </p>
             </div>
@@ -497,7 +499,7 @@ const Resume = (props) => (
                 </li>
               </ul>
               <p>
-                Technologies: <em>HTML</em>, <em>JavaScript</em>,{" "}
+                Technologies / Tools: <em>HTML</em>, <em>JavaScript</em>,{" "}
                 <em>Actionscript</em>, <em>Flash</em>, <em>Wordpress</em>
               </p>
             </div>
@@ -547,9 +549,9 @@ const Resume = (props) => (
                 </li>
               </ul>
               <p>
-                Technologies: <em>Photoshop</em>, <em>Flash/Actionscript</em>,{" "}
-                <em>ASP</em>, <em>SQL</em>, <em>Adobe Premiere</em>,{" "}
-                <em>FinalCut</em>
+                Technologies / Tools: <em>Photoshop</em>,{" "}
+                <em>Flash/Actionscript</em>, <em>ASP</em>, <em>SQL</em>,{" "}
+                <em>Adobe Premiere</em>, <em>FinalCut</em>
               </p>
             </div>
           </div>
@@ -593,7 +595,7 @@ const Resume = (props) => (
                 <li>Graphic, logo and print design</li>
               </ul>
               <p>
-                Technologies: <em>Photoshop</em>, <em>Wordpress</em>,{" "}
+                Technologies / Tools: <em>Photoshop</em>, <em>Wordpress</em>,{" "}
                 <em>Flash/Actionscript</em>, <em>PHP</em>,{" "}
                 <em>Ruby on Rails</em>, <em>Node.js</em>
               </p>
@@ -629,8 +631,8 @@ const Resume = (props) => (
                 <li>Contributed user-interface and graphic design</li>
               </ul>
               <p>
-                Technologies: <em>Photoshop</em>, <em>PHP</em>, <em>MySql</em>,{" "}
-                <em>HTML</em>
+                Technologies / Tools: <em>Photoshop</em>, <em>PHP</em>,{" "}
+                <em>MySql</em>, <em>HTML</em>
               </p>
             </div>
           </div>
@@ -690,6 +692,7 @@ const Resume = (props) => (
             <li className="skill">CSS3</li>
             <li className="skill">JavaScript</li>
             <li className="skill">TypeScript</li>
+            <li className="skill">Node.js</li>
             <li className="skill">React / React-Native</li>
             <li className="skill">GraphQL</li>
             <li className="skill">PHP</li>
@@ -699,11 +702,12 @@ const Resume = (props) => (
             <li className="skill">Git</li>
             <li className="skill">Sublime Text</li>
             <li className="skill">SASS/LESS</li>
+            <li className="skill">Figma</li>
             <li className="skill">Sketch</li>
             <li className="skill">Photoshop</li>
             <li className="skill">Illustrator</li>
             <li className="skill">After Effects</li>
-            <li className="skill">Framer</li>
+            <li className="skill">Framer X</li>
             <li className="skill">Mac OS X</li>
             <li className="skill">UNIX</li>
           </ul>
