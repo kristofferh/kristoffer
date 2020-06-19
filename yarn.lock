@@ -5428,10 +5428,10 @@ gatsby-cli@^2.12.26:
     ink "^2.7.1"
     ink-spinner "^3.0.1"
 
-gatsby-core-utils@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.2.1.tgz#9d5e89d0cf7b9e5d7d77a9dcb47071684f68ffd5"
-  integrity sha512-uyXgjvKdzfJ0yB8oTYmBjMUqM0AACx7aA8Ioubn6k/51C4tE5+LzrG/iG42di2UaTIbcBj6vcwrvRosNKWeeBQ==
+gatsby-core-utils@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/gatsby-core-utils/-/gatsby-core-utils-1.2.2.tgz#19ad6e3917e4748333d952a04ec30ade02fe81fd"
+  integrity sha512-EdVUq0K7C9t32V7wndldUmUGzZp8EwU8gNMc1dtI1whyDUaUuZa6zlkbkpJwbwhPhRHdao5zhvHJXydhgzTEog==
   dependencies:
     ci-info "2.0.0"
     configstore "^5.0.1"
@@ -5479,24 +5479,24 @@ gatsby-page-utils@^0.2.4:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
-gatsby-plugin-manifest@^2.4.2:
-  version "2.4.2"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.4.2.tgz#0a9605a778a8e30ce047b9b3701031b9bde61d6b"
-  integrity sha512-G6MB1/Me4waG/z3Aj1GEqXCfY/yftyMLKp8g83uGvuBDtgLGN5unVgYqdmKAyBFQTvczsUghZ7jBrApHeaTn4w==
+gatsby-plugin-manifest@^2.4.3:
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-2.4.3.tgz#7d6e25609a59ba2ae8abc9881fa8abbc44e44d79"
+  integrity sha512-uljlo8edIknqTL/AaNi1wU/ESFigxGIXqy6H9B7lGcT99zOaApSEGLnJ9IQnZjISOjmgEcxabKtIJt6lpx7qqg==
   dependencies:
     "@babel/runtime" "^7.9.6"
-    gatsby-core-utils "^1.2.1"
+    gatsby-core-utils "^1.2.2"
     semver "^5.7.1"
     sharp "^0.25.1"
 
-gatsby-plugin-offline@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.2.1.tgz#67d04c9915e9852544fbc935c4751b578cae88bf"
-  integrity sha512-b2JZJrp7Xq2XY2/vmP+MviDq0nr07fAsqhAz5ApI0G11yEsyqCwEKLDYKsHuZ4rgM7p69wncQNa/WpluCWUUsw==
+gatsby-plugin-offline@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.2.2.tgz#d63127431b6ef201d70473fdcadc7dc3dd230ac5"
+  integrity sha512-sMsqDjCwseQfiTDoHWjjX4F1QtNb+p171peuYi/wyer6pxvKigG1gIy//tSH0eybnEzMgXRlBOXGDIRmBNljWQ==
   dependencies:
     "@babel/runtime" "^7.9.6"
     cheerio "^1.0.0-rc.3"
-    gatsby-core-utils "^1.2.1"
+    gatsby-core-utils "^1.2.2"
     glob "^7.1.6"
     idb-keyval "^3.2.0"
     lodash "^4.17.15"
@@ -5637,10 +5637,10 @@ gatsby-recipes@^0.1.22:
     ws "^7.3.0"
     xstate "^4.9.1"
 
-gatsby-source-filesystem@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.3.1.tgz#a5c76bdfbb13fcbf771b9ecd9b77b6d955586b78"
-  integrity sha512-WZu4QltA8fLRmWJh6C9QXTfg9tKJsio9Pl1HgEY4nY6cuu9DqUH3CAO39+B/fJ9o12Y6AFK5CVmLjdIyEhK4uQ==
+gatsby-source-filesystem@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-2.3.3.tgz#16a7be93c577da11137654cd04d4bcf0c73c1867"
+  integrity sha512-RsA6xssBKEel2e0Rj1hQZRNtPQ1lOh2ZlpXZr3CpE3W52F8bSrGnIBnqkmp4aPmtDGYgcw3okid0UNhBmUeiuA==
   dependencies:
     "@babel/runtime" "^7.9.6"
     better-queue "^3.8.10"
@@ -5648,7 +5648,7 @@ gatsby-source-filesystem@^2.3.1:
     chokidar "3.4.0"
     file-type "^12.4.2"
     fs-extra "^8.1.0"
-    gatsby-core-utils "^1.2.1"
+    gatsby-core-utils "^1.2.2"
     got "^9.6.0"
     md5-file "^3.2.3"
     mime "^2.4.5"
@@ -5681,10 +5681,10 @@ gatsby-telemetry@^1.3.6:
     stack-utils "1.0.2"
     uuid "3.4.0"
 
-gatsby-transformer-javascript-frontmatter@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-javascript-frontmatter/-/gatsby-transformer-javascript-frontmatter-2.3.1.tgz#bec42f6365fdd5865a46f702ee1b5282ae0e7fea"
-  integrity sha512-f+ep1n/KDhSO7gjKFh9XBekDygyAtgyxjNCeJuWVfUN3+YvS9ONHmXazpH4m7aWSqe/hdPB/V5ss9MB5a6CWWQ==
+gatsby-transformer-javascript-frontmatter@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-javascript-frontmatter/-/gatsby-transformer-javascript-frontmatter-2.3.2.tgz#ad8656bf5ac029ac8f867f73b6830ca8cdfd8797"
+  integrity sha512-xCm2Fo1ziHkdXP33t+iTSfoemi/7OmHZj+bAvEAbBC0iesPI+COlDoB+KiA5SORkK7QtFuM5d8Toe8Ga06taFQ==
   dependencies:
     "@babel/parser" "^7.9.6"
     "@babel/runtime" "^7.9.6"
