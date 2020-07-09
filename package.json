@@ -11,7 +11,7 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "transfer": "rsync --filter='- /images' --filter='- /videos' -arv public/ $npm_config_deploy_path",
+    "transfer": "rsync --filter='- /images' --filter='- /videos' -av public/ $npm_config_deploy_path",
     "deploy": "yarn build && yarn transfer"
   },
   "author": "Kristoffer Hedstrom",
