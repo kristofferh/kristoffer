@@ -1,7 +1,6 @@
-import React, { useRef, useEffect } from "react";
-
-import Layout from "../../components/layouts";
+import React, { useEffect, useRef } from "react";
 import { Boxes } from "../../components/boxes";
+import Layout from "../../components/layouts";
 import { Particles } from "./particles";
 
 export const frontmatter = {
@@ -37,6 +36,7 @@ const Lab = (props: any) => {
             position: "relative",
           }}
         />
+        <div ref={canvasContainerRef} className="canvas-container" />
         <div style={{ position: "relative", minHeight: 600, height: 600 }}>
           <Boxes />
         </div>
