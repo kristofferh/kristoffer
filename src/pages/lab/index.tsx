@@ -25,7 +25,18 @@ const Lab = (props: any) => {
       <div className="content-container">
         <h1 className="page-title">Lab</h1>
         <p>Not much here yet.</p>
-        <div ref={canvasContainerRef} className="canvas-container" />
+        <div
+          ref={canvasContainerRef}
+          className="canvas-container"
+          style={{
+            width: "100vw",
+            marginLeft: "-50vw",
+            marginRight: "-50vw",
+            left: "50%",
+            right: "50%",
+            position: "relative",
+          }}
+        />
         <div style={{ position: "relative", minHeight: 600, height: 600 }}>
           <Boxes />
         </div>
