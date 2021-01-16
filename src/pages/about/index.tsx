@@ -1,10 +1,7 @@
 import React from "react";
-
 import ImageLoader from "../../components/image-loader";
 import Layout from "../../components/layouts";
-
 import shuffle from "../../utils/shuffle-array";
-
 import "./styles.scss";
 
 export const frontmatter = {
@@ -48,14 +45,15 @@ export const frontmatter = {
   ],
 };
 
-const About = (props) => {
+// TODO: Fix any props
+const About = (props: any) => {
   const { images } = frontmatter;
   return (
     <Layout {...props} frontmatter={frontmatter}>
       <div className="about-photos">
         {shuffle(images)
           .slice(0, 3)
-          .map((image, i) => (
+          .map((image: any, i: any) => (
             <ImageLoader
               key={i}
               className="about-photo"
@@ -94,10 +92,18 @@ const About = (props) => {
                 NY for eight.
               </p>
               <p className="load-in">
-                I am currently employed by Google. Before Google, I worked at a
-                small-ish startup. Before that, I was a Product (Engineering)
-                Manager at Tumblr. Before that, I worked at agencies. Before
-                that, I was a baby.
+                I am currently a UI/UX designer at a Swiss running brand called{" "}
+                <a
+                  href="https://on-running.com"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="highlight"
+                >
+                  On
+                </a>
+                . Before On I was a Senior UX Engineer at Google. I've also
+                worked I worked at startups, agencies, and product teams. I am a
+                former baby.
               </p>
               <p className="load-in">
                 I like to design things, and then I like to build those things.
@@ -117,7 +123,7 @@ const About = (props) => {
             </div>
           </div>
           <div className="module col-xs-12 col-sm-3">
-            <h2 className="sub-title load-in">{"Elsewhere"}</h2>
+            <h2 className="sub-title load-in">Elsewhere</h2>
             <ul className="no-bullet-list social-links">
               <li className="load-in">
                 <a
