@@ -8,7 +8,8 @@ export const frontmatter = {
   description: "Kristoffer Hedstrom's Resume.",
 };
 
-const Resume = (props) => (
+// TODO: Fix any props.
+const Resume = (props: any) => (
   <Layout {...props} frontmatter={frontmatter}>
     <div className="resume-wrapper content-container">
       <section className="summary-wrapper masthead row middle-xs top-sm">
@@ -35,13 +36,8 @@ const Resume = (props) => (
 
       <section className="section-wrapper summary-wrapper row">
         <div className="summary col-xs-12 col-sm-9">
-          I’m an Interactive Designer and Developer with{" "}
-          <mark className="highlight">18 years of experience</mark>. I have both
-          programming and design skills, which makes me a bit of a strange
-          monster.{" "}
-          <mark className="highlight">
-            I still want to learn and get better.
-          </mark>
+          I’m an aspiring polymath – I enjoy both design and development – and
+          have spent my “career” careening wildly between both.
         </div>
       </section>
 
@@ -50,6 +46,45 @@ const Resume = (props) => (
           <h2 className="section-headline">Experience</h2>
         </header>
         <div className="section-content col-xs-12 col-sm-9">
+          <div className="experience">
+            <div className="title-location row space-between-xs">
+              <h3 className="title col-xs-12 col-sm-8">UI/UX Designer</h3>
+              <div className="location col-xs-12 col-sm-4">
+                Zürich, Switzerland
+              </div>
+            </div>
+            <a
+              target="_blank"
+              href="https://on-running.com"
+              className="org highlight-link"
+              rel="noopener noreferrer"
+            >
+              On
+            </a>
+            <div className="dates">
+              <abbr className="dt dt-start" title="2021-01-01">
+                January 2021
+              </abbr>{" "}
+              -{" "}
+              <abbr className="dt dt-end" title="now">
+                Present
+              </abbr>
+            </div>
+            <div className="summary">
+              <ul>
+                <li>
+                  Interaction and user experience design for fast-growing Swiss
+                  running brand
+                </li>
+                <li>Establishing a design system</li>
+                <li>Lunch runs</li>
+              </ul>
+              <p>
+                Technologies / Tools: <em>Figma</em>, <em>Miro</em>,{" "}
+                <em>TypeScript</em>, <em>Vue</em>, <em>CSS</em>, <em>HTML</em>
+              </p>
+            </div>
+          </div>
           <div className="experience">
             <div className="title-location row space-between-xs">
               <h3 className="title col-xs-12 col-sm-8">Senior UX Engineer</h3>
@@ -70,8 +105,8 @@ const Resume = (props) => (
                 March 2019
               </abbr>{" "}
               -{" "}
-              <abbr className="dt dt-end" title="now">
-                Present
+              <abbr className="dt dt-end" title="2020-12-31">
+                December 2020
               </abbr>
             </div>
             <div className="summary">
@@ -80,11 +115,11 @@ const Resume = (props) => (
                   Creation tools for <em>Google Calendar</em>
                 </li>
                 <li>
-                  Design and build prototypes for new features in{" "}
+                  Designed and built prototypes for new features in{" "}
                   <em>Google Calendar</em> and <em>Google Tasks</em>
                 </li>
-                <li>Augmenting existing products with Chrome Extensions</li>
-                <li>Attempting to learn Swiss German</li>
+                <li>Augmented existing products with Chrome Extensions</li>
+                <li>Attempted to learn Swiss German</li>
               </ul>
               <p>
                 Technologies / Tools: <em>Sketch</em>, <em>Figma</em>,{" "}
