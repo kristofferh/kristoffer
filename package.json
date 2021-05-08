@@ -12,14 +12,16 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "transfer": "rsync --filter='- /images' --filter='- /videos' -av public/ $npm_config_deploy_path",
-    "deploy": "yarn build && yarn transfer"
+    "deploy": "yarn build && yarn transfer",
+    "snyk-protect": "snyk protect",
+    "prepare": "yarn run snyk-protect"
   },
   "author": "Kristoffer Hedstrom",
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "classnames": "^2.2.3",
-    "gatsby": "^3.4.2",
+    "gatsby": "^2.25.0",
     "gatsby-link": "^2.4.3",
     "gatsby-plugin-manifest": "^2.4.3",
     "gatsby-plugin-sass": "^3.0.0",
@@ -35,7 +37,8 @@
     "react-body-classname": "^1.3.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1",
-    "sass": "^1.32.4"
+    "sass": "^1.32.4",
+    "snyk": "^1.586.0"
   },
   "devDependencies": {
     "@types/classnames": "^2.2.10",
@@ -50,5 +53,6 @@
     "flexboxgrid": "^6.3.0",
     "prettier": "^2.0.0",
     "typescript": "^3.8.3"
-  }
+  },
+  "snyk": true
 }
