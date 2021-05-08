@@ -27,7 +27,7 @@ export const frontmatter = {
   },
 };
 
-const Agency = (props) => {
+const Agency = (props: any) => {
   const { title, styles, darkStyles, media } = frontmatter;
   const { theme } = useContext(ThemeContext);
   return (
