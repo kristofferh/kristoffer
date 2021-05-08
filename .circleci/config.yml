@@ -4,7 +4,7 @@
 #
 version: 2.1
 orbs: # declare what orbs we are going to use
-  node: circleci/node:current-browsers # the node orb provides common node-related configuration
+  node: cimg/node:current-browsers # the node orb provides common node-related configuration
 jobs:
   test:
     executor:
