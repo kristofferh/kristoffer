@@ -6,34 +6,34 @@ version: 2.1
 orbs: # declare what orbs we are going to use
   node: circleci/node:current-browsers # the node orb provides common node-related configuration
 jobs:
-  # build:
-  #   docker:
-  #     # specify the version you desire here
-  #     - image: circleci/node:10-browsers
+  build:
+    # docker:
+    #   # specify the version you desire here
+    #   - image: circleci/node:10-browsers
 
-  #     # Specify service dependencies here if necessary
-  #     # CircleCI maintains a library of pre-built images
-  #     # documented at https://circleci.com/docs/2.0/circleci-images/
-  #     # - image: circleci/mongo:3.4.4
+    #   # Specify service dependencies here if necessary
+    #   # CircleCI maintains a library of pre-built images
+    #   # documented at https://circleci.com/docs/2.0/circleci-images/
+    #   # - image: circleci/mongo:3.4.4
 
-  working_directory: ~/src
+    working_directory: ~/src
 
-  steps:
-    - checkout
+    steps:
+      - checkout
 
-    # Download and cache dependencies
-    - restore_cache:
-        keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
 
-    - run: yarn install
+      - run: yarn install
 
-    - save_cache:
-        paths:
-          - node_modules
-        key: v1-dependencies-{{ checksum "package.json" }}
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
 
-    # run tests!
-    - run: yarn test
+      # run tests!
+      - run: yarn test
