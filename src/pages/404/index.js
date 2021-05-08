@@ -1,8 +1,7 @@
 import React from "react";
-
 import Layout from "../../components/layouts";
 
-export const frontmatter = {
+const frontmatter = {
   title: "Oops. Not Found.",
   color: "orange",
   nav: "none",

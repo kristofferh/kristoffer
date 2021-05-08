@@ -102,11 +102,7 @@ const About = (props: any) => {
                   On
                 </a>
                 . Before On I was a Senior UX Engineer at Google. I've also
-                worked I worked at startups, agencies, and product teams. I am a
-                former baby.
-              </p>
-              <p className="load-in">
-                I like to design things, and then I like to build those things.
+                worked I worked at startups, agencies and on product teams.
               </p>
               <p className="load-in">
                 I occasionally take on freelance projects. Feel free to get in

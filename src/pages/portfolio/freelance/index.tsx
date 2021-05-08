@@ -27,7 +27,7 @@ export const frontmatter = {
   },
 };
 
-const Freelance = (props) => {
+const Freelance = (props: any) => {
   const { title, styles, darkStyles, media } = frontmatter;
   const { theme } = useContext(ThemeContext);
   return (
