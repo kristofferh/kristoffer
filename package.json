@@ -18,7 +18,7 @@
   "license": "MIT",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
-    "classnames": "^2.2.3",
+    "classnames": "^2.3.1",
     "gatsby": "^3.4.2",
     "gatsby-link": "^2.4.3",
     "gatsby-plugin-manifest": "^2.4.3",
