@@ -1,5 +1,3 @@
-const regexExclude404 = /^(?!\/(dev-404-page|404)).*$/;
-
 module.exports = {
   siteMetadata: {
     siteTitle: "Kristoffer Hedstrom",
