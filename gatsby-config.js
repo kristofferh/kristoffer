@@ -1,5 +1,3 @@
-const regexExclude404 = /^(?!\/(dev-404-page|404)).*$/;
-
 module.exports = {
   siteMetadata: {
     siteTitle: "Kristoffer Hedstrom",
@@ -28,36 +26,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        query: `
-        {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-
-          allSitePage(
-            filter: {
-              path: {
-                regex: "${regexExclude404}"
-              }
-            }
-          )  {
-            edges {
-              node {
-                path
-              }
-            }
-          }
-        }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((edge) => {
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-              changefreq: "daily",
-              priority: 0.7,
-            };
-          }),
+        output: "/",
       },
     },
   ],
