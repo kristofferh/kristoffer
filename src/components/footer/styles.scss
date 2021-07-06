@@ -1,8 +1,6 @@
 @import "../../styles/structure/variables/index";
 
 .page-footer.content-container {
-  margin-top: 30px;
-
   &:before {
     content: "";
     border-top: 1px solid rgba($black, 0.1);

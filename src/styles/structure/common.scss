@@ -43,14 +43,6 @@
     text-transform: uppercase;
     margin: 0 0 0.25em;
 
-    &:after {
-      content: "";
-      width: 40px;
-      border-bottom: 4px solid;
-      display: block;
-      margin-top: 0.25em;
-    }
-
     @media (min-width: $min-width-sm) {
       font-size: 48px;
     }
@@ -85,13 +77,49 @@
 
 .content-container {
   max-width: 960px;
-  margin: 30px auto;
+  margin: 2rem auto;
   padding: 0 1rem;
 
   @supports (padding: unquote("max(0px)")) {
     padding-left: unquote("max(1rem, env(safe-area-inset-left))");
     padding-right: unquote("max(1rem, env(safe-area-inset-right))");
   }
+}
+
+.responsive-content-container {
+  margin: 2rem 0;
+
+  @supports (padding: unquote("max(0px)")) {
+    padding-left: unquote("max(1rem, env(safe-area-inset-left))");
+    padding-right: unquote("max(1rem, env(safe-area-inset-right))");
+  }
+
+  @media (min-width: $min-width-sm) {
+    margin: 2rem 4rem;
+  }
+}
+
+.grid-content-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  margin: 2rem 1rem;
+  gap: 10%;
+
+  @supports (padding: unquote("max(0px)")) {
+    padding-left: unquote("max(1rem, env(safe-area-inset-left))");
+    padding-right: unquote("max(1rem, env(safe-area-inset-right))");
+  }
+
+  @media (min-width: $min-width-sm) {
+    margin: 2rem 4rem;
+  }
+}
+
+.vertical-page-title {
+  white-space: nowrap;
+  transform: rotate(180deg);
+  writing-mode: vertical-rl;
+  margin: 0;
 }
 
 .footer-wrapper {

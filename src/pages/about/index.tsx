@@ -73,8 +73,8 @@ const About = (props: any) => {
             <h2 className="sub-title load-in">Bio</h2>
             <div>
               <p className="load-in">
-                Hey. I’m Kris. I’m an interactive designer / developer. Like my
-                ancestors, I make interactive things on the internet.
+                Hello. I’m Kris. Like my ancestors, I make interactive things on
+                the internet.
               </p>
               <p className="load-in">
                 I grew up in Umeå, in northern Sweden, but now live in Zürich,
@@ -101,7 +101,7 @@ const About = (props: any) => {
                 >
                   On
                 </a>
-                . Before On I was a Senior UX Engineer at Google. I've also
+                . Before On I was a Senior UX Engineer at Google. I’ve also
                 worked I worked at startups, agencies and on product teams.
               </p>
               <p className="load-in">
