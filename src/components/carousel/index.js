@@ -370,7 +370,7 @@ export default class Carousel extends Component {
 
 Carousel.defaultProps = {
   baseClassName: "carousel",
-  cellSpacing: 15,
+  cellSpacing: 16,
   index: 0,
   showItems: 1,
   breakpoints: [],

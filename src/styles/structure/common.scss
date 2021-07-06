@@ -86,11 +86,11 @@
 .content-container {
   max-width: 960px;
   margin: 30px auto;
-  padding: 0 15px;
+  padding: 0 1rem;
 
   @supports (padding: unquote("max(0px)")) {
-    padding-left: unquote("max(15px, env(safe-area-inset-left))");
-    padding-right: unquote("max(15px, env(safe-area-inset-right))");
+    padding-left: unquote("max(1rem, env(safe-area-inset-left))");
+    padding-right: unquote("max(1rem, env(safe-area-inset-right))");
   }
 }
 
@@ -103,7 +103,7 @@
   color: $white;
 
   .footer-inner {
-    padding: 15px;
+    padding: 1rem;
     text-align: center;
   }
 }
