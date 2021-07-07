@@ -36,8 +36,9 @@ const Resume = (props: any) => (
 
       <section className="section-wrapper summary-wrapper row">
         <div className="summary col-xs-12 col-sm-9">
-          I’m an aspiring polymath – I enjoy both design and development – and
-          have spent my career careening between the two.
+          I’m an aspiring polymath. I enjoy both design and development, and
+          have spent my career alternating between the two. I design with code
+          whenever I can.
         </div>
       </section>
 
@@ -73,18 +74,23 @@ const Resume = (props: any) => (
             <div className="summary">
               <ul>
                 <li>
-                  Interaction and user experience design for fast-growing Swiss
+                  Interaction and experience design for fast-growing Swiss
                   running brand
                 </li>
                 <li>
-                  Prototyping interactions using Figma and highly interactive
-                  React prototypes
+                  Prototyping interactions using Figma, ProtoPie, and hand-coded
+                  bespoke web apps
                 </li>
+                <li>
+                  Encouraging a culture of validating designs through
+                  prototyping
+                </li>
+                <li>Developing Figma plugins for more effecient designs</li>
                 <li>Establishing a design system</li>
                 <li>Lunch runs</li>
               </ul>
               <p>
-                Technologies / Tools: <em>Figma</em>, <em>Miro</em>,{" "}
+                Technologies / Tools: <em>Figma</em>, <em>ProtoPie</em>,{" "}
                 <em>TypeScript</em>, <em>React</em>, <em>CSS</em>, <em>HTML</em>
               </p>
             </div>
