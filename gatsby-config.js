@@ -29,5 +29,12 @@ module.exports = {
         output: "/",
       },
     },
+    {
+      resolve: "gatsby-theme-kcreate-password",
+      options: {
+        password: "cool",
+        paths: ["/about", "/portfolio/tumblr"],
+      },
+    },
   ],
 };
