@@ -1,5 +1,5 @@
 import Cookies from "js-cookie";
-import { Prompt } from "../components/prompt";
+import { PasswordPrompt } from "../components/password-prompt";
 import React from "react";
 
 const COOKIE_NAME = "pw-protected";
@@ -9,13 +9,13 @@ export const setSessionPassword = (password, expires = undefined) => {
 };
 
 export const getCookiePassword = () => {
-  const cookie = Cookies.get(COOKIE_NAME);
-  return cookie ? base64Decode(cookie) : undefined;
+  return Cookies.get(COOKIE_NAME);
 };
 
 export const getQueryPassword = (search) => {
   const params = new URLSearchParams(search);
-  return params.get("secret");
+  const secret = params.get("secret");
+  return secret ? base64Encode(secret) : undefined;
 };
 
 export const isProtectedPage = (pathname, paths) => {
@@ -34,9 +34,10 @@ export const base64Decode = (string) => {
     : Buffer.from(string, "base64").toString("binary");
 };
 
-export const checkPassword = (location, password, paths) => {
-  const hasPageLevelProtection = paths && paths.length > 0;
-  if (!password || !hasPageLevelProtection) {
+export const checkPassword = (location, pws, paths) => {
+  const hasPageLevelProtection = paths && paths.length;
+  const hasPasswords = pws && pws.length;
+  if (!hasPasswords || !hasPageLevelProtection) {
     return;
   }
   const { pathname, search } = location;
@@ -45,11 +46,9 @@ export const checkPassword = (location, password, paths) => {
   }
 
   const passwordCandidate = getQueryPassword(search) || getCookiePassword();
-  if (passwordCandidate === password) {
-    setSessionPassword(base64Encode(password), 1);
-    console.log("nice");
+  if (pws.includes(passwordCandidate)) {
+    setSessionPassword(passwordCandidate, 1);
     return;
   }
-  console.log("hmm");
-  return <Prompt />;
+  return <PasswordPrompt />;
 };

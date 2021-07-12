@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { setSessionPassword } from "../utils";
+import { setSessionPassword } from "../../../../plugins/gatsby-theme-kcreate-password/src/utils";
 
 const styles = {
   wrapper: {
@@ -40,7 +40,7 @@ const styles = {
   },
 };
 
-export const Prompt = () => {
+export const PasswordPrompt = () => {
   const [password, setPassword] = useState("");
   const [isButtonHovered, buttonHover] = useState(false);
 
@@ -52,7 +52,7 @@ export const Prompt = () => {
 
   return (
     <div style={styles.wrapper}>
-      <h4 style={{ color: "#fff" }}>Enter Password</h4>
+      <h4 style={{ color: "#fff" }}>Shadowed</h4>
 
       <form onSubmit={onSubmit} style={{ width: "320px" }}>
         <input
@@ -79,4 +79,4 @@ export const Prompt = () => {
   );
 };
 
-export default Prompt;
+export default PasswordPrompt;
