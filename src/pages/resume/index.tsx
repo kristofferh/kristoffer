@@ -5,7 +5,8 @@ import "./styles.scss";
 export const frontmatter = {
   title: "Resume",
   color: "blue",
-  description: "Kristoffer Hedstrom's Resume.",
+  description:
+    "Kristoffer Hedstrom's Resume. Interactive designer and developer.",
 };
 
 // TODO: Fix any props.
@@ -38,7 +39,7 @@ const Resume = (props: any) => (
         <div className="summary col-xs-12 col-sm-9">
           I’m an aspiring polymath. I enjoy both design and development, and
           have spent my career alternating between the two. I design with code
-          whenever I can.
+          whenever I can, and I try to make everything I do fun to use.
         </div>
       </section>
 
