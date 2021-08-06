@@ -1821,6 +1821,11 @@
   resolved "https://registry.yarnpkg.com/@types/scheduler/-/scheduler-0.16.1.tgz#18845205e86ff0038517aab7a18a62a6b9f71275"
   integrity sha512-EaCxbanVeyxDRTQBkdLb3Bvl/HK7PBK6UJjsSixB0iHKoWxE5uu2Q/DgtpOhPIojN0Zl1whvOd7PoHs2P0s5eA==
 
+"@types/three@^0.130.1":
+  version "0.130.1"
+  resolved "https://registry.yarnpkg.com/@types/three/-/three-0.130.1.tgz#e5c9aadca684ca3da8daf64e8284bd1a9df2fcc8"
+  integrity sha512-FlCR3CxQHxCmjI0ZCG59O/E15bV+bx7XRO+nJ7RY8KBg2pEF/52frmV/uh9SrLd+ORx+7Zc7NxnJm5Kj4xS9Sg==
+
 "@types/tmp@^0.0.33":
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.33.tgz#1073c4bc824754ae3d10cfab88ab0237ba964e4d"
