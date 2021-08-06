@@ -2,9 +2,9 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
-const pws = JSON.parse(process.env.PW).map((pw) =>
-  Buffer.from(pw).toString("base64")
-);
+const pws = process.env.PW
+  ? JSON.parse(process.env.PW).map((pw) => Buffer.from(pw).toString("base64"))
+  : [];
 
 module.exports = {
   siteMetadata: {
@@ -41,7 +41,7 @@ module.exports = {
       resolve: "gatsby-theme-kcreate-password",
       options: {
         pws,
-        paths: ["/about", "/portfolio/tumblr"],
+        paths: [],
       },
     },
   ],

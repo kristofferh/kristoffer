@@ -9,7 +9,7 @@
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "yarn lint && yarn types",
     "dev": "gatsby develop",
-    "build": "gatsby build",
+    "build": "npx browserslist@latest --update-db && gatsby build",
     "serve": "gatsby serve",
     "transfer": "rsync --filter='- /images' --filter='- /videos' -av public/ $npm_config_deploy_path",
     "deploy": "yarn build && yarn transfer"
