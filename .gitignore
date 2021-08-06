@@ -1,4 +1,5 @@
 .env
+.env.*
 .npmrc
 .cache/
 node_modules

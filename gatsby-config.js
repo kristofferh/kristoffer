@@ -1,3 +1,11 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+const pws = process.env.PW
+  ? JSON.parse(process.env.PW).map((pw) => Buffer.from(pw).toString("base64"))
+  : [];
+
 module.exports = {
   siteMetadata: {
     siteTitle: "Kristoffer Hedstrom",
@@ -27,6 +35,13 @@ module.exports = {
       resolve: "gatsby-plugin-sitemap",
       options: {
         output: "/",
+      },
+    },
+    {
+      resolve: "gatsby-theme-kcreate-password",
+      options: {
+        pws,
+        paths: [],
       },
     },
   ],

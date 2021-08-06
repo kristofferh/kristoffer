@@ -1,0 +1,130 @@
+@import "../../../styles/structure/variables/index";
+
+.pw-container {
+  height: 100vh;
+  background: #eae6e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+  transform: translateZ(0);
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.pw-form {
+  max-width: 360px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+
+.pw-title {
+  font-size: 32px;
+  font-family: $font-family-title;
+  font-weight: normal;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.pw-input {
+  box-sizing: border-box;
+  appearance: none;
+  border: none;
+  padding: 4px 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 48px;
+  font-family: $font-family-default;
+
+  &:focus,
+  &:hover {
+    outline: none;
+    border-bottom-color: #111;
+  }
+}
+
+.pw-button {
+  appearance: none;
+  border: 2px solid #212121;
+  background: #fff;
+  font-family: $font-family-default;
+  font-size: 1rem;
+  white-space: nowrap;
+  padding: 0.75rem 1rem;
+  position: relative;
+  display: inline-flex;
+  cursor: pointer;
+  outline: none;
+  margin: 1rem auto;
+  min-width: 200px;
+  font-weight: bold;
+
+  &::before {
+    content: "";
+    background: #f0fcfb
+      repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 2px,
+        #0048427a 4px
+      );
+    position: absolute;
+    top: 4px;
+    bottom: -6px;
+    left: -6px;
+    right: 2px;
+    z-index: -1;
+    border: 2px solid #424242;
+    user-select: none;
+  }
+
+  &::after {
+    content: "";
+    background: #000;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0px;
+    transform: scaleY(0);
+    transform-origin: 0% 100%;
+    right: 0;
+    transition: transform 0.25s ease-out;
+    pointer-events: none;
+  }
+
+  .pw-button-text {
+    position: relative;
+    z-index: 1;
+    color: #212121;
+    margin: auto;
+  }
+
+  .pw-button:hover .pw-button-text,
+  .pw-button:focus .pw-button-text {
+    color: #fff;
+  }
+
+  @supports (mix-blend-mode: unquote("difference")) {
+    .pw-button-text {
+      color: #fff;
+      mix-blend-mode: difference;
+    }
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1);
+  }
+
+  &:active {
+    transform: translate3d(-2px, 2px, 0);
+  }
+
+  &:active::before {
+    opacity: 0;
+  }
+}

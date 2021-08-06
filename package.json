@@ -9,7 +9,7 @@
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "yarn lint && yarn types",
     "dev": "gatsby develop",
-    "build": "gatsby build",
+    "build": "npx browserslist@latest --update-db && gatsby build",
     "serve": "gatsby serve",
     "transfer": "rsync --filter='- /images' --filter='- /videos' -av public/ $npm_config_deploy_path",
     "deploy": "yarn build && yarn transfer"
@@ -29,6 +29,7 @@
     "gatsby-transformer-javascript-frontmatter": "^3.5.0",
     "gatsby-transformer-javascript-static-exports": "^3.5.0",
     "intersection-observer": "^0.12.0",
+    "js-cookie": "^2.2.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
