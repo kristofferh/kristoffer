@@ -1,11 +1,6 @@
-import PropTypes from "prop-types";
 import React from "react";
 import { ThemeProvider } from "./src/context/theme/";
 
-export const wrapRootElement = ({ element }) => (
-  <ThemeProvider>{element}</ThemeProvider>
-);
-
-wrapRootElement.propTypes = {
-  element: PropTypes.any,
+export const wrapRootElement = ({ element }) => {
+  return <ThemeProvider>{element}</ThemeProvider>;
 };

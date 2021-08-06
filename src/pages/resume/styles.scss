@@ -1,11 +1,6 @@
 @import "../../styles/structure/variables/index";
 
 .resume-wrapper {
-  @supports (padding: unquote("max(0px)")) {
-    padding-left: unquote("max(15px, env(safe-area-inset-left))");
-    padding-right: unquote("max(15px, env(safe-area-inset-right))");
-  }
-
   abbr {
     text-decoration: none;
   }

@@ -23,7 +23,7 @@
     &:hover,
     &:focus {
       .portfolio-item-text {
-        top: calc(50% - 15px);
+        top: calc(50% - 1rem);
         transform: translate3d(-50%, -50%, 0);
         background: $white;
         color: $blackish;
@@ -72,7 +72,7 @@
     text-transform: uppercase;
     left: 50%;
     transform: translate3d(-50%, 0, 0);
-    padding: 3px 15px 0;
+    padding: 3px 1rem 0;
     top: calc(100% - 20px);
     transition: all 0.2s ease;
     pointer-events: none;
@@ -136,7 +136,7 @@
 
 .portfolio-process-container {
   background: #fafafa;
-  padding: 0 15px;
+  padding: 0 1rem;
 
   .dark-mode & {
     background: #1c1c1d;

@@ -1,3 +1,4 @@
+@use "sass:math";
 @import "../../styles/structure/variables/index";
 
 .main-nav {
@@ -189,7 +190,7 @@
         top: 0;
         right: 0;
         bottom: 0;
-        left: 17px; //($close-btn-size / 2);
+        left: 17px;
         transform: rotate(45deg) translateX(0) translateY(0);
         width: 5px;
         height: $close-btn-size;
@@ -206,14 +207,14 @@
         &:after {
           transform: rotate(45deg) translateX(3px) translateY(10px);
           width: 5px;
-          height: ($close-btn-size / 2);
+          height: math.div($close-btn-size, 2);
           transition: all 150ms ease-in;
         }
 
         &:before {
           transform: rotate(-45deg) translateX(-2px) translateY(11px);
           width: 5px;
-          height: ($close-btn-size / 2);
+          height: math.div($close-btn-size, 2);
           transition: all 150ms ease-in;
         }
       }

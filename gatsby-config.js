@@ -1,4 +1,10 @@
-const regexExclude404 = /^(?!\/(dev-404-page|404)).*$/;
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
+const pws = process.env.PW
+  ? JSON.parse(process.env.PW).map((pw) => Buffer.from(pw).toString("base64"))
+  : [];
 
 module.exports = {
   siteMetadata: {
@@ -28,36 +34,14 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        query: `
-        {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
-
-          allSitePage(
-            filter: {
-              path: {
-                regex: "${regexExclude404}"
-              }
-            }
-          )  {
-            edges {
-              node {
-                path
-              }
-            }
-          }
-        }`,
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((edge) => {
-            return {
-              url: site.siteMetadata.siteUrl + edge.node.path,
-              changefreq: "daily",
-              priority: 0.7,
-            };
-          }),
+        output: "/",
+      },
+    },
+    {
+      resolve: "gatsby-theme-kcreate-password",
+      options: {
+        pws,
+        paths: [],
       },
     },
   ],

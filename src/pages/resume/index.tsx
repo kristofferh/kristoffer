@@ -5,7 +5,8 @@ import "./styles.scss";
 export const frontmatter = {
   title: "Resume",
   color: "blue",
-  description: "Kristoffer Hedstrom's Resume.",
+  description:
+    "Kristoffer Hedstrom's Resume. Interactive designer and developer.",
 };
 
 // TODO: Fix any props.
@@ -36,8 +37,9 @@ const Resume = (props: any) => (
 
       <section className="section-wrapper summary-wrapper row">
         <div className="summary col-xs-12 col-sm-9">
-          I’m an aspiring polymath – I enjoy both design and development – and
-          have spent my “career” careening wildly between both.
+          I’m an aspiring polymath. I enjoy both design and development, and
+          have spent my career alternating between the two. I design with code
+          whenever I can, and I try to make everything I do fun to use.
         </div>
       </section>
 
@@ -73,15 +75,24 @@ const Resume = (props: any) => (
             <div className="summary">
               <ul>
                 <li>
-                  Interaction and user experience design for fast-growing Swiss
+                  Interaction and experience design for fast-growing Swiss
                   running brand
                 </li>
+                <li>
+                  Prototyping interactions using Figma, ProtoPie, and hand-coded
+                  bespoke web apps
+                </li>
+                <li>
+                  Encouraging a culture of validating designs through
+                  prototyping
+                </li>
+                <li>Developing Figma plugins for more effecient designs</li>
                 <li>Establishing a design system</li>
                 <li>Lunch runs</li>
               </ul>
               <p>
-                Technologies / Tools: <em>Figma</em>, <em>Miro</em>,{" "}
-                <em>TypeScript</em>, <em>Vue</em>, <em>CSS</em>, <em>HTML</em>
+                Technologies / Tools: <em>Figma</em>, <em>ProtoPie</em>,{" "}
+                <em>TypeScript</em>, <em>React</em>, <em>CSS</em>, <em>HTML</em>
               </p>
             </div>
           </div>
