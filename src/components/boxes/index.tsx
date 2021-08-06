@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { Canvas, useFrame } from "react-three-fiber";
+import { Canvas, useFrame } from "@react-three/fiber";
 
 export const Box = () => {
   // This reference will give us direct access to the mesh
