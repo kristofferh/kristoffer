@@ -1,9 +1,11 @@
 import * as THREE from "three";
+import { Particles as ParticleView } from "./Particles";
 
 export class Particles {
   public scene: THREE.Scene;
   public camera: THREE.PerspectiveCamera;
   public renderer: THREE.WebGLRenderer;
+  protected particles: ParticleView;
 
   constructor() {
     this.scene = new THREE.Scene();
@@ -24,6 +26,9 @@ export class Particles {
     const clock = new THREE.Clock(true);
     this.resize();
     console.log("clock", clock);
+
+    this.particles = new ParticleView();
+    requestAnimationFrame(this.animate);
   }
 
   resize() {
@@ -31,4 +36,9 @@ export class Particles {
 
     this.renderer.setSize(window.innerWidth, window.innerHeight);
   }
+
+  animate = () => {
+    this.renderer.render(this.scene, this.camera);
+    requestAnimationFrame(this.animate);
+  };
 }

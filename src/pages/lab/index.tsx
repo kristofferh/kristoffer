@@ -12,7 +12,6 @@ export const frontmatter = {
 const Lab = (props: any) => {
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    console.log("hi");
     const particles = new Particles();
     const {
       renderer: { domElement },
@@ -36,7 +35,6 @@ const Lab = (props: any) => {
             position: "relative",
           }}
         />
-        <div ref={canvasContainerRef} className="canvas-container" />
         <div style={{ position: "relative", minHeight: 600, height: 600 }}>
           <Boxes />
         </div>
