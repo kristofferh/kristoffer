@@ -78,7 +78,7 @@ export default class Tumblr extends Component {
                   finally morphing into a Product Manager role.
                 </p>
                 <p className="load-in">
-                  I worked on a variety of different projects: creation tools{" "}
+                  I worked on a variety of different projects: creation tools, {" "}
                   <em>{"Optica"}</em> (now Official) – the default theme,
                   embeddable posts, reblog redesign, and many others.
                 </p>
@@ -112,6 +112,9 @@ export default class Tumblr extends Component {
                   <em>Optica</em>, now renamed <em>Official</em>, is the default
                   theme that everyone is assigned when they create a Tumblr
                   blog. It’s also the default mobile theme.
+                </p>
+                <p className="load-in">I worked closely with Tumblr's creative director to
+                  design and develop it - making it easy to configure but difficult to screw up.
                 </p>
                 <p className="load-in">It has an obscene amount of installs.</p>
               </section>
@@ -337,7 +340,7 @@ export default class Tumblr extends Component {
             </div>
           </section>
         </div>
-      </Layout>
+      </Layout >
     );
   }
 }
