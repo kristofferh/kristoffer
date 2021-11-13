@@ -75,20 +75,27 @@ const Resume = (props: any) => (
             <div className="summary">
               <ul>
                 <li>
-                  Interaction and experience design for fast-growing Swiss running brand
+                  Interaction and experience design for fast-growing Swiss
+                  running brand
                 </li>
                 <li>
-                  Prototyping interactions using Figma, ProtoPie, and hand-coded bespoke web apps
+                  Prototyping interactions using Figma, Framer, ProtoPie, and
+                  hand-coded bespoke web apps
                 </li>
                 <li>
-                  Encouraging a culture of validating designs through prototyping
+                  Encouraging a culture of validating designs through
+                  prototyping and user testing
                 </li>
                 <li>Developing Figma plugins for more effecient designs</li>
+                <li>
+                  Motion studies and comps using Principle and After Effects
+                </li>
                 <li>Establishing a design system</li>
                 <li>Lunch runs</li>
               </ul>
               <p>
-                Technologies / Tools: <em>Figma</em>, <em>ProtoPie</em>,{" "}
+                Technologies / Tools: <em>Figma</em>, <em>Framer</em>,{" "}
+                <em>Principle</em>, <em>After Effects</em>, <em>ProtoPie</em>,{" "}
                 <em>TypeScript</em>, <em>React</em>, <em>CSS</em>, <em>HTML</em>
               </p>
             </div>
@@ -294,7 +301,10 @@ const Resume = (props: any) => (
                 <li>Created themes used by millions of people</li>
                 <li>Focused on post creation tools</li>
                 <li>Made the mobile web version 86% less terrible</li>
-                <li>Designed and developed embeddable posts for use on third party sites</li>
+                <li>
+                  Designed and developed embeddable posts for use on third party
+                  sites
+                </li>
               </ul>
               <p>
                 Technologies / Tools: <em>Backbone</em>, <em>JavaScript</em>,{" "}
@@ -530,7 +540,10 @@ const Resume = (props: any) => (
                   Implemented complex UI designs using JavaScript, CSS, HMTL,
                   and Actionscript/Flash
                 </li>
-                <li>Created the welcome screen for Internet Exporer 7. Remember that browser?</li>
+                <li>
+                  Created the welcome screen for Internet Exporer 7. Remember
+                  that browser?
+                </li>
                 <li>
                   Created Wordpress plugins and sites for a variety of clients
                 </li>
