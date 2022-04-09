@@ -1,4 +1,4 @@
-import React, { Component, ContextType } from "react";
+import React, { Component } from "react";
 import DeviceFrame from "../../../components/device-frame";
 import ImageLoader from "../../../components/image-loader";
 import Layout from "../../../components/layouts";
