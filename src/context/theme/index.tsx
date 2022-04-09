@@ -1,19 +1,23 @@
-import PropTypes from "prop-types";
-import React from "react";
+import React, { createContext, Component } from "react";
+
+export interface IThemeContext {
+  theme: string;
+  toggleTheme: () => void;
+}
+
+interface Props {
+  children: React.ReactNode;
+}
 
 const defaultState = {
   theme: "light",
   toggleTheme: () => {},
 };
 
-export const ThemeContext = React.createContext(defaultState);
+export const ThemeContext = createContext<IThemeContext>(defaultState);
 
-export class ThemeProvider extends React.Component {
+export class ThemeProvider extends Component<Props> {
   state = defaultState;
-
-  static propTypes = {
-    children: PropTypes.any,
-  };
 
   darkMediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
 
