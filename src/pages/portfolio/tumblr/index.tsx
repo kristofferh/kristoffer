@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, ContextType } from "react";
 import DeviceFrame from "../../../components/device-frame";
 import ImageLoader from "../../../components/image-loader";
 import Layout from "../../../components/layouts";
@@ -46,7 +46,7 @@ export default class Tumblr extends Component {
 
   render() {
     const { title, styles, darkStyles, media } = frontmatter;
-    const { theme } = this.context;
+    const { theme } = this.context as any;
     return (
       <Layout {...this.props} frontmatter={frontmatter}>
         <div className="portfolio">
@@ -78,7 +78,7 @@ export default class Tumblr extends Component {
                   finally morphing into a Product Manager role.
                 </p>
                 <p className="load-in">
-                  I worked on a variety of different projects: creation tools, {" "}
+                  I worked on a variety of different projects: creation tools,{" "}
                   <em>{"Optica"}</em> (now Official) – the default theme,
                   embeddable posts, reblog redesign, and many others.
                 </p>
@@ -113,8 +113,10 @@ export default class Tumblr extends Component {
                   theme that everyone is assigned when they create a Tumblr
                   blog. It’s also the default mobile theme.
                 </p>
-                <p className="load-in">I worked closely with Tumblr's creative director to
-                  design and develop it - making it easy to configure but difficult to screw up.
+                <p className="load-in">
+                  I worked closely with Tumblr's creative director to design and
+                  develop it - making it easy to configure but difficult to
+                  screw up.
                 </p>
                 <p className="load-in">It has an obscene amount of installs.</p>
               </section>
@@ -340,7 +342,7 @@ export default class Tumblr extends Component {
             </div>
           </section>
         </div>
-      </Layout >
+      </Layout>
     );
   }
 }
