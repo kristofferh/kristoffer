@@ -79,19 +79,23 @@ const Resume = (props: any) => (
                   running brand
                 </li>
                 <li>
-                  Prototyping interactions using Figma, ProtoPie, and hand-coded
-                  bespoke web apps
+                  Prototyping interactions using Figma, Framer, ProtoPie, and
+                  hand-coded bespoke web apps
                 </li>
                 <li>
                   Encouraging a culture of validating designs through
-                  prototyping
+                  prototyping and user testing
                 </li>
                 <li>Developing Figma plugins for more effecient designs</li>
+                <li>
+                  Motion studies and comps using Principle and After Effects
+                </li>
                 <li>Establishing a design system</li>
                 <li>Lunch runs</li>
               </ul>
               <p>
-                Technologies / Tools: <em>Figma</em>, <em>ProtoPie</em>,{" "}
+                Technologies / Tools: <em>Figma</em>, <em>Framer</em>,{" "}
+                <em>Principle</em>, <em>After Effects</em>, <em>ProtoPie</em>,{" "}
                 <em>TypeScript</em>, <em>React</em>, <em>CSS</em>, <em>HTML</em>
               </p>
             </div>
@@ -123,7 +127,7 @@ const Resume = (props: any) => (
             <div className="summary">
               <ul>
                 <li>
-                  Creation tools for <em>Google Calendar</em>
+                  Creation tool experiments in <em>Google Calendar</em>
                 </li>
                 <li>
                   Designed and built prototypes for new features in{" "}
@@ -297,7 +301,10 @@ const Resume = (props: any) => (
                 <li>Created themes used by millions of people</li>
                 <li>Focused on post creation tools</li>
                 <li>Made the mobile web version 86% less terrible</li>
-                <li>Created embeddable posts for use on third party sites</li>
+                <li>
+                  Designed and developed embeddable posts for use on third party
+                  sites
+                </li>
               </ul>
               <p>
                 Technologies / Tools: <em>Backbone</em>, <em>JavaScript</em>,{" "}
@@ -335,8 +342,7 @@ const Resume = (props: any) => (
                 </li>
                 <li>Mentored junior developers</li>
                 <li>
-                  Contributed to <em>USA Today</em>
-                  ’s major redesign
+                  Contributed to <em>USA Today</em>’s major redesign
                 </li>
                 <li>
                   Worked on several award winning sites for <em>Google</em>
@@ -535,9 +541,12 @@ const Resume = (props: any) => (
                   and Actionscript/Flash
                 </li>
                 <li>
+                  Created the welcome screen for Internet Exporer 7. Remember
+                  that browser?
+                </li>
+                <li>
                   Created Wordpress plugins and sites for a variety of clients
                 </li>
-                <li>Developed web applications</li>
                 <li>
                   Worked on client projects including <em>Nintendo</em>,{" "}
                   <em>Raleigh Bicycles</em>, <em>Microsoft</em>,<em>Ubisoft</em>
@@ -717,7 +726,7 @@ const Resume = (props: any) => (
                 <li>Minor in Mathematics</li>
                 <li>Graduated Cum Laude. 3.77 G.P.A.</li>
                 <li>Dean’s List</li>
-                <li>Aret&eacute; Society Award</li>
+                <li>Areté Society Award</li>
                 <li>
                   Main focus: graphics programming and modeling, web design
                 </li>

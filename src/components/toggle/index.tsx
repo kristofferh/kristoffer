@@ -6,7 +6,7 @@ type Props = {
   className?: string;
   options: {
     value: string;
-    label: string;
+    label: React.ReactNode;
   }[];
   input: {
     name: string;
