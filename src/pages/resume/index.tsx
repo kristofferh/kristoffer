@@ -37,9 +37,11 @@ const Resume = (props: any) => (
 
       <section className="section-wrapper summary-wrapper row">
         <div className="summary col-xs-12 col-sm-9">
-          I’m an aspiring polymath. I enjoy both design and development, and
-          have spent my career alternating between the two. I design with code
-          whenever I can, and I try to make everything I do fun to use.
+          Like my ancestors, I make interactive things on the Internet. I’m an
+          aspiring polymath – I enjoy both design and development, and have
+          spent my career alternating between the two. Things I like: designing
+          with code, simplicity, making software fun to use. Things I don’t
+          like: sundried tomatoes.
         </div>
       </section>
 
@@ -47,7 +49,60 @@ const Resume = (props: any) => (
         <header className="section-header col-xs-12 col-sm-3">
           <h2 className="section-headline">Experience</h2>
         </header>
+
         <div className="section-content col-xs-12 col-sm-9">
+          <div className="experience">
+            <div className="title-location row space-between-xs">
+              <h3 className="title col-xs-12 col-sm-8">Creative Design Lead</h3>
+              <div className="location col-xs-12 col-sm-4">
+                Zürich, Switzerland
+              </div>
+            </div>
+            <a
+              target="_blank"
+              href="https://on-running.com"
+              className="org highlight-link"
+              rel="noopener noreferrer"
+            >
+              On
+            </a>
+            <div className="dates">
+              <abbr className="dt dt-start" title="2021-12-01">
+                December 2021
+              </abbr>{" "}
+              -{" "}
+              <abbr className="dt dt-end" title="now">
+                Present
+              </abbr>
+            </div>
+            <div className="summary">
+              <ul>
+                <li>
+                  Creative lead for <em>On</em>'s Digital Design team
+                </li>
+                <li>
+                  Managing 6 full-time UI/UX and Production Designers and a
+                  stable of freelance designers
+                </li>
+                <li>Recruitment of full-time designers and freelancers</li>
+                <li>
+                  Responsible for the art direction of <em>On</em>'s digitial
+                  flagship: on-running.com
+                </li>
+                <li>
+                  Working with 3rd party vendors and agencies to design
+                  sub-brands and other digitial properties
+                </li>
+                <li>Burning out</li>
+              </ul>
+              <p>
+                Technologies / Tools: <em>Figma</em>, <em>Framer</em>,{" "}
+                <em>Principle</em>, <em>After Effects</em>, <em>ProtoPie</em>,{" "}
+                <em>TypeScript</em>, <em>React</em>, <em>CSS</em>, <em>HTML</em>
+              </p>
+            </div>
+          </div>
+
           <div className="experience">
             <div className="title-location row space-between-xs">
               <h3 className="title col-xs-12 col-sm-8">UI/UX Designer</h3>
@@ -68,8 +123,8 @@ const Resume = (props: any) => (
                 January 2021
               </abbr>{" "}
               -{" "}
-              <abbr className="dt dt-end" title="now">
-                Present
+              <abbr className="dt dt-end" title="2021-12-01">
+                December 2021
               </abbr>
             </div>
             <div className="summary">
@@ -79,18 +134,19 @@ const Resume = (props: any) => (
                   running brand
                 </li>
                 <li>
-                  Prototyping interactions using Figma, Framer, ProtoPie, and
+                  Prototyped interactions using Figma, Framer, ProtoPie, and
                   hand-coded bespoke web apps
                 </li>
                 <li>
-                  Encouraging a culture of validating designs through
-                  prototyping and user testing
+                  Encouraged a culture of validating designs through prototyping
+                  and user testing
                 </li>
-                <li>Developing Figma plugins for more effecient designs</li>
+                <li>Developed Figma plugins for more effecient designs</li>
                 <li>
-                  Motion studies and comps using Principle and After Effects
+                  Created motion studies and comps using Principle and After
+                  Effects
                 </li>
-                <li>Establishing a design system</li>
+                <li>Established a design system</li>
                 <li>Lunch runs</li>
               </ul>
               <p>
@@ -133,13 +189,17 @@ const Resume = (props: any) => (
                   Designed and built prototypes for new features in{" "}
                   <em>Google Calendar</em> and <em>Google Tasks</em>
                 </li>
-                <li>Augmented existing products with Chrome Extensions</li>
+                <li>
+                  Augmented existing Google products (<em>Google Docs</em>,{" "}
+                  <em>Google Slides</em> and <em>Google Sheets</em>) with Chrome
+                  Extensions for rapid prototyping
+                </li>
                 <li>Attempted to learn Swiss German</li>
               </ul>
               <p>
                 Technologies / Tools: <em>Sketch</em>, <em>Figma</em>,{" "}
-                <em>React</em>, <em>TypeScript</em>, <em>RxJS</em>, <em>CSS</em>
-                , <em>HTML</em>, <em>Flutter</em>
+                <em>Adobe XD</em>, <em>React</em>, <em>TypeScript</em>,{" "}
+                <em>RxJS</em>, <em>CSS</em>, <em>HTML</em>, <em>Flutter</em>
               </p>
             </div>
           </div>
