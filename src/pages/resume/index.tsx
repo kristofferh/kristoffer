@@ -89,7 +89,7 @@ const Resume = (props: any) => (
                   Responsible for the art direction of <em>On</em>'s digital
                   flagship: on-running.com
                 </li>
-                <li>Ensuring accessbility standards (AA) are being met</li>
+                <li>Ensuring accessibility standards (AA) are being met</li>
                 <li>
                   Working with 3rd party vendors and agencies to design
                   sub-brands and other digitial properties
