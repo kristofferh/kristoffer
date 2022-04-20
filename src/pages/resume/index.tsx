@@ -53,7 +53,7 @@ const Resume = (props: any) => (
         <div className="section-content col-xs-12 col-sm-9">
           <div className="experience">
             <div className="title-location row space-between-xs">
-              <h3 className="title col-xs-12 col-sm-8">Creative Design Lead</h3>
+              <h3 className="title col-xs-12 col-sm-8">UI/UX Design Lead</h3>
               <div className="location col-xs-12 col-sm-4">
                 Zürich, Switzerland
               </div>
@@ -86,9 +86,10 @@ const Resume = (props: any) => (
                 </li>
                 <li>Recruitment of full-time designers and freelancers</li>
                 <li>
-                  Responsible for the art direction of <em>On</em>'s digitial
+                  Responsible for the art direction of <em>On</em>'s digital
                   flagship: on-running.com
                 </li>
+                <li>Ensuring accessbility standards (AA) are being met</li>
                 <li>
                   Working with 3rd party vendors and agencies to design
                   sub-brands and other digitial properties

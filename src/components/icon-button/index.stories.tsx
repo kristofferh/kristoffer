@@ -12,7 +12,6 @@ export default {
 const Template: ComponentStory<typeof IconButton> = (args) => {
   const [{ active }, updateArgs] = useArgs();
   const handleClick = () => updateArgs({ active: !active });
-  console.log(active);
   return (
     <IconButton {...args} onClick={handleClick}>
       <Burger {...args} />
