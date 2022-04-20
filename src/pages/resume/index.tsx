@@ -86,7 +86,7 @@ const Resume = (props: any) => (
                 </li>
                 <li>Recruitment of full-time designers and freelancers</li>
                 <li>
-                  Responsible for the art direction of <em>On</em>'s digitial
+                  Responsible for the art direction of <em>On</em>'s digital
                   flagship: on-running.com
                 </li>
                 <li>Ensuring accessbility standards (AA) are being met</li>
