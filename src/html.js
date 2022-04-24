@@ -34,6 +34,16 @@ const HTML = ({ color, favicon, body, headComponents, postBodyComponents }) => {
         {head.title.toComponent()}
         <link rel="shortcut icon" href={favicon} />
         <script dangerouslySetInnerHTML={{ __html: analytics }} />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inconsolata:wdth,wght@50..200,500&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className={color}>
         <div
