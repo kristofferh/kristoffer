@@ -9,6 +9,7 @@ interface Props {
   children?: React.ReactNode;
   className?: string;
   onClose?: () => void;
+  onAnimationEnd?: () => void;
   maxWidth?: number | string;
   maxHeight?: number | string;
   style?: React.CSSProperties;
@@ -23,6 +24,7 @@ export const Panel: React.FC<Props> = ({
   show,
   className,
   onClose,
+  onAnimationEnd,
   maxHeight,
   maxWidth,
   style,
@@ -51,10 +53,9 @@ export const Panel: React.FC<Props> = ({
     // sure we only set render to be `false` when the panel itself has animated out.
     if (!show && event.target === panelRef.current!) {
       setRender(false);
-      if (onClose) {
-        onClose();
-      }
+      onClose?.();
     }
+    onAnimationEnd?.();
   };
   return render ? (
     <Container

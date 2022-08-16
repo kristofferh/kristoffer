@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/react";
+import { motion } from "framer-motion";
 
 export const enter = keyframes`
   from { 

@@ -5,4 +5,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/preset-scss",
   ],
+  core: {
+    builder: "webpack5",
+  },
 };
