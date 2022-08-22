@@ -11,13 +11,14 @@ import { IconButton } from "../icon-button";
 import { Burger } from "../burger";
 import { Panel } from "../panel";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from "gatsby";
 
 const mainNavVariants = {
   enter: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.05,
-      delayChildren: 0.15,
+      when: "beforeChildren",
+      staggerChildren: 0.15,
       duration: 0.15,
     },
   },
@@ -27,6 +28,50 @@ const mainNavVariants = {
       staggerChildren: 0.01,
       staggerDirection: -1,
     },
+  },
+};
+
+const navItemAbout = {
+  enter: {
+    opacity: 1,
+    x: "2rem",
+  },
+  exit: {
+    opacity: 0,
+    x: 0,
+  },
+};
+
+const navItemWork = {
+  enter: {
+    opacity: 1,
+    x: "6rem",
+  },
+  exit: {
+    opacity: 0,
+    x: "8rem",
+  },
+};
+
+const navItemResume = {
+  enter: {
+    opacity: 1,
+    x: "4rem",
+  },
+  exit: {
+    opacity: 0,
+    x: "3rem",
+  },
+};
+
+const utilNavItem = {
+  enter: {
+    opacity: 1,
+    y: -10,
+  },
+  exit: {
+    opacity: 0,
+    y: 0,
   },
 };
 
@@ -62,67 +107,42 @@ export const Nav: React.FC = () => {
                 width: 80,
                 height: 80,
                 flexShrink: 0,
+                borderRadius: "50%",
               }}
-            >
-              Logo
-            </div>
+            ></div>
             {showNav ? (
               <>
-                <MainNavContainer>
+                <MainNavContainer
+                  variants={mainNavVariants}
+                  animate="enter"
+                  initial="exit"
+                  exit="exit"
+                >
                   <MainNav>
-                    <motion.li
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                    >
-                      About
+                    <motion.li variants={navItemAbout}>
+                      <Link
+                        to="/articles/"
+                        activeStyle={{ color: "red" }}
+                        partiallyActive={true}
+                      >
+                        About
+                      </Link>
                     </motion.li>
-                    <motion.li
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                    >
-                      Work
-                    </motion.li>
-                    <motion.li
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                    >
-                      Resume
-                    </motion.li>
+                    <motion.li variants={navItemWork}>Work</motion.li>
+                    <motion.li variants={navItemResume}>Resume</motion.li>
                   </MainNav>
                 </MainNavContainer>
-                <UtilityNavContainer>
+                <UtilityNavContainer
+                  variants={mainNavVariants}
+                  animate="enter"
+                  initial="exit"
+                  exit="exit"
+                >
                   <UtilityNav>
-                    <motion.li
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                    >
-                      Codepen
-                    </motion.li>
-                    <motion.li
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                    >
-                      Github
-                    </motion.li>
-                    <motion.li
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                    >
-                      Tumblr
-                    </motion.li>
-                    <motion.li
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                    >
-                      Twitter
-                    </motion.li>
+                    <motion.li variants={utilNavItem}>Codepen</motion.li>
+                    <motion.li variants={utilNavItem}>Github</motion.li>
+                    <motion.li variants={utilNavItem}>Tumblr</motion.li>
+                    <motion.li variants={utilNavItem}>Twitter</motion.li>
                   </UtilityNav>
                 </UtilityNavContainer>
               </>

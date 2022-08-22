@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/react";
 import { motion } from "framer-motion";
+import { PAGE_MARGIN_HORIZONTAL } from "../../../styles";
 
 export const enter = keyframes`
   from { 
@@ -31,7 +32,7 @@ export const Controls = styled.nav<{ wide?: boolean }>`
   bottom: 16px;
   bottom: max(16px, calc(env(safe-area-inset-bottom) + 16px));
   opacity: 0;
-  left: 18px;
+  left: ${PAGE_MARGIN_HORIZONTAL};
   z-index: 100;
   overflow: hidden;
   animation: ${enter} 0.25s 0.35s ease-in forwards;
@@ -42,6 +43,7 @@ export const NavContainer = styled.div`
   flex-direction: column;
   width: 100%;
   overflow: auto;
+  margin: ${PAGE_MARGIN_HORIZONTAL};
 `;
 
 export const MainNavContainer = styled(motion.nav)`
