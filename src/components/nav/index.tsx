@@ -6,12 +6,60 @@ import {
   MainNav,
   UtilityNavContainer,
   UtilityNav,
+  PrimaryNavLink,
 } from "./styles";
 import { IconButton } from "../icon-button";
 import { Burger } from "../burger";
 import { Panel } from "../panel";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "gatsby";
+import { motion } from "framer-motion";
+
+const PRIMARY_NAV_LINKS = [
+  {
+    name: "about",
+    link: "/about/",
+    label: "About",
+    variants: {
+      enter: {
+        opacity: 1,
+        x: "2rem",
+      },
+      exit: {
+        opacity: 0,
+        x: 0,
+      },
+    },
+  },
+  {
+    name: "work",
+    link: "/work/",
+    label: "Work",
+    variants: {
+      enter: {
+        opacity: 1,
+        x: "6rem",
+      },
+      exit: {
+        opacity: 0,
+        x: "8rem",
+      },
+    },
+  },
+  {
+    name: "resume",
+    link: "/resume/",
+    label: "Resume",
+    variants: {
+      enter: {
+        opacity: 1,
+        x: "4rem",
+      },
+      exit: {
+        opacity: 0,
+        x: "3rem",
+      },
+    },
+  },
+];
 
 const mainNavVariants = {
   enter: {
@@ -32,53 +80,25 @@ const mainNavVariants = {
   },
 };
 
-const navItemAbout = {
-  enter: {
-    opacity: 1,
-    x: "2rem",
-  },
-  exit: {
-    opacity: 0,
-    x: 0,
-  },
-};
-
-const navItemWork = {
-  enter: {
-    opacity: 1,
-    x: "6rem",
-  },
-  exit: {
-    opacity: 0,
-    x: "8rem",
-  },
-};
-
-const navItemResume = {
-  enter: {
-    opacity: 1,
-    x: "4rem",
-  },
-  exit: {
-    opacity: 0,
-    x: "3rem",
-  },
-};
-
 const utilNavItem = {
   enter: {
     opacity: 1,
-    y: -10,
+    y: 0,
   },
   exit: {
     opacity: 0,
-    y: 0,
+    y: 10,
   },
 };
 
-export const Nav: React.FC = () => {
+interface Props {
+  isDesktop: boolean;
+}
+
+export const Nav: React.FC<Props> = ({ isDesktop }) => {
   const [open, setOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
+
   const handleButtonClick = () => {
     if (!showNav) {
       setOpen(true);
@@ -86,6 +106,7 @@ export const Nav: React.FC = () => {
       setShowNav(false);
     }
   };
+
   const handlePanelAnimationEnd = () => {
     setShowNav(open);
   };
@@ -95,6 +116,11 @@ export const Nav: React.FC = () => {
       setOpen(false);
     }
   };
+
+  const handleNavClick = () => {
+    setShowNav(false);
+  };
+
   return (
     <>
       <Controls>
@@ -103,12 +129,13 @@ export const Nav: React.FC = () => {
         </IconButton>
       </Controls>
       <Panel
-        direction="btt"
+        direction={isDesktop ? "rtl" : "btt"}
         show={open}
         durationIn="0.3s"
         durationOut="0.3s"
         lockScroll
         onAnimationEnd={handlePanelAnimationEnd}
+        maxWidth={isDesktop ? "800px" : undefined}
       >
         <NavContainer>
           <div
@@ -128,17 +155,19 @@ export const Nav: React.FC = () => {
             onAnimationComplete={handleNavAnimationEnd}
           >
             <MainNav>
-              <motion.li variants={navItemAbout}>
-                <Link
-                  to="/about/"
-                  activeStyle={{ color: "red" }}
-                  partiallyActive={true}
-                >
-                  About
-                </Link>
-              </motion.li>
-              <motion.li variants={navItemWork}>Work</motion.li>
-              <motion.li variants={navItemResume}>Resume</motion.li>
+              {PRIMARY_NAV_LINKS.map((item) => {
+                return (
+                  <motion.li variants={item.variants} key={item.name}>
+                    <PrimaryNavLink
+                      to={item.link}
+                      partiallyActive
+                      onClick={handleNavClick}
+                    >
+                      {item.label}
+                    </PrimaryNavLink>
+                  </motion.li>
+                );
+              })}
             </MainNav>
           </MainNavContainer>
           <UtilityNavContainer

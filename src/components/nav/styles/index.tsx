@@ -1,12 +1,20 @@
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/react";
 import { motion } from "framer-motion";
-import { PAGE_MARGIN_HORIZONTAL, PAGE_MARGIN_VERTICAL } from "../../../styles";
+import {
+  PAGE_MARGIN_HORIZONTAL,
+  PAGE_MARGIN_VERTICAL,
+  PAGE_MARGIN_VERTIAL_DESKTOP,
+  fluid_03,
+  fancyLinks,
+  DESKTOP_LAYOUT,
+} from "../../../styles";
+import { Link } from "gatsby";
 
 export const enter = keyframes`
   from { 
     opacity: 0;
-    transform: translate3d(0, 100%, 0);
+    transform: translate(0, -100%, 0);
   }
 
   to { 
@@ -39,6 +47,13 @@ export const Controls = styled.nav<{ wide?: boolean }>`
   z-index: 100;
   overflow: hidden;
   animation: ${enter} 0.25s 0.35s ease-in forwards;
+
+  @media (min-width: ${DESKTOP_LAYOUT}px) {
+    bottom: unset;
+    top: ${PAGE_MARGIN_VERTIAL_DESKTOP};
+    left: unset;
+    right: ${PAGE_MARGIN_HORIZONTAL};
+  }
 `;
 
 export const NavContainer = styled.div`
@@ -46,7 +61,12 @@ export const NavContainer = styled.div`
   flex-direction: column;
   width: 100%;
   overflow: auto;
-  margin: ${PAGE_MARGIN_VERTICAL} ${PAGE_MARGIN_HORIZONTAL};
+  margin: ${PAGE_MARGIN_VERTICAL} ${PAGE_MARGIN_HORIZONTAL} 0;
+
+  @media (min-width: ${DESKTOP_LAYOUT}px) {
+    margin-right: calc(${PAGE_MARGIN_HORIZONTAL} * 2 + 48px);
+    border-right: 1px solid #eee;
+  }
 `;
 
 export const MainNavContainer = styled(motion.nav)`
@@ -57,7 +77,11 @@ export const MainNavContainer = styled(motion.nav)`
 `;
 
 export const UtilityNavContainer = styled(motion.nav)`
-  margin-bottom: 8rem;
+  margin-bottom: 5rem;
+
+  @media (min-width: ${DESKTOP_LAYOUT}px) {
+    margin-bottom: ${PAGE_MARGIN_VERTIAL_DESKTOP};
+  }
 `;
 
 export const MainNav = styled(motion.ul)`
@@ -71,5 +95,20 @@ export const UtilityNav = styled(motion.ul)`
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 0 1rem;
+  flex-direction: column;
+  gap: 0.5em 0;
+
+  @media (min-width: ${DESKTOP_LAYOUT}px) {
+    flex-direction: row;
+    gap: 0 1em;
+  }
+`;
+
+export const PrimaryNavLink = styled(Link)`
+  ${fluid_03()}
+  ${fancyLinks()}
+  color: inherit;
+  text-decoration: none;
+  margin: 0.125em 0;
+  display: inline-block;
 `;

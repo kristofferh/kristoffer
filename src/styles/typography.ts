@@ -65,3 +65,29 @@ export const fluid_05 = () => {
     letter-spacing: -0.02em;
   `;
 };
+
+export const fancyLinks = () => {
+  return `
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 0.05em;
+      position: absolute;
+      bottom: 0.05em;
+      left: 0;
+      background: currentColor;
+      transition: 0.25s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:not(:hover):after {
+      right: 0;
+      left: auto;
+    }
+  `;
+};
