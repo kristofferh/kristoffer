@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { keyframes } from "@emotion/react";
 import { motion } from "framer-motion";
-import { PAGE_MARGIN_HORIZONTAL } from "../../../styles";
+import { PAGE_MARGIN_HORIZONTAL, PAGE_MARGIN_VERTICAL } from "../../../styles";
 
 export const enter = keyframes`
   from { 
@@ -29,8 +29,11 @@ export const logoEnter = keyframes`
 
 export const Controls = styled.nav<{ wide?: boolean }>`
   position: fixed;
-  bottom: 16px;
-  bottom: max(16px, calc(env(safe-area-inset-bottom) + 16px));
+  bottom: ${PAGE_MARGIN_VERTICAL};
+  bottom: max(
+    ${PAGE_MARGIN_VERTICAL},
+    calc(env(safe-area-inset-bottom) + ${PAGE_MARGIN_VERTICAL})
+  );
   opacity: 0;
   left: ${PAGE_MARGIN_HORIZONTAL};
   z-index: 100;
@@ -43,7 +46,7 @@ export const NavContainer = styled.div`
   flex-direction: column;
   width: 100%;
   overflow: auto;
-  margin: ${PAGE_MARGIN_HORIZONTAL};
+  margin: ${PAGE_MARGIN_VERTICAL} ${PAGE_MARGIN_HORIZONTAL};
 `;
 
 export const MainNavContainer = styled(motion.nav)`

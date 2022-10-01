@@ -25,7 +25,8 @@ const mainNavVariants = {
   exit: {
     opacity: 0,
     transition: {
-      staggerChildren: 0.01,
+      when: "afterChildren",
+      staggerChildren: 0.1,
       staggerDirection: -1,
     },
   },
@@ -79,10 +80,20 @@ export const Nav: React.FC = () => {
   const [open, setOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
   const handleButtonClick = () => {
-    setOpen(!open);
+    if (!showNav) {
+      setOpen(true);
+    } else {
+      setShowNav(false);
+    }
   };
-  const handleAnimationEnd = () => {
+  const handlePanelAnimationEnd = () => {
     setShowNav(open);
+  };
+
+  const handleNavAnimationEnd = () => {
+    if (open && !showNav) {
+      setOpen(false);
+    }
   };
   return (
     <>
@@ -97,58 +108,53 @@ export const Nav: React.FC = () => {
         durationIn="0.3s"
         durationOut="0.3s"
         lockScroll
-        onAnimationEnd={handleAnimationEnd}
+        onAnimationEnd={handlePanelAnimationEnd}
       >
-        <AnimatePresence>
-          <NavContainer>
-            <div
-              style={{
-                background: "red",
-                width: 80,
-                height: 80,
-                flexShrink: 0,
-                borderRadius: "50%",
-              }}
-            ></div>
-            {showNav ? (
-              <>
-                <MainNavContainer
-                  variants={mainNavVariants}
-                  animate="enter"
-                  initial="exit"
-                  exit="exit"
+        <NavContainer>
+          <div
+            style={{
+              background: "red",
+              width: 80,
+              height: 80,
+              flexShrink: 0,
+              borderRadius: "50%",
+            }}
+          ></div>
+          <MainNavContainer
+            variants={mainNavVariants}
+            animate={showNav ? "enter" : "exit"}
+            initial="exit"
+            exit={showNav ? "exit" : "enter"}
+            onAnimationComplete={handleNavAnimationEnd}
+          >
+            <MainNav>
+              <motion.li variants={navItemAbout}>
+                <Link
+                  to="/about/"
+                  activeStyle={{ color: "red" }}
+                  partiallyActive={true}
                 >
-                  <MainNav>
-                    <motion.li variants={navItemAbout}>
-                      <Link
-                        to="/articles/"
-                        activeStyle={{ color: "red" }}
-                        partiallyActive={true}
-                      >
-                        About
-                      </Link>
-                    </motion.li>
-                    <motion.li variants={navItemWork}>Work</motion.li>
-                    <motion.li variants={navItemResume}>Resume</motion.li>
-                  </MainNav>
-                </MainNavContainer>
-                <UtilityNavContainer
-                  variants={mainNavVariants}
-                  animate="enter"
-                  initial="exit"
-                  exit="exit"
-                >
-                  <UtilityNav>
-                    <motion.li variants={utilNavItem}>Codepen</motion.li>
-                    <motion.li variants={utilNavItem}>Github</motion.li>
-                    <motion.li variants={utilNavItem}>Tumblr</motion.li>
-                    <motion.li variants={utilNavItem}>Twitter</motion.li>
-                  </UtilityNav>
-                </UtilityNavContainer>
-              </>
-            ) : null}
-          </NavContainer>
-        </AnimatePresence>
+                  About
+                </Link>
+              </motion.li>
+              <motion.li variants={navItemWork}>Work</motion.li>
+              <motion.li variants={navItemResume}>Resume</motion.li>
+            </MainNav>
+          </MainNavContainer>
+          <UtilityNavContainer
+            variants={mainNavVariants}
+            animate={showNav ? "enter" : "exit"}
+            initial="exit"
+            exit={showNav ? "exit" : "enter"}
+          >
+            <UtilityNav>
+              <motion.li variants={utilNavItem}>Codepen</motion.li>
+              <motion.li variants={utilNavItem}>Github</motion.li>
+              <motion.li variants={utilNavItem}>Tumblr</motion.li>
+              <motion.li variants={utilNavItem}>Twitter</motion.li>
+            </UtilityNav>
+          </UtilityNavContainer>
+        </NavContainer>
       </Panel>
     </>
   );
