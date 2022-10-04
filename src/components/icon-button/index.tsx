@@ -7,10 +7,11 @@ interface Props {
   style?: React.CSSProperties;
   className?: string;
   children?: React.ReactNode;
+  size?: number;
 }
 
 export const IconButton = forwardRef<HTMLButtonElement, Props>(
-  ({ active, onClick, children, style, className }, ref) => {
+  ({ active, onClick, children, style, className, size }, ref) => {
     return (
       <Container
         ref={ref}
@@ -18,6 +19,7 @@ export const IconButton = forwardRef<HTMLButtonElement, Props>(
         style={style}
         onClick={onClick}
         className={className}
+        size={size}
       >
         {children}
       </Container>
