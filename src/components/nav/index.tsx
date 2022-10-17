@@ -7,6 +7,7 @@ import {
   UtilityNavContainer,
   UtilityNav,
   PrimaryNavLink,
+  TempLogo,
 } from "./styles";
 import { IconButton } from "../icon-button";
 import { Burger } from "../burger";
@@ -58,6 +59,29 @@ const PRIMARY_NAV_LINKS = [
         x: "3rem",
       },
     },
+  },
+];
+
+const SOCIAL_NAV_LINKS = [
+  {
+    name: "codepen",
+    link: "https://codepen.io/kristofferh/",
+    label: "Codepen",
+  },
+  {
+    name: "github",
+    link: "https://github.com/kristofferh",
+    label: "Github",
+  },
+  {
+    name: "tumblr",
+    link: "http://kris.tumblr.com/",
+    label: "Tumblr",
+  },
+  {
+    name: "twitter",
+    link: "https://twitter.com/_kris",
+    label: "Twitter",
   },
 ];
 
@@ -124,29 +148,21 @@ export const Nav: React.FC<Props> = ({ isDesktop }) => {
   return (
     <>
       <Controls>
-        <IconButton onClick={handleButtonClick} active={open}>
-          <Burger active={open} />
+        <IconButton onClick={handleButtonClick} active={open} size={64}>
+          <Burger active={open} size={32} />
         </IconButton>
       </Controls>
       <Panel
         direction={isDesktop ? "rtl" : "btt"}
         show={open}
         durationIn="0.3s"
-        durationOut="0.3s"
+        durationOut="0.2s"
         lockScroll
         onAnimationEnd={handlePanelAnimationEnd}
         maxWidth={isDesktop ? "800px" : undefined}
       >
         <NavContainer>
-          <div
-            style={{
-              background: "red",
-              width: 80,
-              height: 80,
-              flexShrink: 0,
-              borderRadius: "50%",
-            }}
-          ></div>
+          <TempLogo />
           <MainNavContainer
             variants={mainNavVariants}
             animate={showNav ? "enter" : "exit"}
@@ -177,10 +193,13 @@ export const Nav: React.FC<Props> = ({ isDesktop }) => {
             exit={showNav ? "exit" : "enter"}
           >
             <UtilityNav>
-              <motion.li variants={utilNavItem}>Codepen</motion.li>
-              <motion.li variants={utilNavItem}>Github</motion.li>
-              <motion.li variants={utilNavItem}>Tumblr</motion.li>
-              <motion.li variants={utilNavItem}>Twitter</motion.li>
+              {SOCIAL_NAV_LINKS.map((link) => (
+                <motion.li variants={utilNavItem} key={link.name}>
+                  <a href={link.link} target="_blank" rel="noopener noreferrer">
+                    {link.label}
+                  </a>
+                </motion.li>
+              ))}
             </UtilityNav>
           </UtilityNavContainer>
         </NavContainer>

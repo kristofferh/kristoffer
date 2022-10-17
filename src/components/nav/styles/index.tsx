@@ -35,6 +35,18 @@ export const logoEnter = keyframes`
   }
 `;
 
+export const TempLogo = styled.div`
+  background: #e5e5e5;
+  width: 80px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 50%;
+
+  @media (min-width: ${DESKTOP_LAYOUT}px) {
+    display: none;
+  }
+`;
+
 export const Controls = styled.nav<{ wide?: boolean }>`
   position: fixed;
   bottom: ${PAGE_MARGIN_VERTICAL};
@@ -45,7 +57,6 @@ export const Controls = styled.nav<{ wide?: boolean }>`
   opacity: 0;
   left: ${PAGE_MARGIN_HORIZONTAL};
   z-index: 100;
-  overflow: hidden;
   animation: ${enter} 0.25s 0.35s ease-in forwards;
 
   @media (min-width: ${DESKTOP_LAYOUT}px) {
@@ -61,10 +72,10 @@ export const NavContainer = styled.div`
   flex-direction: column;
   width: 100%;
   overflow: auto;
-  margin: ${PAGE_MARGIN_VERTICAL} ${PAGE_MARGIN_HORIZONTAL} 0;
+  padding: 0 ${PAGE_MARGIN_HORIZONTAL};
 
   @media (min-width: ${DESKTOP_LAYOUT}px) {
-    margin-right: calc(${PAGE_MARGIN_HORIZONTAL} * 2 + 48px);
+    margin-right: calc(${PAGE_MARGIN_HORIZONTAL} * 2 + 64px);
     border-right: 1px solid #eee;
   }
 `;
@@ -77,7 +88,7 @@ export const MainNavContainer = styled(motion.nav)`
 `;
 
 export const UtilityNavContainer = styled(motion.nav)`
-  margin-bottom: 5rem;
+  margin-bottom: 6rem;
 
   @media (min-width: ${DESKTOP_LAYOUT}px) {
     margin-bottom: ${PAGE_MARGIN_VERTIAL_DESKTOP};
