@@ -92,7 +92,7 @@ const About = (props: any) => {
                 NY for eight.
               </p>
               <p className="load-in">
-                I am currently a UI/UX designer at a Swiss running brand called{" "}
+                I am currently the Creative Lead at a Swiss running brand called{" "}
                 <a
                   href="https://on-running.com"
                   rel="noopener noreferrer"
