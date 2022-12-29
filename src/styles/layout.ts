@@ -1,3 +1,10 @@
+export const PAGE_MARGIN_HORIZONTAL = "5vw";
+export const PAGE_MARGIN_VERTICAL = "1rem";
+export const PAGE_MARGIN_VERTIAL_DESKTOP = "3rem";
+export const GUTTER_MOBILE = "clamp(0.5rem, 2.1333vw, 1rem)";
+export const GUTTER_DESKTOP = "clamp(1rem, 1.6667vw, 2rem)";
+export const DESKTOP_LAYOUT = 1024;
+
 export const focusRing = () => `
   &:focus-visible {
     transition: 0.2s ease box-shadow;

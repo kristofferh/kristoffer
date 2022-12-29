@@ -85,7 +85,8 @@ export const Container = styled.aside<ContainerProps>`
   z-index: 10;
   background: #fff;
   width: ${({ maxWidth }) => (maxWidth ? maxWidth : "100%")};
-  height: 100%;
+  height: 100vh;
+  height: 100svh;
   max-height: ${({ maxHeight }) => (maxHeight ? maxHeight : undefined)};
   display: flex;
   transition: all 0.25s ease-in;

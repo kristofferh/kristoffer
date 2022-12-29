@@ -14,11 +14,13 @@ const Template: ComponentStory<typeof IconButton> = (args) => {
   const handleClick = () => updateArgs({ active: !active });
   return (
     <IconButton {...args} onClick={handleClick}>
-      <Burger {...args} />
+      <Burger {...args} size={32} />
     </IconButton>
   );
 };
 
 export const Story = Template.bind({});
-Story.args = {};
+Story.args = {
+  size: 64,
+};
 Story.storyName = "Icon Button";

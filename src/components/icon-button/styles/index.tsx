@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { focusRing } from "../../../styles/layout";
 
-export const Container = styled.button<{ active?: boolean }>`
+export const Container = styled.button<{ active?: boolean; size?: number }>`
   appearance: none;
   border: 0;
   padding: 0;
@@ -9,8 +9,8 @@ export const Container = styled.button<{ active?: boolean }>`
   font-family: inherit;
   position: relative;
   display: block;
-  width: 44px;
-  height: 44px;
+  width: ${({ size }) => (size ? `${size}px` : "44px")};
+  height: ${({ size }) => (size ? `${size}px` : "44px")};
   cursor: pointer;
   outline: none;
   border-radius: 50%;
