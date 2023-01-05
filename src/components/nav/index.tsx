@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   Controls,
   NavContainer,
@@ -13,6 +13,7 @@ import { IconButton } from "../icon-button";
 import { Burger } from "../burger";
 import { Panel } from "../panel";
 import { motion } from "framer-motion";
+import { useScrollData } from "../../utils/hooks";
 
 const PRIMARY_NAV_LINKS = [
   {
@@ -122,6 +123,10 @@ interface Props {
 export const Nav: React.FC<Props> = ({ isDesktop }) => {
   const [open, setOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const previousFrame = useRef<any>();
+
+  const { position } = useScrollData();
+  previousFrame.current = position;
 
   const handleButtonClick = () => {
     if (!showNav) {
@@ -148,6 +153,17 @@ export const Nav: React.FC<Props> = ({ isDesktop }) => {
   return (
     <>
       <Controls>
+        <div
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            transformOrigin: "50% 50%",
+            transition: "transform 0.2s cubic-bezier(0.64, 0.57, 0.67, 1.53)",
+            transform: `rotate(${position.y * 0.3}deg)`,
+          }}
+        >
+          Menu
+        </div>
         <IconButton onClick={handleButtonClick} active={open} size={64}>
           <Burger active={open} size={32} />
         </IconButton>
