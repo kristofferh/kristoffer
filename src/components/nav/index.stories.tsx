@@ -25,8 +25,8 @@ const Template: ComponentStory<typeof Nav> = (args) => {
           style={{
             backgroundColor: "#eee",
             width: "100vw",
-            height: "100vh",
-            position: "fixed",
+            height: "800vh",
+            position: "absolute",
             left: 0,
             top: 0,
           }}

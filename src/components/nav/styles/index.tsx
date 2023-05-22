@@ -4,10 +4,11 @@ import { motion } from "framer-motion";
 import {
   PAGE_MARGIN_HORIZONTAL,
   PAGE_MARGIN_VERTICAL,
-  PAGE_MARGIN_VERTIAL_DESKTOP,
+  PAGE_MARGIN_VERTICAL_DESKTOP,
   fluid_03,
   fancyLinks,
   DESKTOP_LAYOUT,
+  static_00_monospace,
 } from "../../../styles";
 import { Link } from "gatsby";
 
@@ -61,7 +62,7 @@ export const Controls = styled.nav<{ wide?: boolean }>`
 
   @media (min-width: ${DESKTOP_LAYOUT}px) {
     bottom: unset;
-    top: ${PAGE_MARGIN_VERTIAL_DESKTOP};
+    top: ${PAGE_MARGIN_VERTICAL_DESKTOP};
     left: unset;
     right: ${PAGE_MARGIN_HORIZONTAL};
   }
@@ -91,7 +92,7 @@ export const UtilityNavContainer = styled(motion.nav)`
   margin-bottom: 6rem;
 
   @media (min-width: ${DESKTOP_LAYOUT}px) {
-    margin-bottom: ${PAGE_MARGIN_VERTIAL_DESKTOP};
+    margin-bottom: ${PAGE_MARGIN_VERTICAL_DESKTOP};
   }
 `;
 
@@ -122,4 +123,14 @@ export const PrimaryNavLink = styled(Link)`
   text-decoration: none;
   margin: 0.125em 0;
   display: inline-block;
+`;
+
+export const TextSpin = styled(motion.div)`
+  ${static_00_monospace()}
+  font-size: 0.875rem;
+  display: inline-flex;
+  align-ttems: center;
+  transformorigin: 50% 50%;
+  transition: transform 0.25s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+  font-weight: 500;
 `;

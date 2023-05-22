@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Controls,
   NavContainer,
@@ -8,11 +8,13 @@ import {
   UtilityNav,
   PrimaryNavLink,
   TempLogo,
+  TextSpin,
 } from "./styles";
 import { IconButton } from "../icon-button";
 import { Burger } from "../burger";
 import { Panel } from "../panel";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useScrollData } from "../../utils/hooks";
 
 const PRIMARY_NAV_LINKS = [
   {
@@ -122,6 +124,23 @@ interface Props {
 export const Nav: React.FC<Props> = ({ isDesktop }) => {
   const [open, setOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
+  const { speed, direction } = useScrollData();
+
+  const handleKeyDown = (event: KeyboardEvent) => {
+    if (event.key === "Escape") {
+      setShowNav(false);
+    }
+  };
+
+  useEffect(() => {
+    if (showNav) {
+      document.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [showNav]);
 
   const handleButtonClick = () => {
     if (!showNav) {
@@ -145,11 +164,24 @@ export const Nav: React.FC<Props> = ({ isDesktop }) => {
     setShowNav(false);
   };
 
+  const rotation = speed.y * (direction.y === "up" ? -1 : 1) * 0.05;
   return (
     <>
       <Controls>
         <IconButton onClick={handleButtonClick} active={open} size={64}>
-          <Burger active={open} size={32} />
+          <AnimatePresence>
+            {open ? (
+              <Burger active={open} size={32} />
+            ) : (
+              <TextSpin
+                style={{
+                  transform: `rotate(${rotation}deg)`,
+                }}
+              >
+                Menu
+              </TextSpin>
+            )}
+          </AnimatePresence>
         </IconButton>
       </Controls>
       <Panel
@@ -159,7 +191,7 @@ export const Nav: React.FC<Props> = ({ isDesktop }) => {
         durationOut="0.2s"
         lockScroll
         onAnimationEnd={handlePanelAnimationEnd}
-        maxWidth={isDesktop ? "800px" : undefined}
+        maxWidth={isDesktop ? "768px" : undefined}
       >
         <NavContainer>
           <TempLogo />

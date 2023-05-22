@@ -7,6 +7,18 @@ export const FLUID_03 = "clamp(3.375rem, 2.97rem + 1.75vw, 5.0625rem)";
 export const FLUID_04 = "clamp(5.0625rem, 4.46rem + 2.59vw, 7.5625rem)";
 export const FLUID_05 = "clamp(7.5625rem, 6.64rem + 3.95vw, 11.375rem)";
 
+export const MONOSPACE = "'Inconsolata', monospace";
+
+export const static_00_monospace = (caps = true) => {
+  return `
+    font-family: ${MONOSPACE};
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    text-transform: ${caps === true ? "uppercase" : "none"};
+  `;
+};
+
 export const fluid__02 = () => {
   return `
     font-size: ${FLUID__02};
