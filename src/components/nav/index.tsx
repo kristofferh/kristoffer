@@ -124,7 +124,7 @@ interface Props {
 export const Nav: React.FC<Props> = ({ isDesktop }) => {
   const [open, setOpen] = useState(false);
   const [showNav, setShowNav] = useState(false);
-  const { position, speed, direction } = useScrollData();
+  const { speed, direction } = useScrollData();
 
   const handleKeyDown = (event: KeyboardEvent) => {
     if (event.key === "Escape") {
