@@ -53,6 +53,75 @@ const Resume = (props: any) => (
         <div className="section-content col-xs-12 col-sm-9">
           <div className="experience">
             <div className="title-location row space-between-xs">
+              <h3 className="title col-xs-12 col-sm-8">Head of UI/UX Design</h3>
+              <div className="location col-xs-12 col-sm-4">
+                Zürich, Switzerland
+              </div>
+            </div>
+            <a
+              target="_blank"
+              href="https://on-running.com"
+              className="org highlight-link"
+              rel="noopener noreferrer"
+            >
+              On
+            </a>
+            <div className="dates">
+              <abbr className="dt dt-start" title="2021-12-01">
+                December 2022
+              </abbr>{" "}
+              -{" "}
+              <abbr className="dt dt-end" title="now">
+                Present
+              </abbr>
+            </div>
+            <div className="summary">
+              <ul>
+                <li>
+                  Responsible for the creative direction and vision of{" "}
+                  <em>On</em>’s digital experiences - from websites, to mobile
+                  apps, to forward thinking innovation projects
+                </li>
+                <li>
+                  Fostering a design-led culture by evangelizing the value of
+                  design thinking, upholding our principles and not compromising
+                  on quality
+                </li>
+                <li>
+                  Hiring, managing and mentoring a talented, diverse, inclusive
+                  team of UI/UX Designers, UX Researchers and Production
+                  Designers across the globe
+                </li>
+                <li>
+                  Ensuring the team structure sets each member up with a clear
+                  growth path that reflects both their personal goals and the
+                  needs of the business
+                </li>
+                <li>
+                  Valuing our principles of transparency: sharing context and
+                  plans with the team while simultaneously shielding them from
+                  unnecessary pressures and distractions
+                </li>
+                <li>
+                  Connecting the dots between our various platforms to create an
+                  overall experience that's both cohesive yet specific to each
+                  platform’s needs
+                </li>
+                <li>
+                  Partner with external companies and agencies when specialized
+                  needs are required
+                </li>
+              </ul>
+              <p>
+                Technologies / Tools: <em>Figma</em>, <em>Framer</em>,{" "}
+                <em>Principle</em>, <em>After Effects</em>, <em>ProtoPie</em>,{" "}
+                <em>TypeScript</em>, <em>React</em>, <em>CSS</em>, <em>HTML</em>
+              </p>
+            </div>
+          </div>
+
+          <div className="experience">
+            <div className="title-location row space-between-xs">
               <h3 className="title col-xs-12 col-sm-8">UI/UX Design Lead</h3>
               <div className="location col-xs-12 col-sm-4">
                 Zürich, Switzerland
@@ -71,8 +140,8 @@ const Resume = (props: any) => (
                 December 2021
               </abbr>{" "}
               -{" "}
-              <abbr className="dt dt-end" title="now">
-                Present
+              <abbr className="dt dt-end" title="2022-12-01">
+                December 2022
               </abbr>
             </div>
             <div className="summary">
@@ -81,7 +150,7 @@ const Resume = (props: any) => (
                   Creative lead for <em>On</em>'s Digital Design team
                 </li>
                 <li>
-                  Managing 6 full-time UI/UX and Production Designers and a
+                  Managed 6 full-time UI/UX and Production Designers and a
                   stable of freelance designers
                 </li>
                 <li>Recruitment of full-time designers and freelancers</li>
@@ -91,7 +160,7 @@ const Resume = (props: any) => (
                 </li>
                 <li>Ensuring accessibility standards (AA) are being met</li>
                 <li>
-                  Working with 3rd party vendors and agencies to design
+                  Worked with 3rd party vendors and agencies to design
                   sub-brands and other digitial properties
                 </li>
                 <li>Burning out</li>
