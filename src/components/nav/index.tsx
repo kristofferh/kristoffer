@@ -9,6 +9,7 @@ import {
   PrimaryNavLink,
   TempLogo,
   TextSpin,
+  UtilityNavLink,
 } from "./styles";
 import { IconButton } from "../icon-button";
 import { Burger } from "../burger";
@@ -227,9 +228,13 @@ export const Nav: React.FC<Props> = ({ isDesktop }) => {
             <UtilityNav>
               {SOCIAL_NAV_LINKS.map((link) => (
                 <motion.li variants={utilNavItem} key={link.name}>
-                  <a href={link.link} target="_blank" rel="noopener noreferrer">
+                  <UtilityNavLink
+                    href={link.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {link.label}
-                  </a>
+                  </UtilityNavLink>
                 </motion.li>
               ))}
             </UtilityNav>

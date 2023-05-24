@@ -125,6 +125,20 @@ export const PrimaryNavLink = styled(Link)`
   display: inline-block;
 `;
 
+export const UtilityNavLink = styled.a`
+  ${static_00_monospace(false)}
+  ${fancyLinks()}
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  bottom: 0;
+  display: inline-block;
+
+  &::after {
+    bottom: 0;
+  }
+`;
+
 export const TextSpin = styled(motion.div)`
   ${static_00_monospace()}
   font-size: 0.875rem;
