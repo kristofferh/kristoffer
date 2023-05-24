@@ -36,16 +36,18 @@ export const logoEnter = keyframes`
   }
 `;
 
-export const TempLogo = styled.div`
-  background: #e5e5e5;
-  width: 80px;
-  height: 80px;
+export const LogoContainer = styled(motion.div)`
   flex-shrink: 0;
-  border-radius: 50%;
+  margin-top: 1.5rem;
 
   @media (min-width: ${DESKTOP_LAYOUT}px) {
     display: none;
   }
+`;
+
+export const LogoLink = styled(Link)`
+  text-decoration: none;
+  display: block;
 `;
 
 export const Controls = styled.nav<{ wide?: boolean }>`
@@ -123,6 +125,20 @@ export const PrimaryNavLink = styled(Link)`
   text-decoration: none;
   margin: 0.125em 0;
   display: inline-block;
+`;
+
+export const UtilityNavLink = styled.a`
+  ${static_00_monospace(false)}
+  ${fancyLinks()}
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  bottom: 0;
+  display: inline-block;
+
+  &::after {
+    bottom: 0;
+  }
 `;
 
 export const TextSpin = styled(motion.div)`

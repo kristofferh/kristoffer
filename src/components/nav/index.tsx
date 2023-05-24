@@ -7,14 +7,17 @@ import {
   UtilityNavContainer,
   UtilityNav,
   PrimaryNavLink,
-  TempLogo,
+  LogoContainer,
+  LogoLink,
   TextSpin,
+  UtilityNavLink,
 } from "./styles";
 import { IconButton } from "../icon-button";
 import { Burger } from "../burger";
 import { Panel } from "../panel";
 import { motion, AnimatePresence } from "framer-motion";
 import { useScrollData } from "../../utils/hooks";
+import { KHLogo } from "../kh-logo";
 
 const PRIMARY_NAV_LINKS = [
   {
@@ -194,7 +197,16 @@ export const Nav: React.FC<Props> = ({ isDesktop }) => {
         maxWidth={isDesktop ? "768px" : undefined}
       >
         <NavContainer>
-          <TempLogo />
+          <LogoContainer
+            variants={mainNavVariants}
+            animate={showNav ? "enter" : "exit"}
+            initial="exit"
+            exit={showNav ? "exit" : "enter"}
+          >
+            <LogoLink to="/" onClick={handleNavClick}>
+              <KHLogo width={80} height={40} />
+            </LogoLink>
+          </LogoContainer>
           <MainNavContainer
             variants={mainNavVariants}
             animate={showNav ? "enter" : "exit"}
@@ -227,9 +239,13 @@ export const Nav: React.FC<Props> = ({ isDesktop }) => {
             <UtilityNav>
               {SOCIAL_NAV_LINKS.map((link) => (
                 <motion.li variants={utilNavItem} key={link.name}>
-                  <a href={link.link} target="_blank" rel="noopener noreferrer">
+                  <UtilityNavLink
+                    href={link.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {link.label}
-                  </a>
+                  </UtilityNavLink>
                 </motion.li>
               ))}
             </UtilityNav>
