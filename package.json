@@ -18,7 +18,9 @@
     "transfer": "rsync --filter='- /images' --filter='- /videos' -av public/ $npm_config_deploy_path",
     "deploy": "yarn build && yarn transfer",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy-storybook": "yarn build-storybook && yarn transfer-storybook",
+    "transfer-storybook": "rsync -av storybook-static/ $npm_config_deploy_path_storybook"
   },
   "author": "Kristoffer Hedstrom",
   "license": "MIT",

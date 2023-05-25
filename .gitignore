@@ -17,6 +17,7 @@ styles/fonts/tanek
 styles/fonts/tiempos
 src/styles/fonts/tanek
 src/styles/fonts/tiempos
+storybook-static/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
