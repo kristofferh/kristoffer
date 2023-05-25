@@ -9,6 +9,7 @@ import {
   fancyLinks,
   DESKTOP_LAYOUT,
   static_00_monospace,
+  sans_serif,
 } from "../../../styles";
 import { Link } from "gatsby";
 
@@ -114,13 +115,14 @@ export const UtilityNav = styled(motion.ul)`
 
   @media (min-width: ${DESKTOP_LAYOUT}px) {
     flex-direction: row;
-    gap: 0 1em;
+    gap: 0 1.5em;
   }
 `;
 
 export const PrimaryNavLink = styled(Link)`
   ${fluid_03()}
   ${fancyLinks()}
+  ${sans_serif(600)}
   color: inherit;
   text-decoration: none;
   margin: 0.125em 0;
@@ -137,6 +139,7 @@ export const UtilityNavLink = styled.a`
   display: inline-block;
 
   &::after {
+    height: 1px;
     bottom: 0;
   }
 `;

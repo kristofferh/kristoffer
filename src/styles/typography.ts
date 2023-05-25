@@ -8,6 +8,14 @@ export const FLUID_04 = "clamp(5.0625rem, 4.46rem + 2.59vw, 7.5625rem)";
 export const FLUID_05 = "clamp(7.5625rem, 6.64rem + 3.95vw, 11.375rem)";
 
 export const MONOSPACE = "'Inconsolata', monospace";
+export const SANS_SERIF = "'Inter', sans-serif";
+
+export const sans_serif = (weight = 400) => {
+  return `
+    font-family: ${SANS_SERIF};
+    font-weight: ${weight};
+  `;
+};
 
 export const static_00_monospace = (caps = true) => {
   return `
